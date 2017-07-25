@@ -1,5 +1,6 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Overlock:400,400i,700,700i,900,900i|Rancho");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 // Variables
 @import "variables";
 // Bootstrap
@@ -9,3 +10,20 @@
 //Font awesome ~
 $fa-font-path: "../fonts";
 @import "node_modules/font-awesome/scss/font-awesome";
+.btn {
+    font-family: 'Overlock', cursive;
+}
+
+.fa-amazon {
+    color: darkmagenta;
+}
+
+.material-icons.face {
+    color: #3097D1;
+}
+
+.totem {
+    color: #fff !important;
+    background-color: #bf5329;
+    border-color: #3097D1;
+}

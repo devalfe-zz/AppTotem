@@ -8,8 +8,8 @@
         "hot": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
         "production": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-
     },
+
     "devDependencies": {
         "axios": "^0.16.2",
         "bootstrap": "^4.0.0-alpha.6",
@@ -24,8 +24,10 @@
         "sweetalert": "^1.1.3",
         "datatables.net": "^1.10.15",
         "datatables.net-bs": "^1.10.15",
+        "datatables.net-dt": "^1.10.15",
         "owl.carousel": "^2.2.0",
         "animate.css": "^3.5.2",
-        "smooth-scroll": "^11.1.0"
+        "smooth-scroll": "^11.1.0",
+        "fullpage.js": "^2.9.4"
     }
 }
