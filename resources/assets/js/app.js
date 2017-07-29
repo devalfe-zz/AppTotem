@@ -8,6 +8,15 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+function include(scriptUrl) {
+    document.write('<script src="' + scriptUrl + '"></script>');
+}
+
+function isIE() {
+    var myNav = navigator.userAgent.toLowerCase();
+    return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+};
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -19,3 +28,32 @@ Vue.component('example', require('./components/Example.vue'));
 const app = new Vue({
     el: '#app'
 });
+/* Superfish menus
+ ========================================================*/
+;
+(function($) {
+    include('js/superfish.js');
+
+    var o = $('.sf-menu-toggle');
+    if (o.length > 0) {
+        $(document).ready(function() {
+            var n = $('.nav');
+            o.click(function() {
+                n.toggleClass('active');
+                return false;
+            });
+
+            $(document).click(function(e) {
+                if (n.hasClass('active')) {
+                    var target = e.clientX;
+                    if (target > (n.width())) {
+                        n.removeClass('active');
+                    }
+                }
+            });
+        });
+    } else {
+        include('js/jquery.mobilemenu.js');
+
+    }
+})(jQuery);

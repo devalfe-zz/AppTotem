@@ -1,6 +1,20 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/design.css": "/css/design.css",
-    "/js/design.js": "/js/design.js"
+    "/css/bootstrap-material-design.css": "/css/bootstrap-material-design.css",
+    "/css/ripples.css": "/css/ripples.css",
+    "/css/animate.css": "/css/animate.css",
+    "/css/sweetalert.css": "/css/sweetalert.css",
+    "/css/owl.carousel.css": "/css/owl.carousel.css",
+    "/css/jquery.fullpage.css": "/css/jquery.fullpage.css",
+    "/css/superfish.css": "/css/superfish.css",
+    "/js/material.js": "/js/material.js",
+    "/js/ripples.js": "/js/ripples.js",
+    "/js/sweetalert-dev.js": "/js/sweetalert-dev.js",
+    "/js/owl.carousel.js": "/js/owl.carousel.js",
+    "/js/jquery.fullpage.extensions.min.js": "/js/jquery.fullpage.extensions.min.js",
+    "/js/jquery.fullpage.js": "/js/jquery.fullpage.js",
+    "/js/wow.js": "/js/wow.js",
+    "/js/superfish.js": "/js/superfish.js",
+    "/js/smooth-scroll.js": "/js/smooth-scroll.js"
 }

@@ -1,3 +1,5 @@
+$principal:#F1780D;
+$secundario:#F1A50D;
 // Body
 $body-bg: #f5f8fa;
 // Borders
@@ -15,9 +17,10 @@ $brand-danger: #bf5329;
 // Typography
 $fa-font-path: "~node_modules/font-awesome/fonts";
 //$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-$font-family-sans-serif: "Raleway",
-sans-serif;
-//$font-size-base: 14px;
+$font-family-sans-serif: "Overlock",
+cursive;
+$font-size-base: 3rem;
+$font-weight-base: Bold;
 $line-height-base: 1.6;
 $text-color: #636b6f;
 // Navbar
