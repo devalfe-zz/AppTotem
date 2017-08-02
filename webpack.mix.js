@@ -83,27 +83,3 @@ mix.copy(['node_modules/bootstrap-material-design/dist/js/material.js',
     'node_modules/smooth-scroll/dist/js/smooth-scroll.js'
 
 ], 'public/js');
-
-
-//mix.copy('resources/assets/scr/css/bootstrap-material-design.min.css', 'public/css');
-//mix.copy('resources/assets/scr/css/dataTables.bootstrap.min.css', 'public/css');
-//mix.copy('resources/assets/scr/css/jquery.dataTables.min.css', 'public/css');
-//mix.copy('resources/assets/scr/css/jquery-ui.min.css', 'public/css');
-//mix.copy('resources/assets/scr/css/responsive.bootstrap.min.css', 'public/css');
-//mix.copy('resources/assets/scr/css/ripples.min.css', 'public/css');
-
-
-//mix.copy('resources/assets/scr/js/dataTables.bootstrap.min.js', 'public/js');
-//mix.copy('resources/assets/scr/js/dataTables.responsive.min.js', 'public/js');
-//mix.copy('resources/assets/scr/js/jquery.dataTables.min.js', 'public/js');
-//mix.copy('resources/assets/scr/js/jquery.min.js', 'public/js');
-//mix.copy('resources/assets/scr/js/jquery-ui.min.js', 'public/js');
-//mix.copy('resources/assets/scr/js/owl.carousel.min.js', 'public/js');
-//mix.copy('resources/assets/scr/js/responsive.bootstrap.min.js', 'public/js');
-//mix.copy('resources/assets/scr/js/ripples.min.js', 'public/js');
-//mix.copy('resources/assets/scr/js/smooth-scroll.min.js', 'public/js');
-//mix.copy('resources/assets/scr/js/sweetalert.min.js', 'public/js');
-//mix.copy('resources/assets/scr/js/wow.min.js', 'public/js');
-
-//mix.copy('node_modules/font-awesome/fonts', 'public/fonts');
-//mix.copyDirectory('assets/img', 'public/images');

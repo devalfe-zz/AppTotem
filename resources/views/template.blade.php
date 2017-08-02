@@ -5,6 +5,7 @@
 @include('layouts.header')
 <main class="container-fluid">
     <section>
+    
     </section>
 </main>
 @include('layouts.script')
