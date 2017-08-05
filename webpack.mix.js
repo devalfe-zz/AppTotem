@@ -12,9 +12,16 @@ let config = {
         //'resources/assets/**/*.*',
         //'resources/views/**/*.*',
         //'app/Modules/**/Resources/views/**/*.*',
-        'public/css/**/*.*',
-        'public/js/**/*.*',
-        'resources/views/**/*.*',
+        'public/css/**/*.*', ['public/js/**/*.*'],
+        ['resources/views/**/*.{php,html}'],
+        ['resources/views/**/*.*'],
+        'resources/views/*.*',
+        'resources/views/*.blade.php',
+        'resources/views/layouts/*.*',
+        'resources/views/**/*.php',
+        'app/**/*.php',
+        'routes/**/*.php',
+        'resources/views/layouts/*.blade.php'
         //'aap/Modules/**/Resources/views/**/*.*',
         //'app/Modules/**/Resources/views/*.*'
     ]
@@ -29,7 +36,7 @@ mix.browserSync({
     online: true,
     logConnections: false,
     reloadOnRestart: true,
-    notify: false,
+    notify: true,
     open: false //false, local, external, ui, tunnel
 });
 // mix.browserSync({
@@ -83,3 +90,4 @@ mix.copy(['node_modules/bootstrap-material-design/dist/js/material.js',
     'node_modules/smooth-scroll/dist/js/smooth-scroll.js'
 
 ], 'public/js');
+mix.copy(['resources/assets/img/*.*'], 'public/images');

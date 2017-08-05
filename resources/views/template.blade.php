@@ -9,5 +9,4 @@
     </section>
 </main>
 @include('layouts.script')
-</body>
 </html>
