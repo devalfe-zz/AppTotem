@@ -8,6 +8,7 @@
     "/css/owl.carousel.css": "/css/owl.carousel.css",
     "/css/jquery.fullpage.css": "/css/jquery.fullpage.css",
     "/css/superfish.css": "/css/superfish.css",
+    "/css/bootstrap.css": "/css/bootstrap.css",
     "/js/material.js": "/js/material.js",
     "/js/ripples.js": "/js/ripples.js",
     "/js/sweetalert-dev.js": "/js/sweetalert-dev.js",
@@ -17,6 +18,7 @@
     "/js/wow.js": "/js/wow.js",
     "/js/superfish.js": "/js/superfish.js",
     "/js/smooth-scroll.js": "/js/smooth-scroll.js",
+    "/js/bootstrap.js": "/js/bootstrap.js",
     "/images/logo.svg": "/images/logo.svg",
     "/images/mpmn.svg": "/images/mpmn.svg"
 }

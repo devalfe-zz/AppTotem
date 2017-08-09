@@ -16,13 +16,13 @@ $color-secondary-2-2: #F94B42;
 $color-secondary-2-3: #BC0D04;
 $color-secondary-2-4: #930700;
 // Body
-$body-bg: #34495e;
+$body-bg: #fafafa;
 // Borders
-$laravel-border-color: darken($body-bg, 10%);
-$list-group-border: $laravel-border-color;
-$navbar-default-border: $laravel-border-color;
-$panel-default-border: $laravel-border-color;
-$panel-inner-border: $laravel-border-color;
+//$laravel-border-color: darken($body-bg, 10%);
+//$list-group-border: $laravel-border-color;
+//$navbar-default-border: $laravel-border-color;
+//$panel-default-border: $laravel-border-color;
+//$panel-inner-border: $laravel-border-color;
 // Brands
 $brand-primary: #3097D1;
 $brand-info: #8eb4cb;
@@ -34,7 +34,7 @@ $fa-font-path: "~node_modules/font-awesome/fonts";
 //$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 $font-family-sans-serif: "Overlock",
 cursive;
-$font-size-base: 3rem;
+$font-size-base: 2rem;
 $font-weight-base: Bold;
 $line-height-base: 1.6;
 $text-color: #636b6f;

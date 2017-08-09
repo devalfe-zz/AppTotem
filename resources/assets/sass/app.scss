@@ -4,15 +4,25 @@
 // Variables
 @import "variables";
 // Bootstrap
-@import "node_modules/bootstrap/scss/bootstrap";
-@import "node_modules/bootstrap/scss/bootstrap-grid";
-@import "node_modules/bootstrap/scss/bootstrap-reboot";
+//@import "node_modules/bootstrap/scss/bootstrap";
+//@import "node_modules/bootstrap/scss/bootstrap-grid";
+//@import "node_modules/bootstrap/scss/bootstrap-reboot";
+//@import "node_modules/bootstrap-material-design/sass/bootstrap-material-design";
 //Font awesome ~
 $fa-font-path: "../fonts";
 @import "node_modules/font-awesome/scss/font-awesome";
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: $font-family-sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #292b2c;
+    background-color: #fafafa;
 }
 
 li,
@@ -25,24 +35,26 @@ ol:focus {
 
 a {
     text-decoration: none;
-    color: $color-secondary-1-4;
+    color: $color-secondary-2-2 !important;
 }
 
 a:hover,
 a:focus {
     text-decoration: none;
-    color: $color-primary-3;
+    color: $color-primary-3 !important;
 }
 
 
 /*========================   header-top   ==========================*/
 
 .header-top {
-    background: #f5f5f5;
-    border-bottom: 1px solid #e9e9e9;
-    width: 100%;
-    color: $color-secondary-1-4;
+    color: $color-secondary-2-2;
     font-size: 1rem;
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    line-height: 32px;
+    width: 100%;
+    //color: #334141;
 }
 
 @media (max-width: 1199px) {
@@ -76,6 +88,86 @@ a:focus {
 
 /*======================== btn-buscar ==========================*/
 
+.form-group .form-control {
+    margin-bottom: inherit;
+}
+
+#search .input-group {
+    border: 2px solid $color-primary-0;
+    border-radius: 50px;
+    //display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+}
+
+select.custom-select {
+    padding-right: 28px;
+    padding-left: 18px;
+    text-indent: 0.01px;
+    cursor: pointer;
+    color: $color-primary-0;
+    height: inherit;
+    font-family: $font-family-sans-serif;
+}
+
+.custom-select:focus {
+    border-color: #fafafa;
+    outline: none;
+}
+
+#search input {
+    height: 40px;
+    display: inline-block;
+    width: 60%;
+    border: none;
+    background: #fafafa;
+    border-left: 1px solid $color-primary-0;
+    box-shadow: none;
+    padding-left: 12px;
+    color: $color-primary-0;
+    font-family: $font-family-sans-serif;
+}
+
+#search button {
+    line-height: 28px;
+    padding: 6px 20px 6px 18px;
+    float: right;
+    //display: inline-block;
+    background: #fafafa;
+    border: none;
+    color: $color-primary-0;
+    border-left: 1px #eaeaea solid;
+    margin: 0px 0px;
+}
+
+#search button:hover {
+    background: $color-primary-0;
+    border: none;
+    color: #fff;
+}
+
+.container-fluid .well.result {
+    background-color: #ff5722;
+}
+
+.content {
+    background-color: #464a4c;
+}
+
+div.clock,
+div.time {
+    font-size: 1em;
+    font-weight: 200;
+}
+
+div.clock,
+div.date {
+    color: #fafafa;
+    font-size: 1em;
+    margin: 10px 0;
+}
+
 .btn {
     font-family: 'Overlock', cursive;
 }
@@ -91,5 +183,5 @@ a:focus {
 .totem {
     color: #fff !important;
     background-color: #bf5329;
-    border-color: #3097D1;
+    border-color: #3096D1;
 }

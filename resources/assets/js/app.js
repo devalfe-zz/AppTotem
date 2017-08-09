@@ -4,9 +4,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+//require('./bootstrap');
 
-window.Vue = require('vue');
+//window.Vue = require('vue');
+window.$ = window.jQuery = require('jquery');
 
 function include(scriptUrl) {
     document.write('<script src="' + scriptUrl + '"></script>');
@@ -23,14 +24,14 @@ function isIE() {
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+// Vue.component('example', require('./components/Example.vue'));
 
-const app = new Vue({
-    el: '#app'
-});
+// const app = new Vue({
+//     el: '#app'
+// });
 /* Superfish menus
  ========================================================*/
-;
+
 (function($) {
     include('js/superfish.js');
 

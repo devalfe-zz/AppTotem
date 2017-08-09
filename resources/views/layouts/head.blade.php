@@ -17,13 +17,15 @@
     <meta name="geo.position" content="@yield('position','default')" />
     <meta name="ICBM" content="@yield('ICBM','default')" />
 
-    <link rel="stylesheet" href="{{mix('css/bootstrap-material-design.css')}}" />
-    <link rel="stylesheet" href="{{mix('css/ripples.css')}}" />
     <link rel="stylesheet" href="{{mix('css/animate.css')}}" />
     <link rel="stylesheet" href="{{mix('css/sweetalert.css')}}" />
     <link rel="stylesheet" href="{{mix('css/owl.carousel.css')}}" />
     <link rel="stylesheet" href="{{mix('css/jquery.fullpage.css')}}" />
     <link rel="stylesheet" href="{{mix('css/superfish.css')}}" />
+    
+    <link rel="stylesheet" href="{{mix('css/bootstrap.css')}}" />
+    <link rel="stylesheet" href="{{mix('css/ripples.css')}}" />
+    <link rel="stylesheet" href="{{mix('css/bootstrap-material-design.css')}}" />
     
     <link rel="stylesheet" href="{{mix('css/app.css')}}" />
 
