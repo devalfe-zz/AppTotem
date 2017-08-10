@@ -35,13 +35,13 @@ ol:focus {
 
 a {
     text-decoration: none;
-    color: $color-secondary-2-2 !important;
+    color: $color-secondary-2-2;
 }
 
 a:hover,
 a:focus {
     text-decoration: none;
-    color: $color-primary-3 !important;
+    color: $color-primary-3;
 }
 
 
@@ -170,6 +170,32 @@ div.date {
 
 .btn {
     font-family: 'Overlock', cursive;
+}
+
+
+/*======================== navbar ==========================*/
+
+nav {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    background: #ff5722;
+}
+
+.menu>ul>li>a {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu>ul>li>a:hover {
+    color: #464a4c;
+}
+
+.menu>ul>li>a>i {
+    //color: #ffffff;
+    font-size: 3rem;
 }
 
 .fa-amazon {

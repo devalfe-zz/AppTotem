@@ -50,8 +50,8 @@
     </div>
     <div class="col-3 d-flex justify-content-center align-items-center flex-column">
         <!-- www.tutiempo.net - Ancho:263px - Alto:107px -->
-<div id="TT_FVtAbBdhtcaa8INUjAqkkkEEkWaUaUB">El tiempo - Tutiempo.net</div>
-<script type="text/javascript" src="https://www.tutiempo.net/s-widget/l_FVtAbBdhtcaa8INUjAqkkkEEkWaUaUB"></script>
+        <div id="TT_FVtAbBdhtcaa8INUjAqkkkEEkWaUaUB">El tiempo - Tutiempo.net</div>
+        <script type="text/javascript" src="https://www.tutiempo.net/s-widget/l_FVtAbBdhtcaa8INUjAqkkkEEkWaUaUB"></script>
       
     </div>
 </div>

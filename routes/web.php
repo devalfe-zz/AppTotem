@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('template');
-});
+// Route::get('/', function () {
+//     return view('template');
+// });
+
+Route::get('/', 'InicioController@index');

@@ -3077,13 +3077,13 @@ ol:focus {
 
 a {
   text-decoration: none;
-  color: #F94B42 !important;
+  color: #F94B42;
 }
 
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #BC5B04 !important;
+  color: #BC5B04;
 }
 
 /*========================   header-top   ==========================*/
@@ -3206,6 +3206,37 @@ div.date {
 
 .btn {
   font-family: 'Overlock', cursive;
+}
+
+/*======================== navbar ==========================*/
+
+nav {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  background: #ff5722;
+}
+
+.menu > ul > li > a {
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu > ul > li > a:hover {
+  color: #464a4c;
+}
+
+.menu > ul > li > a > i {
+  font-size: 3rem;
 }
 
 .fa-amazon {
