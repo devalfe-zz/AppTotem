@@ -29,5 +29,9 @@
     
     <link rel="stylesheet" href="{{mix('css/app.css')}}" />
 
-    
+      <style>
+      .myContent{
+        height: 300px;
+      }
+    </style>
 </head>

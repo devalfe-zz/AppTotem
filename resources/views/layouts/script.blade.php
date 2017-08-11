@@ -1,8 +1,7 @@
 
 <script src="{{mix('js/sweetalert-dev.js')}}"></script>
 <script src="{{mix('js/owl.carousel.js')}}"></script>
-<script src="{{mix('js/jquery.fullpage.extensions.min.js')}}"></script>
-<script src="{{mix('js/jquery.fullpage.js')}}"></script>
+
 <script src="{{mix('js/wow.js')}}"></script>
 <script src="{{mix('js/superfish.js')}}"></script>
 <script src="{{mix('js/smooth-scroll.js')}}"></script>
@@ -12,6 +11,8 @@
 <script src="{{mix('js/app.js')}}"></script>
 <script src="{{mix('js/material.js')}}"></script>
 <script src="{{mix('js/bootstrap.js')}}"></script>
+<script src="{{mix('js/jquery.fullpage.extensions.min.js')}}"></script>
+<script src="{{mix('js/jquery.fullpage.js')}}"></script>
 <script>
   $(function () {
     $.material.init();
@@ -19,3 +20,13 @@
     $.material.input();
   });
 </script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                verticalCentered: true,
+                anchors: ['anchor1', 'anchor2', 'anchor3'],
+                menu: '#menu',
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE']
+            });
+        });
+    </script>

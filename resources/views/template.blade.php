@@ -3,11 +3,10 @@
 @include('layouts.head')
 <body>
 @include('layouts.header')
-@include('layouts.navbar')
-<main class="container-fluid">
-    <section class="p-4">
+<div id="fullpage">
+  
         @yield('content')
-    </section>
-</main>
+    
+</div>
 @include('layouts.script')
 </html>
