@@ -23,10 +23,11 @@
 <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                verticalCentered: true,
-                anchors: ['anchor1', 'anchor2', 'anchor3'],
+                 verticalCentered: true,
+                anchors: ['section', 'anchor2', 'anchor3'],
                 menu: '#menu',
-                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE']
+                sectionsColor: ['#ff5722', '#4BBFC3', '#7BAABE']
+
             });
         });
     </script>

@@ -3,10 +3,15 @@
 @include('layouts.head')
 <body>
 @include('layouts.header')
-<div id="fullpage">
-  
-        @yield('content')
-    
+<div class="container-fluid">
+    <div class="row">
+        <main class="page" id=fullpage>
+            <section class="section fp-auto-height" id="section">
+                {{--  @yield('content')  --}}
+            </section>
+        </mina>
+    </div>
 </div>
+
 @include('layouts.script')
 </html>

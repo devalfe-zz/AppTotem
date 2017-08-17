@@ -3184,24 +3184,11 @@ select.custom-select {
 }
 
 .container-fluid .well.result {
-  background-color: #ff5722;
+  background: #ff5722;
 }
 
 .content {
   background-color: #464a4c;
-}
-
-div.clock,
-div.time {
-  font-size: 1em;
-  font-weight: 200;
-}
-
-div.clock,
-div.date {
-  color: #fafafa;
-  font-size: 1em;
-  margin: 10px 0;
 }
 
 .btn {
@@ -3237,6 +3224,34 @@ nav {
 
 .menu > ul > li > a > i {
   font-size: 3rem;
+}
+
+/*======================== menu inicio ==========================*/
+
+.btn-menu {
+  height: 635px;
+}
+
+@media (max-width: 1199px) {
+  .btn-menu {
+    height: 1545px;
+  }
+}
+
+.container-fluid .well.case-study {
+  background-color: #ff5722;
+  position: relative;
+  display: block;
+  width: 400px;
+  /* height: 250px; */
+  margin: 2rem 1rem;
+  background-size: cover;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 #header,
