@@ -9,8 +9,14 @@
             </div>
             <!-- End Header Logo --> 
         </div>
-        <div class="col-6">
-             <!-- Search -->
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <div class="owl-carousel w-50 ">
+                <img src="{{asset('images/head.jpg')}}" class="img-fluid" alt="image">
+                <img src="{{asset('images/head1.jpg')}}" class="img-fluid" alt="image">
+                <img src="{{asset('images/head2.jpg')}}" class="img-fluid" alt="image">
+      
+            </div>
+             {{--  <!-- Search -->
             <div class="top-search">
                 <div id="search">
                     <form>
@@ -42,7 +48,7 @@
                     Look, I'm in a well!
                 </div>
             <!-- End Search --> 
-            </div>
+            </div>  --}}
         </div>
         <div class="col-3 d-flex justify-content-center align-items-center flex-column">
             <!-- www.tutiempo.net - Ancho:263px - Alto:107px -->

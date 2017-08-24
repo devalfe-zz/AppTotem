@@ -1,6 +1,6 @@
 
 <script src="{{mix('js/sweetalert-dev.js')}}"></script>
-<script src="{{mix('js/owl.carousel.js')}}"></script>
+
 
 <script src="{{mix('js/wow.js')}}"></script>
 <script src="{{mix('js/superfish.js')}}"></script>
@@ -23,7 +23,7 @@
 <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                 verticalCentered: true,
+                verticalCentered: true,
                 anchors: ['section', 'anchor2', 'anchor3'],
                 menu: '#menu',
                 sectionsColor: ['#ff5722', '#4BBFC3', '#7BAABE']
@@ -31,3 +31,16 @@
             });
         });
     </script>
+<script src="{{mix('js/owl.carousel.js')}}"></script>
+<script>
+jQuery(document).ready(function($) {
+   $('.owl-carousel').owlCarousel({
+        items:1,
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause:true
+    }) 
+});
+</script>

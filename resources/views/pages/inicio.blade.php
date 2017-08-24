@@ -2,14 +2,12 @@
 @section ('title', 'inicio')
 @section('class','inicio')
 @section ('content')
+
 <div class="slide" data-anchor="slide1" id="slide1">
-    <div class="col-3">
-        <h2 class="case-study__title">Developing Hexxis</h2>
-    </div>
-    <div class="col-6 d-flex flex-row flex-wrap justify-content-center align-content-center btn-menu">
+    <div class="col-12 d-flex flex-row flex-wrap justify-content-center align-content-center btn-menu">
         <div class="well case-study study1">
             <figure>
-                <img class="case-study__img" src="http://static.squarespace.com/static/51b79838e4b0b8b55c75cf91/t/51c4b688e4b03003ea9f1a63/1371846281755/Hexxis+Logo+White.png" alt="" />
+                <img class="case-study__img" src="{{asset('images/head.jpg')}}" alt="" />
             </figure>
             <div class="case-study__overlay">
                 <h2 class="case-study__title">Developing Hexxis</h2>
@@ -35,16 +33,7 @@
             </div>
         </div>
 
-        <div class="well case-study study3">
-            <figure>
-                <img class="case-study__img" src="http://static.squarespace.com/static/51b79838e4b0b8b55c75cf91/t/51c4b688e4b03003ea9f1a63/1371846281755/Hexxis+Logo+White.png" alt="" />
-            </figure>
-            <div class="case-study__overlay">
-                <h2 class="case-study__title">Developing Hexxis</h2>
-                <a class="case-study__link" href="#">View Case Study</a>
-            </div>
-        </div>
-           <div class="well case-study study4">
+        <div class="well case-study study4">
             <figure>
                 <img class="case-study__img" src="http://static.squarespace.com/static/51b79838e4b0b8b55c75cf91/t/51c4b688e4b03003ea9f1a63/1371846281755/Hexxis+Logo+White.png" alt="" />
             </figure>
@@ -63,12 +52,10 @@
             </div>
         </div>
     </div>
-    <div class="col-3">
-            <h2 class="case-study__title">Developing Hexxis</h2>
-    </div>
-</div>
+    
+</div>  
 
-<div class="slide" id="slide2">
+{{--  <div class="slide" id="slide2">
     <h2><a href='https://3.bp.blogspot.com/-NfaxRzCwymI/UJ1Dz-_QQSI/AAAAAAAADgQ/73uWKRloGOw/s1600/slider-oblicuo.jpg'>The post</a></h2>
 <div id="slider-k">
     <div class="frame-k">
@@ -84,5 +71,5 @@
         <img src="http://lorempixel.com/500/300/transport" alt="" />
     </div>
 </div>
-</div>
+</div>  --}}
 @endsection

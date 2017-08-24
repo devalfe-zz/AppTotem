@@ -5,9 +5,9 @@
 @include('layouts.header')
 <div class="container-fluid">
     <div class="row">
-        <main class="page" id=fullpage>
+        <main class="vapage" id=fullpage>
             <section class="section fp-auto-height" id="section">
-                {{--  @yield('content')  --}}
+                @yield('content')
             </section>
         </mina>
     </div>
