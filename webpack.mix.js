@@ -7,14 +7,14 @@ let config = {
     watchFiles: [
         'app/Modules/**/Resources/views/**/*.{php,html}',
         'app/Modules/**/Resources/views/*.{php,html}',
-        //'app/**/*.*',
+        'app/**/*.*',
         //'public/**/*.*'
-        //'resources/assets/**/*.*',
-        //'resources/views/**/*.*',
-        //'app/Modules/**/Resources/views/**/*.*',
-        'public/css/**/*.*', ['public/js/**/*.*'],
-        ['resources/views/**/*.{php,html}'],
-        ['resources/views/**/*.*'],
+        'resources/assets/**/*.*',
+        'resources/views/**/*.*',
+        'app/Modules/**/Resources/views/**/*.*',
+        'public/css/**/*.*', 'public/js/**/*.*',
+        'resources/views/**/*.{php,html}',
+        'resources/views/**/*.*',
         'resources/views/*.*',
         'resources/views/*.blade.php',
         'resources/views/layouts/*.*',
@@ -42,7 +42,7 @@ mix.browserSync({
 // mix.browserSync({
 //     'js': [
 //         'public/js/app.js',
-//     ],
+//     ],cd
 //     'css': [
 //         'public/css/app.css',
 //     ],

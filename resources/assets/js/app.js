@@ -29,6 +29,46 @@ function isIE() {
 // const app = new Vue({
 //     el: '#app'
 // });
+
+function displaySection(nav) {
+    var sections = new Array(5);
+    sections[0] = "menu-1";
+    sections[1] = "menu-2";
+    sections[2] = "menu-3";
+    sections[3] = "menu-4";
+    sections[4] = "menu-5";
+    var search;
+    var show;
+    var nav;
+    for (var i = 0; i < 5; i++) {
+        search = document.getElementById(sections[i]);
+        show = search.style.display;
+        if (show == "block") {
+            search.style.display = "none";
+            if (nav == "next") {
+                i++;
+                if (i > 4) i = 0;
+            }
+            if (nav == "prev") {
+                i--;
+                if (i < 0) i = 4;
+            }
+            search = document.getElementById(sections[i]);
+            search.style.display = "block";
+            break;
+        }
+    }
+    if (sections[i] == "menu-1") {
+        bkgr_body = "#233d58";
+        bkgr_menu = "#233d58";
+    } else {
+        bkgr_body = "#f1f1f1";
+        bkgr_menu = "#29abe2";
+    }
+    search.style.background = bkgr_body;
+    nav = document.getElementById("navbar");
+    nav.style.background = bkgr_menu;
+}
 /* Superfish menus
  ========================================================*/
 

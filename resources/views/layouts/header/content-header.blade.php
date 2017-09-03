@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-3 d-flex justify-content-center flex-column">
             <!-- Header Logo -->
-            <div class="logo my-4">
+            <div class="logo my-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                 <a title="logo" href="{{ url('/') }}">
                     <img alt="logo" src="{{asset('images/logo.svg')}}">
                 </a>

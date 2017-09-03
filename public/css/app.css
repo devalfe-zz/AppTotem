@@ -3254,6 +3254,136 @@ nav {
   transition: all .4s ease;
 }
 
+#prev_section,
+#next_section {
+  cursor: pointer;
+  margin: 5px;
+  position: absolute;
+  top: 800px;
+  z-index: 999;
+}
+
+#prev_section {
+  right: 75px;
+}
+
+#next_section {
+  right: 5px;
+}
+
+#prev_section .fa,
+#next_section .fa {
+  font-size: 3rem;
+}
+
+.btn.btn-fab.btn-primary {
+  background-color: #ff5722;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.btn.btn-fab.btn-primary:hover,
+.btn.btn-fab.btn-primary:focus {
+  background-color: rgba(255, 255, 255, 0.84);
+  color: #ff5722;
+}
+
+#slider {
+  width: 100%;
+  position: relative;
+  top: 66px;
+  margin-top: -66px;
+}
+
+#slider section.slide {
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#slider #menu-1 {
+  position: relative;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#slider #menu-2 {
+  height: 400px;
+  background: red;
+}
+
+#slider #menu-3 {
+  height: 300px;
+  background: #3097D1;
+}
+
+#slider #menu-4 {
+  height: 200px;
+  background: aqua;
+}
+
+#slider #menu-5 {
+  height: 100px;
+  background: blueviolet;
+}
+
+footer {
+  width: 100%;
+  background: #0275d8;
+  color: white;
+  text-align: center;
+  z-index: 99;
+  height: 100px;
+  position: fixed;
+  bottom: -80px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+footer:hover {
+  bottom: 0px;
+}
+
+footer:after {
+  content: "\F062";
+  font-family: FontAwesome;
+  font-size: 2rem;
+  position: absolute;
+  top: 0px;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: #0275d8;
+  border-radius: 50%;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+footer:hover:after {
+  content: "\F063";
+  font-family: FontAwesome;
+  background: white;
+  color: #F1780D;
+}
+
+footer .footer {
+  margin-top: 35px;
+  height: 40px;
+}
+
+footer .footer a {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  font-size: 2rem;
+  color: whitesmoke;
+}
+
+footer p {
+  font-size: .8rem;
+  font-weight: normal;
+}
+
 .case-study-gallery {
   margin-top: 50px;
   width: 90%;

@@ -1,4 +1,4 @@
-<nav>
+<nav id="navbar">
     <div class="container-fluid">
         <div class="row">
             @include('layouts.navbar.menu-content')
