@@ -5,9 +5,9 @@
 @include('layouts.header')
 <div class="container-fluid">
 <div class="row">
-<div id="slider">
+
 @yield('content')
-</div>
+
 </div>
 </div>
 @include('layouts.footer')

@@ -14,5 +14,10 @@
 // Route::get('/', function () {
 //     return view('template');
 // });
+Route::get('/', 'IndexController@index');
+Route::get('/inicio', 'InicioController@index');
+Route::get('/dondeir','Pages1controller@index');
+Route::get('/quehacer','Pages2controller@index');
+Route::get('/plan_viaje','Pages3controller@index');
+Route::get('/servicios','Pages4controller@index');
 
-Route::get('/', 'InicioController@index');
