@@ -15,7 +15,11 @@ class Pages1Controller extends Controller
     public function index()
     {
         //
-        return view('pages.pages1');
+        //$lists  = array('Vacation Planning', 'Plaza De Armas', 'Casa Chocano'); 
+       
+        //return view('pages.pages1')->with('lists', $lists ); 
+        return view('pages.pages1', compact('lists'));
+        //return view('pages.pages1');
 
     }
 

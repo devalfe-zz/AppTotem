@@ -1,10 +1,9 @@
 <?php
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePages3sTable extends Migration
+class CreateCategoriasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +12,12 @@ class CreatePages3sTable extends Migration
      */
     public function up()
     {
-        Schema::create('pages3s', function (Blueprint $table) {
+        Schema::create('categorias', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
+            $table->string('name',60);
+            $table->boolean('activo');
+
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreatePages3sTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pages3s');
+        Schema::dropIfExists('categorias');
     }
 }

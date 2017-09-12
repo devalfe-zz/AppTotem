@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Apptotem\categoria;
+use Apptotem\atractivo;
+use Apptotem\galeria;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        Galeria::truncate();
+        Atractivo::truncate();
+        Categoria::truncate();
+        
+         $this->call(CategoriasTableSeeder::class);
+         $this->call(AtractivosTableSeeder::class);
+         $this->call(GaleriasTableSeeder::class);
     }
 }
