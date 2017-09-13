@@ -25,7 +25,7 @@ class CreateAtractivosTable extends Migration
             $table->double('latitud');
             $table->string('horarios')->nullable();
             $table->boolean('activo');
-            $table->integer('categoria_id')->unsigned()->index();
+            $table->integer('categoria_id')->unsigned();
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
 
             $table->timestamps();

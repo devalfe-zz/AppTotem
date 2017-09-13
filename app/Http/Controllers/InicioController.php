@@ -15,7 +15,7 @@ class InicioController extends Controller
     public function index()
     {
         //
-        return view('pages.inicio');
+       // return view('pages.inicio');
     }
 
     /**

@@ -1,11 +1,12 @@
 <?php
 
 namespace Apptotem\Http\Controllers;
-
-use Apptotem\pages2;
 use Illuminate\Http\Request;
+use Apptotem\atractivo;
+use Apptotem\categoria;
+use Apptotem\galeria;
 
-class Pages2Controller extends Controller
+class AtrativoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,12 @@ class Pages2Controller extends Controller
     public function index()
     {
         //
-        return view('pages.pages2');
-
+        $atractivos = atractivo::get();//with('galeria');
+        $atractivos->each(function($atractivos){
+            $atractivos->categorias;
+                    
+		});
+        return view('pages.pages1')->with('atractivos', $atractivos);//compact('atractivos'));
     }
 
     /**
@@ -43,10 +48,10 @@ class Pages2Controller extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \Apptotem\pages2  $pages2
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(pages2 $pages2)
+    public function show($id)
     {
         //
     }
@@ -54,10 +59,10 @@ class Pages2Controller extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \Apptotem\pages2  $pages2
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(pages2 $pages2)
+    public function edit($id)
     {
         //
     }
@@ -66,10 +71,10 @@ class Pages2Controller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Apptotem\pages2  $pages2
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, pages2 $pages2)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -77,10 +82,10 @@ class Pages2Controller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Apptotem\pages2  $pages2
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(pages2 $pages2)
+    public function destroy($id)
     {
         //
     }

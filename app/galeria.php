@@ -8,9 +8,9 @@ class galeria extends Model
 {
     //
     protected $table = 'galerias';
-    protected $fillable = ['titulo','foto_url','atractivo_id','activo'];
+    protected $fillable = ['titulo','foto_url','activo','atractivo_id'];
 
-     public function atractivos(){
+     public function atractiv(){
         return $this->belongsTo('Apptotem\atractivo');
     }
 }

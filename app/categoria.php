@@ -13,4 +13,8 @@ class categoria extends Model
     public function atractivos(){
         return $this->hasMany('Apptotem\atractivo');
     }
+    public function scopeSearchCategory($query, $name)
+	{
+		return $query->where('name', '=', $name);
+	}
 }

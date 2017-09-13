@@ -19,7 +19,7 @@ class CreateGaleriasTable extends Migration
             $table->string('titulo',60);
             $table->string('foto_url');
             $table->boolean('activo');
-            $table->integer('atractivo_id')->unsigned()->index();
+            $table->integer('atractivo_id')->unsigned();
             $table->foreign('atractivo_id')->references('id')->on('atractivos')->onDelete('cascade');
             $table->timestamps();
         });

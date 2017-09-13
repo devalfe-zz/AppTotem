@@ -2,11 +2,15 @@
 @section ('title', '¿Dónde ir?')
 @section('class','dondeir')
 @section ('content')
-@foreach($lists as $list)
+@foreach($atractivos as $atractivo)
 <div class="item card">
 <img class ="box" src="{{asset('images/head2.jpg')}}">
-{{--  <p>{!! $list->name !!} </p>  --}}
-<p>{{ $list->name }}</p>
+{{--  <img class ="box" src="{!! $atractivo->galeria->foto_url !!}">  --}}
+
+{{--  <p>{!! $atractivo->titulo !!} </p>  --}}
+<p>{{ $atractivo->categoria_id }} </p>
+
+{{--  <p>{{ $atractivos }}</p>  --}}
 
 </div>
 @endforeach
