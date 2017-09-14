@@ -3,31 +3,19 @@
 namespace Apptotem;
 
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentSluggable\SluggableInterface;
-use Cviebrock\EloquentSluggable\SluggableTrait;
 
-
-class atractivo extends Model// implements SluggableInterface
+class Atractivo extends Model
 {
     //
-    // use SluggableTrait;
-
-	// protected $sluggable = [
-	// 	'build_from' => 'titulo',
-	// 	'save_to' => 'slug'
-	// ];
     protected $table = 'atractivos';
-    protected $fillable = ['titulo', 'descripcion','detalle','direccion','ubicacion','longitud','latitud','horarios','activo','categoria_id'];
+    //protected $fillable = ['titulo','descripcion','detalle','direccion','ubicacion','longitud','latitud','horarios','foto_url','activo','categoria_id'];
 
     public function categorias()
     {
-        return $this->belongsTo('Apptotem\categoria');
+        return $this->belongsTo('Apptotem\Categoria','categoria_id','id');
     }
-    public function galerias(){ 
-        return $this->hasMany('Apptotem\galeria');
+    public function fotos()
+    {
+        return $this->hasMany('Apptotem\Galeria');
     }
-    public function scopeSearch($query, $title)
-	{
-		return $query->where('titulo', 'LIKE', "%$title%");
-	}
 }

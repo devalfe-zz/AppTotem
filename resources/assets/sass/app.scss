@@ -485,7 +485,8 @@ h2 {
 
 .label-box {
     position: absolute;
-    bottom: 50px;
+    top: 315px;
+    bottom: -65px;
     color: #eceeef;
     z-index: 2;
     font-size: 3rem;
@@ -495,12 +496,13 @@ h2 {
     right: 0px;
     display: inline-block;
     background-color: rgba(255, 87, 34, 0.7);
-    transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
-    padding: 10px 36px;
+    transform: skew(-10deg) rotate(-10deg) translate(0, -25%);
+    //padding: 10px 36px;
 }
 
 .card-img-overlay {
     overflow: hidden;
+    border-radius: 50px;
 }
 
 /////////////////////////////////////////////

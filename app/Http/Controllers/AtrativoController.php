@@ -2,9 +2,9 @@
 
 namespace Apptotem\Http\Controllers;
 use Illuminate\Http\Request;
-use Apptotem\atractivo;
-use Apptotem\categoria;
-use Apptotem\galeria;
+use Apptotem\Atractivo as Atractivo;
+use Apptotem\Categoria as Categoria;
+use Apptotem\Galeria as Galeria;
 
 class AtrativoController extends Controller
 {
@@ -15,13 +15,13 @@ class AtrativoController extends Controller
      */
     public function index()
     {
-        //
-        $atractivos = atractivo::get();//with('galeria');
-        $atractivos->each(function($atractivos){
-            $atractivos->categorias;
-                    
-		});
-        return view('pages.pages1')->with('atractivos', $atractivos);//compact('atractivos'));
+        // 
+        $categorias = Categoria::find(1);
+        $atractivos = $categorias->atractivos;
+        //return view('pages.pages1')->with('categorias', $categorias);
+        //return view('pages.pages1')->with('atractivos', $atractivos);
+        return view('pages.pages1', compact('atractivos'));
+        
     }
 
     /**

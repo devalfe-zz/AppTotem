@@ -16,7 +16,7 @@ class CreateGaleriasTable extends Migration
         Schema::create('galerias', function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id');
-            $table->string('titulo',60);
+            $table->string('titulo',80);
             $table->string('foto_url');
             $table->boolean('activo');
             $table->integer('atractivo_id')->unsigned();

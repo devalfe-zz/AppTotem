@@ -3,18 +3,26 @@
 namespace Apptotem;
 
 use Illuminate\Database\Eloquent\Model;
-
-class categoria extends Model
+use Apptotem\Categoria;
+class Categoria extends Model
 {
-    //
+    //$categorias = Apptotem\CAtegoria::all();
     protected $table = 'categorias';
-    protected $fillable = ['name','activo'];
+    //protected $fillable = ['titulo','activo'];
 
-    public function atractivos(){
-        return $this->hasMany('Apptotem\atractivo');
+    
+    public function atractivos()
+    {
+        return $this->hasMany('Apptotem\Atractivo');
     }
-    public function scopeSearchCategory($query, $name)
+    public function scopeSearchCategory($query, $titulo)
 	{
-		return $query->where('name', '=', $name);
+		return $query->where('titulo', '=', $titulo);
 	}
+
+    // public function atractivos()
+	// {
+	// 	return $this->hasMany(Atractivo::class);
+	// }
+
 }

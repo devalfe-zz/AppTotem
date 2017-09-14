@@ -12,15 +12,15 @@ class CategoriasTableSeeder extends Seeder
     public function run()
     {
         //
-        categoria::create(['name' => 'Lugares','activo' => 1]);
-        categoria::create(['name' => 'Rutas', 'activo' => 1]);
-        categoria::create(['name' => 'Alojamientos','activo' => 1]);
-        categoria::create(['name' => 'Restaurantes', 'activo' => 1]);
-        categoria::create(['name' => 'Bodegas','activo' => 1]);
-        categoria::create(['name' => 'Festivales', 'activo' => 1]);
-        categoria::create(['name' => 'Eventos','activo' => 1]);
-        categoria::create(['name' => 'Articulos', 'activo' => 1]);
-        categoria::create(['name' => 'Noticias', 'activo' => 0]);      
+        categoria::create(['titulo' => 'Lugares','activo' => 1]);
+        categoria::create(['titulo' => 'Rutas', 'activo' => 1]);
+        categoria::create(['titulo' => 'Alojamientos','activo' => 1]);
+        categoria::create(['titulo' => 'Restaurantes', 'activo' => 1]);
+        categoria::create(['titulo' => 'Bodegas','activo' => 1]);
+        categoria::create(['titulo' => 'Festivales', 'activo' => 1]);
+        categoria::create(['titulo' => 'Eventos','activo' => 1]);
+        categoria::create(['titulo' => 'Articulos', 'activo' => 1]);
+        categoria::create(['titulo' => 'Noticias', 'activo' => 0]);      
 
     }
 }

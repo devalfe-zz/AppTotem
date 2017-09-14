@@ -4,14 +4,8 @@
 @section ('content')
 @foreach($atractivos as $atractivo)
 <div class="item card">
-<img class ="box" src="{{asset('images/head2.jpg')}}">
-{{--  <img class ="box" src="{!! $atractivo->galeria->foto_url !!}">  --}}
-
-{{--  <p>{!! $atractivo->titulo !!} </p>  --}}
-<p>{{ $atractivo->categoria_id }} </p>
-
-{{--  <p>{{ $atractivos }}</p>  --}}
-
+<img class ="box" src="{{ $atractivo->foto_url }}">
+<p><a href="detalle/{{ $atractivo->titulo }}">{{ $atractivo->titulo }}</a></p>
 </div>
 @endforeach
 

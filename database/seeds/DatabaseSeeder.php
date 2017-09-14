@@ -15,9 +15,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
-        galeria::truncate();
-        atractivo::truncate();
         categoria::truncate();
+        atractivo::truncate();
+        galeria::truncate();
+        
+       
         
          $this->call(CategoriasTableSeeder::class);
          $this->call(AtractivosTableSeeder::class);
