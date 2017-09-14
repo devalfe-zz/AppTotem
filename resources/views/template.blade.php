@@ -4,7 +4,7 @@
 <body>
 @include('layouts.header')
 <div class="container-fluid">
-<div class="row">
+<div class="row align-items-center">
 
 @yield('content')
 
