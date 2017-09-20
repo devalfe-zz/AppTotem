@@ -18,4 +18,14 @@ class Atractivo extends Model
     {
         return $this->hasMany('Apptotem\Galeria');
     }
+
+    public function scopeSearchCategoria($query, $id)
+	{
+		return $query->where('categoria_id', '=', $id);
+    }
+    
+    public function scopeSearchUbicacion($query, $ubicacion)
+	{
+		return $query->where('ubicacion', '=', $ubicacion);
+	}
 }

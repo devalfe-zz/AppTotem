@@ -3,8 +3,7 @@
 namespace Apptotem\Http\Controllers;
 use Illuminate\Http\Request;
 use Apptotem\Atractivo as Atractivo;
-use Apptotem\Categoria as Categoria;
-use Apptotem\Galeria as Galeria;
+
 
 class AtrativoController extends Controller
 {
@@ -16,14 +15,24 @@ class AtrativoController extends Controller
     public function index()
     {
         // 
-        $categorias = Categoria::find(1);
-        $atractivos = $categorias->atractivos;
+        //$categorias = Categoria::find(1);
+        //$atractivos = $categorias->atractivos;
+        //$atractivos =  Atractivo::where('ubicacion','Mariscal Nieto')->get();
         //return view('pages.pages1')->with('categorias', $categorias);
         //return view('pages.pages1')->with('atractivos', $atractivos);
+        $atractivos = Atractivo::all();
         return view('pages.pages1', compact('atractivos'));
-        
     }
-
+    public function dentro()
+    {
+        $atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Mariscal Nieto')->get();
+        return view('pages.pages1', compact('atractivos'));
+    }
+    public function fuera()
+    {
+        $atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('fuera')->get();
+        return view('pages.pages2', compact('atractivos'));
+    }
     /**
      * Show the form for creating a new resource.
      *

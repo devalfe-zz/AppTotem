@@ -15,9 +15,11 @@
 //     return view('template');
 // });
 Route::get('/', 'PagesController@index');
-Route::get('/inicio', 'PagesController@inicio')->name('home');;
-Route::get('/dondeir','AtrativoController@index')->name('atractivos');
-Route::get('/quehacer','Pages2controller@index');
-Route::get('/plan_viaje','Pages3controller@index');
-Route::get('/servicios','Pages4controller@index');
+Route::get('/home', 'PagesController@inicio')->name('home');
+Route::get('/atractivo','AtrativoController@dentro')->name('dentro');
+Route::get('/atractivos','AtrativoController@fuera')->name('fuera');
+
+//Route::get('/quehacer','PagesController@index')->name('atractivos');
+//|Route::get('/plan_viaje','PagesController@index')->name('atractivos');
+//Route::get('/servicios','PagesController@index')->name('atractivos');
 

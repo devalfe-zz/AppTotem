@@ -3,11 +3,12 @@
 @include('layouts.head')
 <body>
 @include('layouts.header')
-<div class="container-fluid">
-<div class="row align-items-center">
-
+<div class="container">
+<h1 class="well text-center pt-2">
+@yield('lema')
+</h1> 
+<div class="row">
 @yield('content')
-
 </div>
 </div>
 @include('layouts.footer')

@@ -1,10 +1,21 @@
 @extends('template')
 @section ('title', '¿Qué hacer?')
 @section('class','quehacer')
+@section('lema')
+Atractivos fuera de la ciudad
+@endsection
 @section ('content')
-<section class="slide wow slideInRight" data-wow-delay=".3s" id="menu-3">
-<h1 class="well pt-2">¿Qué hacer?</h1>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quaerat qui ea modi deleniti consectetur sed similique, possimus tempore sint adipisci rem obcaecati impedit dignissimos perferendis architecto tempora laboriosam nobis.
-</section>
-
+<figure class="snip1396 green">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample13.jpg" alt="pr-sample13" />
+  <div class="image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample13.jpg" alt="pr-sample13" /></div>
+  <figcaption>
+    <h3>Pudol Doux</h3>
+    <p>All this modern technology just makes people try to do everything at once.</p>
+  </figcaption>
+  <div class="price">
+    <s>$24.00</s>$19.00
+  </div><a href="#" class="add-to-cart">
+     
+    Add to Cart<i class="ion-android-checkbox-outline"></i></a>
+</figure>
 @endsection
