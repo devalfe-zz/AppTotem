@@ -6,7 +6,7 @@
     @foreach($atractivos as $atractivo)
     <div class="item card">
         <img class ="box" src="{{ $atractivo->foto_url }}">
-        <p><a href="/detalle?id={{ $atractivo->id }}">{{ $atractivo->titulo }}</a></p>
+        <p><a href="detalle?id={{ $atractivo->id }}">{{ $atractivo->titulo }}</a></p>
     </div>
     @endforeach
 @else

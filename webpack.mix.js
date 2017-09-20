@@ -5,13 +5,14 @@ let config = {
     port: 3000,
     base_url: 'apptotem.dev',
     watchFiles: [
-        'app/Modules/**/Resources/views/**/*.{php,html}',
-        'app/Modules/**/Resources/views/*.{php,html}',
+        'app/**/*.php',
+        'resources/views/**/*.php',
+        'app/**/resources/views/**/*.{php,html}', 'app/**/resources/views/*.{php,html}',
         'app/**/*.*',
         //'public/**/*.*'
         'resources/assets/**/*.*',
         'resources/views/**/*.*',
-        'app/Modules/**/Resources/views/**/*.*',
+        'app/**/resources/views/**/*.*',
         'public/css/**/*.*', 'public/js/**/*.*',
         'resources/views/**/*.{php,html}',
         'resources/views/**/*.*',
@@ -22,8 +23,7 @@ let config = {
         'app/**/*.php',
         'routes/**/*.php',
         'resources/views/layouts/*.blade.php'
-        //'aap/Modules/**/Resources/views/**/*.*',
-        //'app/Modules/**/Resources/views/*.*'
+
     ]
 };
 
