@@ -15,11 +15,7 @@ class Categoria extends Model
     {
         return $this->hasMany('Apptotem\Atractivo');
     }
-    public function scopeSearchCategory($query, $titulo)
-	{
-		return $query->where('titulo', '=', $titulo);
-	}
-
+    
     // public function atractivos()
 	// {
 	// 	return $this->hasMany(Atractivo::class);

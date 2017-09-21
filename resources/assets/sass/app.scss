@@ -40,8 +40,22 @@ h1 {
     font-family: $font-family;
 }
 
+h2 {
+    margin: 2em;
+    letter-spacing: 0.2em;
+    color: #EEE;
+    font-family: $font-family;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family;
+}
+
 body {
-    font-family: $font-family-sans-serif;
+    font-family: $font-family;
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.5;
@@ -464,12 +478,6 @@ footer p {
     border-color: #3096D1;
 }
 
-h2 {
-    margin: 2em;
-    letter-spacing: 0.2em;
-    color: #EEE
-}
-
 /////////////////////////////7
 .menu-box {
     border-radius: 50px;
@@ -500,7 +508,7 @@ h2 {
     //padding: 10px 36px;
 }
 
-.card-img-overlay {
+.card-img-overlay.menu {
     overflow: hidden;
     border-radius: 50px;
     background: linear-gradient(-30deg, rgba(255, 255, 255, 0.85) 40%, rgba(255, 255, 255, 0.0) 50%);

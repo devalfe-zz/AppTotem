@@ -17,7 +17,6 @@ class CreateCategoriasTable extends Migration
             $table->increments('id');
             $table->string('titulo',80);
             $table->boolean('activo');
-
             $table->timestamps();
         });
     }

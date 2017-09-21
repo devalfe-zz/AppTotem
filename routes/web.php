@@ -15,9 +15,10 @@
 //     return view('template');
 // });
 Route::get('/', 'PagesController@index');
-Route::get('/home', 'PagesController@inicio')->name('home');
-Route::get('/atractivo','AtrativoController@dentro')->name('dentro');
-Route::get('/atractivos','AtrativoController@fuera')->name('fuera');
+Route::view('home', 'inicio')->name('home');
+Route::get('atractivo','AtrativoController@dentro')->name('dentro');
+Route::get('atractivos','AtrativoController@fuera')->name('fuera');
+Route::get('detalle/{id}','GaleriaController@index')->name('detalle');
 
 //Route::get('/quehacer','PagesController@index')->name('atractivos');
 //|Route::get('/plan_viaje','PagesController@index')->name('atractivos');

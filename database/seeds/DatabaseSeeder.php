@@ -17,10 +17,7 @@ class DatabaseSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         categoria::truncate();
         atractivo::truncate();
-        galeria::truncate();
-        
-       
-        
+        galeria::truncate();            
          $this->call(CategoriasTableSeeder::class);
          $this->call(AtractivosTableSeeder::class);
          $this->call(GaleriasTableSeeder::class);

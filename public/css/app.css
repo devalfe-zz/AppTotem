@@ -3081,8 +3081,22 @@ h1 {
   font-family: "Rancho", cursive;
 }
 
+h2 {
+  margin: 2em;
+  letter-spacing: 0.2em;
+  color: #EEE;
+  font-family: "Rancho", cursive;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rancho", cursive;
+}
+
 body {
-  font-family: "Overlock", cursive;
+  font-family: "Rancho", cursive;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
@@ -3501,12 +3515,6 @@ footer p {
   border-color: #3096D1;
 }
 
-h2 {
-  margin: 2em;
-  letter-spacing: 0.2em;
-  color: #EEE;
-}
-
 .menu-box {
   border-radius: 50px;
   width: 400px;
@@ -3532,7 +3540,7 @@ h2 {
   display: inline-block;
 }
 
-.card-img-overlay {
+.card-img-overlay.menu {
   overflow: hidden;
   border-radius: 50px;
   background: linear-gradient(-30deg, rgba(255, 255, 255, 0.85) 40%, rgba(255, 255, 255, 0) 50%);

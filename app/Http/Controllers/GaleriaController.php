@@ -1,43 +1,26 @@
 <?php
 
 namespace Apptotem\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Apptotem\Atractivo as Atractivo;
-use Apptotem\Galeria as Galeria;
-
-class AtrativoController extends Controller
+use Apptotem\Galeria;
+class GaleriaController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        // 
-        //$categorias = Categoria::find(1)->atractivos;
-        //$atractivos = $categorias->atractivos;
-        //$atractivos =  Atractivo::where('ubicacion','Mariscal Nieto')->get();
-        //return view('pages.pages1')->with('categorias', $categorias);
-        //return view('pages.pages1')->with('atractivos', $atractivos);
-        $atractivos = Atractivo::all();
-        return view('pages.pages1', compact('atractivos'));
+        //
+        $atractivos = Atractivo::find($id);
+        $atractivos = $atractivos->load('fotos');
+        //return view('pages.detalle', compact('atractivos'));
+    dd($atractivos);
     }
-    public function dentro()
-    {
-        $atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Mariscal Nieto')->get();
-        return view('pages.pages1', compact('atractivos'));
-    }
-    public function fuera()
-    {
-        $atractivos = Atractivo::where([
-            ['categoria_id', '=', '1'],
-            ['ubicacion', '=', 'Fuera'],
-        ])->get();
-        //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
-        return view('pages.pages2', compact('atractivos'));
-        
-    }
+
     /**
      * Show the form for creating a new resource.
      *

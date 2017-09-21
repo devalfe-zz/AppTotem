@@ -8,7 +8,7 @@ class Atractivo extends Model
 {
     //
     protected $table = 'atractivos';
-    //protected $fillable = ['titulo','descripcion','detalle','direccion','ubicacion','longitud','latitud','horarios','foto_url','activo','categoria_id'];
+    protected $fillable = ['id','titulo','descripcion','detalle','direccion','ubicacion','longitud','latitud','horarios','foto_url','activo','categoria_id'];
 
     public function categorias()
     {
@@ -16,7 +16,7 @@ class Atractivo extends Model
     }
     public function fotos()
     {
-        return $this->hasMany('Apptotem\Galeria');
+        return $this->hasMany('Apptotem\Galeria', 'atractivo_id','id');
     }
 
     public function scopeSearchCategoria($query, $id)
