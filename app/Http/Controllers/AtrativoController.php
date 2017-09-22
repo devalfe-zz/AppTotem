@@ -59,6 +59,18 @@ class AtrativoController extends Controller
         return view('pages.detalle', compact('atractivos'));
         //dd($atractivos);
     }
+    public function maps()
+    {
+        $config = array();
+        $config['center'] = '-17.197361, -70.9328138';
+        $config['zoom'] = 'auto';
+        Gmaps::initialize($config);
+        $marker = array();
+        $marker['position'] = '-17.194194, -70.9356523';
+        Gmaps::add_marker($marker);
+        $data['map'] = Gmaps::create_map();
+        return view('pages.detalle', $data);
+    }
 
     /**
      * Show the form for creating a new resource.
