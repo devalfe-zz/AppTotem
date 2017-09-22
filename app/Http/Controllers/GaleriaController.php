@@ -18,7 +18,7 @@ class GaleriaController extends Controller
         $atractivos = Atractivo::find($id);
         $atractivos = $atractivos->load('fotos');
         //return view('pages.detalle', compact('atractivos'));
-    dd($atractivos);
+        dd($atractivos);
     }
 
     /**

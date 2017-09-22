@@ -3084,7 +3084,7 @@ h1 {
 h2 {
   margin: 2em;
   letter-spacing: 0.2em;
-  color: #EEE;
+  color: #ff0f0;
   font-family: "Rancho", cursive;
 }
 
@@ -3232,7 +3232,7 @@ nav {
   position: relative;
   margin: auto;
   width: 100%;
-  background: #ec5220;
+  background: #0275d8;
 }
 
 .menu > ul > li > a {

@@ -15,10 +15,10 @@
 //     return view('template');
 // });
 Route::get('/', 'PagesController@index');
-Route::view('home', 'inicio')->name('home');
+Route::view('home','inicio')->name('home');
 Route::get('atractivo','AtrativoController@dentro')->name('dentro');
 Route::get('atractivos','AtrativoController@fuera')->name('fuera');
-Route::get('detalle/{id}','GaleriaController@index')->name('detalle');
+Route::get('detalle/{id}','GaleriaController@index')->name(' ');
 
 //Route::get('/quehacer','PagesController@index')->name('atractivos');
 //|Route::get('/plan_viaje','PagesController@index')->name('atractivos');
