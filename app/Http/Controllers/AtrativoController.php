@@ -55,10 +55,11 @@ class AtrativoController extends Controller
     public function detalle($id)
     {
         $atractivos = Atractivo::find($id);
-        $atractivos = $atractivos->load('fotos');
+        $atractivos = $atractivos->load('fotos')->load('categorias');
         return view('pages.detalle', compact('atractivos'));
         //dd($atractivos);
     }
+
     /**
      * Show the form for creating a new resource.
      *

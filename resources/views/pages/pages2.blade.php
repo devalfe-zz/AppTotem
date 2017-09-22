@@ -1,5 +1,5 @@
 @extends('template')
-@section ('title', '¿Qué hacer?')
+@section ('title', '¿')
 @section('class','quehacer')
 @section('lema')
 Atractivos fuera de la ciudad
