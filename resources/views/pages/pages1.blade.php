@@ -10,7 +10,7 @@ Atractivos dentro de la ciudad
     <div class="col-md-3 d-flex">
     <div class="item card">
         <img class ="box" src="{{ $atractivo->foto_url }}">
-        <p><a href="{{ route ('detalle' , $atractivo->id }}">{{ $atractivo->titulo }}</a></p>
+        <p><a href="{{ route ('detalle', $atractivo->id) }}">{{ $atractivo->titulo }}</a></p>
     </div>
     </div>
     @endforeach

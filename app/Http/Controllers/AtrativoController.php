@@ -23,11 +23,21 @@ class AtrativoController extends Controller
         $atractivos = Atractivo::all();
         return view('pages.pages1', compact('atractivos'));
     }
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function dentro()
     {
         $atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Mariscal Nieto')->get();
         return view('pages.pages1', compact('atractivos'));
     }
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function fuera()
     {
         $atractivos = Atractivo::where([
@@ -36,7 +46,18 @@ class AtrativoController extends Controller
         ])->get();
         //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
         return view('pages.pages2', compact('atractivos'));
-        
+    }
+    /**
+     * Display a listing of the resource.
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function detalle($id)
+    {
+        $atractivos = Atractivo::find($id);
+        $atractivos = $atractivos->load('fotos');
+        return view('pages.detalle', compact('atractivos'));
+        //dd($atractivos);
     }
     /**
      * Show the form for creating a new resource.
