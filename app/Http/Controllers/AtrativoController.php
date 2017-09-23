@@ -4,7 +4,7 @@ namespace Apptotem\Http\Controllers;
 use Illuminate\Http\Request;
 use Apptotem\Atractivo as Atractivo;
 use Apptotem\Galeria as Galeria;
-use Mapper;
+use Gmaps;
 
 class AtrativoController extends Controller
 {
@@ -63,13 +63,13 @@ class AtrativoController extends Controller
         $config['map_width'] = 400;
         $config['map_height'] = 400;
         $config['zoom'] = '12';
-        \Gmaps::initialize($config);
+        Gmaps::initialize($config);
          // Colocar el marcador 
         // Una vez se conozca la posición del usuario
         $marker = array();
         $marker['position'] = '37.4419, -122.1419';
-        \Gmaps::add_marker($marker);
-        $map = \Gmaps::create_map();
+        Gmaps::add_marker($marker);
+        $map = Gmaps::create_map();
         
         return view('pages.detalle', compact('atractivos','map'));
         //dd($atractivos);
