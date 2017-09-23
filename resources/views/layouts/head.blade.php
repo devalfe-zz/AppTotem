@@ -27,6 +27,5 @@
     <link rel="stylesheet" href="{{mix('css/bootstrap-material-design.css')}}" />
     
     <link rel="stylesheet" href="{{mix('css/app.css')}}" />
-    <script type="text/javascript">var centreGot = false;</script>{{ $map['js'] }}
-
+    {{--  <script type="text/javascript">var centreGot = false;</script>{!!$map['js']!!}  --}}
 </head>

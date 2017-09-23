@@ -19,6 +19,8 @@ Route::get('home','PagesController@inicio')->name('home');
 Route::get('atractivo','AtrativoController@dentro')->name('dentro');
 Route::get('atractivos','AtrativoController@fuera')->name('fuera');
 Route::get('detalle/{id}','AtrativoController@detalle')->name('detalle');
+//Route::get('detalle/{id}','AtrativoController@maps')->name('mapa');
+
 //Route::get('/quehacer','PagesController@index')->name('atractivos');
 //|Route::get('/plan_viaje','PagesController@index')->name('atractivos');
 //Route::get('/servicios','PagesController@index')->name('atractivos');

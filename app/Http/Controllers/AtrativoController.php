@@ -4,6 +4,7 @@ namespace Apptotem\Http\Controllers;
 use Illuminate\Http\Request;
 use Apptotem\Atractivo as Atractivo;
 use Apptotem\Galeria as Galeria;
+use Mapper;
 
 class AtrativoController extends Controller
 {
@@ -56,20 +57,42 @@ class AtrativoController extends Controller
     {
         $atractivos = Atractivo::find($id);
         $atractivos = $atractivos->load('fotos')->load('categorias');
+        $config = array();
+        $config['center'] = '37.4419, -122.1419';
+        $config['map_width'] = 400;
+        $config['map_height'] = 400;
+        $config['zoom'] = 'auto';
+        \Gmaps::initialize($config);
+         // Colocar el marcador 
+        // Una vez se conozca la posición del usuario
+        $marker = array();
+        $marker['position'] = '37.429, -122.1419';
+        \Gmaps::add_marker($marker);
+        $map = \Gmaps::create_map();
+        
         return view('pages.detalle', compact('atractivos'));
         //dd($atractivos);
     }
+     /**
+     * Display a listing of the resource.
+     * 
+     * @return \Illuminate\Http\Response
+     */
     public function maps()
     {
         $config = array();
-        $config['center'] = '-17.197361, -70.9328138';
+        $config['center'] = '37.4419, -122.1419';
+        $config['map_width'] = 400;
+        $config['map_height'] = 400;
         $config['zoom'] = 'auto';
-        Gmaps::initialize($config);
+        \Gmaps::initialize($config);
+         // Colocar el marcador 
+        // Una vez se conozca la posición del usuario
         $marker = array();
-        $marker['position'] = '-17.194194, -70.9356523';
-        Gmaps::add_marker($marker);
-        $data['map'] = Gmaps::create_map();
-        return view('pages.detalle', $data);
+        $marker['position'] = '37.429, -122.1419';
+        \Gmaps::add_marker($marker);
+        $map = \Gmaps::create_map();
+        return view('pages.detalle', compact('map'));
     }
 
     /**

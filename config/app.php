@@ -161,9 +161,9 @@ return [
         Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
-        Illuminate\View\ViewServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,  
         GeneaLabs\Phpgmaps\PhpgmapsServiceProvider::class,
-
+        Collective\Html\HtmlServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -177,6 +177,11 @@ return [
         // Apptotem\Providers\BroadcastServiceProvider::class,
         Apptotem\Providers\EventServiceProvider::class,
         Apptotem\Providers\RouteServiceProvider::class,
+        //GeneaLabs\Phpgmaps\PhpgmapsServiceProvider::class,
+       //'GoogleMaps\ServiceProvider\GoogleMapsServiceProvider',
+       //Appitventures\Phpgmaps\PhpgmapsServiceProvider::class,
+       Cornford\Googlmapper\MapperServiceProvider::class,
+      
 
     ],
 
@@ -227,6 +232,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Gmaps' => GeneaLabs\Phpgmaps\Facades\PhpgmapsFacade::class,
+        'GoogleMaps' => 'GoogleMaps\Facade\GoogleMapsFacade',
+        //'Gmaps' => 'Appitventures\Phpgmaps\Facades\Phpgmaps',
+        'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];

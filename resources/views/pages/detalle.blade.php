@@ -5,15 +5,14 @@
 {{ $atractivos->titulo }}
 @endsection
 @section('content')
-{{ $atractivos->fotos as $foto }}
-    {{--  @foreach($atractivos->fotos as $foto)
+{{--  {{ $atractivos->fotos as $foto }}  --}}
+     @foreach($atractivos->fotos as $foto)
     @endforeach
-    <div class="movie-card">  --}}
+    <div class="movie-card">
         <div class="container">
             {{--  <a href=""><img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" 
             class="cover" /></a>  --}}
-            <img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" 
-            class="cover" />
+            <img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" class="cover" />
             <div class="logo_detalle">  
                 {{--  <a href=""><img src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}" class="cover" /></a>   --}}
                 <img class="img-detalle img-fluid w-100 h-100" src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}" class="cover-bar" /> 
@@ -32,9 +31,11 @@
                     <p>{{ $atractivos->detalle }}</p>
                 </div> <!-- end column2 -->
             </div> <!-- end description -->
-            <div class="maps">
-                {{ $map['html'] }}
-            </div>
+            
         </div> <!-- end container -->
-    </div> <!-- end movie-card -->
+    </div> <!-- end movie-card --> 
+
+   <div style="width: 500px; height: 500px;">
+	{{--  {!!$map['html']!!}  --}}
+</div>
 @endsection
