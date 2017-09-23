@@ -57,20 +57,19 @@ class AtrativoController extends Controller
     {
         $atractivos = Atractivo::find($id);
         $atractivos = $atractivos->load('fotos')->load('categorias');
-
+        $lng = $atractivos->longitud;
+        $lat = $atractivos->latitud;
         $config = array();
-        $config['center'] = '37.4419, -122.1419';
+        $config['center'] = $lat.','. $lng;
         $config['map_width'] = 400;
         $config['map_height'] = 400;
-        $config['zoom'] = '12';
+        $config['zoom'] = '15';
         Gmaps::initialize($config);
-         // Colocar el marcador 
-        // Una vez se conozca la posición del usuario
         $marker = array();
-        $marker['position'] = '37.4419, -122.1419';
+        $marker['position'] = $lat.','. $lng;
         Gmaps::add_marker($marker);
         $map = Gmaps::create_map();
-        
+        //dd($map);
         return view('pages.detalle', compact('atractivos','map'));
         //dd($atractivos);
     }
