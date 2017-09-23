@@ -34,8 +34,5 @@
             
         </div> <!-- end container -->
     </div> <!-- end movie-card --> 
-
-   <div style="width: 500px; height: 500px;">
-	{{--  {!!$map['html']!!}  --}}
-</div>
+@include('pages.partials.map')
 @endsection

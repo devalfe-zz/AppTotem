@@ -57,20 +57,21 @@ class AtrativoController extends Controller
     {
         $atractivos = Atractivo::find($id);
         $atractivos = $atractivos->load('fotos')->load('categorias');
+
         $config = array();
         $config['center'] = '37.4419, -122.1419';
         $config['map_width'] = 400;
         $config['map_height'] = 400;
-        $config['zoom'] = 'auto';
+        $config['zoom'] = '12';
         \Gmaps::initialize($config);
          // Colocar el marcador 
         // Una vez se conozca la posición del usuario
         $marker = array();
-        $marker['position'] = '37.429, -122.1419';
+        $marker['position'] = '37.4419, -122.1419';
         \Gmaps::add_marker($marker);
         $map = \Gmaps::create_map();
         
-        return view('pages.detalle', compact('atractivos'));
+        return view('pages.detalle', compact('atractivos','map'));
         //dd($atractivos);
     }
      /**
@@ -92,7 +93,7 @@ class AtrativoController extends Controller
         $marker['position'] = '37.429, -122.1419';
         \Gmaps::add_marker($marker);
         $map = \Gmaps::create_map();
-        return view('pages.detalle', compact('map'));
+        return view('pages.partials.map', compact('map'));
     }
 
     /**
