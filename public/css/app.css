@@ -3084,7 +3084,7 @@ h1 {
 h2 {
   margin: 2em;
   letter-spacing: 0.2em;
-  color: #ff0f0;
+  color: #fff;
   font-family: "Rancho", cursive;
 }
 
@@ -3194,7 +3194,7 @@ select.custom-select {
           box-shadow: none;
   padding-left: 12px;
   color: #F1780D;
-  font-family: "Overlock", cursive;
+  font-family: "Rancho", cursive;
 }
 
 #search button {
@@ -3625,10 +3625,10 @@ img.box {
 
 .cover {
   position: absolute;
-  top: 260px;
+  top: 360px;
   left: 40px;
   z-index: 2;
-  height: 330px;
+  height: 150px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
           box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
 }
@@ -3709,6 +3709,8 @@ img.box {
 }
 
 .map {
+  height: 100%;
+  width: 100%;
   background: #ddcec2;
   position: relative;
 }
@@ -3716,5 +3718,19 @@ img.box {
 .col-12#map {
   padding-right: 0px;
   padding-left: 0px;
+}
+
+.accesoMapa {
+  display: block;
+  position: absolute;
+  z-index: 9960;
+  background: #c20c48;
+  color: #fff;
+  left: 47%;
+  bottom: -25px;
+  width: 50px;
+  height: 26px;
+  overflow: hidden;
+  text-indent: -9999em;
 }
 
