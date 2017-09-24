@@ -18,7 +18,7 @@
                 <img class="img-detalle img-fluid w-100 h-100" src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}" class="cover-bar" /> 
                 <div class="details">
                     <div class="title1">{{ $atractivos->titulo }}
-                        <span>{{ $atractivos->categorias->titulo }}</span>
+                        <span>{{ $atractivos->ubicacion}}</span>
                     </div>
                     <div class="title2">{{ $atractivos->descripcion }}</div>     
                 </div> <!-- end details -->

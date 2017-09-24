@@ -3625,10 +3625,12 @@ img.box {
 
 .cover {
   position: absolute;
-  top: 360px;
+  top: 260px;
   left: 40px;
   z-index: 2;
-  height: 150px;
+  height: 330px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
+          box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
 }
 
 .details {
@@ -3697,5 +3699,22 @@ img.box {
   padding-top: 30px;
   margin-left: 20px;
   float: left;
+}
+
+#map {
+  margin-bottom: 100px;
+  position: relative;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 10px;
+          box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 10px;
+}
+
+.map {
+  background: #ddcec2;
+  position: relative;
+}
+
+.col-12#map {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 

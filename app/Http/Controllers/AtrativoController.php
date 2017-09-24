@@ -55,14 +55,15 @@ class AtrativoController extends Controller
      */
     public function detalle($id)
     {
+        //$atractivos = Atractivo::with('fotos')->get();
         $atractivos = Atractivo::find($id);
         $atractivos = $atractivos->load('fotos')->load('categorias');
         $lng = $atractivos->longitud;
         $lat = $atractivos->latitud;
         $config = array();
         $config['center'] = $lat.','. $lng;
-        $config['map_width'] = 400;
-        $config['map_height'] = 400;
+        //$config['map_width'] = 400;
+        //$config['map_height'] = 400;
         $config['zoom'] = '15';
         Gmaps::initialize($config);
         $marker = array();
