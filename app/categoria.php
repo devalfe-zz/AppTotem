@@ -8,7 +8,7 @@ class Categoria extends Model
 {
     //$categorias = Apptotem\CAtegoria::all();
     protected $table = 'categorias';
-    //protected $fillable = ['titulo','activo'];
+    protected $fillable = ['titulo','activo'];
 
     
     public function atractivos()

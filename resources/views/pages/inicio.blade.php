@@ -1,63 +1,92 @@
 @extends('template')
 @section ('title', 'inicio')
 @section('class','inicio')
+@section('lema')
+    Sobre Moquegua
+@endsection
 @section ('content')
-<section   class="slide wow slideInRight" data-wow-offset="300"  id="menu-1" >
-<h1 class="well pt-2">Sobre Moquegua</h1>
-<div class="inicio col-12 d-flex">
-    <div class="card-inicio col-12 col-xl-6">
-        <p class="p-3 text-justify">La región Moquegua está situada en el sur peruano, en la vertiente occidental de la Cordillera de los Andes.. Limita por el norte con la región Arequipa, por el sur con Tacna, por el noreste con Puno y por el oeste con el Mar de Grau (océano Pacífico correspondiente al Perú). Se emplaza entre los paralelos 15º 58’ y 17º 50’ latitud sur y los meridianos  69º 59’ y 71º 29’, longitud oeste. Posee una superficie territorial de 15, 733,97 Km2, (1,2% del territorio nacional). Abarca dos zonas (costa y sierra) y seis pisos latitudinales (costa, yunga, quechua, suni, jalca y janca) llegando a alcanzar los 6,000 metros sobre el nivel del mar. Moquegua, es la ciudad homónima a la región y capital a su vez de la Provincia Mariscal Nieto, se emplaza sobre los 1410 msnm.
-    La región está conformada por tres provincias. La Provincia de Ilo posee uno de los más importantes puertos del país; su industria gira en torno a la pesquería, metalurgia y la agroindustria (procesamiento de la vid y el olivo). La Provincia de Mariscal Nieto posee riqueza minera y agropecuaria, sus dos minas más importantes son Cuajone y Quellaveco; su agroindustria está íntimamente ligada a la vitivinicultura, industria con más de 400 años de tradición, produciendo los mejores piscos de la nación; además de los productos lácteos y la exportación de la palta y el orégano. La Provincia de General Sánchez Cerro es mayoritariamente agrícola, llegando a abastecer a las regiones sureñas del país con sus frutos, su producto bandera es la palta y la vid; así mismo posee riqueza en su suelo, llegándose a explorar el oro y otros minerales.</p>
+<div class="inicio mb-4">
+    <div class="card p-2">
+        <img class="card-img-top w-100 h-100" src="/images/clima.jpg" alt="Card image cap">
+        <h4 class="card-title mt-2">Clima</h4>
+        <div class="card-body">La ciudad de Moquegua tiene un clima seco, semicálido y soleado durante todo el año.</div>
+        <p class="h7">Seco, semicálido y soleado</p>
+        <span class="datoNum">Temperatura máxima <em class="blue">27°C</em><sub>81°F</sub></span>
+        <span class="datoNum">Temperatura mínima <em class="blue">10°C</em><sub>50°F</sub></span>
+    </div>
+</div>
+<div class="lado " style="width: 500px"; >
+    <div class="flex">
+  <div class="card p-3">
+    <div class="header">
+        <div class="title">
+          <div>
+            <h1>5 ways to create inspiring articles</h1>
+           
+          </div>
+      </div>
+    </div>
+    <div class="contenido">
         
+        <p>Isn't it great to do something you can't fail at? Work on one thing at a time. Don't get carried away - we have plenty of time. You can do it. If we're gonna walk though the woods, we need a little path. You have to make these big decisions.</p>
+        <p>We don't really know where this goes - and I'm not sure we really care. Get away from those little Christmas tree things we used to make in school. From all of us here, I want to wish you happy painting and God bless, my friends. If you don't think every day is a good day - try missing a few. You'll see.</p>
+        <p>Do an almighty painting with us. Remember how free clouds are. They just lay around in the sky all day long. When you do it your way you can go anywhere you choose. Put your feelings into it, your heart, it's your world. You can't have light without dark. You can't know happiness unless you've known sorrow.</p>
+        <p>Use absolutely no pressure. Just like an angel's wing. These trees are so much fun. I get started on them and I have a hard time stopping. Every day I learn.</p>
+        <img src="http://placehold.it/380x200">      
+        <p>There's not a thing in the world wrong with washing your brush. You've got to learn to fight the temptation to resist these things. Just let them happen. Painting should do one thing. It should put happiness in your heart. I can't think of anything more rewarding than being able to express yourself to others through....
+        </p>
     </div>
-    <div class="card-inicio col-12 col-xl-6">
-        <div class="card-image">
-            <img src="{{asset('images/head.jpg')}}" alt="">
-        </div>
-    </div>
-</div>
-
-<div class="content">
-<div class="card-column column-0">
-    <div class="card card-color-0">
-        <div class="border"></div>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg" />
-        <h1>Hey now, you're an allstar</h1>
-    </div>
-    <div class="card card-color-2">
-        <div class="border"></div>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg" />
-        <h1>Hey now, you're a rock star</h1>
-    </div>
+  </div>
 </div>
 </div>
-
-<div class="card-column column-1">
-<div class="card card-color-1">
-<div class="border"></div>
-<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg" />
-<h1>Get your game on, go play</h1>
-</div>
-<div class="card card-color-3">
-<div class="border"></div>
-<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg" />
-<h1>Get the show on, get paid</h1>
-</div>
-</div>
-</div>
-
-<div id="cover" class="cover"></div>
-<div id="open-content" class="open-content">
-    <a href="#" id="close-content" class="close-content">
-        <span class="x-1"></span>
-        <span class="x-2"></span>
-    </a>
-    <img id="open-content-image" src="" />
-    <div class="text" id="open-content-text">
+<div class="inicio mb-4" >
+    <div class="card p-2" style="
+    top: -650px;
+    width: 630px;
+">
+        <img class="card-img-top w-100 h-100" src="/images/acceso.jpg" alt="Card image cap">
+        <h4 class="card-title mt-2">Vias de acceso</h4>
+        <p class="h7">Vía de acceso terrestre</p>
+       <span class="datoNum">Lima-Moquegua: <em class="red">1.146 Km</em> <sub>por la Carretera Panamericana Sur (14 horas en auto)</sub></span>
+        <span class="datoNum">Arequipa-Moquegua: <em class="red">227 Km</em> <sub>por la Carretera Panamericana Sur (3 horas en auto)</sub></span>
+       <span class="datoNum">Tacna-Moquegua: <em class="red">159 Km</em> <sub>por la Carretera Panamericana Sur (1 hora y 30 minutos en auto)</sub></span>
     </div>
 </div>
 
-</section>
-  
+<div class="inicio mb-4">
+    <div class="card p-2" style="
+    top: -650px;
+    width: 630px;">
+        <img class="card-img-top w-100 h-100" src="/images/distancia.jpg" alt="Card image cap">
+        <h4 class="card-title mt-2">Distancias desde la ciudad de Moquegua</h4>
+        <span class="datoNum"><em class="green">Omate</em> (Provincia de General Sánchez Cerro) <sub>141 Km / 3 horas</sub></span>
+        <span class="datoNum"><em class="green">Ilo </em> (Provincia de Ilo) <sub>99 Km / 40 minutos</sub></span>
+    </div>
+</div>
+
+<div class="inicio  mb-4" >
+    <div class="card p-2" style="
+    top: -650px;
+    width: 630px;">
+        <img class="card-img-top w-100 h-100" src="/images/altitud.jpg" alt="Card image cap">
+        <h4 class="card-title mt-2">Altitud</h4>
+        <span class="datoNum purple"><em>Mínima</em> <sub>5 msnm (Pueblo Nuevo)</sub></span>
+        <span class="datoNum purple"><em>Máxima</em> <sub> 3.756 msnm (Ichuña)</sub></span>
+    </div>
+</div>
+
+<div class="inicio mb-4">
+    <div class="card p-2" style="
+    top: -650px;
+    width: 630px;">
+        <img class="card-img-top w-100 h-100" src="/images/estancia.jpg" alt="Card image cap">
+        <h4 class="card-title mt-2">Tiempo de Estancia</h4>
+        <p class="datoinfo">Un día permitirá visitar la ciudad y sus atractivos cercanos. Para disfrutar de la naturaleza de la región necesitará 2 días.</p>
+        <p class="h7">Rutas y Tiempos</p>
+        <ul class="datoNum"> <li><em class="yellow">½ día</em></li> <li>Centro histórico: City Tour Paquete 1: 4 horas.</li> <li>Ruta del Pisco 3 Km / 10 minutos.</li> <li>Geoglifos de Chen Chen 1.5 Km / 10 minutos.</li> </ul>
+        <ul class="datoNum"> <li><em class="yellow">1 día</em></li> <li>Distrito de Samegua 5 Km / 10 minutos.</li> <li>Sitio arqueológico de Cerro Baúl 18 Km / 20 minutos.</li> <li>Yacimiento de Cuajone 32 Km / 30 minutos.</li> <li>Valles de Carumas - Cuchumbaya y San Cristóbal – Calacoa 129 Km / 5 horas.</li> <li>Aguas Termales – Putina 141 Km / 4 horas.</li> <li>Punta de Coles 111 Km / 1 hora.</li> <li>Playas del norte 132 Km / 1 hora 10 minutos.</li> <li>Playas del Sur 128 Km / 1 hora.</li> </ul>
+        <ul class="datoNum"> <li><em class="yellow">2 días</em></li> <li>Valle de Omate 147 Km / 6 horas. Incluye:</li> <li>Señor de las Piedades</li> <li>Molinos hidráulicos de Omate</li> </ul>
+    </div>
+</div>
 
 @endsection

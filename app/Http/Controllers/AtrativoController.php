@@ -4,6 +4,7 @@ namespace Apptotem\Http\Controllers;
 use Illuminate\Http\Request;
 use Apptotem\Atractivo as Atractivo;
 use Apptotem\Galeria as Galeria;
+use Apptotem\Categoria as Categoria;
 use Gmaps;
 
 class AtrativoController extends Controller
@@ -46,7 +47,30 @@ class AtrativoController extends Controller
             ['ubicacion', '=', 'Fuera'],
         ])->get();
         //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
+        return view('pages.pages1', compact('atractivos'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function servicios()
+    {
+        //$atractivos = Atractivo::with('categorias')->get();
+        
+        $atractivos = Atractivo::SearchCategoria(3)->SearchCategoria(4)->SearchCategoria(5)->get();
         return view('pages.pages2', compact('atractivos'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function multimedia()
+    {
+        $galerias = Galeria::all();
+        //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
+        return view('pages.multimedia', compact('galerias'));
     }
     /**
      * Display a listing of the resource.
@@ -56,8 +80,9 @@ class AtrativoController extends Controller
     public function detalle($id)
     {
         //$atractivos = Atractivo::with('fotos')->get();
-        $atractivos = Atractivo::find($id);
-        $atractivos = $atractivos->load('fotos')->load('categorias');
+        
+        $atractivos = Atractivo::findOrFail($id);
+        $atractivos = $atractivos->load('fotos','categorias');
         $lng = $atractivos->longitud;
         $lat = $atractivos->latitud;
         $config = array();

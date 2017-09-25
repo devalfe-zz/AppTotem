@@ -7,19 +7,16 @@ Atractivos fuera de la ciudad
 @section ('content')
 @if(sizeof($atractivos) > 0)
     @foreach($atractivos as $atractivo)
-        <div class="col-3">      
-            <div class="card">
-                <div class="card-body">
-                    <p class="card-text"><a href=" {{ route('detalle', $atractivo->id) }}">{{ $atractivo->titulo }}</a></p>
-                </div>
-                <img class="img-card w-100 h-100" src="{{ $atractivo->foto_url }}" alt="{{ $atractivo->titulo }}">
-                <div class="card-body">
-                    <p class="card-text">{{ $atractivo->descripcion }}</p>
-                </div>
-            </div>
-        </div>
+    <div class="col-md-3 d-flex">
+    <div class="item card">
+        <img class ="box" src="{{ $atractivo->foto_url }}">
+        <p class="text-uppercase"><a href="{{ route ('detalle', $atractivo->id) }}">{{ $atractivo->titulo }}</a></p>
+    </div>
+    </div>
     @endforeach
 @else
-    
+    <div class="alert alert-danger" role="alert">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+    </div>
 @endif
 @endsection

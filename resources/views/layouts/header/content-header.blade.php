@@ -10,10 +10,10 @@
             <!-- End Header Logo --> 
         </div>
         <div class="col-6 d-flex justify-content-center align-items-center">
-            <div class="owl-carousel w-50 ">
-                <img src="{{asset('images/head.jpg')}}" class="img-fluid" alt="image">
-                <img src="{{asset('images/head1.jpg')}}" class="img-fluid" alt="image">
-                <img src="{{asset('images/head2.jpg')}}" class="img-fluid" alt="image">
+             <div class="owl-carousel w-25">
+                <img src="{{asset('images/head.jpg')}}"  alt="image">
+                <img src="{{asset('images/head1.jpg')}}"  alt="image">
+                <img src="{{asset('images/head2.jpg')}}"  alt="image">
       
             </div>
              {{--  <!-- Search -->

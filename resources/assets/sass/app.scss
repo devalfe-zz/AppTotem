@@ -519,16 +519,16 @@ footer p {
 .item {
     margin: 2em;
     display: inline-block;
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
-    transform: rotate(45deg);
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    //transform: rotate(45deg);
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     padding: 0;
     //box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    margin: 0 auto;
+    margin: 15px auto;
     border: 0px;
 }
 
@@ -539,12 +539,11 @@ footer p {
 
 .item p {
     position: absolute;
-    transform: rotate(-45deg);
-    top: 30%;
-    left: -20%;
-    background: rgba(0, 0, 0, 0.7);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.12);
     padding: 10px 20px;
-    width: 130%;
     text-align: center;
     color: #fff;
     transition: all 0.3s ease-in-out;
@@ -561,7 +560,7 @@ img.box {
     width: 100%;
     height: 100%;
     transition: 0.3s linear;
-    transform: rotate(-45deg) scale(1.4)
+    //transform: rotate(-45deg) scale(1.4)
 }
 
 .item:hover>img {
@@ -572,13 +571,12 @@ img.box {
 //---------- pages detalle --------------
 //---------------------------------------
 .logo_detalle {
-    height: 442px;
+    //height: 442px;
     margin: 0;
     position: relative;
     overflow: hidden;
     z-index: 1;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 10px;
 }
 
 .img-detalle {
@@ -591,42 +589,46 @@ img.box {
     top: 360px;
     left: 40px;
     z-index: 2;
-    height: 150px;
+    height: 120px;
     box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
 }
 
 .details {
-    padding: 190px 0 0 280px;
+    //padding: 190px 0 0 280px;
     .title1 {
-        top: -400px;
-        color: white;
+        //top: -400px;
+        color: #fffafa;
         font-size: 44px;
         margin-bottom: 13px;
-        position: relative;
+        position: absolute;
+        z-index: 72;
+        left: 250px;
+        bottom: 80px;
         span {
-            position: absolute;
+            //position: absolute;
             top: 3px;
             margin-left: 12px;
-            background: #C4AF3D;
+            background: rgb(255, 255, 255);
             border-radius: 5px;
-            color: #544C21;
+            color: rgb(32, 29, 13);
             font-size: 14px;
             padding: 0px 4px;
         }
     }
     .title2 {
-        top: -400px;
+        position: absolute;
         color: #C7C1BA;
         font-size: 23px;
         font-weight: 300;
         margin-bottom: 15px;
-        position: relative;
+        z-index: 73;
+        left: 250px;
+        bottom: 60px;
     }
 }
 
 .description {
-    bottom: 0px;
-    height: 200px;
+    margin-top: 20px;
     font-size: 16px;
     line-height: 26px;
     color: #B1B0AC;
@@ -670,15 +672,6 @@ img.box {
     box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 10px;
 }
 
-.map {
-    //width: 430px;
-    //height: 370px;
-    height: 100%;
-    width: 100%;
-    background: #ddcec2;
-    position: relative;
-}
-
 .col-12#map {
     padding-right: 0px;
     padding-left: 0px;
@@ -687,14 +680,30 @@ img.box {
 .accesoMapa {
     display: block;
     position: absolute;
-    z-index: 9960;
+    z-index: 96;
     background: #c20c48;
     color: #fff;
     left: 47%;
-    bottom: -25px;
+    //bottom: -25px;
     width: 50px;
     height: 26px;
     overflow: hidden;
-    //background: url(images/ico_sprite.png?v11072014) no-repeat -107px -337px;
+    background: url(/images/ico_sprite.png?v11072014) no-repeat -107px -337px;
     text-indent: -9999em;
+}
+
+.map {
+    height: 100%;
+    width: 100%;
+    background: #ddcec2;
+    position: relative;
+}
+
+.card>span.datoNum,
+.card>ul.datoNum {
+    width: 290px;
+    float: left;
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 10px;
 }
