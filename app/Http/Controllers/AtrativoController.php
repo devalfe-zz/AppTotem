@@ -85,14 +85,18 @@ class AtrativoController extends Controller
         $atractivos = $atractivos->load('fotos','categorias');
         $lng = $atractivos->longitud;
         $lat = $atractivos->latitud;
+        $des = $atractivos->detalle;
+        $tit = $atractivos->titulo;
         $config = array();
         $config['center'] = $lat.','. $lng;
-        //$config['map_width'] = 400;
-        //$config['map_height'] = 400;
+        
+        $config['clickable'] = true;
         $config['zoom'] = '15';
         Gmaps::initialize($config);
         $marker = array();
         $marker['position'] = $lat.','. $lng;
+        $marker['title'] = $tit;       
+        $marker['infowindow_content'] = $des;
         Gmaps::add_marker($marker);
         $map = Gmaps::create_map();
         //dd($map);

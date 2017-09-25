@@ -1,5 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
     "/css/bootstrap-material-design.css": "/css/bootstrap-material-design.css",
     "/css/animate.css": "/css/animate.css",
     "/css/sweetalert2.min.css": "/css/sweetalert2.min.css",
@@ -17,6 +18,5 @@
     "/js/smooth-scroll.js": "/js/smooth-scroll.js",
     "/js/bootstrap.js": "/js/bootstrap.js",
     "/images/logo.svg": "/images/logo.svg",
-    "/images/mpmn.svg": "/images/mpmn.svg",
-    "/css/app.css": "/css/app.css"
+    "/images/mpmn.svg": "/images/mpmn.svg"
 }
