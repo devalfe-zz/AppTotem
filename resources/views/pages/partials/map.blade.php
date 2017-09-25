@@ -5,5 +5,6 @@
     <a class="accesoMapa" href="">mapa</a><!-- Map -->
     <div class="map">
         {!!$map['html']!!}
+       	<div id="directionsDiv"></div>
     </div>   
 </div>

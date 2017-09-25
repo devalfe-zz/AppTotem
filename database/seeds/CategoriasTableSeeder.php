@@ -16,6 +16,7 @@ class CategoriasTableSeeder extends Seeder
         categoria::create(['titulo' => 'Rutas', 'activo' => 1]);
         categoria::create(['titulo' => 'Alojamientos','activo' => 1]);
         categoria::create(['titulo' => 'Restaurantes', 'activo' => 1]);
+        categoria::create(['titulo' => 'Transportes', 'activo' => 1]);
         categoria::create(['titulo' => 'Bodegas','activo' => 1]);
         categoria::create(['titulo' => 'Festivales', 'activo' => 1]);
         categoria::create(['titulo' => 'Eventos','activo' => 1]);

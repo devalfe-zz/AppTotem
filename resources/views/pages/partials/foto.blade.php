@@ -15,6 +15,5 @@
     <label for='tele' class='entypo-right-bold otra'></label>
     <label for='uno' class='entypo-arrows-ccw afin'></label>  
   </article>
-  
   </section>
 </div>

@@ -21,8 +21,8 @@ class CreateAtractivosTable extends Migration
             $table->string('detalle',800)->nullable();
             $table->string('direccion',60);
             $table->string('ubicacion')->nullable();
-            $table->double('longitud');
-            $table->double('latitud');
+            $table->double('longitud')->nullable();
+            $table->double('latitud')->nullable();
             $table->string('horarios')->nullable();
             $table->string('foto_url')->nullable();
             $table->string('video_url')->nullable();                
