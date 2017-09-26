@@ -91,6 +91,7 @@ class AtrativoController extends Controller
         $config['center'] = '-17.1937795,-70.933598';
         $config['zoom'] = 'auto';
         $config['directions'] = TRUE;
+        $config['directionsMode'] = "WALKING";
         $config['directionsStart'] = '-17.1937795,-70.933598';
         $config['directionsEnd'] = $lat.','. $lng;
         $config['directionsDivID'] = 'directionsDiv';

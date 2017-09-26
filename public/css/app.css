@@ -3516,15 +3516,15 @@ footer p {
 }
 
 .menu-box {
-  border-radius: 50px;
-  width: 400px;
-  height: 400px;
-  margin: 50px;
+  border-radius: 25px;
+  width: 250px;
+  height: 250px;
+  margin: 25px;
   border: 0px;
 }
 
 .card-img {
-  border-radius: 50px;
+  border-radius: 25px;
 }
 
 .label-box {
@@ -3532,17 +3532,16 @@ footer p {
   bottom: 0px;
   color: #464a4c;
   z-index: 2;
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-align: center;
   position: absolute;
-  left: 200px;
-  right: 20px;
+  left: 100px;
   display: inline-block;
 }
 
 .card-img-overlay.menu {
   overflow: hidden;
-  border-radius: 50px;
+  border-radius: 25px;
   background: linear-gradient(-30deg, rgba(255, 255, 255, 0.85) 40%, rgba(255, 255, 255, 0) 50%);
 }
 
