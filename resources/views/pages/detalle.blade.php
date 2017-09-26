@@ -13,7 +13,7 @@
             {{--  <a href=""><img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" 
             class="cover" /></a>  --}}
             
-            <img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" class="cover mw-100 mh-100b:" />
+            <img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" class="cover mw-100 mh-100" />
             <div class="logo_detalle">  
                 {{--  <a href=""><img src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}" class="cover" /></a>   --}}
                 <div class="embed-responsive embed-responsive-16by9">

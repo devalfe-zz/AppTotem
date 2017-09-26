@@ -12,7 +12,7 @@ class AtractivosTableSeeder extends Seeder
     public function run()
     {
         //
-        
+       //1 
         atractivo::create([
             'titulo' => 'CASA DEL REGIDOR PERPETUO',//verificar nombre de atractivo
             'descripcion' => 'Este solar perteneció a los Condes de Alastaya.',
@@ -22,11 +22,11 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9356523',
             'latitud' => '-17.194194',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/regidor_perpetuo1.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]); 
-
+        //2
         atractivo::create([
             'titulo' => 'PLAZA DE ARMAS',
             'descripcion' => 'Considerada como la más bella del sur peruano. ',
@@ -36,12 +36,12 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9346494',
             'latitud' => '-17.1938378',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/plaza1.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
 
-
+        //3
         atractivo::create([
             'titulo' => 'CASA CHOCANO',
             'descripcion' => 'Esta casa fue reconstruida en el siglo XIX por don Nicolás Jacinto Chocano.',
@@ -51,25 +51,25 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9347765',
             'latitud' => '-17.1943247',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
-            'video_url' => '',
+            'foto_url' => '',
+            'video_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_chocano.jpg',
             'activo' => 1,
             'categoria_id' => 1]);
-
+        //4
         atractivo::create([
             'titulo' => 'CASA DE LOS FERNÁNDEZ DE CÓRDOBA O LOS DE LA FLOR',
             'descripcion' => 'Este solar fue propiedad de los Fernández de Córdoba.',
             'detalle' => 'Este solar fue propiedad de los Fernández de Córdoba, familia fundadora de la ciudad en 1623. Fue reconstruido en repetidas oportunidades perdiendo en cada una su esencia virreinal. Fue propiedad de doña Estela Fernández de Córdoba quien termina vendiendo el inmueble a su yerno don Ricardo de la Flor y de la Flor. Posee una sobria pero elegante portada de piedra flanqueada por dos ventanas coloniales con hierro forjado. En su fachada se puede observar el imponente balcón de cajón de cedro cochabambino. Posee dos patios alrededor de los cuales se ubican las habitaciones con amplios techos en mojinete.',
             'direccion' => 'Calle Ayacucho N° 540.',
             'ubicacion' => 'Mariscal Nieto',
-            'longitud' => '0',
-            'latitud' => '0',
+            'longitud' => '-70.934372',
+            'latitud' => '-17.194114',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_tradicional1.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);        
-
+        //5
         atractivo::create([
             'titulo' => 'CASA DE LOS FERNÁNDEZ CORNEJO Y FERNÁNDEZ DE CÓRDOBA',
             'descripcion' => 'Solar construido en dos plantas, con balcón corrido al frente de la plaza.',
@@ -79,11 +79,11 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '0',
             'latitud' => '0',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => '',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
-
+        //6
         atractivo::create([
             'titulo' => 'MURO DE LA IGLESIA MATRIZ',
             'descripcion' => 'Se emplaza al lado norte de la plaza de armas de la ciudad.',
@@ -93,11 +93,11 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9347544',
             'latitud' => '-17.1934791',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => '',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);  
-
+        //7
         atractivo::create([
             'titulo' => 'LA ANTIGUA CÁRCEL Y EL CABILDO',
             'descripcion' => 'Ambas edificaciones se emplazan al lado sur de la plaza de armas.',
@@ -107,11 +107,11 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '0',
             'latitud' => '0',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/carcel1.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);  
-
+        //8
         atractivo::create([
             'titulo' => 'COMPLEJO SAN FRANCISCO Y LAS CATACUMBAS',
             'descripcion' => 'Se ubica en la calle Lima, a una cuadra de la plaza de armas.',
@@ -121,11 +121,11 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '0',
             'latitud' => '0',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => '',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
-
+        //9
         atractivo::create([
             'titulo' => 'COMPLEJO SANTO DOMINGO',
             'descripcion' => 'Ubicada en la esquina sur este de la plaza de armas.',
@@ -135,11 +135,11 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9336815',
             'latitud' => '-17.1939819',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia3.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
-
+        //10
         atractivo::create([
             'titulo' => 'CASA DE LOS CABELLO',
             'descripcion' => 'En este antiguo solar nació la escritora Mercedes Cabello de la Llosa en 1842.',
@@ -149,39 +149,39 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.932889',
             'latitud' => '-17.192434',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => '',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);  
-
+        //11
         atractivo::create([
             'titulo' => 'CASA DE LOS BARRIOS O CASA DE LA CULTURA',
             'descripcion' => 'Esta casa fue construida por don Pedro de Arguedas en 1791, luce su tradicional balcón de madera.',
             'detalle' => 'Esta casa fue construida por don Pedro de Arguedas en 1791, luce su tradicional balcón de madera. En 1824 fue adquirida por don Camilo Barrios Nieto, en completo estado de deterioro; se ocupó de restaurarla y ampliarla. Su nieto don Domingo Barrios y su esposa doña Adelaida Hurtado de Mendoza donan la propiedad a la municipalidad para que en ella funcionen las oficinas. Tiene dos patios alrededor de los cuales se distribuyen las amplias habitaciones con techos altos en mojinete. Hoy el Municipio la ha convertido en un elegante centro cultural.',
             'direccion' => 'Calle Moquegua N° 851',
             'ubicacion' => 'Mariscal Nieto',
-            'longitud' => '0',
-            'latitud' => '0',
+            'longitud' => '-70.9330874',
+            'latitud' => '-17.1921543',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => '',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);   
-            
+        //12    
         atractivo::create([
             'titulo' => 'CASA DE LOS FERNÁNDEZ MALDONADO',
             'descripcion' => 'Fue reconstruida por Mariano Fernández Maldonado, cuyas iniciales aparecen grabadas en la parte superior de la portada.',
             'detalle' => 'Fue reconstruida por Mariano Fernández Maldonado, cuyas iniciales aparecen grabadas en la parte superior de la portada. Más conocida como Casa de la serpiente, sus antiguos propietarios la llamaban Casa de la Culebra, a causa de la cabeza de serpiente tallada debajo de una pequeña ventana de la fachada. En un principio la vivienda fue de dos niveles, el terremoto de 1868 destruyó este antiguo solar y el segundo piso no se volvió a levantar. Las espaciosas habitaciones tienen vigas de madera artísticamente talladas y es el único caso de una vivienda que presenta actualmente dichas características. Sirvió de cuartel durante la guerra con Chile.',
             'direccion' => 'Calle Tarapacá N° 398',
             'ubicacion' => 'Mariscal Nieto',
-            'longitud' => '0',
-            'latitud' => '0',
+            'longitud' => '-70.932466',
+            'latitud' => '-17.19273',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => '',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);   
-            
+        //13    
         atractivo::create([
             'titulo' => 'CASA DE LOS DIEZ CANSECO Y FERNÁNDEZ DÁVILA',
             'descripcion' => 'De este importante solar hoy sólo puede observarse la bella portada de piedra ricamente tallada personalizada con querubines, plantas, animales y figuras heráldicas.',
@@ -191,26 +191,26 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '0',
             'latitud' => '0',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => '',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]); 
-
+        //14
         atractivo::create([
             'titulo' => 'CASA DE LOS JIMÉNEZ DE LA FLOR',
             'descripcion' => 'Hoy funciona el hogar de ancianos.',
             'detalle' => 'Hoy funciona el hogar de ancianos. Es un solar característico de Moquegua, con techos en mojinete, portada de piedra y rejas sevillanas. El antiguo zaguán nos conduce a un amplio patio empedrado, rodeado de habitaciones, algunas de las cuales aún lucen habitaciones enchapadas en madera; el segundo patio luce una fuente de piedra, a su vez, rodeado de habitaciones.',
             'direccion' => 'Calle Tarapacá N',
             'ubicacion' => 'Mariscal Nieto',
-            'longitud' => '0',
-            'latitud' => '0',
+            'longitud' => '-70.93223',
+            'latitud' => '-17.192675',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => '',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
 
-
+        //15
         atractivo::create([
             'titulo' => 'COMPLEJO BETLEMÍTICO Y EL BARRIO ',
             'descripcion' => 'Ubicado a cuatro cuadras de la plaza de armas, con dirección este',
@@ -220,7 +220,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '0',
             'latitud' => '0',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo%2540moqueguaturismo.gob.pe@moqueguaturismo.gob.pe/images/atractivos/Koala.jpg',
+            'foto_url' => '',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);

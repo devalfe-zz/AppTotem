@@ -11,13 +11,144 @@ class GaleriasTableSeeder extends Seeder
      */
     public function run()
     {
-        //
-        galeria::create(['Titulo' => 'Atractivo 1','foto_url' => 'https://firebasestorage.googleapis.com/v0/b/toursapp-78bac.appspot.com/o/fotos%2Fchupe.jpg?alt=media&token=a2fcfa18-1127-4d24-aa51-c4e1cd5650c8','atractivo_id' => 1,'activo' => 1]);
-        galeria::create(['Titulo' => 'Atractivo 2','foto_url' => 'https://firebasestorage.googleapis.com/v0/b/toursapp-78bac.appspot.com/o/fotos%2Fchupe.jpg?alt=media&token=a2fcfa18-1127-4d24-aa51-c4e1cd5650c8','atractivo_id' => 1,'activo' => 1]);
-        galeria::create(['Titulo' => 'Atractivo 3','foto_url' => 'https://firebasestorage.googleapis.com/v0/b/toursapp-78bac.appspot.com/o/fotos%2Fchupe.jpg?alt=media&token=a2fcfa18-1127-4d24-aa51-c4e1cd5650c8','atractivo_id' => 2,'activo' => 1]);
-        galeria::create(['Titulo' => 'Atractivo 4','foto_url' => 'https://firebasestorage.googleapis.com/v0/b/toursapp-78bac.appspot.com/o/fotos%2Fchupe.jpg?alt=media&token=a2fcfa18-1127-4d24-aa51-c4e1cd5650c8','atractivo_id' => 3,'activo' => 1]);
-        galeria::create(['Titulo' => 'Atractivo 5','foto_url' => 'https://firebasestorage.googleapis.com/v0/b/toursapp-78bac.appspot.com/o/fotos%2Fchupe.jpg?alt=media&token=a2fcfa18-1127-4d24-aa51-c4e1cd5650c8','atractivo_id' => 4,'activo' => 1]);
-        galeria::create(['Titulo' => 'Atractivo 6','foto_url' => 'https://firebasestorage.googleapis.com/v0/b/toursapp-78bac.appspot.com/o/fotos%2Fchupe.jpg?alt=media&token=a2fcfa18-1127-4d24-aa51-c4e1cd5650c8','atractivo_id' => 5,'activo' => 1]);
+        //1
+        galeria::create([
+            'Titulo' => 'CASA DEL REGIDOR PERPETUO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/regidor_perpetuo1.jpg',
+            'atractivo_id' => 1,
+            'activo' => 1
+        ]);
+        galeria::create([
+            'Titulo' => 'CASA DEL REGIDOR PERPETUO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/regidor_perpetuo2.jpg',
+            'atractivo_id' => 1,
+            'activo' => 1
+        ]);        
+        //2
+        galeria::create([
+            'Titulo' => 'PLAZA DE ARMAS',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/plaza1.jpg',
+            'atractivo_id' => 2,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'PLAZA DE ARMAR',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/plaza2.jpg',
+            'atractivo_id' => 2,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'PLAZA DE ARMAR',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/plaza3.jpg',
+            'atractivo_id' => 2,
+            'activo' => 1
+        ]);
+        //3
+        galeria::create([
+            'Titulo' => 'CASA CHOCANO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_chocano.jpg',
+            'atractivo_id' => 3,
+            'activo' => 1
+        ]);  
+        galeria::create([
+            'Titulo' => 'CASA CHOCANO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_chocano2.jpg',
+            'atractivo_id' => 3,
+            'activo' => 1
+        ]);   
+        galeria::create([
+            'Titulo' => 'CASA CHOCANO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_chocano3.jpg',
+            'atractivo_id' => 3,
+            'activo' => 1
+        ]);                     
+        //4
+        galeria::create([
+            'Titulo' => 'CASA DE LOS FERNÁNDEZ DE CÓRDOBA O LOS DE LA FLOR',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_tradicional1.jpg',
+            'atractivo_id' => 4,
+            'activo' => 1
+        ]);                   
+        galeria::create([
+            'Titulo' => 'CASA DE LOS FERNÁNDEZ DE CÓRDOBA O LOS DE LA FLOR',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_tradicional2.jpg',
+            'atractivo_id' => 4,
+            'activo' => 1
+        ]);                   
+        galeria::create([
+            'Titulo' => 'CASA DE LOS FERNÁNDEZ DE CÓRDOBA O LOS DE LA FLOR',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_tradicional3.jpg',
+            'atractivo_id' => 4,
+            'activo' => 1
+        ]);                   
+        //5
+        //6
+        //7
+        galeria::create([
+            'Titulo' => 'LA ANTIGUA CÁRCEL Y EL CABILDO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/carcel1.jpg',
+            'atractivo_id' => 7,
+            'activo' => 1
+        ]);   
+        galeria::create([
+            'Titulo' => 'LA ANTIGUA CÁRCEL Y EL CABILDO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/carcel2.jpg',
+            'atractivo_id' => 7,
+            'activo' => 1
+        ]); 
+
+        //8
+        //9
+        galeria::create([
+            'Titulo' => 'PLAZA DE ARMAR',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia1.jpg',
+            'atractivo_id' => 9,
+            'activo' => 1
+        ]);
+
+
+        galeria::create([
+            'Titulo' => 'PLAZA DE ARMAR',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia2.jpg',
+            'atractivo_id' => 9,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'PLAZA DE ARMAR',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia3.jpg',
+            'atractivo_id' => 9,
+            'activo' => 1
+        ]);
+        //10
+        //11
+        //12
+        //13
+        galeria::create([
+            'Titulo' => 'PLAZA DE ARMAR',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diezcanseco.jpg',
+            'atractivo_id' => 10,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'PLAZA DE ARMAR',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diezcanseco2.jpg',
+            'atractivo_id' => 10,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'PLAZA DE ARMAR',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diezcanseco3.jpg',
+            'atractivo_id' => 10,
+            'activo' => 1
+        ]);        
+        //14
+        //15
+
 
     }
 }

@@ -20,9 +20,8 @@ Route::get('/atractivo','AtrativoController@dentro')->name('dentro');
 Route::get('/atractivos','AtrativoController@fuera')->name('fuera');
 Route::get('/servicios','AtrativoController@servicios')->name('servicios');
 Route::get('/multimedia','AtrativoController@multimedia')->name('multimedia');
-
 Route::get('/detalle/{id}','AtrativoController@detalle')->name('detalle');
-Route::post('/detalle/{id}','AtrativoController@ruta')->name('ruta');
+Route::get('/detalle/map/{id}','AtrativoController@map')->name('map');
 
 //Route::get('detalle/','AtrativoController@maps')->name('mapa');
 

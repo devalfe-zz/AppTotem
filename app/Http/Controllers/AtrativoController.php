@@ -112,7 +112,7 @@ class AtrativoController extends Controller
         return view('pages.detalle', compact('atractivos','map'));
         //dd($atractivos);
     }
-    public function ruta($id)
+    public function map($id)
     {
         //$atractivos = Atractivo::with('fotos')->get();
         
@@ -120,32 +120,20 @@ class AtrativoController extends Controller
         $atractivos = $atractivos->load('fotos','categorias');
         $lng = $atractivos->longitud;
         $lat = $atractivos->latitud;
-        //$des = $atractivos->detalle;
-        //$tit = $atractivos->titulo;
         $config = array();
         $config['center'] = '-17.1937795,-70.933598';
         $config['zoom'] = 'auto';
         $config['directions'] = TRUE;
-        $config['directionsMode'] = "DRIVING";
+        //$config['directionsMode'] = "DRIVING";
         $config['directionsStart'] = '-17.1937795,-70.933598';
         $config['directionsEnd'] = $lat.','. $lng;
         $config['directionsDivID'] = 'directionsDiv';
-        //$this->googlemaps->initialize($config);
-        //$data['map'] = $this->googlemaps->create_map();
-
-        //$config['center'] = -17.1937795, -70.9335977
         $config['clickable'] = true;
-        //$config['zoom'] = '15';
         Gmaps::initialize($config);
-        // $marker = array();
-        // $marker['position'] = $lat.','. $lng;
-        // $marker['title'] = $tit;       
-        // $marker['infowindow_content'] = $des;
-        // Gmaps::add_marker($marker);
         $map = Gmaps::create_map();
         //dd($map);
-        //|return view('pages.detalle', compact('atractivos','map'));
-        dd($atractivos);
+        return view('pages.detalle', compact('atractivos','map'));
+        //dd($atractivos);
     }
      /**
      * Display a listing of the resource.
