@@ -38,10 +38,11 @@
             
         </div> <!-- end container -->
     </div> <!-- end movie-card --> 
-@include('pages.partials.map')
+@include('pages.partials.map', ['id' => $atractivos->id])
+{{--  @include('pages.partials.map', ['some' => 'DRIVING'])  --}}
 <section class="auto-lightbox">
 @foreach($atractivos->fotos as $foto)
-            <img src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}">
-    @endforeach
+    <img src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}">
+ @endforeach
 </section>
 @endsection

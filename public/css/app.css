@@ -3228,7 +3228,7 @@ select.custom-select {
 
 /*======================== navbar ==========================*/
 
-nav {
+#navbar {
   position: relative;
   margin: auto;
   width: 100%;
@@ -3731,5 +3731,59 @@ img.box {
   display: block;
   margin-bottom: 15px;
   margin-top: 10px;
+}
+
+.leftmenu {
+  position: absolute;
+  top: calc(50% - 250px);
+  z-index: 9;
+}
+
+.leftmenu__item {
+  max-width: 56px;
+  max-height: 56px;
+  height: 30px;
+  margin: 3px 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.12);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.leftmenu__item span {
+  display: inline-block;
+}
+
+.leftmenu__item span.title {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 0.8092857142857143rem;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.leftmenu__item span.icon {
+  text-align: center;
+  width: 56px;
+  min-width: 56px;
+}
+
+.leftmenu__item:hover {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.leftmenu__item:hover span.title {
+  padding-left: 20px;
+  max-width: 100%;
 }
 

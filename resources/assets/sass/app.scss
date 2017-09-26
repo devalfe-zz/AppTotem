@@ -194,7 +194,7 @@ select.custom-select {
 
 /*======================== navbar ==========================*/
 
-nav {
+#navbar {
     position: relative;
     margin: auto;
     width: 100%;
@@ -706,4 +706,51 @@ img.box {
     display: block;
     margin-bottom: 15px;
     margin-top: 10px;
+}
+
+//------------------------------------------------
+//=========== menulateral=========================
+.leftmenu {
+    position: absolute;
+    top: calc(50% - 250px);
+    //left: 0;
+    z-index: 9;
+    &__item {
+        max-width: 56px;
+        max-height: 56px;
+        height: 30px;
+        margin: 3px 0;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.12);
+        display: flex;
+        align-items: center;
+        transition: all 0.4s ease-in-out;
+        span {
+            display: inline-block;
+            &.title {
+                text-transform: uppercase;
+                color: #000;
+                font-size: 0.8092857142857143rem;
+                max-width: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                transition: all 0.4s ease-in-out;
+            }
+            &.icon {
+                text-align: center;
+                width: 56px;
+                min-width: 56px;
+            }
+        }
+        &:hover {
+            max-width: 100%;
+            min-width: 100%;
+            span {
+                &.title {
+                    padding-left: 20px;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
 }

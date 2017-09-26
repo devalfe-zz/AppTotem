@@ -22,6 +22,8 @@ Route::get('/servicios','AtrativoController@servicios')->name('servicios');
 Route::get('/multimedia','AtrativoController@multimedia')->name('multimedia');
 
 Route::get('/detalle/{id}','AtrativoController@detalle')->name('detalle');
+Route::post('/detalle/{id}','AtrativoController@ruta')->name('ruta');
+
 //Route::get('detalle/','AtrativoController@maps')->name('mapa');
 
 //Route::get('/quehacer','PagesController@index')->name('atractivos');

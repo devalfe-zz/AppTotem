@@ -5,6 +5,7 @@
     <a class="accesoMapa" href="">mapa</a><!-- Map -->
     <div class="map">
         {!!$map['html']!!}
-       	<div id="directionsDiv"></div>
+       	<div id="directionsDiv">{{$id}}</div>
     </div>   
+    @include('pages.partials.menu-lateral')
 </div>
