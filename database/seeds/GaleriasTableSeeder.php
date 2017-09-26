@@ -84,6 +84,19 @@ class GaleriasTableSeeder extends Seeder
             'activo' => 1
         ]);                   
         //5
+        galeria::create([
+            'Titulo' => 'CASA DE LOS FERNÁNDEZ CORNEJO Y FERNÁNDEZ DE CÓRDOBA',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diez_ventanas.jpg',
+            'atractivo_id' => 5,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'CASA DE LOS FERNÁNDEZ CORNEJO Y FERNÁNDEZ DE CÓRDOBA',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diez_ventanas2.jpg',
+            'atractivo_id' => 5,
+            'activo' => 1
+        ]);
         //6
         //7
         galeria::create([

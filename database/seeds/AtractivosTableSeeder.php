@@ -76,10 +76,10 @@ class AtractivosTableSeeder extends Seeder
             'detalle' => 'Solar construido en dos plantas, con balcón corrido al frente de la plaza, a lo largo de toda la fachada. Por el lado de la esquina, que da a la iglesia posee cinco ventanas en el primer nivel y cuatro en el segundo, además de un pequeño balcón. Posee techos amplios en mojinete con madera machimbrada. Ingresando por el zaguán, observamos un patio central muy amplio, antes todo empedrado, con un jardín en el centro del mismo. Hoy le pertenece a SERPOST.',
             'direccion' => 'Calle Ayacucho N° 550 - 570',
             'ubicacion' => 'Mariscal Nieto',
-            'longitud' => '0',
-            'latitud' => '0',
+            'longitud' => '-70.9341261',
+            'latitud' => '-17.1940844',
             'horarios' => '',
-            'foto_url' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diez_ventanas.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
@@ -191,7 +191,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '0',
             'latitud' => '0',
             'horarios' => '',
-            'foto_url' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diezcanseco.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]); 
