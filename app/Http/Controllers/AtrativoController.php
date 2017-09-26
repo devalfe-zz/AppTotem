@@ -144,8 +144,8 @@ class AtrativoController extends Controller
         // Gmaps::add_marker($marker);
         $map = Gmaps::create_map();
         //dd($map);
-        return view('pages.detalle', compact('atractivos','map'));
-        //dd($atractivos);
+        //|return view('pages.detalle', compact('atractivos','map'));
+        dd($atractivos);
     }
      /**
      * Display a listing of the resource.
