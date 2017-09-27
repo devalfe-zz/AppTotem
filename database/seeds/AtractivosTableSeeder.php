@@ -93,7 +93,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9347544',
             'latitud' => '-17.1934791',
             'horarios' => '',
-            'foto_url' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/muro_matriz2.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);  
@@ -149,7 +149,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.932889',
             'latitud' => '-17.192434',
             'horarios' => '',
-            'foto_url' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia3.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);  
