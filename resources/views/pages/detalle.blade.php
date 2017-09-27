@@ -45,6 +45,11 @@
             
         </div> <!-- end container -->
     </div> <!-- end movie-card --> 
+
+{{--  <object data="http://moqueguaturismo.gob.pe/doc/document.pdf" type="application/pdf">
+    <embed src="http://moqueguaturismo.gob.pe/doc/document.pdf" type="application/pdf" />
+</object>  --}}
+<a href="{{ asset('files/nav.pdf') }}">Open the pdf!</a>
 @include('pages.partials.map', ['id' => $atractivos->id])
 {{--  @include('pages.partials.map', ['some' => 'DRIVING'])  --}}
 @include('pages.partials.foto')

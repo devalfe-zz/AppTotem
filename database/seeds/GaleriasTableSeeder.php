@@ -282,42 +282,82 @@ class GaleriasTableSeeder extends Seeder
             //6-3 
         galeria::create([
             'Titulo' => 'BODEGAS BIONDI',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-3-1.jpg',
-            'atractivo_id' => 17,
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/631.jpg',
+            'atractivo_id' => 18,
             'activo' => 1
         ]);
         galeria::create([
             'Titulo' => 'BODEGAS BIONDI',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-3-2.jpg',
-            'atractivo_id' => 17,
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/632.jpg',
+            'atractivo_id' => 18,
             'activo' => 1
         ]);  
         galeria::create([
             'Titulo' => 'BODEGAS BIONDI',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-3-3.jpg',
-            'atractivo_id' => 17,
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/633.jpg',
+            'atractivo_id' => 18,
             'activo' => 1
         ]);                          
-        //18
+        //19
             //6-4
         galeria::create([
             'Titulo' => 'BODEGAS ZAPATA',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-4-1.jpg',
-            'atractivo_id' => 18,
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/641.jpg',
+            'atractivo_id' => 19,
             'activo' => 1
         ]); 
         galeria::create([
             'Titulo' => 'BODEGAS ZAPATA',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-4-2.jpg',
-            'atractivo_id' => 18,
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/642.jpg',
+            'atractivo_id' => 19,
             'activo' => 1
         ]); 
         galeria::create([
             'Titulo' => 'BODEGAS ZAPATA',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-4-3.jpg',
-            'atractivo_id' => 18,
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/643.jpg',
+            'atractivo_id' => 19,
             'activo' => 1
         ]);                 
+        //20
+        galeria::create([
+            'Titulo' => 'GEOGLIFOS DE CHEN CHEN',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/geoglifos1.jpg',
+            'atractivo_id' => 20,
+            'activo' => 1
+        ]);  
+
+        galeria::create([
+            'Titulo' => 'GEOGLIFOS DE CHEN CHEN',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/geoglifos2.jpg',
+            'atractivo_id' => 20,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'GEOGLIFOS DE CHEN CHEN',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/geoglifos3.jpg',
+            'atractivo_id' => 20,
+            'activo' => 1
+        ]);
+        //22
+        galeria::create([
+            'Titulo' => 'MIRADOR CRISTO BLANCO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/cristo_blanco1.jpg',
+            'atractivo_id' => 22,
+            'activo' => 1
+        ]);  
+        galeria::create([
+            'Titulo' => 'MIRADOR CRISTO BLANCO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/cristo_blanco2.jpg',
+            'atractivo_id' => 22,
+            'activo' => 1
+        ]);                
+        galeria::create([
+            'Titulo' => 'MIRADOR CRISTO BLANCO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/cristo_blanco3.jpg',
+            'atractivo_id' => 22,
+            'activo' => 1
+        ]);   
 
     }
 }

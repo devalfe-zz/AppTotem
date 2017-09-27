@@ -273,7 +273,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.2393657', 
 
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/6-3-2.jpg',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/632.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);
@@ -289,11 +289,57 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.2373483', 
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/6-4-1.jpg',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/641.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);
+        //20
+        
+        atractivo::create([
+            'titulo' => 'GEOGLIFOS DE CHEN CHEN',
+            'descripcion' => 'Se encuentran a unos 10 min. al sureste de la ciudad, tomando la ruta a Toquepala, a unos 1500 m.s.n.m. El grupo de representaciones más interesante se emplaza en el centro de una cadena de colinas situados en Chen Chen. ',
+            'detalle' => 'Se encuentran a unos 10 min. al sureste de la ciudad, tomando la ruta a Toquepala, a unos 1500 m.s.n.m. El grupo de representaciones más interesante se emplaza en el centro de una cadena de colinas situados en Chen Chen. Son representaciones zoomorfas (auquénidos), fitomorfas y antropomorfas que fueron construidas en las laderas de los cerros por la cultura Tiwanacu quienes emplearon dos técnicas: retirando la capa superficial del terreno o bien, adicionando piedras con diferente tonalidad al suelo, a manera de mosaico.',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.926285',
+            'latitud' => '-17.223654',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/geoglifos1.jpg',
+            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/LOS%20GEOGLIFOS%20DE%20CHEN%20CHEN.mp4',
+            'activo' => 1,
+            'categoria_id' => 1]); 
+        //21
+        atractivo::create([
+            'titulo' => 'BODEGA ATENCIO TAPIA',
+             'descripcion' => 'Moquegua ofrece una experiencia turística a través de los sentidos; resaltando la oferta gastronómica, visita a centenarias y tradicionales bodegas de pisco y vino, en medio de paisajes incomparables, disfrutando bajo un soleado y cálido clima.',
+            'detalle' => 'La ruta del pisco te invita a disfrutar de la campiña moquegua, recorrer sus diversos rincones y pasajes, donde se elevan una cantidad generosa de bodegas coloniales y tradicionales, que entre parajes rurales hacen su aparición que para felicidad nuestra, acogidas bajo su sombra podemos disfrutar vinos, piscos y diversos licores que son la expresión enaltecida de tradicionales fórmulas y saberes de antiguos viñateros, que han atrevesado los tiempos graciasa su descendencia, a la que supieron contagiar el amor por la elaboración del pisco y demás bebidas, Así, pues, Moquegua es cuna de los más exquisitos Piscos del Perú',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto - Chen Chen',
+            'longitud' => '-70.924259',
+            'latitud' => '-17.215572',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/1.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 6]);   
 
+        //22
+        atractivo::create([
+            'titulo' => 'MIRADOR CRISTO BLANCO',
+            'descripcion' => 'MIRADOR CRISTO BLANCO',
+            'detalle' => 'MIRADOR CRISTO BLANCO',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9297997',
+            'latitud' => '-17.1975564',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/cristo_blanco1.jpg',
+            'video_url' => 'http://@moqueguaturismo.gob.pe/videos/mp4/CRISTO%20BLANCO.mp4',
+            'activo' => 1,
+            'categoria_id' => 1]); 
 
     }
 }

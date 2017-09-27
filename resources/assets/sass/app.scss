@@ -511,7 +511,7 @@ footer p {
 .card-img-overlay.menu {
     overflow: hidden;
     border-radius: 25px;
-    background: linear-gradient(-30deg, rgba(255, 255, 255, 0.85) 40%, rgba(255, 255, 255, 0.0) 50%);
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.85) 30%, rgba(255, 255, 255, 0) 30%);
 }
 
 /////////////////////////////////////////////
@@ -557,8 +557,8 @@ footer p {
 }
 
 img.box {
-    width: 100%;
-    height: 100%;
+    //width: 100%;
+    height: 250px;
     transition: 0.3s linear;
     //transform: rotate(-45deg) scale(1.4)
 }
