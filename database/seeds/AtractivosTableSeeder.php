@@ -23,7 +23,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.194194',
             'horarios' => '',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/regidor_perpetuo1.jpg',
-            'video_url' => '',
+            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/CASA%20DEL%20REGIDOR%20PERPETUO.mp4',
             'activo' => 1,
             'categoria_id' => 1]); 
         //2
@@ -37,7 +37,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1938378',
             'horarios' => '',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/plaza1.jpg',
-            'video_url' => '',
+            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/PLAZA%20DE%20ARMAS.mp4',
             'activo' => 1,
             'categoria_id' => 1]);
 
@@ -51,8 +51,8 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9347765',
             'latitud' => '-17.1943247',
             'horarios' => '',
-            'foto_url' => '',
-            'video_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_chocano.jpg',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_chocano.jpg',
+            'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
         //4
@@ -66,7 +66,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.194114',
             'horarios' => '',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_tradicional1.jpg',
-            'video_url' => '',
+            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/CASA%20DE%20LOS%20FERNANDEZ%20DE%20CORDOVA%20O%20DE%20LA%20FLOR.mp4',
             'activo' => 1,
             'categoria_id' => 1]);        
         //5
@@ -80,7 +80,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1940844',
             'horarios' => '',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diez_ventanas.jpg',
-            'video_url' => '',
+            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/CASA%20DE%20LOS%20FERN%C3%81NDEZ%20CORNEJO%20Y%20FERN%C3%81NDEZ%20DE%20C%C3%93RDOBA.mp4',
             'activo' => 1,
             'categoria_id' => 1]);
         //6
@@ -104,8 +104,8 @@ class AtractivosTableSeeder extends Seeder
             'detalle' => 'Ambas edificaciones se emplazan al lado sur de la plaza de armas. Está construido íntegramente en piedra, con anchos muros y resguardado con macizas rejas. Sus techos son abovedados y el piso enteramente es de piedra. Posee zaguán y un patio interior alrededor de los cuales se encuentran los pequeños cuartos que sirvieron para alojar a los reos. El Cabildo, hoy Casa Mariátegui, fue edificado siguiendo los parámetros de la arquitectura civil moqueguana; con patio principal e interior y habitaciones que los circundan.',
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto',
-            'longitud' => '0',
-            'latitud' => '0',
+            'longitud' => '-70.9345291',
+            'latitud' => '-17.1942036',
             'horarios' => '',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/carcel1.jpg',
             'video_url' => '',
@@ -118,10 +118,10 @@ class AtractivosTableSeeder extends Seeder
             'detalle' => 'Se ubica en la calle Lima, a una cuadra de la plaza de armas. El antiguo complejo de San Francisco fue edificado por los Jesuitas y luego de su expulsión fue ocupado por los Franciscanos. Desde su inicio funcionó para actividades docentes y misioneras y posteriormente como convento de varones. Fue sede del antiguo colegio Propaganda Fide. Destruido y levantado después de desastrosos sismos, aún mantiene la mayor parte de su estructura de piedra y el ingreso a las Catacumbas. De la antigua iglesia de San Francisco hoy solo quedan viejas paredes derruidas. Es una edificación de piedra, confeccionada en tres niveles, aunque en la actualidad se puedan observar el primero y parte de los corredores subterráneos. Estuvo compuesto de colegio, hospedaje para estudiantes, convento e iglesia de tres naves. Al ingresar podemos observar un sobrio patio de piedra. Bajo la vieja urbe de Moquegua, en lo que era la villa de Santa Catalina de Guadalcázar, se halla un conjunto de primer orden llamado Catacumbas, dispuesto en torno a los complejos eclesiásticos del virreinato (C. San Francisco, C. Betlemítico y C. Santo Domingo), iglesia Matriz, el antiguo corregimiento y los solares de las principales familias con poder político de la antigua villa.  Las Catacumbas, bóvedas subterráneas confeccionadas en piedra, son de simple manufactura y con pequeños nichos. Son pasillos subterráneos que tuvieron doble fin: la comunicación interna entre las órdenes religiosas y políticas, y los enterramientos habituales, no sólo de religiosos, sino también de personajes prominentes. Algo similar, aunque en menor tamaño, se puede observar en la villa heroica de San Agustín de Torata, sus catacumbas, están confeccionadas en piedra provenientes de las canteras circundantes.',
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto',
-            'longitud' => '0',
-            'latitud' => '0',
+            'longitud' => '-70.934804',
+            'latitud' => '-17.191672',
             'horarios' => '',
-            'foto_url' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/complejo_san_francisco_catacumbas.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
@@ -149,7 +149,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.932889',
             'latitud' => '-17.192434',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia3.jpg',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/solar_de_cabellos.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);  
@@ -163,7 +163,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9330874',
             'latitud' => '-17.1921543',
             'horarios' => '',
-            'foto_url' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_cultura.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);   
@@ -177,7 +177,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.932466',
             'latitud' => '-17.19273',
             'horarios' => '',
-            'foto_url' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_serpiente.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);   
@@ -188,11 +188,11 @@ class AtractivosTableSeeder extends Seeder
             'detalle' => 'De este importante solar hoy sólo puede observarse la bella portada de piedra ricamente tallada personalizada con querubines, plantas, animales y figuras heráldicas.',
             'direccion' => 'Calle Ayacucho N 868',
             'ubicacion' => 'Mariscal Nieto',
-            'longitud' => '0',
-            'latitud' => '0',
+            'longitud' => '-70.932320',
+            'latitud' => '-17.192902',
             'horarios' => '',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diezcanseco.jpg',
-            'video_url' => '',
+            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/CASA%20DE%20LOS%20DIEZ%20CANSECO%20Y%20FERN%C3%81NDEZ%20D%C3%81VILA.mp4',
             'activo' => 1,
             'categoria_id' => 1]); 
         //14
@@ -205,7 +205,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.93223',
             'latitud' => '-17.192675',
             'horarios' => '',
-            'foto_url' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_ancianos.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
@@ -217,13 +217,83 @@ class AtractivosTableSeeder extends Seeder
             'detalle' => 'Ubicado a cuatro cuadras de la plaza de armas, con dirección este. Fue una imponente edificación que contó con una iglesia sencilla, pero de bella arquitectura. Convento y hospital con campanario, sacristía, botica y portería. Fundado en 1743, fue uno de los hospitales más antiguos del Perú virreinal. El barrio que circunda al antiguo complejo es conocido como Barrio Belén. Encantador contorno que guarda la arquitectura virreinal y republicana de Moquegua, sus solares exhiben balcones, portadas, ventanas sevillanas y techos de mojinete.',
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto',
-            'longitud' => '0',
-            'latitud' => '0',
+            'longitud' => '-70.9310187',
+            'latitud' => '-17.1912383',
             'horarios' => '',
-            'foto_url' => '',
-            'video_url' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia_belen.jpg',
+            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/COMPLEJO%20BETLEM%C3%8DTICO%20Y%20EL%20BARRIO%20BEL%C3%89N.mp4',
             'activo' => 1,
             'categoria_id' => 1]);
+
+
+
+
+        //BODEGAS 6///////////////////////////////////////////////////
+        //16
+        //6-1
+        atractivo::create([
+            'titulo' => 'BODEGAS ANTIGUAS',
+            'descripcion' => 'Moquegua ofrece una experiencia turística a través de los sentidos; resaltando la oferta gastronómica, visita a centenarias y tradicionales bodegas de pisco y vino, en medio de paisajes incomparables, disfrutando bajo un soleado y cálido clima.',
+            'detalle' => 'La ruta del pisco te invita a disfrutar de la campiña moquegua, recorrer sus diversos rincones y pasajes, donde se elevan una cantidad generosa de bodegas coloniales y tradicionales, que entre parajes rurales hacen su aparición que para felicidad nuestra, acogidas bajo su sombra podemos disfrutar vinos, piscos y diversos licores que son la expresión enaltecida de tradicionales fórmulas y saberes de antiguos viñateros, que han atrevesado los tiempos graciasa su descendencia, a la que supieron contagiar el amor por la elaboración del pisco y demás bebidas, Así, pues, Moquegua es cuna de los más exquisitos Piscos del Perú',
+            'direccion' => 'Mariscal Nieto - El valle',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.995075', 
+            'latitud' => '-17.317464',
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/1.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 6]);
+        //17
+        //6-2
+        atractivo::create([
+            'titulo' => 'BODEGAS GHERSI',
+            'descripcion' => 'Moquegua ofrece una experiencia turística a través de los sentidos; resaltando la oferta gastronómica, visita a centenarias y tradicionales bodegas de pisco y vino, en medio de paisajes incomparables, disfrutando bajo un soleado y cálido clima.',
+            'detalle' => 'La ruta del pisco te invita a disfrutar de la campiña moquegua, recorrer sus diversos rincones y pasajes, donde se elevan una cantidad generosa de bodegas coloniales y tradicionales, que entre parajes rurales hacen su aparición que para felicidad nuestra, acogidas bajo su sombra podemos disfrutar vinos, piscos y diversos licores que son la expresión enaltecida de tradicionales fórmulas y saberes de antiguos viñateros, que han atrevesado los tiempos graciasa su descendencia, a la que supieron contagiar el amor por la elaboración del pisco y demás bebidas, Así, pues, Moquegua es cuna de los más exquisitos Piscos del Perú',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto - El valle',
+            'longitud' => '-70.983176',
+            'latitud' => '-17.271867', 
+
+
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/1.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 6]);
+        //18
+        //6-3
+        atractivo::create([
+            'titulo' => 'BODEGAS BIONDI',
+            'descripcion' => 'Moquegua ofrece una experiencia turística a través de los sentidos; resaltando la oferta gastronómica, visita a centenarias y tradicionales bodegas de pisco y vino, en medio de paisajes incomparables, disfrutando bajo un soleado y cálido clima.',
+            'detalle' => 'La ruta del pisco te invita a disfrutar de la campiña moquegua, recorrer sus diversos rincones y pasajes, donde se elevan una cantidad generosa de bodegas coloniales y tradicionales, que entre parajes rurales hacen su aparición que para felicidad nuestra, acogidas bajo su sombra podemos disfrutar vinos, piscos y diversos licores que son la expresión enaltecida de tradicionales fórmulas y saberes de antiguos viñateros, que han atrevesado los tiempos graciasa su descendencia, a la que supieron contagiar el amor por la elaboración del pisco y demás bebidas, Así, pues, Moquegua es cuna de los más exquisitos Piscos del Perú',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto - El valle',
+            'longitud' => '-70.9832829',
+            'latitud' => '-17.2393657', 
+
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/6-3-2.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 6]);
+        //19
+        //6-4
+        atractivo::create([
+            'titulo' => 'BODEGAS ZAPATA',
+            'descripcion' => 'Moquegua ofrece una experiencia turística a través de los sentidos; resaltando la oferta gastronómica, visita a centenarias y tradicionales bodegas de pisco y vino, en medio de paisajes incomparables, disfrutando bajo un soleado y cálido clima.',
+            'detalle' => 'La ruta del pisco te invita a disfrutar de la campiña moquegua, recorrer sus diversos rincones y pasajes, donde se elevan una cantidad generosa de bodegas coloniales y tradicionales, que entre parajes rurales hacen su aparición que para felicidad nuestra, acogidas bajo su sombra podemos disfrutar vinos, piscos y diversos licores que son la expresión enaltecida de tradicionales fórmulas y saberes de antiguos viñateros, que han atrevesado los tiempos graciasa su descendencia, a la que supieron contagiar el amor por la elaboración del pisco y demás bebidas, Así, pues, Moquegua es cuna de los más exquisitos Piscos del Perú',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto - El valle',
+            'longitud' => '-70.9838462',
+            'latitud' => '-17.2373483', 
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/6-4-1.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 6]);
+
 
     }
 }

@@ -16,9 +16,16 @@
             <img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" class="cover mw-100 mh-100" />
             <div class="logo_detalle">  
                 {{--  <a href=""><img src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}" class="cover" /></a>   --}}
-                <div class="embed-responsive embed-responsive-16by9">
+                @if(sizeof($atractivos->video_url ) > 0)
+                    <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="{{ $atractivos->video_url }}" allowfullscreen></iframe>
+                    </div>
+                @else
+                    <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="//www.youtube.com/embed/31-z05RpRZg" allowfullscreen></iframe>
                </div>
+                @endif
+                
                 {{--  <img class="img-detalle img-fluid w-100 h-100" src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}" class="cover-bar" />   --}}
                 <div class="details">
                     <div class="title1">{{ $atractivos->titulo }}
@@ -40,9 +47,10 @@
     </div> <!-- end movie-card --> 
 @include('pages.partials.map', ['id' => $atractivos->id])
 {{--  @include('pages.partials.map', ['some' => 'DRIVING'])  --}}
-<section class="auto-lightbox">
+@include('pages.partials.foto')
+{{--  <section class="auto-lightbox">
 @foreach($atractivos->fotos as $foto)
     <img src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}">
  @endforeach
-</section>
+</section>  --}}
 @endsection

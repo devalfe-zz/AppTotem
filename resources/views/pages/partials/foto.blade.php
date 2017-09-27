@@ -1,19 +1,13 @@
-<div>
-<section class='galeria'>
-<input type="radio" id="uno" value="1" name="tractor" checked='checked' />    
-<input type="radio" id="dole" value="2" name="tractor" />      
-<input type="radio" id="tele" value="3" name="tractor" />
-    <article class='card'>
-        <h2 class='entypo-tag'>{{ $atractivo->titulo }}</h2>
-        <p>{{ $atractivo->detalle }}</p>
-    <ul class='footer'>
-      <li class='entypo-bell'></li>
-      <li class='entypo-mic'></li>
-      <li class='entypo-megaphone'></li>
-    </ul>
-    <label for='dole' class='entypo-left-bold otra'></label>
-    <label for='tele' class='entypo-right-bold otra'></label>
-    <label for='uno' class='entypo-arrows-ccw afin'></label>  
-  </article>
-  </section>
-</div>
+<section class="fotos">
+    <div class="container gallerij">
+        <h2 class="well text-center titulo-g">Galería</h2>
+            @foreach($atractivos->fotos as $foto)
+            <article class="col-lg-3 col-sm-3 col-6" style="float: left;">
+                <a class="link" href="{{ $foto->foto_url }}">
+                    <img class="foto-g w-100"data-position="{{$foto->id}}" src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}">
+                </a>
+            </article>
+             @endforeach
+    </div>
+</section>
+

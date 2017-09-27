@@ -665,7 +665,7 @@ img.box {
 }
 
 #map {
-    margin-bottom: 100px;
+    //margin-bottom: 100px;
     //height: 450px;
     //margin-top: 60px;
     position: relative;
@@ -752,5 +752,151 @@ img.box {
                 }
             }
         }
+    }
+}
+
+//=============================
+//===========fotos galeria====================
+h2.titulo-g {
+    text-align: center;
+    margin-bottom: 2vh;
+    color: #F1780D;
+}
+
+.fotos {
+    padding: 3vh 0;
+    .gallerij {
+        margin-top: 2vh;
+        article {
+            margin-bottom: 2vh;
+            //display: none;
+            &:nth-child(-n+5) {
+                display: block;
+            }
+            .link {
+                display: block;
+                background-color: rgba(0, 0, 0, 0.8);
+                background-image: url(https://ariwarda.be/assets/images/camera.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: auto;
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px transparent;
+                overflow: hidden;
+                transition-duration: 0.3s;
+                transition-property: background;
+                .foto-g {
+                    opacity: 0.5;
+                    transform: perspective(1px) translateZ(0);
+                    box-shadow: 0 0 1px transparent;
+                    overflow: hidden;
+                    transition-duration: 0.3s;
+                    transition-property: opacity;
+                }
+            }
+            &:hover {
+                .link {
+                    background: none;
+                    .foto-g {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        p {
+            text-align: center;
+            margin-top: 5vh;
+            .link {
+                color: white;
+                text-decoration: none;
+                &.less {
+                    display: none;
+                }
+                &.green {
+                    background-color: #2e7ba7;
+                }
+                &.primary {
+                    background-color: #1b6189;
+                }
+            }
+        }
+    }
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999999;
+    width: 100%;
+    height: 100%;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.35s;
+    -webkit-animation-timing-function: ease-in-out;
+    article {
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        span {
+            text-align: right;
+            width: 100%;
+            display: inline-block;
+            background-color: #fcfcfc;
+            margin: 0;
+            /* text-indent: 20px; */
+            padding: 10px 19px;
+            position: absolute;
+            .fa {
+                cursor: pointer;
+            }
+        }
+        .foto-g {
+            height: auto;
+            max-width: 100%;
+            display: block;
+            border: 15px solid #fcfcfc;
+            width: auto;
+            max-height: 95vh;
+            box-sizing: border-box;
+            float: left;
+        }
+        .navigation {
+            background-color: #fcfcfc;
+            padding: 15px;
+            display: flex;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            z-index: 999;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            .fa {
+                cursor: pointer;
+                background-color: orange;
+                padding: 15px;
+                color: #fcfcfc;
+                &:hover {
+                    background-color: brown;
+                }
+                &.disabled {
+                    background-color: lightgray;
+                    color: #fcfcfc;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

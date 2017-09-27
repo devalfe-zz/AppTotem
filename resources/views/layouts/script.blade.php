@@ -15,6 +15,93 @@
     $.material.input();
   });
 </script>
+<script>
+    $(document).ready(function(){
+
+    var items =  $('.gallerij article').size();
+    var shown =  4;
+    $('.more').click(function (e) {
+        e.preventDefault();
+        $('.less').show();
+        shown = $('.gallerij article:visible').size()+4;
+        if(shown< items) {$('.gallerij article:lt('+shown+')').show(300);}
+        else {$('.gallerij article:lt('+items+')').show(300);
+             $('.more').hide();
+             }
+    });
+    
+    $('.less').click(function (e) {
+        e.preventDefault();
+        $('.gallerij article').not(':lt(4)').hide(300);
+        $('.more').show();
+        $('.less').hide();
+    });
+
+    //Lightbox
+    var thumbs = [];
+    var bigImg = [];
+    $('.gallerij .link .foto-g').each(function(){
+        var srcs = $(this).attr('src');
+        var newSrc = srcs.replace('-150x150', '');
+        thumbs.push(srcs);
+        bigImg.push(newSrc);
+    });
+    $('.gallerij article').each(function(){
+        $(this).find('.link').on('click',function(e){
+            e.preventDefault();
+
+            var pos = $(this).find('.foto-g').attr('data-position') - 1;
+            $('body').append('<div class="lightbox"><article><span><i class="fa fa-times" aria-hidden="true"></i></span><img data-thumb="'+pos+'" src="'+bigImg[pos]+'" alt="" /><div class="navigation"><i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i></div></article></div>');
+
+        });
+    });
+    
+    $(document).on('click', '.navigation .fa-arrow-right', function(e){ 
+        e.stopPropagation();
+        $(this).each(function(){
+            var pos = $('.lightbox .link').attr('data-thumb');
+            var newPos = ++pos;
+            var newSrc = bigImg[newPos];
+            $('.lightbox article').hide();
+            $('.lightbox article .link').attr('src', newSrc);
+            $('.lightbox article .link').attr('data-thumb', newPos);
+            $('.lightbox article').fadeIn();
+            var lastEl = bigImg[bigImg.length - 1]; 
+            if($('.lightbox article .link').attr('src') == lastEl){
+                $(this).addClass('disabled');
+            }else{
+                $(this).removeClass('disabled');
+            }
+            $('.navigation .fa-arrow-left').removeClass('disabled');
+        });
+
+    });
+    $(document).on('click', '.navigation .fa-arrow-left', function(e){ 
+        e.stopPropagation();
+        $(this).each(function(){
+            var pos = $('.lightbox .link').attr('data-thumb');
+            var newPos = --pos;
+            var newSrc = bigImg[newPos];
+            $('.lightbox article').hide();
+            $('.lightbox article .link').attr('src', newSrc);
+            $('.lightbox article .link').attr('data-thumb', newPos);
+            $('.lightbox article').fadeIn();
+            var firstEl = bigImg[0]; 
+            if($('.lightbox article .link').attr('src') == firstEl){
+                $(this).addClass('disabled');
+            }else{
+                $(this).removeClass('disabled');
+            }
+            $('.navigation .fa-arrow-right').removeClass('disabled');
+        })
+    });
+    $(document).on('click', '.lightbox', function(){ 
+        $('.lightbox').fadeOut().delay(3000).queue(function() {
+           $(this).remove();
+        });
+    }); 
+});
+</script>
 <script type="text/javascript">
 new WOW().init();
 function setColors(i){

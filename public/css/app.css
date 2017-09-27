@@ -3692,7 +3692,6 @@ img.box {
 }
 
 #map {
-  margin-bottom: 100px;
   position: relative;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 10px;
           box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 10px;
@@ -3785,5 +3784,181 @@ img.box {
 .leftmenu__item:hover span.title {
   padding-left: 20px;
   max-width: 100%;
+}
+
+h2.titulo-g {
+  text-align: center;
+  margin-bottom: 2vh;
+  color: #F1780D;
+}
+
+.fotos {
+  padding: 3vh 0;
+}
+
+.fotos .gallerij {
+  margin-top: 2vh;
+}
+
+.fotos .gallerij article {
+  margin-bottom: 2vh;
+  display: none;
+}
+
+.fotos .gallerij article:nth-child(-n+5) {
+  display: block;
+}
+
+.fotos .gallerij article .link {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url(https://ariwarda.be/assets/images/camera.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px transparent;
+          box-shadow: 0 0 1px transparent;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: background;
+  transition-property: background;
+}
+
+.fotos .gallerij article .link .foto-g {
+  opacity: 0.5;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px transparent;
+          box-shadow: 0 0 1px transparent;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.fotos .gallerij article:hover .limk {
+  background: none;
+}
+
+.fotos .gallerij article:hover .limk .foto-g {
+  opacity: 1;
+}
+
+.fotos .gallerij p {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.fotos .gallerij p a {
+  color: white;
+  text-decoration: none;
+}
+
+.fotos .gallerij p a.less {
+  display: none;
+}
+
+.fotos .gallerij p a.green {
+  background-color: #2e7ba7;
+}
+
+.fotos .gallerij p a.primary {
+  background-color: #1b6189;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999999;
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.35s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.lightbox article {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+.lightbox article span {
+  text-align: right;
+  width: 100%;
+  display: inline-block;
+  background-color: #fcfcfc;
+  margin: 0;
+  /* text-indent: 20px; */
+  padding: 10px 19px;
+  position: absolute;
+}
+
+.lightbox article span .fa {
+  cursor: pointer;
+}
+
+.lightbox article foto-g {
+  height: auto;
+  max-width: 100%;
+  display: block;
+  border: 15px solid #fcfcfc;
+  width: auto;
+  max-height: 95vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+}
+
+.lightbox article .navigation {
+  background-color: #fcfcfc;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.lightbox article .navigation .fa {
+  cursor: pointer;
+  background-color: orange;
+  padding: 15px;
+  color: #fcfcfc;
+}
+
+.lightbox article .navigation .fa:hover {
+  background-color: brown;
+}
+
+.lightbox article .navigation .fa.disabled {
+  background-color: lightgray;
+  color: #fcfcfc;
+  cursor: not-allowed;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 

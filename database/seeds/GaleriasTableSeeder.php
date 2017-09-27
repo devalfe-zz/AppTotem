@@ -33,14 +33,14 @@ class GaleriasTableSeeder extends Seeder
         ]);
 
         galeria::create([
-            'Titulo' => 'PLAZA DE ARMAR',
+            'Titulo' => 'PLAZA DE ARMAS',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/plaza2.jpg',
             'atractivo_id' => 2,
             'activo' => 1
         ]);
 
         galeria::create([
-            'Titulo' => 'PLAZA DE ARMAR',
+            'Titulo' => 'PLAZA DE ARMAS',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/plaza3.jpg',
             'atractivo_id' => 2,
             'activo' => 1
@@ -98,6 +98,26 @@ class GaleriasTableSeeder extends Seeder
             'activo' => 1
         ]);
         //6
+        galeria::create([
+            'Titulo' => 'MURO DE LA IGLESIA MATRIZ',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/muro_matriz.jpg',
+            'atractivo_id' => 6,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'MURO DE LA IGLESIA MATRIZ',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/muro_matriz2.jpg',
+            'atractivo_id' => 6,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'MURO DE LA IGLESIA MATRIZ',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/muro_matriz3.jpg',
+            'atractivo_id' => 6,
+            'activo' => 1
+        ]);        
         //7
         galeria::create([
             'Titulo' => 'LA ANTIGUA CÁRCEL Y EL CABILDO',
@@ -113,9 +133,22 @@ class GaleriasTableSeeder extends Seeder
         ]); 
 
         //8
+        galeria::create([
+            'Titulo' => 'COMPLEJO SAN FRANCISCO Y LAS CATACUMBAS',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/complejo_san_francisco_catacumbas.jpg',
+            'atractivo_id' => 8,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'COMPLEJO SAN FRANCISCO Y LAS CATACUMBAS',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/complejo_san_francisco_catacumbas1.jpg',
+            'atractivo_id' => 8,
+            'activo' => 1
+        ]);
         //9
         galeria::create([
-            'Titulo' => 'PLAZA DE ARMAR',
+            'Titulo' => 'COMPLEJO SANTO DOMINGO',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia1.jpg',
             'atractivo_id' => 9,
             'activo' => 1
@@ -123,45 +156,168 @@ class GaleriasTableSeeder extends Seeder
 
 
         galeria::create([
-            'Titulo' => 'PLAZA DE ARMAR',
+            'Titulo' => 'COMPLEJO SANTO DOMINGO',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia2.jpg',
             'atractivo_id' => 9,
             'activo' => 1
         ]);
 
         galeria::create([
-            'Titulo' => 'PLAZA DE ARMAR',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia3.jpg',
+            'Titulo' => 'COMPLEJO SANTO DOMINGO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_cultura.jpg',
             'atractivo_id' => 9,
             'activo' => 1
         ]);
         //10
+
+        galeria::create([
+            'Titulo' => 'CASA DE LOS CABELLO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/solar_de_cabellos.jpg',
+            'atractivo_id' => 10,
+            'activo' => 1
+        ]);
+        galeria::create([
+            'Titulo' => 'CASA DE LOS CABELLO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/solar_de_cabellos1.jpg',
+            'atractivo_id' => 10,
+            'activo' => 1
+        ]);
+
         //11
+        galeria::create([
+            'Titulo' => 'CASA DE LOS BARRIOS O CASA DE LA CULTURA',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_cultura.jpg',
+            'atractivo_id' => 11,
+            'activo' => 1
+        ]);
+        galeria::create([
+            'Titulo' => 'CASA DE LOS BARRIOS O CASA DE LA CULTURA',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_cultura1.jpg',
+            'atractivo_id' => 11,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'CASA DE LOS BARRIOS O CASA DE LA CULTURA',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_cultura2.jpg',
+            'atractivo_id' => 11,
+            'activo' => 1
+        ]);
+
         //12
+        galeria::create([
+            'Titulo' => 'CASA DE LOS FERNÁNDEZ MALDONADO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_serpiente.jpg',
+            'atractivo_id' => 12,
+            'activo' => 1
+        ]);
+        galeria::create([
+            'Titulo' => 'CASA DE LOS FERNÁNDEZ MALDONADO',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_serpiente2.jpg',
+            'atractivo_id' => 12,
+            'activo' => 1
+        ]);
+
         //13
         galeria::create([
-            'Titulo' => 'PLAZA DE ARMAR',
+            'Titulo' => 'CASA DE LOS DIEZ CANSECO Y FERNÁNDEZ DÁVILA',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diezcanseco.jpg',
-            'atractivo_id' => 10,
+            'atractivo_id' => 13,
             'activo' => 1
         ]);
 
         galeria::create([
-            'Titulo' => 'PLAZA DE ARMAR',
+            'Titulo' => 'CASA DE LOS DIEZ CANSECO Y FERNÁNDEZ DÁVILA',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diezcanseco2.jpg',
-            'atractivo_id' => 10,
+            'atractivo_id' => 13,
             'activo' => 1
         ]);
 
         galeria::create([
-            'Titulo' => 'PLAZA DE ARMAR',
+            'Titulo' => 'CASA DE LOS DIEZ CANSECO Y FERNÁNDEZ DÁVILA',
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diezcanseco3.jpg',
-            'atractivo_id' => 10,
+            'atractivo_id' => 13,
             'activo' => 1
         ]);        
         //14
-        //15
+        galeria::create([
+            'Titulo' => 'CASA DE LOS JIMÉNEZ DE LA FLOR ',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_ancianos.jpg',
+            'atractivo_id' => 14,
+            'activo' => 1
+        ]);  
 
+        galeria::create([
+            'Titulo' => 'CASA DE LOS JIMÉNEZ DE LA FLOR ',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_ancianos2.jpg',
+            'atractivo_id' => 14,
+            'activo' => 1
+        ]);  
+        //15
+        galeria::create([
+            'Titulo' => 'COMPLEJO BETLEMÍTICO Y EL BARRIO ',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia_belen.jpg',
+            'atractivo_id' => 15,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'COMPLEJO BETLEMÍTICO Y EL BARRIO ',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia_belen2.jpg',
+            'atractivo_id' => 15,
+            'activo' => 1
+        ]);
+
+        galeria::create([
+            'Titulo' => 'COMPLEJO BETLEMÍTICO Y EL BARRIO ',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia_belen3.jpg',
+            'atractivo_id' => 15,
+            'activo' => 1
+        ]);        
+
+        ///BODEGAS///////////////////////////////////////////////////////////
+        //16
+            //6-2
+        //17
+            //6-3 
+        galeria::create([
+            'Titulo' => 'BODEGAS BIONDI',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-3-1.jpg',
+            'atractivo_id' => 17,
+            'activo' => 1
+        ]);
+        galeria::create([
+            'Titulo' => 'BODEGAS BIONDI',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-3-2.jpg',
+            'atractivo_id' => 17,
+            'activo' => 1
+        ]);  
+        galeria::create([
+            'Titulo' => 'BODEGAS BIONDI',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-3-3.jpg',
+            'atractivo_id' => 17,
+            'activo' => 1
+        ]);                          
+        //18
+            //6-4
+        galeria::create([
+            'Titulo' => 'BODEGAS ZAPATA',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-4-1.jpg',
+            'atractivo_id' => 18,
+            'activo' => 1
+        ]); 
+        galeria::create([
+            'Titulo' => 'BODEGAS ZAPATA',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-4-2.jpg',
+            'atractivo_id' => 18,
+            'activo' => 1
+        ]); 
+        galeria::create([
+            'Titulo' => 'BODEGAS ZAPATA',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/6-4-3.jpg',
+            'atractivo_id' => 18,
+            'activo' => 1
+        ]);                 
 
     }
 }

@@ -42,11 +42,13 @@ class AtrativoController extends Controller
      */
     public function fuera()
     {
-        $atractivos = Atractivo::where([
-            ['categoria_id', '=', '1'],
-            ['ubicacion', '=', 'Fuera'],
-        ])->get();
+        // $atractivos = Atractivo::where([
+        //     ['categoria_id', '=', '1'],
+        //     ['ubicacion', '<>', 'Mariscal Nieto'],
+        // ])->get();
         //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
+        $atractivos = Atractivo::SearchCategoria(6)->get();
+        
         return view('pages.pages1', compact('atractivos'));
     }
     /**
@@ -68,7 +70,7 @@ class AtrativoController extends Controller
      */
     public function multimedia()
     {
-        $galerias = Galeria::all();
+        $galerias = Galeria::with('lugares')->get();
         //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
         return view('pages.multimedia', compact('galerias'));
     }

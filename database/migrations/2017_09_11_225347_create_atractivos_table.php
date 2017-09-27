@@ -17,7 +17,7 @@ class CreateAtractivosTable extends Migration
             $table->engine = "InnoDB";
             $table->increments('id');
             $table->string('titulo',80);
-            $table->string('descripcion',200);
+            $table->string('descripcion',300);
             $table->string('detalle',2000)->nullable();
             $table->string('direccion',60);
             $table->string('ubicacion')->nullable();
