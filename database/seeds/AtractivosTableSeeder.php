@@ -341,5 +341,155 @@ class AtractivosTableSeeder extends Seeder
             'activo' => 1,
             'categoria_id' => 1]); 
 
+        atractivo::create([
+            'titulo' => 'TERMINAL TERRESTRE',
+            'descripcion' => 'TERMINAL TERRESTRE',
+            'detalle' => 'TERMINAL TERRESTRE',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9482136',
+            'latitud' => '-17.1911595',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/terminal.JPG',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 1]); 
+
+        atractivo::create([
+            'titulo' => 'PARQUE ECOLÓGICO',
+            'descripcion' => 'PARQUE ECOLÓGICO',
+            'detalle' => 'PARQUE ECOLÓGICO',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9484048',
+            'latitud' => '-17.1877323',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/ecologico.JPG',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 1]);  
+
+        atractivo::create([
+            'titulo' => 'BODEGA PARRAS & REYES',
+            'descripcion' => 'BODEGA PARRAS & REYES',
+            'detalle' => 'BODEGA PARRAS & REYES',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9412494',
+            'latitud' => '-17.184134',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/parras%20y%20reyes.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 6]);  
+
+        atractivo::create([
+            'titulo' => 'BODEGA RAYITO DE SOL',
+            'descripcion' => 'BODEGA RAYITO DE SOL',
+            'detalle' => 'BODEGA RAYITO DE SOL',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9451412',
+            'latitud' => '-17.1835814',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/rayito.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 6]);
+
+        atractivo::create([
+            'titulo' => 'BODEGA PAREDES',
+            'descripcion' => 'BODEGA PAREDES',
+            'detalle' => 'BODEGA PAREDES',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9481885',
+            'latitud' => '-17.1824169',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/paredes.JPG',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 6]);
+
+        atractivo::create([
+            'titulo' => 'BODEGA EL MOCHO',
+            'descripcion' => 'BODEGA EL MOCHO',
+            'detalle' => 'BODEGA EL MOCHO',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9258193',
+            'latitud' => '-17.1607121',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/mocho.JPG',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 6]); 
+
+        atractivo::create([
+            'titulo' => 'BODEGA CFAM',
+            'descripcion' => 'BODEGA CFAM',
+            'detalle' => 'BODEGA CFAM',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.92896',
+            'latitud' => '-17.177246',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/1.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 6]);  
+
+        atractivo::create([
+            'titulo' => 'BODEGA DON CAMILO',
+            'descripcion' => 'BODEGA DON CAMILO',
+            'detalle' => 'BODEGA DON CAMILO',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9249966',
+            'latitud' => '-17.1803916',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/1.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 6]);  
+
+        atractivo::create([
+            'titulo' => 'ESTADIO 25 DE NOVIEMBRE',
+            'descripcion' => 'ESTADIO 25 DE NOVIEMBRE',
+            'detalle' => 'ESTADIO 25 DE NOVIEMBRE',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9297962',
+            'latitud' => '-17.1862302',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/estadio.JPG',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 1]);  
+
+        atractivo::create([
+            'titulo' => 'MIRADOR INMACULADA CONCEPCIÓN',
+            'descripcion' => 'MIRADOR INMACULADA CONCEPCIÓN',
+            'detalle' => 'MIRADOR INMACULADA CONCEPCIÓN',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.8956552',
+            'latitud' => '-17.1794529',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/estadio.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 1]);                      
+
     }
 }

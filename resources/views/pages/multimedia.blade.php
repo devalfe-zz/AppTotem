@@ -1,19 +1,35 @@
 @extends('template')
-@section ('title', 'Servicios y ofertas')
+@section ('title', 'multimedia')
 @section('class','servicos')
 
 @section ('content')
-<section class="fotos">
-    <div class="container gallerij">
-        <h2 class="well text-center titulo-g">Galería</h2>
-            @foreach($galerias as $foto)
-            <article class="col-lg-3 col-sm-3 col-6" >
-                <a class="link " href="{{ $foto->foto_url }}" style="float: left;">
-                    <img class="foto-g w-100 img-thumbnail"data-position="{{$foto->id}}" src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}">
-                </a>
-            </article>
-             @endforeach
+{{--  <ul class="galeria d-flex flex-wrap mb-2">
+@foreach($galerias as $foto)
+    <li class="col-3 mb-2">
+        <a  href="#" class="thumbnail" data-toggle="modal"  data-target="#lightbox"><img class="w-100 h-100 img-thumbnail" src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}">
+        </a>
+    </li>
+@endforeach  --}}
+<div class="container d-flex flex-wrap mb-2">
+@foreach($galerias as $foto)
+    <div class="col-xs-6 col-sm-3">
+        <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
+            <img class="w-100 h-100 img-thumbnail" src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}">
+        </a>
     </div>
-</section>
+@endforeach     
+</div>
+</ul>
+<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+        <div class="modal-content">
+            <div class="modal-body">
+                {{--  <h5 class="modal-title" id="exampleModalLabel">{{ $foto->titulo }}</h5>  --}}
+                <img src="" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
 
 @endsection

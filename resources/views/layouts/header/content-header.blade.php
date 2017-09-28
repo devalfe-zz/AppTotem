@@ -10,7 +10,7 @@
             <!-- End Header Logo --> 
         </div>
         <div class="col-6 d-flex justify-content-center align-items-center">
-             <div class="owl-carousel w-25">
+             <div class="owl-carousel w-75">
                 <img src="{{asset('images/head.jpg')}}"  alt="image">
                 <img src="{{asset('images/head1.jpg')}}"  alt="image">
                 <img src="{{asset('images/head2.jpg')}}"  alt="image">

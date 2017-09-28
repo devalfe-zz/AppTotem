@@ -3960,3 +3960,21 @@ h2.titulo-g {
   }
 }
 
+#lightbox .modal-content {
+  display: inline-block;
+  text-align: center;
+}
+
+#lightbox .close {
+  opacity: 1;
+  color: white;
+  background-color: #191919;
+  padding: 5px 8px;
+  border-radius: 30px;
+  border: 2px solid white;
+  position: absolute;
+  top: -15px;
+  right: -55px;
+  z-index: 1032;
+}
+

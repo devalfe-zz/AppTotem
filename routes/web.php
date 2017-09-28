@@ -20,8 +20,16 @@ Route::get('/atractivo','AtrativoController@dentro')->name('dentro');
 Route::get('/atractivos','AtrativoController@fuera')->name('fuera');
 Route::get('/servicios','AtrativoController@servicios')->name('servicios');
 Route::get('/multimedia','AtrativoController@multimedia')->name('multimedia');
+Route::get('/transporte','AtrativoController@transporte')->name('transporte');
+Route::get('/alojamiento','AtrativoController@alojamiento')->name('alojamiento');
+Route::get('/restaurante','AtrativoController@restaurante')->name('restaurante');
+Route::get('/telefonos', function () {
+     return view('pages.telefono');
+})->name('telefono');
 Route::get('/detalle/{id}','AtrativoController@detalle')->name('detalle');
 Route::get('/detalle/map/{id}','AtrativoController@map')->name('map');
+Route::get('/mapa','AtrativoController@maps')->name('mapa');
+
 
 //Route::get('detalle/','AtrativoController@maps')->name('mapa');
 

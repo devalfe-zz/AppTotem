@@ -76,6 +76,39 @@ class AtrativoController extends Controller
     }
     /**
      * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function transporte()
+    {
+        $atractivos = Atractivo::SearchCategoria(5)->get();
+        //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
+        return view('pages.pages3', compact('atractivos'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function alojamiento()
+    {
+        $atractivos = Atractivo::SearchCategoria(3)->get();
+        //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
+        return view('pages.pages3', compact('atractivos'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function restaurante()
+    {
+        $atractivos = Atractivo::SearchCategoria(4)->get();
+        //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
+        return view('pages.pages3', compact('atractivos'));
+    }
+    /**
+     * Display a listing of the resource.
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
@@ -144,19 +177,31 @@ class AtrativoController extends Controller
      */
     public function maps()
     {
+        $atractivos = Atractivo::findOrFail(1);
+        $atractivos = $atractivos->load('fotos','categorias');
+        $lng = $atractivos->longitud;
+        $lat = $atractivos->latitud;
+        $des = $atractivos->detalle;
+        $tit = $atractivos->titulo;
         $config = array();
-        $config['center'] = '37.4419, -122.1419';
-        $config['map_width'] = 400;
-        $config['map_height'] = 400;
-        $config['zoom'] = 'auto';
-        \Gmaps::initialize($config);
-         // Colocar el marcador 
-        // Una vez se conozca la posición del usuario
+        $config['center'] = '-17.1937795,-70.933598';
+        //$config['zoom'] = 'auto';
+        //$config['directions'] = TRUE;
+        //$config['directionsMode'] = "WALKING";
+        //$config['directionsStart'] = '-17.1937795,-70.933598';
+        //$config['directionsEnd'] = $lat.','. $lng;
+        //$config['directionsDivID'] = 'directionsDiv';
+        //$config['center'] = -17.1937795, -70.9335977
+        $config['clickable'] = true;
+        $config['zoom'] = '15';
+        Gmaps::initialize($config);
         $marker = array();
-        $marker['position'] = '37.429, -122.1419';
-        \Gmaps::add_marker($marker);
-        $map = \Gmaps::create_map();
-        return view('pages.partials.map', compact('map'));
+        $marker['position'] = $lat.','. $lng;
+       
+        Gmaps::add_marker($marker);
+        $map = Gmaps::create_map();
+        //dd($map)
+         return view('pages.mapa', compact('map'));
     }
 
     /**

@@ -27,7 +27,7 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="">
+    <a href="{{ route('home') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/atractivos/carcel1.jpg')}}">
             <div class="card-img-overlay menu">
@@ -48,17 +48,17 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="">
+    <a href="{{ route('home') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/atractivos/casa_diezcanseco3.jpg')}}">
             <div class="card-img-overlay menu">
-            <p class="card-text label-box carousel-caption">Historía</p>
+            <p class="card-text label-box carousel-caption">Danzas</p>
         </div>
         </div>
         <div class="carousel-item menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/atractivos/muro_matriz2.jpg')}}">
             <div class="card-img-overlay menu">
-                <p class="card-text label-box carousel-caption">Historía</p>
+                <p class="card-text label-box carousel-caption">Danzas</p>
             </div>     
         </div>
     </a>
@@ -69,7 +69,7 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="">
+    <a href="{{ route('telefono') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/atractivos/muro_matriz.jpg')}}">
             <div class="card-img-overlay menu">
@@ -90,17 +90,17 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="">
+    <a href="{{ route('home') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/atractivos/casa_tradicional3.jpg')}}">
             <div class="card-img-overlay menu">
-            <p class="card-text label-box carousel-caption">Historía</p>
+            <p class="card-text label-box carousel-caption">Diversión</p>
         </div>
         </div>
         <div class="carousel-item menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/atractivos/iglesia_belen3.jpg')}}">
             <div class="card-img-overlay menu">
-                <p class="card-text label-box carousel-caption">Historía</p>
+                <p class="card-text label-box carousel-caption">Diversión</p>
             </div>     
         </div>
     </a>
@@ -111,7 +111,7 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="">
+    <a href="{{ route('transporte') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/atractivos/casa_chocano3.jpg')}}">
             <div class="card-img-overlay menu">
@@ -132,7 +132,7 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="">
+    <a href="{{ route('alojamiento') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/portada/DMHOTELES%20-%20BALCON%20DE%20BUNGALOWS.jpg')}}">
             <div class="card-img-overlay menu">
@@ -153,7 +153,7 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="">
+    <a href="{{ route('restaurante') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/atractivos/casa_serpiente2.jpg')}}">
             <div class="card-img-overlay menu">
@@ -174,17 +174,17 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="">
+    <a href="{{ route('home') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/atractivos/regidor_perpetuo2.jpg')}}">
             <div class="card-img-overlay menu">
-            <p class="card-text label-box carousel-caption">Historía</p>
+            <p class="card-text label-box carousel-caption"></p>
         </div>
         </div>
         <div class="carousel-item menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/atractivos//head1.jpg')}}">
             <div class="card-img-overlay menu">
-                <p class="card-text label-box carousel-caption">Historía</p>
+                <p class="card-text label-box carousel-caption">Cartelera - Cine</p>
             </div>     
         </div>
     </a>
@@ -195,7 +195,7 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="">
+    <a href="{{ route('home') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/portada/CUY_FRITO.jpg')}}">
             <div class="card-img-overlay menu">
@@ -216,7 +216,7 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="">
+    <a href="{{ route('home') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/portada/historia_moquegua1.jpg')}}">
             <div class="card-img-overlay menu">
@@ -237,7 +237,7 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="">
+    <a href="{{ route('mapa') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/portada/mapa-moquegua.jpg')}}">
             <div class="card-img-overlay menu">

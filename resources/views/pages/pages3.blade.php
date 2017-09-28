@@ -2,7 +2,6 @@
 @section ('title', '¿')
 @section('class','servicios')
 @section('lema')
-Atractivos fuera de la ciudad
 @endsection
 @section ('content')
 @if(sizeof($atractivos) > 0)
