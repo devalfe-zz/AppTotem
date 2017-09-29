@@ -489,7 +489,21 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/estadio.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]);                      
+            'categoria_id' => 1]);      
+         atractivo::create([
+            'titulo' => 'Hotel Moquegua',
+            'descripcion' => 'Hotel Moquegua',
+            'detalle' => 'Hotel Moquegua',
+            'direccion' => '',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '70.93951195',
+            'latitud' => '-17.19008065',
+            
+            'horarios' => '',
+            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/hotel.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 1]);                              
 
     }
 }

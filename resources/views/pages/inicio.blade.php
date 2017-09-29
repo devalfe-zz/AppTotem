@@ -26,16 +26,6 @@
           </div>
       </div>
     </div>
-    <div class="contenido">
-        
-        <p>Isn't it great to do something you can't fail at? Work on one thing at a time. Don't get carried away - we have plenty of time. You can do it. If we're gonna walk though the woods, we need a little path. You have to make these big decisions.</p>
-        <p>We don't really know where this goes - and I'm not sure we really care. Get away from those little Christmas tree things we used to make in school. From all of us here, I want to wish you happy painting and God bless, my friends. If you don't think every day is a good day - try missing a few. You'll see.</p>
-        <p>Do an almighty painting with us. Remember how free clouds are. They just lay around in the sky all day long. When you do it your way you can go anywhere you choose. Put your feelings into it, your heart, it's your world. You can't have light without dark. You can't know happiness unless you've known sorrow.</p>
-        <p>Use absolutely no pressure. Just like an angel's wing. These trees are so much fun. I get started on them and I have a hard time stopping. Every day I learn.</p>
-        <img src="http://placehold.it/380x200">      
-        <p>There's not a thing in the world wrong with washing your brush. You've got to learn to fight the temptation to resist these things. Just let them happen. Painting should do one thing. It should put happiness in your heart. I can't think of anything more rewarding than being able to express yourself to others through....
-        </p>
-    </div>
   </div>
 </div>
 </div>

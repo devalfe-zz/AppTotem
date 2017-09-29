@@ -26,6 +26,12 @@ Route::get('/restaurante','AtrativoController@restaurante')->name('restaurante')
 Route::get('/telefonos', function () {
      return view('pages.telefono');
 })->name('telefono');
+Route::get('/historia', function () {
+     return view('pages.historia');
+})->name('historia');
+Route::get('/turismo', function () {
+     return view('pages.telefono');
+})->name('telefono');
 Route::get('/detalle/{id}','AtrativoController@detalle')->name('detalle');
 Route::get('/detalle/map/{id}','AtrativoController@map')->name('map');
 Route::get('/mapa','AtrativoController@maps')->name('mapa');

@@ -216,7 +216,7 @@
 <div class="col-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-    <a href="{{ route('home') }}">
+    <a href="{{ route('historia') }}">
         <div class="carousel-item active menu-box">
             <img class="card-img d-block w-100 h-100" src="{{asset('http://moqueguaturismo.gob.pe/images/portada/historia_moquegua1.jpg')}}">
             <div class="card-img-overlay menu">

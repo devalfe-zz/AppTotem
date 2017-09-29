@@ -14,12 +14,15 @@
             class="cover" /></a>  --}}
             
                 <img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" class="cover mw-100 mh-100" />
-                <div class="logo_detalle">  
+                <div class="logo_detalle">  vagran up
                 {{--  <a href=""><img src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}" class="cover" /></a>   --}}
                 @if(sizeof($atractivos->video_url ) > 0)
                     <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="{{ $atractivos->video_url }}" allowfullscreen></iframe>
-                    </div>
+                    <video autoplay loop class="embed-responsive-item" controls="false">
+                            <source src="{{ $atractivos->video_url }}" allowfullscreen></source>
+                        </video>
+                    {{--  <iframe class="auto play embed-responsive-item" src="{{ $atractivos->video_url }}" allowfullscreen></iframe>
+                    </div>  --}}
                 @else
                     <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="//www.youtube.com/embed/31-z05RpRZg" allowfullscreen></iframe>
