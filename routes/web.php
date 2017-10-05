@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+ use GuzzleHttp\Client;
 // Route::get('/', function () {
 //     return view('template');
 // });
@@ -23,18 +23,24 @@ Route::get('/multimedia','AtrativoController@multimedia')->name('multimedia');
 Route::get('/transporte','AtrativoController@transporte')->name('transporte');
 Route::get('/alojamiento','AtrativoController@alojamiento')->name('alojamiento');
 Route::get('/restaurante','AtrativoController@restaurante')->name('restaurante');
-Route::get('/telefonos', function () {
-     return view('pages.telefono');
-})->name('telefono');
-Route::get('/historia', function () {
-     return view('pages.historia');
-})->name('historia');
-Route::get('/turismo', function () {
-     return view('pages.telefono');
-})->name('telefono');
+Route::view('/telefonos', 'pages.telefono')->name('telefono');
+Route::view('/historia', 'pages.historia')->name('historia');
+Route::view('/turismo', 'pages.turismo')->name('turismo');
 Route::get('/detalle/{id}','AtrativoController@detalle')->name('detalle');
 Route::get('/detalle/map/{id}','AtrativoController@map')->name('map');
 Route::get('/mapa','AtrativoController@maps')->name('mapa');
+Route::get('/cartelera', function () {
+   $client = new Client([
+        // Base URI is used with relative requests
+        'base_uri' => 'https://tv-v2.api-fetch.website',
+        // You can set any number of default request options.
+        'timeout'  => 5.0,
+    ]);
+    $response = $client->request('GET', 'movies/1');
+    
+    $carteleras = json_decode ($response->getBody()->getContents());
+    return view('pages.cartelera',compact('carteleras'));
+})->name('cine');
 
 
 //Route::get('detalle/','AtrativoController@maps')->name('mapa');
