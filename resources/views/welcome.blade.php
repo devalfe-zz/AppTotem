@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -12,7 +12,9 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Overlock:400,400i,700,700i,900,900i|Rancho" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="{{mix('css/design.css')}}" />
+<link rel="stylesheet" href="{{mix('css/app.css')}}" />
+<script src="{{mix('js/app.js')}}"></script>
+
        
 
         <!-- Styles -->
@@ -70,7 +72,7 @@
                 margin-bottom: 30px;
             }
         </style>
-        <link rel="stylesheet" href="{{mix('css/app.css')}}" />
+     
 
     </head>
     <body>
@@ -85,12 +87,15 @@
                     @endif
                 </div>
             @endif
+            <div id="app">
+            </div>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+            <div class="container">
+                <div class="title">
+                    
+                    Laravel - vue
                 </div>
-                <button type="button" class="btn btn-primary totem">laravel</button>
+                <button type="button" class="btn btn-primary btn-lg">laravel</button>
                 <i class="material-icons face">face</i>
 <i class="material-icons">shopping_cart</i>
                 <div class="links">

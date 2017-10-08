@@ -7,23 +7,8 @@ let config = {
     watchFiles: [
         'app/**/*.php',
         'resources/views/**/*.php',
-        'app/**/resources/views/**/*.{php,html}', 'app/**/resources/views/*.{php,html}',
-        'app/**/*.*',
-        //'public/**/*.*'
-        'resources/assets/**/*.*',
-        'resources/views/**/*.*',
-        'app/**/resources/views/**/*.*',
-        'public/css/**/*.*', 'public/js/**/*.*',
-        'resources/views/**/*.{php,html}',
-        'resources/views/**/*.*',
-        'resources/views/*.*',
-        'resources/views/*.blade.php',
-        'resources/views/layouts/*.*',
-        'resources/views/**/*.php',
-        'app/**/*.php',
-        'routes/**/*.php',
-        'resources/views/layouts/*.blade.php'
-
+        'public/js/**/*.js',
+        'public/css/**/*.css'
     ]
 };
 

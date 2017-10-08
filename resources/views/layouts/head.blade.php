@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="{{mix('css/bootstrap-material-design.css')}}" />
     
     <link rel="stylesheet" href="{{mix('css/app.css')}}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('map')
    
 </head>
