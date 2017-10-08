@@ -24,20 +24,6 @@ mix.browserSync({
     notify: true,
     open: false //false, local, external, ui, tunnel
 });
-// mix.browserSync({
-//     'js': [
-//         'public/js/app.js',
-//     ],cd
-//     'css': [
-//         'public/css/app.css',
-//     ],
-//     'views': [
-//         'resources/views/**/*'
-//     ],
-//     proxy: 'apptotem.dev',
-//     open: false,
-//     host: "192.168.10.10"
-// });
 
 /*
  |--------------------------------------------------------------------------
@@ -70,7 +56,10 @@ mix.copy(['node_modules/bootstrap-material-design/dist/js/bootstrap-material-des
     'node_modules/wowjs/dist/wow.js',
     'node_modules/superfish/src/js/superfish.js',
     'node_modules/smooth-scroll/dist/js/smooth-scroll.js',
-    'node_modules/bootstrap/dist/js/bootstrap.js'
+    'node_modules/bootstrap/dist/js/bootstrap.js',
+    'node_modules/vue/dist/vue.js',
+    'node_modules/vue-resource/dist/vue-resource.js',
+    'node_modules/vue-router/dist/vue-router.js'
 
 
 ], 'public/js');

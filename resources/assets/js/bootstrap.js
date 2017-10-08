@@ -1,3 +1,5 @@
+window._ = require('lodash');
+
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -5,19 +7,6 @@
  */
 
 window.$ = window.jQuery = require('jquery');
-
-//require('bootstrap-sass');
-
-/**
- * Vue is a modern JavaScript library for building interactive web interfaces
- * using reactive data binding and reusable components. Vue's API is clean
- * and simple, leaving you to focus on building your next great project.
- */
-
-window.Vue = require('vue');
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -49,7 +38,9 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
-// import Echo from "laravel-echo"
+// import Echo from 'laravel-echo'
+
+// window.Pusher = require('pusher-js');
 
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',

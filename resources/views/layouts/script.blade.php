@@ -1,4 +1,3 @@
-
 <script src="{{mix('js/sweetalert2.min.js')}}"></script>
 <script src="{{mix('js/wow.js')}}"></script>
 <script src="{{mix('js/superfish.js')}}"></script>
@@ -7,6 +6,10 @@
 <script src="{{mix('js/bootstrap.js')}}"></script>
 <script src="{{mix('js/jquery.fullpage.extensions.min.js')}}"></script>
 <script src="{{mix('js/jquery.fullpage.js')}}"></script>
+<script src="{{mix('js/vue.js')}}"></script>
+<script src="{{mix('js/vue-resource.js')}}"></script>
+<script src="{{mix('js/vue-router.js')}}"></script>
+<script src="{{mix('js/app.js')}}"></script>
 <script>
   $(function () {
     $.material.init();
@@ -27,4 +30,4 @@ jQuery(document).ready(function($) {
     }) 
 });
 </script>
-<script src="{{mix('js/app.js')}}"></script>
+

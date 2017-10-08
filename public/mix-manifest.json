@@ -17,6 +17,9 @@
     "/js/superfish.js": "/js/superfish.js",
     "/js/smooth-scroll.js": "/js/smooth-scroll.js",
     "/js/bootstrap.js": "/js/bootstrap.js",
+    "/js/vue.js": "/js/vue.js",
+    "/js/vue-resource.js": "/js/vue-resource.js",
+    "/js/vue-router.js": "/js/vue-router.js",
     "/images/logo.svg": "/images/logo.svg",
     "/images/mpmn.svg": "/images/mpmn.svg"
 }
