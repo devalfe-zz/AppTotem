@@ -1,18 +1,19 @@
 <template>
-    <div class="container">
+    <div id="main" class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-
-                <div class="card ">
-                    <div class="card-header bg-primary text-white">
-                        Featured
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Special title treatment</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                </div>
-
+            <div class="col-sm-4">
+                <h1>VUEjs - AJAX axios</h1>
+                <ul class="list-group">
+                    <li v-for="item in lists" class="list-group-item">
+                        {{ item.name }}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-8">
+                <h1>JSON</h1>
+                <pre>
+        					{{ $data | json }}
+        				</pre>
             </div>
         </div>
     </div>

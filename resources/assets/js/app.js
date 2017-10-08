@@ -16,6 +16,24 @@ window.Vue = require('vue');
 
 Vue.component('example', require('./components/Example.vue'));
 
-const app = new Vue({
-    el: '#app'
+// const app = new Vue({
+//     el: '#app'
+// });
+
+var urlUsers = 'https://jsonplaceholder.typicode.com/users';
+new Vue({
+    el: '#main',
+    created: function() {
+        this.getUsers();
+    },
+    data: {
+        lists: []
+    },
+    methods: {
+        getUsers: function() {
+            axios.get(urlUsers).then(response => {
+                this.lists = response.data
+            });
+        }
+    }
 });

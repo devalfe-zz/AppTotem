@@ -17,16 +17,26 @@
 <link rel="stylesheet" href="{{mix('css/app.css')}}" />
 
 
-
-       
-
-      
-
     </head>
     <body>
-        <div id="app">
-                <example></example>
+        <<div id="main" class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h1>VUEjs - AJAX axios</h1>
+                <ul class="list-group">
+                    <li v-for="item in lists" class="list-group-item">
+                        @{{ item.name }}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-8">
+                <h1>JSON</h1>
+                <pre>
+        					@{{ $data | json }}
+        				</pre>
+            </div>
         </div>
+    </div>
  
     {{--  <script src="{{mix('js/vue.js')}}"></script>
 <script src="{{mix('js/vue-resource.js')}}"></script>

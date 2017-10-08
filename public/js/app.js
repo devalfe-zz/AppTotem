@@ -93,8 +93,28 @@ window.Vue = __webpack_require__(48);
 
 Vue.component('example', __webpack_require__(12));
 
-var app = new Vue({
-  el: '#app'
+// const app = new Vue({
+//     el: '#app'
+// });
+
+var urlUsers = 'https://jsonplaceholder.typicode.com/users';
+new Vue({
+    el: '#main',
+    created: function created() {
+        this.getUsers();
+    },
+    data: {
+        lists: []
+    },
+    methods: {
+        getUsers: function getUsers() {
+            var _this = this;
+
+            axios.get(urlUsers).then(function (response) {
+                _this.lists = response.data;
+            });
+        }
+    }
 });
 
 /***/ }),
@@ -275,6 +295,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -287,26 +308,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "container"
+    staticClass: "container",
+    attrs: {
+      "id": "main"
+    }
   }, [_c('div', {
     staticClass: "row"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
-  }, [_c('div', {
-    staticClass: "card "
-  }, [_c('div', {
-    staticClass: "card-header bg-primary text-white"
-  }, [_vm._v("\n                    Featured\n                ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-body"
-  }, [_c('h4', {
-    staticClass: "card-title"
-  }, [_vm._v("Special title treatment")]), _vm._v(" "), _c('p', {
-    staticClass: "card-text"
-  }, [_vm._v("With supporting text below as a natural lead-in to additional content.")])])])])])])
-}]}
+    staticClass: "col-sm-4"
+  }, [_c('h1', [_vm._v("VUEjs - AJAX axios")]), _vm._v(" "), _c('ul', {
+    staticClass: "list-group"
+  }, _vm._l((_vm.lists), function(item) {
+    return _c('li', {
+      staticClass: "list-group-item"
+    }, [_vm._v("\n                    " + _vm._s(item.name) + "\n                ")])
+  }))]), _vm._v(" "), _c('div', {
+    staticClass: "col-sm-8"
+  }, [_c('h1', [_vm._v("JSON")]), _vm._v(" "), _c('pre', [_vm._v("    \t\t\t\t\t" + _vm._s(_vm._f("json")(_vm.$data)) + "\n    \t\t\t\t")])])])])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()

@@ -31,13 +31,10 @@ Route::get('/detalle/map/{id}','AtrativoController@map')->name('map');
 Route::get('/mapa','AtrativoController@maps')->name('mapa');
 Route::get('/cartelera', function () {
    $client = new Client([
-        // Base URI is used with relative requests
         'base_uri' => 'https://tv-v2.api-fetch.website',
-        // You can set any number of default request options.
         'timeout'  => 5.0,
     ]);
     $response = $client->request('GET', 'movies/1');
-    
     $carteleras = json_decode ($response->getBody()->getContents());
     return view('pages.cartelera',compact('carteleras'));
 })->name('cine');
