@@ -11,10 +11,22 @@
 |
 */
  use GuzzleHttp\Client;
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('categorias', function () {
+//     return view('pages.dashboard');
+// });
+//Route::resource('tasks', 'TaskController', ['except' => 'show', 'create', 'edit']);
+Route::group(['prefix' => 'admin'], function () {
+    Route::view('categorias', 'pages.dashboard');
+    Route::resource('categoria', 'CategoriaController', ['except' => 'show', 'create', 'edit']);    
 });
-//Route::get('/', 'PagesController@index')->name('index');
+// Route::get('categoria', function () {
+//     return view('pages.dashboard');
+// });
+
+Route::get('/', 'PagesController@index')->name('index');
 Route::get('/home','PagesController@inicio')->name('home');
 Route::get('/atractivo','AtrativoController@dentro')->name('dentro');
 Route::get('/atractivos','AtrativoController@fuera')->name('fuera');
@@ -26,8 +38,8 @@ Route::get('/restaurante','AtrativoController@restaurante')->name('restaurante')
 Route::view('/telefonos', 'pages.telefono')->name('telefono');
 Route::view('/historia', 'pages.historia')->name('historia');
 Route::view('/turismo', 'pages.turismo')->name('turismo');
-Route::get('/detalle/{id}','AtrativoController@detalle')->name('detalle');
-Route::get('/detalle/map/{id}','AtrativoController@map')->name('map');
+Route::get('/atractivo/{id}','AtrativoController@detalle')->name('detalle');
+Route::get('/atractivos/{id}','AtrativoController@map')->name('map');
 Route::get('/mapa','AtrativoController@maps')->name('mapa');
 Route::get('/cartelera', function () {
    $client = new Client([

@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 
+
 window.Vue = require('vue');
 
 /**
@@ -19,21 +20,46 @@ Vue.component('example', require('./components/Example.vue'));
 // const app = new Vue({
 //     el: '#app'
 // });
-
-var urlUsers = 'https://jsonplaceholder.typicode.com/users';
+var urlCat = 'categoria';
 new Vue({
-    el: '#main',
+    el: '#crud',
     created: function() {
-        this.getUsers();
+        this.getCategorias();
     },
     data: {
-        lists: []
+        categorias: [],
+        newCategoria: '',
+        errors: []
     },
     methods: {
-        getUsers: function() {
-            axios.get(urlUsers).then(response => {
-                this.lists = response.data
+        getCategorias: function() {
+            axios.get(urlCat).then(response => {
+                this.categorias = response.data
+            });
+        },
+        deleteCategorias: function(categoria) {
+            //alert(categoria.id);
+            var url = urlCat + '/' + categoria.id;
+            axios.delete(url).then(response => {
+                this.getCategorias();
+                toastr.success('Eliminado');
+            });
+        },
+        createCategoria: function() {
+            var url = 'categoria';
+            axios.post(url, {
+                cat: this.newCategoria
+            }).then(response => {
+                this.getCategorias();
+                this.newCategoria = '';
+                this.errors = [];
+                $('#create').modal('hide');
+                toastr.success('Nueva Categoria creada con éxito');
+            }).catch(error => {
+                this.errors = error.response.data
             });
         }
+
     }
+
 });

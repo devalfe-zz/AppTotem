@@ -12,8 +12,8 @@
             <div class="col-sm-8">
                 <h1>JSON</h1>
                 <pre>
-        					{{ $data | json }}
-        				</pre>
+            			{{ $data | json }}
+            		</pre>
             </div>
         </div>
     </div>

@@ -5,7 +5,25 @@
     Sobre Moquegua
 @endsection
 @section ('content')
-<div class="inicio mb-4">
+<div id="main" class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h1>VUEjs - AJAX axios</h1>
+                <ul class="list-group">
+                    <li v-for="item in lists" class="list-group-item">
+                        @{{ item.name }}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-8">
+                <h1>JSON</h1>
+                <pre>
+        			@{{ $data | json }}
+        		</pre>
+            </div>
+        </div>
+</div>
+{{--  <div class="inicio mb-4">
     <div class="card p-2">
         <img class="card-img-top w-100 h-100" src="/images/clima.jpg" alt="Card image cap">
         <h4 class="card-title mt-2">Clima</h4>
@@ -77,6 +95,6 @@
         <ul class="datoNum"> <li><em class="yellow">1 día</em></li> <li>Distrito de Samegua 5 Km / 10 minutos.</li> <li>Sitio arqueológico de Cerro Baúl 18 Km / 20 minutos.</li> <li>Yacimiento de Cuajone 32 Km / 30 minutos.</li> <li>Valles de Carumas - Cuchumbaya y San Cristóbal – Calacoa 129 Km / 5 horas.</li> <li>Aguas Termales – Putina 141 Km / 4 horas.</li> <li>Punta de Coles 111 Km / 1 hora.</li> <li>Playas del norte 132 Km / 1 hora 10 minutos.</li> <li>Playas del Sur 128 Km / 1 hora.</li> </ul>
         <ul class="datoNum"> <li><em class="yellow">2 días</em></li> <li>Valle de Omate 147 Km / 6 horas. Incluye:</li> <li>Señor de las Piedades</li> <li>Molinos hidráulicos de Omate</li> </ul>
     </div>
-</div>
+</div>  --}}
 
 @endsection

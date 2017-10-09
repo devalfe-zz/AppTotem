@@ -16,7 +16,7 @@ class CreateCategoriasTable extends Migration
             $table->engine = "InnoDB";
             $table->increments('id');
             $table->string('titulo',80);
-            $table->boolean('activo');
+            $table->boolean('activo')->->nullable();;
             $table->timestamps();
         });
     }
