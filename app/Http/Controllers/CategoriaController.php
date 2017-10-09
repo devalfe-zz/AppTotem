@@ -40,7 +40,7 @@ class CategoriaController extends Controller
             'cat' => 'required'
         ]);
         Categoria::create($request->all());
-        return $request;
+        return;
     }
 
     /**
