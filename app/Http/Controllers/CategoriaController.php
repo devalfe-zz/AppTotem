@@ -37,7 +37,8 @@ class CategoriaController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'cat' => 'required'
+            'titulo' => 'required'
+            'activo' => 1
         ]);
         Categoria::create($request->all());
         return;
