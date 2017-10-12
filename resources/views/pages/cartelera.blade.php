@@ -7,8 +7,7 @@
 <section class="movies" id="movies">
     <h2>Featured Movies</h2>
 	<div class="row">
-@foreach($carteleras as $cartelera)
-  
+@foreach($carteleras as $cartelera)  
 		<div class="col-lg-3 col-md-4 col-sm-6 d-flex mb-2">
 			<article class="card">
 				<header class="title-header">
