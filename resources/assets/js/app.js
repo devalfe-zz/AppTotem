@@ -28,8 +28,11 @@ new Vue({
     },
     data: {
         categorias: [],
-        newCategoria: '',
-        errors: []
+        addCategoria: {
+            titulo: '',
+            activo: ''
+        },
+        errors: {}
     },
     methods: {
         getCategorias: function() {
@@ -38,28 +41,49 @@ new Vue({
             });
         },
         deleteCategorias: function(categoria) {
-            //alert(categoria.id);
-            var url = urlCat + '/' + categoria.id;
-            axios.delete(url).then(response => {
-                this.getCategorias();
-                toastr.success('Eliminado');
-            });
+            let ok = confirm("are you sure?");
+            if (ok) {
+                var url = urlCat + '/' + categoria.id;
+                axios.delete(url).then(response => {
+                    //console.log(response);
+                    this.getCategorias();
+                    //toastr.success('Eliminado');
+                });
+            }
         },
-        createCategoria: function() {
-            var url = 'categoria';
-            axios.post(url, {
-                cat: this.newCategoria
+        createCategorias: function() {
+            // axios.post('categoria', this.addCategoria)
+            //     .then(response => {
+            //         this.getCategorias();
+            //         this.addCategoria = "";
+            //         this.errors = "";
+            //         console.log(response);
+            //         //$('#create').modal('hide');
+            //         $('#create').modal().hide();
+            //     })
+            //     .catch(error => {
+            //         this.errors = error.response;
+            //         console.log(error.response)
+            //     })
+            axios.post('categoria', {
+                titulo: this.addCategoria,
+                activo: this.addCategoria
             }).then(response => {
                 this.getCategorias();
-                this.newCategoria = '';
+                this.addCategoria = "";
                 this.errors = [];
                 $('#create').modal('hide');
-                toastr.success('Nueva Categoria creada con éxito');
+                console.log(response);
+                // toastr.success('Nueva Categoria creada con éxito');
             }).catch(error => {
                 this.errors = error.response.data
+                console.log(error.response)
             });
         }
 
+    },
+    mounted() {
+        console.log('Component mounted.')
     }
 
 });

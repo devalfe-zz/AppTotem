@@ -11,7 +11,7 @@
 <div id="map" class="col-12"> 
     <div class="map">
         {!!$map['html']!!}
-       	<div id="directionsDiv"></div>
+       	{{--  <div id="directionsDiv"></div>  --}}
     </div>  
 </div>
 @endsection

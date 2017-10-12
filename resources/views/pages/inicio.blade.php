@@ -5,25 +5,7 @@
     Sobre Moquegua
 @endsection
 @section ('content')
-<div id="main" class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <h1>VUEjs - AJAX axios</h1>
-                <ul class="list-group">
-                    <li v-for="item in lists" class="list-group-item">
-                        @{{ item.name }}
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-8">
-                <h1>JSON</h1>
-                <pre>
-        			@{{ $data | json }}
-        		</pre>
-            </div>
-        </div>
-</div>
-{{--  <div class="inicio mb-4">
+<div class="inicio mb-4">
     <div class="card p-2">
         <img class="card-img-top w-100 h-100" src="/images/clima.jpg" alt="Card image cap">
         <h4 class="card-title mt-2">Clima</h4>
@@ -33,25 +15,8 @@
         <span class="datoNum">Temperatura mínima <em class="blue">10°C</em><sub>50°F</sub></span>
     </div>
 </div>
-<div class="lado " style="width: 500px"; >
-    <div class="flex">
-  <div class="card p-3">
-    <div class="header">
-        <div class="title">
-          <div>
-            <h1>5 ways to create inspiring articles</h1>
-           
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 <div class="inicio mb-4" >
-    <div class="card p-2" style="
-    top: -650px;
-    width: 630px;
-">
+    <div class="card p-2" style="width: 630px;">
         <img class="card-img-top w-100 h-100" src="/images/acceso.jpg" alt="Card image cap">
         <h4 class="card-title mt-2">Vias de acceso</h4>
         <p class="h7">Vía de acceso terrestre</p>
@@ -62,9 +27,7 @@
 </div>
 
 <div class="inicio mb-4">
-    <div class="card p-2" style="
-    top: -650px;
-    width: 630px;">
+    <div class="card p-2" style="width: 630px;">
         <img class="card-img-top w-100 h-100" src="/images/distancia.jpg" alt="Card image cap">
         <h4 class="card-title mt-2">Distancias desde la ciudad de Moquegua</h4>
         <span class="datoNum"><em class="green">Omate</em> (Provincia de General Sánchez Cerro) <sub>141 Km / 3 horas</sub></span>
@@ -73,9 +36,7 @@
 </div>
 
 <div class="inicio  mb-4" >
-    <div class="card p-2" style="
-    top: -650px;
-    width: 630px;">
+    <div class="card p-2" style="width: 630px;">
         <img class="card-img-top w-100 h-100" src="/images/altitud.jpg" alt="Card image cap">
         <h4 class="card-title mt-2">Altitud</h4>
         <span class="datoNum purple"><em>Mínima</em> <sub>5 msnm (Pueblo Nuevo)</sub></span>
@@ -84,9 +45,7 @@
 </div>
 
 <div class="inicio mb-4">
-    <div class="card p-2" style="
-    top: -650px;
-    width: 630px;">
+    <div class="card p-2" style="width: 630px;">
         <img class="card-img-top w-100 h-100" src="/images/estancia.jpg" alt="Card image cap">
         <h4 class="card-title mt-2">Tiempo de Estancia</h4>
         <p class="datoinfo">Un día permitirá visitar la ciudad y sus atractivos cercanos. Para disfrutar de la naturaleza de la región necesitará 2 días.</p>
@@ -95,6 +54,6 @@
         <ul class="datoNum"> <li><em class="yellow">1 día</em></li> <li>Distrito de Samegua 5 Km / 10 minutos.</li> <li>Sitio arqueológico de Cerro Baúl 18 Km / 20 minutos.</li> <li>Yacimiento de Cuajone 32 Km / 30 minutos.</li> <li>Valles de Carumas - Cuchumbaya y San Cristóbal – Calacoa 129 Km / 5 horas.</li> <li>Aguas Termales – Putina 141 Km / 4 horas.</li> <li>Punta de Coles 111 Km / 1 hora.</li> <li>Playas del norte 132 Km / 1 hora 10 minutos.</li> <li>Playas del Sur 128 Km / 1 hora.</li> </ul>
         <ul class="datoNum"> <li><em class="yellow">2 días</em></li> <li>Valle de Omate 147 Km / 6 horas. Incluye:</li> <li>Señor de las Piedades</li> <li>Molinos hidráulicos de Omate</li> </ul>
     </div>
-</div>  --}}
+</div>
 
 @endsection

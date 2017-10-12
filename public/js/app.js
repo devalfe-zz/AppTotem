@@ -809,8 +809,11 @@ new Vue({
     },
     data: {
         categorias: [],
-        newCategoria: '',
-        errors: []
+        addCategoria: {
+            titulo: '',
+            activo: ''
+        },
+        errors: {}
     },
     methods: {
         getCategorias: function getCategorias() {
@@ -823,32 +826,52 @@ new Vue({
         deleteCategorias: function deleteCategorias(categoria) {
             var _this2 = this;
 
-            //alert(categoria.id);
-            var url = urlCat + '/' + categoria.id;
-            axios.delete(url).then(function (response) {
-                _this2.getCategorias();
-                toastr.success('Eliminado');
-            });
+            var ok = confirm("are you sure?");
+            if (ok) {
+                var url = urlCat + '/' + categoria.id;
+                axios.delete(url).then(function (response) {
+                    //console.log(response);
+                    _this2.getCategorias();
+                    //toastr.success('Eliminado');
+                });
+            }
         },
-        createCategoria: function createCategoria() {
+        createCategorias: function createCategorias() {
             var _this3 = this;
 
-            var url = 'categoria';
-            axios.post(url, {
-                cat: this.newCategoria
+            // axios.post('categoria', this.addCategoria)
+            //     .then(response => {
+            //         this.getCategorias();
+            //         this.addCategoria = "";
+            //         this.errors = "";
+            //         console.log(response);
+            //         //$('#create').modal('hide');
+            //         $('#create').modal().hide();
+            //     })
+            //     .catch(error => {
+            //         this.errors = error.response;
+            //         console.log(error.response)
+            //     })
+            axios.post('categoria', {
+                titulo: this.addCategoria,
+                activo: this.addCategoria
             }).then(function (response) {
                 _this3.getCategorias();
-                _this3.newCategoria = '';
+                _this3.addCategoria = "";
                 _this3.errors = [];
                 $('#create').modal('hide');
-                toastr.success('Nueva Categoria creada con éxito');
+                console.log(response);
+                // toastr.success('Nueva Categoria creada con éxito');
             }).catch(function (error) {
                 _this3.errors = error.response.data;
+                console.log(error.response);
             });
         }
 
+    },
+    mounted: function mounted() {
+        console.log('Component mounted.');
     }
-
 });
 
 /***/ }),
@@ -875,19 +898,19 @@ window.axios = __webpack_require__(14);
 
 // window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-// /**
-//  * Next we will register the CSRF Token as a common header with Axios so that
-//  * all outgoing HTTP requests automatically have it attached. This is just
-//  * a simple convenience so we don't have to attach every token manually.
-//  */
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
 
-// let token = document.head.querySelector('meta[name="csrf-token"]');
+var token = document.head.querySelector('meta[name="csrf-token"]');
 
-// if (token) {
-//     window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-// } else {
-//     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-// }
+if (token) {
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
