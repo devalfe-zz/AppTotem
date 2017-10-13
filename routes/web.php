@@ -30,6 +30,7 @@ Route::get('/', 'PagesController@index')->name('index');
 Route::get('/home','PagesController@inicio')->name('home');
 Route::get('/atractivo','AtrativoController@dentro')->name('dentro');
 Route::get('/atractivos','AtrativoController@fuera')->name('fuera');
+Route::get('/lugares','AtrativoController@index')->name('lugares');
 Route::get('/servicios','AtrativoController@servicios')->name('servicios');
 Route::get('/multimedia','AtrativoController@multimedia')->name('multimedia');
 Route::get('/transporte','AtrativoController@transporte')->name('transporte');

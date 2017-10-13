@@ -22,8 +22,8 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9356523',
             'latitud' => '-17.194194',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/regidor_perpetuo1.jpg',
-            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/CASA%20DEL%20REGIDOR%20PERPETUO.mp4',
+            'foto_url' => 'images/atractivos/regidor_perpetuo1.jpg',
+            'video_url' => 'videos/mp4/CASA%20DEL%20REGIDOR%20PERPETUO.mp4',
             'activo' => 1,
             'categoria_id' => 1]); 
         //2
@@ -36,8 +36,8 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9346494',
             'latitud' => '-17.1938378',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/plaza1.jpg',
-            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/PLAZA%20DE%20ARMAS.mp4',
+            'foto_url' => 'images/atractivos/plaza1.jpg',
+            'video_url' => 'videos/mp4/PLAZA%20DE%20ARMAS.mp4',
             'activo' => 1,
             'categoria_id' => 1]);
 
@@ -51,7 +51,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9347765',
             'latitud' => '-17.1943247',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_chocano.jpg',
+            'foto_url' => 'images/atractivos/casa_chocano.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
@@ -65,8 +65,8 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.934372',
             'latitud' => '-17.194114',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_tradicional1.jpg',
-            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/CASA%20DE%20LOS%20FERNANDEZ%20DE%20CORDOVA%20O%20DE%20LA%20FLOR.mp4',
+            'foto_url' => 'images/atractivos/casa_tradicional1.jpg',
+            'video_url' => 'videos/mp4/CASA%20DE%20LOS%20FERNANDEZ%20DE%20CORDOVA%20O%20DE%20LA%20FLOR.mp4',
             'activo' => 1,
             'categoria_id' => 1]);        
         //5
@@ -79,8 +79,8 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9341261',
             'latitud' => '-17.1940844',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diez_ventanas.jpg',
-            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/CASA%20DE%20LOS%20FERN%C3%81NDEZ%20CORNEJO%20Y%20FERN%C3%81NDEZ%20DE%20C%C3%93RDOBA.mp4',
+            'foto_url' => 'images/atractivos/casa_diez_ventanas.jpg',
+            'video_url' => 'videos/mp4/CASA%20DE%20LOS%20FERN%C3%81NDEZ%20CORNEJO%20Y%20FERN%C3%81NDEZ%20DE%20C%C3%93RDOBA.mp4',
             'activo' => 1,
             'categoria_id' => 1]);
         //6
@@ -93,7 +93,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9347544',
             'latitud' => '-17.1934791',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/muro_matriz2.jpg',
+            'foto_url' => 'images/atractivos/muro_matriz2.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);  
@@ -107,7 +107,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9345291',
             'latitud' => '-17.1942036',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/carcel1.jpg',
+            'foto_url' => 'images/atractivos/carcel1.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);  
@@ -121,7 +121,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.934804',
             'latitud' => '-17.191672',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/complejo_san_francisco_catacumbas.jpg',
+            'foto_url' => 'images/atractivos/complejo_san_francisco_catacumbas.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
@@ -135,7 +135,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9336815',
             'latitud' => '-17.1939819',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia3.jpg',
+            'foto_url' => 'images/atractivos/iglesia3.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
@@ -149,7 +149,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.932889',
             'latitud' => '-17.192434',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/solar_de_cabellos.jpg',
+            'foto_url' => 'images/atractivos/solar_de_cabellos.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);  
@@ -163,7 +163,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9330874',
             'latitud' => '-17.1921543',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_cultura.jpg',
+            'foto_url' => 'images/atractivos/casa_cultura.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);   
@@ -177,7 +177,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.932466',
             'latitud' => '-17.19273',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_serpiente.jpg',
+            'foto_url' => 'images/atractivos/casa_serpiente.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);   
@@ -191,8 +191,8 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.932320',
             'latitud' => '-17.192902',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_diezcanseco.jpg',
-            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/CASA%20DE%20LOS%20DIEZ%20CANSECO%20Y%20FERN%C3%81NDEZ%20D%C3%81VILA.mp4',
+            'foto_url' => 'images/atractivos/casa_diezcanseco.jpg',
+            'video_url' => 'videos/mp4/CASA%20DE%20LOS%20DIEZ%20CANSECO%20Y%20FERN%C3%81NDEZ%20D%C3%81VILA.mp4',
             'activo' => 1,
             'categoria_id' => 1]); 
         //14
@@ -205,7 +205,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.93223',
             'latitud' => '-17.192675',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/casa_ancianos.jpg',
+            'foto_url' => 'images/atractivos/casa_ancianos.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
@@ -220,8 +220,8 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.9310187',
             'latitud' => '-17.1912383',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/iglesia_belen.jpg',
-            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/COMPLEJO%20BETLEM%C3%8DTICO%20Y%20EL%20BARRIO%20BEL%C3%89N.mp4',
+            'foto_url' => 'images/atractivos/iglesia_belen.jpg',
+            'video_url' => 'videos/mp4/COMPLEJO%20BETLEM%C3%8DTICO%20Y%20EL%20BARRIO%20BEL%C3%89N.mp4',
             'activo' => 1,
             'categoria_id' => 1]);
 
@@ -240,7 +240,7 @@ class AtractivosTableSeeder extends Seeder
             'longitud' => '-70.995075', 
             'latitud' => '-17.317464',
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/1.jpg',
+            'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);
@@ -257,7 +257,7 @@ class AtractivosTableSeeder extends Seeder
 
 
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/1.jpg',
+            'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);
@@ -273,7 +273,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.2393657', 
 
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/632.jpg',
+            'foto_url' => 'images/bodegas/632.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);
@@ -289,7 +289,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.2373483', 
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/641.jpg',
+            'foto_url' => 'images/bodegas/641.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);
@@ -305,8 +305,8 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.223654',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/geoglifos1.jpg',
-            'video_url' => 'http://moqueguaturismo.gob.pe/videos/mp4/LOS%20GEOGLIFOS%20DE%20CHEN%20CHEN.mp4',
+            'foto_url' => 'images/atractivos/geoglifos1.jpg',
+            'video_url' => 'videos/mp4/LOS%20GEOGLIFOS%20DE%20CHEN%20CHEN.mp4',
             'activo' => 1,
             'categoria_id' => 1]); 
         //21
@@ -320,7 +320,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.215572',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/1.jpg',
+            'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);   
@@ -336,7 +336,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1975564',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/cristo_blanco1.jpg',
+            'foto_url' => 'images/atractivos/cristo_blanco1.jpg',
             'video_url' => 'http://@moqueguaturismo.gob.pe/videos/mp4/CRISTO%20BLANCO.mp4',
             'activo' => 1,
             'categoria_id' => 1]); 
@@ -351,7 +351,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1911595',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/terminal.JPG',
+            'foto_url' => 'images/atractivos/terminal.JPG',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]); 
@@ -366,7 +366,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1877323',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/ecologico.JPG',
+            'foto_url' => 'images/atractivos/ecologico.JPG',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);  
@@ -381,7 +381,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.184134',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/parras%20y%20reyes.jpg',
+            'foto_url' => 'images/bodegas/parras%20y%20reyes.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);  
@@ -396,7 +396,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1835814',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/rayito.jpg',
+            'foto_url' => 'images/bodegas/rayito.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);
@@ -411,7 +411,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1824169',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/paredes.JPG',
+            'foto_url' => 'images/bodegas/paredes.JPG',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);
@@ -426,7 +426,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1607121',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/mocho.JPG',
+            'foto_url' => 'images/bodegas/mocho.JPG',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]); 
@@ -441,7 +441,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.177246',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/1.jpg',
+            'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);  
@@ -456,7 +456,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1803916',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/bodegas/1.jpg',
+            'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);  
@@ -471,7 +471,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1862302',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/estadio.JPG',
+            'foto_url' => 'images/atractivos/estadio.JPG',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);  
@@ -486,7 +486,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1794529',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/estadio.jpg',
+            'foto_url' => 'images/atractivos/estadio.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);      
@@ -500,7 +500,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.19008065',
             
             'horarios' => '',
-            'foto_url' => 'http://moqueguaturismo.gob.pe/images/atractivos/hotel.jpg',
+            'foto_url' => 'images/atractivos/hotel.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);                              

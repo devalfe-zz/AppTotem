@@ -9,7 +9,7 @@ Atractivos dentro de la ciudad
     @foreach($atractivos as $atractivo)
     <div class="col-md-3 d-flex">
         <div class="item card">
-            <img class ="box" src="{{ $atractivo->foto_url }}">
+            <img class ="box" src="{{ asset($atractivo->foto_url) }}">
             <p class="text-uppercase"><a href="{{ route ('detalle', $atractivo->id) }}">{{ $atractivo->titulo }}</a></p>
         </div>
     </div>

@@ -15,7 +15,8 @@
                 <img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" class="cover mw-100 mh-100" />
                 <div class="logo_detalle"> 
                 {{--  <a href=""><img src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}" class="cover" /></a>   --}}
-                @if(sizeof($atractivos->video_url ) > 0)
+                
+                @if($atractivos->video_url !== "")
                     <div class="embed-responsive embed-responsive-16by9">
                     <video autoplay loop class="embed-responsive-item" controls="false">
                             <source src="{{ $atractivos->video_url }}" allowfullscreen></source>
@@ -23,11 +24,9 @@
                     {{--  <iframe class="auto play embed-responsive-item" src="{{ $atractivos->video_url }}" allowfullscreen></iframe>
                     </div>  --}}
                 @else
-                    <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/31-z05RpRZg" allowfullscreen></iframe>
-               </div>
+                <img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" class="w-100 h-100" />
                 @endif
-                
+                </div>
                 {{--  <img class="img-detalle img-fluid w-100 h-100" src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}" class="cover-bar" />   --}}
                 <div class="details">
                     <div class="title1">{{ $atractivos->titulo }}
