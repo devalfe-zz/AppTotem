@@ -3,7 +3,7 @@
 @include('layouts.head')
 <body>
 @include('layouts.header')
-<div class="container">
+<div class="container-fluid">
 <h1 class="well text-center pt-2">
 @yield('lema')
 </h1> 

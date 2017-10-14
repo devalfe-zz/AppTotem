@@ -1,4 +1,4 @@
-<div class="container-fluid content">
+<div class="hidden-xl-up container-fluid content">
     <div class="row">
         <div class="col-3 d-flex justify-content-center flex-column">
             <!-- Header Logo -->

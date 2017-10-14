@@ -1,5 +1,5 @@
 <section class="fotos">
-    <div class="container gallerij">
+    <div class="gallerij">
         <h2 class="well text-center titulo-g">Galería</h2>
             @foreach($atractivos->fotos as $foto)
             <article class="col-lg-3 col-sm-3 col-6" style="float: left;">

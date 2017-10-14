@@ -4,7 +4,7 @@
 @section('content')
 
 
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2 col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <a href="">
@@ -24,7 +24,7 @@
     </div>
 </div>
 </div>
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2  col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <a href="{{ route('lugares') }}">
@@ -45,7 +45,7 @@
 </div>
 </div>
 
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2  col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <a href="{{ route('home') }}">
@@ -66,7 +66,7 @@
 </div>
 </div>
 
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2  col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <a href="{{ route('telefono') }}">
@@ -87,7 +87,7 @@
 </div>
 </div>
 
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2  col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <a href="{{ route('home') }}">
@@ -108,7 +108,7 @@
 </div>
 </div>
 
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2  col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <a href="{{ route('transporte') }}">
@@ -129,7 +129,7 @@
 </div>
 </div>
 
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2  col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
    <a href="{{ route('alojamiento') }}">
@@ -150,7 +150,7 @@
 </div>
 </div>
 
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2  col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <a href="{{ route('restaurante') }}">
@@ -171,7 +171,7 @@
 </div>
 </div>
 
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2  col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <a href="{{ route('cine') }}">
@@ -192,7 +192,7 @@
 </div>
 </div>
 
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2  col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <a href="{{ route('home') }}">
@@ -213,7 +213,7 @@
 </div>
 </div>
 
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2  col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <a href="{{ route('historia') }}">
@@ -234,7 +234,7 @@
 </div>
 </div>
 
-<div class="col-4 d-flex justify-content-center">
+<div class="col-xl-2  col-md-4 d-flex justify-content-center">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <a href="{{ route('mapa') }}">

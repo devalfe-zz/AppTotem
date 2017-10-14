@@ -7,7 +7,7 @@ Atractivos dentro de la ciudad
 @section ('content')
 @if(sizeof($atractivos) > 0)
     @foreach($atractivos as $atractivo)
-    <div class="col-md-3 d-flex">
+    <div class="col-xl-2 col-md-4 d-flex justify-content-center">
         <a href="{{ route ('detalle', $atractivo->id) }}">
             <div class="item card">
                 <img class ="box" src="{{ asset($atractivo->foto_url) }}">

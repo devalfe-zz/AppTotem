@@ -8,12 +8,12 @@
 {{--  {{ $atractivos->fotos as $foto }}  --}}
     @foreach($atractivos->fotos as $foto)
     @endforeach
-    <div class="movie-card">
-        <div class="container">
+    <div class="row movie-card">
+        
             {{--  <a href=""><img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" 
             class="cover" /></a>  --}}
                 <img src="{{ $atractivos->foto_url }}" alt="{{ $atractivos->titulo }}" class="cover mw-100 mh-100" />
-                <div class="logo_detalle"> 
+                <div class="col-xl-8 logo_detalle"> 
                 {{--  <a href=""><img src="{{ $foto->foto_url }}" alt="{{ $foto->titulo }}" class="cover" /></a>   --}}
                 
                 @if($atractivos->video_url !== "")
@@ -35,7 +35,7 @@
                     <div class="title2">{{ $atractivos->descripcion }}</div>     
                 </div> <!-- end details -->
             </div> <!-- end logo -->
-            <div class="row description">
+            <div class="row col-xl-4 description">
                 <div class="col-3">
                     <span class="tag"></span>
                 </div> <!-- end column1 -->
@@ -44,7 +44,7 @@
                 </div> <!-- end column2 -->
             </div> <!-- end description -->
             
-        </div> <!-- end container -->
+        <!-- end container -->
     </div> <!-- end movie-card --> 
 
 {{--  <object data="http://moqueguaturismo.gob.pe/doc/document.pdf" type="application/pdf">
