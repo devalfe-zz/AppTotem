@@ -8,10 +8,12 @@ Atractivos fuera de la ciudad
 @if(sizeof($atractivos) > 0)
     @foreach($atractivos as $atractivo)
     <div class="col-md-3 d-flex">
-    <div class="item card">
-        <img class ="box" src="{{ asset($atractivo->foto_url) }}">
-        <p class="text-uppercase"><a href="{{ route ('detalle', $atractivo->id) }}">{{ $atractivo->titulo }}</a></p>
-    </div>
+        <a href="{{ route ('detalle', $atractivo->id) }}">
+            <div class="item card">
+                <img class ="box" src="{{ asset($atractivo->foto_url) }}">
+                <p class="text-uppercase">{{ $atractivo->titulo }}</p>
+            </div>
+        </a> 
     </div>
     @endforeach
 @else

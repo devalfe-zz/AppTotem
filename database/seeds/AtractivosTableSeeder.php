@@ -503,7 +503,7 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/hotel.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]);                              
+            'categoria_id' => 3]);                              
 
     }
 }

@@ -3547,14 +3547,13 @@ footer p {
 .item {
   margin: 2em;
   display: inline-block;
-  width: 250px;
-  height: 250px;
+  width: 225px;
+  height: 225px;
   border-radius: 30px;
   position: relative;
   overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  padding: 0;
   margin: 15px auto;
   border: 0px;
 }
@@ -3567,15 +3566,20 @@ footer p {
 
 .item p {
   position: absolute;
-  top: 0px;
   left: 0px;
   right: 0px;
+  bottom: -15px;
   background: rgba(0, 0, 0, 0.12);
   padding: 10px 20px;
   text-align: center;
   color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  font-size: .8rem;
+}
+
+.item > p > a {
+  color: #000;
 }
 
 .item:hover {
