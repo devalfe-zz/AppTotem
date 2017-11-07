@@ -9,7 +9,6 @@
         "alexpechkarev/google-maps": "1.0.8",
         "barryvdh/laravel-dompdf": "^0.8.1",
         "cornford/googlmapper": "2.*",
-        "genealabs/phpgmaps": "~0.3.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",

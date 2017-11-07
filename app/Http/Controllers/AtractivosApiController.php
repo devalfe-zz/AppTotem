@@ -15,9 +15,10 @@ class AtractivosApiController extends Controller
      */
     public function index()
     {
-        $atractivos = Atractivo::with('fotos')->get();
+        $atractivos = Atractivo::with('fotos')->orderBy('id', 'asc')->get();
         //$atractivos = Atractivo::all();
         $response = Response::json($atractivos,200);
+        //return ["results" =>[$response]];
         return $response; 
         
     }

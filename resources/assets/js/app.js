@@ -79,6 +79,7 @@ new Vue({
                 this.errors = error.response.data
                 console.log(error.response)
             });
+
         }
 
     },

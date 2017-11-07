@@ -5,9 +5,10 @@ let config = {
     port: 3000,
     base_url: 'apptotem.dev',
     watchFiles: [
-        'app/**/*.php',
+        // 'app/**/*.php',
         'resources/views/**/*.php',
         'public/js/**/*.js',
+        // '**/*.php',
         'public/css/**/*.css'
     ]
 };
@@ -24,6 +25,21 @@ mix.browserSync({
     notify: true,
     open: false //false, local, external, ui, tunnel
 });
+// BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+
+// mix.webpackConfig({
+//     plugins: [
+//         new BrowserSyncPlugin({
+//             host: '192.168.10.10',
+//             port: 3000,
+//             proxy: 'apptotem.dev',
+//             files: [
+//                 '**/*.scss',
+//                 '**/*.php'
+//             ]
+//         }, { reload: true })
+//     ]
+// });
 
 /*
  |--------------------------------------------------------------------------
@@ -41,7 +57,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
 
 mix.copy(['node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.css',
     'node_modules/animate.css/animate.css',
-    'node_modules/sweetalert2/dist/sweetalert2.min.css',
     'node_modules/owl.carousel/dist/assets/owl.carousel.css',
     'node_modules/fullpage.js/dist/jquery.fullpage.css',
     'node_modules/superfish/src/css/superfish.css',
@@ -50,7 +65,7 @@ mix.copy(['node_modules/bootstrap-material-design/dist/css/bootstrap-material-de
 
 
 mix.copy(['node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.js',
-    'node_modules/sweetalert2/dist/sweetalert2.min.js', 'node_modules/owl.carousel/dist/owl.carousel.js',
+    'node_modules/owl.carousel/dist/owl.carousel.js',
     'node_modules/fullpage.js/dist/jquery.fullpage.extensions.min.js',
     'node_modules/fullpage.js/dist/jquery.fullpage.js',
     'node_modules/wowjs/dist/wow.js',
