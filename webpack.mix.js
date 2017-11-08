@@ -6,7 +6,7 @@ let config = {
     base_url: 'apptotem.dev',
     watchFiles: [
         // 'app/**/*.php',
-        'resources/views/**/*.php',
+        'resources/views/**/*.blade.php',
         'public/js/**/*.js',
         // '**/*.php',
         'public/css/**/*.css'

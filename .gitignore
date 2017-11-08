@@ -1,6 +1,9 @@
 /node_modules
 /public/hot
 /public/images/atractivos
+/public/videos
+/public/bodegas
+/public/portada
 /public/storage
 /storage/*.key
 /vendor

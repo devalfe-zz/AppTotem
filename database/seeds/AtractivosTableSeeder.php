@@ -23,7 +23,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.194194',
             'horarios' => '',
             'foto_url' => 'images/atractivos/regidor_perpetuo1.jpg',
-            'video_url' => 'videos/mp4/CASA%20DEL%20REGIDOR%20PERPETUO.mp4',
+            'video_url' => 'videos/mp4/CASADELREGIDORPERPETUO.mp4',
             'activo' => 1,
             'categoria_id' => 1]); 
         //2
@@ -37,7 +37,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1938378',
             'horarios' => '',
             'foto_url' => 'images/atractivos/plaza1.jpg',
-            'video_url' => 'videos/mp4/PLAZA%20DE%20ARMAS.mp4',
+            'video_url' => 'videos/mp4/PLAZADEARMAS.mp4',
             'activo' => 1,
             'categoria_id' => 1]);
 
@@ -66,7 +66,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.194114',
             'horarios' => '',
             'foto_url' => 'images/atractivos/casa_tradicional1.jpg',
-            'video_url' => 'videos/mp4/CASA%20DE%20LOS%20FERNANDEZ%20DE%20CORDOVA%20O%20DE%20LA%20FLOR.mp4',
+            'video_url' => 'videos/mp4/CASADELOSFERNANDEZDECORDOVAODELAFLOR.mp4',
             'activo' => 1,
             'categoria_id' => 1]);        
         //5
@@ -80,7 +80,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1940844',
             'horarios' => '',
             'foto_url' => 'images/atractivos/casa_diez_ventanas.jpg',
-            'video_url' => 'videos/mp4/CASA%20DE%20LOS%20FERN%C3%81NDEZ%20CORNEJO%20Y%20FERN%C3%81NDEZ%20DE%20C%C3%93RDOBA.mp4',
+            'video_url' => 'videos/mp4/CASADELOSFERNANDEZCORNEJOYFERNANDEZDECORDOBA.mp4',
             'activo' => 1,
             'categoria_id' => 1]);
         //6
@@ -105,7 +105,7 @@ class AtractivosTableSeeder extends Seeder
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto',
             'longitud' => '-70.9345291',
-            'latitud' => '-17.1942036',
+            'latitud' => '-17.19436',
             'horarios' => '',
             'foto_url' => 'images/atractivos/carcel1.jpg',
             'video_url' => '',
@@ -188,11 +188,11 @@ class AtractivosTableSeeder extends Seeder
             'detalle' => 'De este importante solar hoy sólo puede observarse la bella portada de piedra ricamente tallada personalizada con querubines, plantas, animales y figuras heráldicas.',
             'direccion' => 'Calle Ayacucho N 868',
             'ubicacion' => 'Mariscal Nieto',
-            'longitud' => '-70.932320',
+            'longitud' => '-70.9323',
             'latitud' => '-17.192902',
             'horarios' => '',
             'foto_url' => 'images/atractivos/casa_diezcanseco.jpg',
-            'video_url' => 'videos/mp4/CASA%20DE%20LOS%20DIEZ%20CANSECO%20Y%20FERN%C3%81NDEZ%20D%C3%81VILA.mp4',
+            'video_url' => 'videos/mp4/CASADELOSDIEZCANSECOYFERNANDEZDAVILA.mp4',
             'activo' => 1,
             'categoria_id' => 1]); 
         //14
@@ -212,7 +212,7 @@ class AtractivosTableSeeder extends Seeder
 
         //15
         atractivo::create([
-            'titulo' => 'COMPLEJO BETLEMÍTICO Y EL BARRIO ',
+            'titulo' => 'COMPLEJO BETLEMÍTICO Y EL BARRIO BELÉN',
             'descripcion' => 'Ubicado a cuatro cuadras de la plaza de armas, con dirección este',
             'detalle' => 'Ubicado a cuatro cuadras de la plaza de armas, con dirección este. Fue una imponente edificación que contó con una iglesia sencilla, pero de bella arquitectura. Convento y hospital con campanario, sacristía, botica y portería. Fundado en 1743, fue uno de los hospitales más antiguos del Perú virreinal. El barrio que circunda al antiguo complejo es conocido como Barrio Belén. Encantador contorno que guarda la arquitectura virreinal y republicana de Moquegua, sus solares exhiben balcones, portadas, ventanas sevillanas y techos de mojinete.',
             'direccion' => '',
@@ -221,13 +221,9 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1912383',
             'horarios' => '',
             'foto_url' => 'images/atractivos/iglesia_belen.jpg',
-            'video_url' => 'videos/mp4/COMPLEJO%20BETLEM%C3%8DTICO%20Y%20EL%20BARRIO%20BEL%C3%89N.mp4',
+            'video_url' => 'videos/mp4/COMPLEJOBETLEMITICOYELBARRIOBELEN.mp4',
             'activo' => 1,
             'categoria_id' => 1]);
-
-
-
-
         //BODEGAS 6///////////////////////////////////////////////////
         //16
         //6-1
@@ -293,7 +289,7 @@ class AtractivosTableSeeder extends Seeder
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);
-        //20
+        //
         
         atractivo::create([
             'titulo' => 'GEOGLIFOS DE CHEN CHEN',
@@ -306,7 +302,7 @@ class AtractivosTableSeeder extends Seeder
             
             'horarios' => '',
             'foto_url' => 'images/atractivos/geoglifos1.jpg',
-            'video_url' => 'videos/mp4/LOS%20GEOGLIFOS%20DE%20CHEN%20CHEN.mp4',
+            'video_url' => 'videos/mp4/LOSGEOGLIFOSDECHENCHEN.mp4',
             'activo' => 1,
             'categoria_id' => 1]); 
         //21
@@ -337,7 +333,7 @@ class AtractivosTableSeeder extends Seeder
             
             'horarios' => '',
             'foto_url' => 'images/atractivos/cristo_blanco1.jpg',
-            'video_url' => 'http://@moqueguaturismo.gob.pe/videos/mp4/CRISTO%20BLANCO.mp4',
+            'video_url' => 'videos/mp4/CRISTOBLANCO.mp4',
             'activo' => 1,
             'categoria_id' => 1]); 
 
@@ -381,7 +377,7 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.184134',
             
             'horarios' => '',
-            'foto_url' => 'images/bodegas/parras%20y%20reyes.jpg',
+            'foto_url' => 'images/bodegas/parrasyreyes.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);  

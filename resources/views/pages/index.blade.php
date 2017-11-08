@@ -129,13 +129,13 @@
 		<div class="carousel-inner" role="listbox">
 			<a href="{{ route('alojamiento') }}">
 				<div class="carousel-item active menu-box">
-					<img class="card-img d-block w-100 h-100" src="{{asset('images/portada/DMHOTELES%20-%20PISCINA.jpg')}}">
+					<img class="card-img d-block w-100 h-100" src="{{asset('images/portada/DMHOTELES-PISCINA.jpg')}}">
 					<div class="card-img-overlay menu">
 						<p class="card-text label-box carousel-caption">Alojamientos</p>
 					</div>
 				</div>
 				<div class="carousel-item menu-box">
-					<img class="card-img d-block w-100 h-100" src="{{asset('images/portada/DMHOTELES%20-%20PISCINA.jpg')}}">
+					<img class="card-img d-block w-100 h-100" src="{{asset('images/portada/DMHOTELES-PISCINA.jpg')}}">
 					<div class="card-img-overlay menu">
 						<p class="card-text label-box carousel-caption">Alojamientos</p>
 					</div>
@@ -177,7 +177,7 @@
 					</div>
 				</div>
 				<div class="carousel-item menu-box">
-					<img class="card-img d-block w-100 h-100" src="{{asset('images/atractivos//head1.jpg')}}">
+					<img class="card-img d-block w-100 h-100" src="{{asset('images/atractivos/head1.jpg')}}">
 					<div class="card-img-overlay menu">
 						<p class="card-text label-box carousel-caption">Cartelera - Cine</p>
 					</div>
