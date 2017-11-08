@@ -10,6 +10,6 @@ ciudad @endsection @section ('content') @if(sizeof($atractivos) > 0) @foreach($a
 </div>
 @endforeach @else
 <div class="alert alert-danger" role="alert">
-	<strong>Oh snap!</strong> Change a few things up and try submitting again.
+	<strong>Oh snap!</strong> Error.
 </div>
 @endif @endsection

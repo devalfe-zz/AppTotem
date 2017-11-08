@@ -2,8 +2,8 @@
 /public/hot
 /public/images/atractivos
 /public/videos
-/public/bodegas
-/public/portada
+/public/images/bodegas
+/public/images/portada
 /public/storage
 /storage/*.key
 /vendor
