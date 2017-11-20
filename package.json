@@ -32,6 +32,11 @@
         "smooth-scroll": "^12.1.5",
         "fullpage.js": "^2.9.5",
         "superfish": "^1.7.9",
-        "popper.js": "^1.12.6"
+        "popper.js": "^1.12.6",
+        "fancybox": "^3.0.0"
+    },
+    "dependencies": {
+        "moment": "^2.19.2",
+        "toastr": "^2.1.2"
     }
 }

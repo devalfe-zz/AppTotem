@@ -60,7 +60,8 @@ mix.copy(['node_modules/bootstrap-material-design/dist/css/bootstrap-material-de
     'node_modules/owl.carousel/dist/assets/owl.carousel.css',
     'node_modules/fullpage.js/dist/jquery.fullpage.css',
     'node_modules/superfish/src/css/superfish.css',
-    'node_modules/bootstrap/dist/css/bootstrap.css'
+    'node_modules/bootstrap/dist/css/bootstrap.css',
+    'node_modules/fancybox/dist/jquery.fancybox.css'
 ], 'public/css');
 
 
@@ -75,8 +76,8 @@ mix.copy(['node_modules/bootstrap-material-design/dist/js/bootstrap-material-des
     'node_modules/popper.js/dist/popper.js',
     'node_modules/vue/dist/vue.js',
     'node_modules/vue-resource/dist/vue-resource.js',
-    'node_modules/vue-router/dist/vue-router.js'
-
+    'node_modules/vue-router/dist/vue-router.js',
+    'node_modules/fancybox/dist/jquery.fancybox.js'
 
 ], 'public/js');
 mix.copy(['resources/assets/img/*.*'], 'public/images');

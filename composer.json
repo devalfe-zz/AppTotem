@@ -5,10 +5,11 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.6.4",
+        "php": ">=7.0.0",
         "alexpechkarev/google-maps": "1.0.8",
         "barryvdh/laravel-dompdf": "^0.8.1",
         "cornford/googlmapper": "2.*",
+        "genealabs/laravel-maps": "^0.5.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",

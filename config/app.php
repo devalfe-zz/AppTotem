@@ -162,7 +162,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,  
-        GeneaLabs\Phpgmaps\PhpgmapsServiceProvider::class,
+        //GeneaLabs\Phpgmaps\PhpgmapsServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         /*
          * Package Service Providers...

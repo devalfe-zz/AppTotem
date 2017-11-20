@@ -486,6 +486,7 @@ class AtractivosTableSeeder extends Seeder
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);      
+
          atractivo::create([
             'titulo' => 'Hotel Moquegua',
             'descripcion' => 'Hotel Moquegua',
@@ -500,6 +501,52 @@ class AtractivosTableSeeder extends Seeder
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 3]);                              
+                    
+        atractivo::create([
+            'titulo' => 'Ledelca Tours',
+            'descripcion' => 'Ledelca Tours',
+            'detalle' => 'Agencia de viajes en Moquegua, Perú',
+            'direccion' => 'Calle Ayacucho N° 625',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9339868',
+            'latitud' => '-17.1937281',
 
+            'horarios' => '',
+            'foto_url' => 'images/agencias/agencia.png',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 10]);                              
+        
+        atractivo::create([
+            'titulo' => 'DM Hoteles Moquegua',
+            'descripcion' => 'DM Hoteles Moquegua',
+            'detalle' => 'Haciendo gala de su nombre, El Mirador de Moquegua, tiene la mejor vista de la ciudad y es el principal balcón para apreciar y contemplar la tranquilidad de este Valle.',
+            'direccion' => 'Calle Ayacucho N° 625',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9322392',
+            'latitud' => '-17.1836055',
+
+            'horarios' => '',
+            'foto_url' => 'images/hoteles/dmoquegua.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 3]);         
+
+        atractivo::create([
+            'titulo' => 'Taxigol Moquegua',
+            'descripcion' => 'Taxigol Moquegua',
+            'detalle' => 'Nuestra misión es prestar un excelente servicio,teniendo como principio la mejor atención al cliente un servicio eficiente honorable, ético y responsable',
+            'direccion' => 'Mariscal Nieto',
+            'ubicacion' => 'Mariscal Nieto',
+            'longitud' => '-70.9322392',
+            'latitud' => '-70.9322392',
+            
+            'horarios' => '',
+            'foto_url' => 'images/transporte/taxigol.jpg',
+            'video_url' => '',
+            'activo' => 1,
+            'categoria_id' => 5]);      
+
+        
     }
 }

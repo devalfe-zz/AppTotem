@@ -7,6 +7,7 @@
     "/css/jquery.fullpage.css": "/css/jquery.fullpage.css",
     "/css/superfish.css": "/css/superfish.css",
     "/css/bootstrap.css": "/css/bootstrap.css",
+    "/css/jquery.fancybox.css": "/css/jquery.fancybox.css",
     "/js/bootstrap-material-design.js": "/js/bootstrap-material-design.js",
     "/js/owl.carousel.js": "/js/owl.carousel.js",
     "/js/jquery.fullpage.extensions.min.js": "/js/jquery.fullpage.extensions.min.js",
@@ -19,6 +20,7 @@
     "/js/vue.js": "/js/vue.js",
     "/js/vue-resource.js": "/js/vue-resource.js",
     "/js/vue-router.js": "/js/vue-router.js",
+    "/js/jquery.fancybox.js": "/js/jquery.fancybox.js",
     "/images/logo.svg": "/images/logo.svg",
     "/images/mpmn.svg": "/images/mpmn.svg"
 }

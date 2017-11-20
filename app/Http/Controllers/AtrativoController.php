@@ -1,12 +1,11 @@
 <?php
-
 namespace Apptotem\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Apptotem\Atractivo as Atractivo;
 use Apptotem\Galeria as Galeria;
 use Apptotem\Categoria as Categoria;
-use Gmaps;
+//use Gmaps;
 
 class AtrativoController extends Controller
 {
@@ -137,13 +136,13 @@ class AtrativoController extends Controller
         //$config['center'] = -17.1937795, -70.9335977
         $config['clickable'] = true;
         //$config['zoom'] = '15';
-        Gmaps::initialize($config);
+        app('map')->initialize($config);
         // $marker = array();
         // $marker['position'] = $lat.','. $lng;
         // $marker['title'] = $tit;       
         // $marker['infowindow_content'] = $des;
         // Gmaps::add_marker($marker);
-        $map = Gmaps::create_map();
+        $map = app('map')->create_map();
         //dd($map);
         return view('pages.detalle', compact('atractivos','map'));
         //dd($atractivos);
@@ -165,8 +164,8 @@ class AtrativoController extends Controller
         $config['directionsEnd'] = $lat.','. $lng;
         $config['directionsDivID'] = 'directionsDiv';
         $config['clickable'] = true;
-        Gmaps::initialize($config);
-        $map = Gmaps::create_map();
+        app('map')->initialize($config);
+        $map = app('map')->create_map();
         //dd($map);
         return view('pages.detalle', compact('atractivos','map'));
         //dd($atractivos);
@@ -178,35 +177,22 @@ class AtrativoController extends Controller
      */
     public function maps()
     {
-        //$atractivos = Atractivo::all();
-        //return view('pages.pages1', compact('atractivos'));
-        $lugares = Atractivo::all();
-        //$lugares = DB::select('select * from atractivos');
-       dd($lugares);
-        //$atractivos = $lugares->load('fotos','categorias');
-        // $lng = $lugar->longitud;
-        // $lat = $lugar->latitud;
-        //$des = $lugares->detalle;
-       // $tit = $lugares->titulo;
+        $lugares = Atractivo::get();
         $config = array();
         $config['center'] = '-17.1937795,-70.933598';
-        //$config['zoom'] = 'auto';
-        //$config['directions'] = TRUE;
-        //$config['directionsMode'] = "WALKING";
-        //$config['directionsStart'] = '-17.1937795,-70.933598';
-        //$config['directionsEnd'] = $lat.','. $lng;
-        //$config['directionsDivID'] = 'directionsDiv';
-        //$config['center'] = -17.1937795, -70.9335977
         $config['clickable'] = true;
-        $config['zoom'] = '15';
-        Gmaps::initialize($config);
+        $config['zoom'] = '12';
+        //Gmaps::initialize($config);
+        app('map')->initialize($config);
         $marker = array();
-                   
-        $marker['position'] = $lat.','.$lng;       
-        Gmaps::add_marker($marker);
-        $map = Gmaps::create_map();
-        //dd($map)
-        //return view('pages.pages1')->with('map', $map);
+        foreach ($lugares as $lugare) {
+            $marker['position'] = $lugare->latitud.','.$lugare->longitud;     
+            $marker['title'] = $lugare->titulo;       
+            $marker['infowindow_content'] = $lugare->titulo.'\n'.$lugare->descripcion; 
+            $marker['animation'] = 'DROP';
+            app('map')->add_marker($marker);
+        }
+        $map = app('map')->create_map();
         return view('pages.mapa', compact('map'));
     }
 

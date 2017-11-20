@@ -51,10 +51,12 @@
 {{--
 <object data="http://moqueguaturismo.gob.pe/doc/document.pdf" type="application/pdf">
 	<embed src="http://moqueguaturismo.gob.pe/doc/document.pdf" type="application/pdf" />
-</object> --}} {{--
+</object>
+--}} {{--
 <a href="{{ asset('files/file.pdf') }}">Open the pdf!</a> --}} @include('pages.partials.map') {{-- @include('pages.partials.map', ['some' => 'DRIVING']) --}} @include('pages.partials.foto')
 {{--
 <section class="auto-lightbox">
 	@foreach($atractivos->fotos as $foto)
 	<img src="{{ asset($foto->foto_url) }}" alt="{{ $foto->titulo }}"> @endforeach
-</section> --}} @endsection
+</section>
+--}} @endsection
