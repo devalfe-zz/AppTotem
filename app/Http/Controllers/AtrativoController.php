@@ -58,9 +58,10 @@ class AtrativoController extends Controller
      */
     public function servicios()
     {
-        //$atractivos = Atractivo::with('categorias')->get();
-        
-        $atractivos = Atractivo::SearchCategoria(3)->SearchCategoria(4)->SearchCategoria(5)->get();
+        //$atractivos = Atractivo::with('SearchServicios')->get();
+        //$atractivos = Atractivo::whereIn('categoria_id', ['3', '5', '10']);
+        //dd($atractivos);
+        $atractivos = Atractivo::SearchCategoria(3)->get();
         return view('pages.pages2', compact('atractivos'));
     }
     /**

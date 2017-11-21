@@ -482,15 +482,15 @@ class AtractivosTableSeeder extends Seeder
             'latitud' => '-17.1794529',
             
             'horarios' => '',
-            'foto_url' => 'images/atractivos/estadio.jpg',
+            'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);      
 
          atractivo::create([
             'titulo' => 'Hotel Moquegua',
-            'descripcion' => 'Hotel Moquegua',
-            'detalle' => 'Hotel Moquegua',
+            'descripcion' => 'El Hotel Moquegua ofrece alojamiento con conexión WiFi gratuita en Moquegua.',
+            'detalle' => 'El Hotel Moquegua ofrece alojamiento con conexión WiFi gratuita en Moquegua. A 5 calles del establecimiento hay restaurantes.Las habitaciones cuenta con TV, baño privado y vistas a la ciudad. La tarifa incluye un desayuno continental diario.El Hotel Moquegua alberga recepción 24 horas, un bar, instalaciones para reuniones, salón compartido y mostrador de información turística. Hay aparcamiento gratuito. Este alojamiento también tiene muy buena puntuación por la mejor relación calidad-precio en Moquegua. Los clientes sacan más partido a su dinero en comparación con otros alojamientos de la misma ciudad.',
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto',
             'longitud' => '70.93951195',

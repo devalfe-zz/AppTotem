@@ -66,13 +66,13 @@
 		<div class="carousel-inner" role="listbox">
 			<a href="{{ route('telefono') }}">
 				<div class="carousel-item active menu-box">
-					<img class="card-img d-block w-100 h-100" src="{{asset('images/atractivos/muro_matriz.jpg')}}">
+					<img class="card-img d-block w-100 h-100" src="{{asset('images/call.jpg')}}">
 					<div class="card-img-overlay menu">
 						<p class="card-text label-box carousel-caption">Teléfonos de interés</p>
 					</div>
 				</div>
 				<div class="carousel-item menu-box">
-					<img class="card-img d-block w-100 h-100" src="{{asset('images/atractivos/iglesia_belen2.jpg')}}">
+					<img class="card-img d-block w-100 h-100" src="{{asset('images/call.jpg')}}">
 					<div class="card-img-overlay menu">
 						<p class="card-text label-box carousel-caption">Teléfonos de interés</p>
 					</div>
@@ -171,13 +171,13 @@
 		<div class="carousel-inner" role="listbox">
 			<a href="{{ route('cine') }}">
 				<div class="carousel-item active menu-box">
-					<img class="card-img d-block w-100 h-100" src="{{asset('images/atractivos/regidor_perpetuo2.jpg')}}">
+					<img class="card-img d-block w-100 h-100" src="{{asset('images/cine.jpg')}}">
 					<div class="card-img-overlay menu">
-						<p class="card-text label-box carousel-caption"></p>
+						<p class="card-text label-box carousel-caption">Cartelera - Cine</p>
 					</div>
 				</div>
 				<div class="carousel-item menu-box">
-					<img class="card-img d-block w-100 h-100" src="{{asset('images/atractivos/head1.jpg')}}">
+					<img class="card-img d-block w-100 h-100" src="{{asset('images/cine.jpg')}}">
 					<div class="card-img-overlay menu">
 						<p class="card-text label-box carousel-caption">Cartelera - Cine</p>
 					</div>
@@ -234,13 +234,13 @@
 		<div class="carousel-inner" role="listbox">
 			<a href="{{ route('mapa') }}">
 				<div class="carousel-item active menu-box">
-					<img class="card-img d-block w-100 h-100" src="{{asset('images/portada/mapa-moquegua.jpg')}}">
+					<img class="card-img d-block w-100 h-100" src="{{asset('images/mapa.jpeg')}}">
 					<div class="card-img-overlay menu">
 						<p class="card-text label-box carousel-caption">Mapa de la ciudad</p>
 					</div>
 				</div>
 				<div class="carousel-item menu-box">
-					<img class="card-img d-block w-100 h-100" src="{{asset('images/portada/mapa-moquegua.jpg')}}">
+					<img class="card-img d-block w-100 h-100" src="{{asset('images/mapa.jpeg')}}">
 					<div class="card-img-overlay menu">
 						<p class="card-text label-box carousel-caption">Mapa de la ciudad</p>
 					</div>

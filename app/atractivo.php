@@ -1,7 +1,6 @@
 <?php
 
 namespace Apptotem;
-
 use Illuminate\Database\Eloquent\Model;
 
 class Atractivo extends Model
@@ -13,6 +12,11 @@ class Atractivo extends Model
     public function categorias()
     {
         return $this->belongsTo('Apptotem\Categoria','categoria_id','id');
+    }
+    public function SearchServicios()
+    {
+        return $query->whereIn('categoria_id', ['3']);
+
     }
     public function fotos()
     {
