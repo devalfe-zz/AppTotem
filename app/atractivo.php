@@ -13,11 +13,7 @@ class Atractivo extends Model
     {
         return $this->belongsTo('Apptotem\Categoria','categoria_id','id');
     }
-    public function SearchServicios()
-    {
-        return $query->whereIn('categoria_id', ['3']);
-
-    }
+   
     public function fotos()
     {
         return $this->hasMany('Apptotem\Galeria', 'atractivo_id','id');

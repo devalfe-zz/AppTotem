@@ -58,10 +58,7 @@ class AtrativoController extends Controller
      */
     public function servicios()
     {
-        //$atractivos = Atractivo::with('SearchServicios')->get();
-        //$atractivos = Atractivo::whereIn('categoria_id', ['3', '5', '10']);
-        //dd($atractivos);
-        $atractivos = Atractivo::SearchCategoria(3)->get();
+        $atractivos = Atractivo::whereIn('categoria_id',['3', '5', '10'])->get();
         return view('pages.pages2', compact('atractivos'));
     }
     /**
@@ -70,9 +67,11 @@ class AtrativoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function multimedia()
-    {
-        $galerias = Galeria::with('lugares')->get();
-        //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
+    {   
+        $galerias = Galeria::get();
+        //$galerias = Galeria::with('lugares')->get();
+        $galerias = $galerias->load('lugares');
+       
         return view('pages.multimedia', compact('galerias'));
     }
     /**

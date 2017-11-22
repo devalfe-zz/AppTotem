@@ -8,10 +8,11 @@ class Galeria extends Model
 {
     //
     protected $table = 'galerias';
-    protected $prymaryKey = 'atractivo_id';
-    protected $fillable = ['titulo','foto_url','activo','atractivo_id'];
+    protected $primaryKey = 'id';
+    protected $fillable = ['id','titulo','foto_url','activo','atractivo_id'];
+
     public function lugares()
     {
-        return $this->belongsTo('Apptotem\Atractivo');
+        return $this->belongsTo('Apptotem\Atractivo','atractivo_id','id');
     }
 }
