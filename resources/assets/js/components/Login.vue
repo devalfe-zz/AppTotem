@@ -48,23 +48,24 @@
 
 <script>
 export default {
-    data() {
-        return {
-            email: "",
-            password: ""
-        }
-    },
-    methods: {
-        logIn() {
-            axios.post('/login', { email: this.email, password: this.password })
-                .then(response => {
-                    let token = response.data.token;
-                    if (token) {
-                        localStorage.setItem('token', token);
-                    }
-                    console.log(token);
-                })
-        }
+  data() {
+    return {
+      email: "",
+      password: ""
+    };
+  },
+  methods: {
+    logIn() {
+      axios
+        .post("/login", { email: this.email, password: this.password })
+        .then(response => {
+          let token = response.data.token;
+          if (token) {
+            localStorage.setItem("token", token);
+          }
+          console.log(token);
+        });
     }
-}
+  }
+};
 </script>

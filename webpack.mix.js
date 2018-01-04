@@ -5,10 +5,11 @@ let config = {
     port: 3000,
     base_url: 'apptotem.dev',
     watchFiles: [
-        // 'app/**/*.php',
-        'resources/views/**/*.blade.php',
+        'app/**/*.php',
+        'resources/views/**/*.php',
+        //'AppTotem/resources/views/**/*.php',
         'public/js/**/*.js',
-        // '**/*.php',
+        //'**/*.php',
         'public/css/**/*.css'
     ]
 };
@@ -23,7 +24,10 @@ mix.browserSync({
     logConnections: false,
     reloadOnRestart: true,
     notify: true,
-    open: false //false, local, external, ui, tunnel
+    open: false, //false, local, external, ui, tunnel
+    injectChanges: true,
+    logSnippet: true,
+    browser: ["google chrome", "firefox"]
 });
 // BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 

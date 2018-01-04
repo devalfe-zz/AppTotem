@@ -22,7 +22,6 @@ class AtractivosApiController extends Controller
         return $response; 
         
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -52,7 +51,11 @@ class AtractivosApiController extends Controller
      */
     public function show($id)
     {
-        //
+        //$atractivos = Atractivo::with('fotos')->orderBy('id', 'asc')->get();
+        $atractivos = Atractivo::findOrFail($id);
+        $atractivos = $atractivos->load('fotos','categorias');
+        $response = Response::json($atractivos,200);
+        return $response; 
     }
 
     /**

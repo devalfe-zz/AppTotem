@@ -115,7 +115,6 @@ class AtrativoController extends Controller
     public function detalle($id)
     {
         //$atractivos = Atractivo::with('fotos')->get();
-        
         $atractivos = Atractivo::findOrFail($id);
         $atractivos = $atractivos->load('fotos','categorias');
         $lng = $atractivos->longitud;
@@ -178,6 +177,7 @@ class AtrativoController extends Controller
     public function maps()
     {
         $lugares = Atractivo::get();
+        //dd($lugares);
         $config = array();
         $config['center'] = '-17.1937795,-70.933598';
         $config['clickable'] = true;
@@ -188,7 +188,7 @@ class AtrativoController extends Controller
         foreach ($lugares as $lugare) {
             $marker['position'] = $lugare->latitud.','.$lugare->longitud;     
             $marker['title'] = $lugare->titulo;       
-            $marker['infowindow_content'] = $lugare->titulo.'\n'.$lugare->descripcion; 
+            $marker['infowindow_content'] = $lugare->titulo.''.$lugare->descripcion; 
             $marker['animation'] = 'DROP';
             app('map')->add_marker($marker);
         }
