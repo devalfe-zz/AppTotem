@@ -10,8 +10,8 @@
 //@import "node_modules/bootstrap/scss/bootstrap-reboot";
 //@import "node_modules/bootstrap-material-design/sass/bootstrap-material-design";
 //Font awesome ~
-$fa-font-path: "../fonts";
-@import "node_modules/font-awesome/scss/font-awesome";
+//$fa-font-path: "../fonts";
+//@import "node_modules/font-awesome/scss/font-awesome";
 * {
     margin: 0;
     padding: 0;
@@ -91,8 +91,7 @@ a:focus {
     background: #fff;
     border-bottom: 1px solid #eaeaea;
     line-height: 32px;
-    width: 100%;
-    //color: #334141;
+    width: 100%; //color: #334141;
 }
 
 .lang {
@@ -101,10 +100,8 @@ a:focus {
     position: absolute;
     padding: 10px;
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    //opacity: 0;
-    filter: alpha(opacity=0);
-    // visibility: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); //opacity: 0;
+    filter: alpha(opacity=0); // visibility: hidden;
     z-index: 999;
     /* text-align: left; */
     margin-bottom: 0px;
@@ -126,8 +123,7 @@ a:focus {
 
 #search .input-group {
     border: 2px solid $color-primary-0;
-    border-radius: 50px;
-    //display: inline-block;
+    border-radius: 50px; //display: inline-block;
     overflow: hidden;
     width: 100%;
     background: #fff;
@@ -164,8 +160,7 @@ select.custom-select {
 #search button {
     line-height: 28px;
     padding: 6px 20px 6px 18px;
-    float: right;
-    //display: inline-block;
+    float: right; //display: inline-block;
     background: #fafafa;
     border: none;
     color: $color-primary-0;
@@ -241,8 +236,7 @@ select.custom-select {
 //-----------------------------------------------
 #prev_section,
 #next_section {
-    cursor: pointer;
-    //overflow: hidden;
+    cursor: pointer; //overflow: hidden;
     margin: 5px;
     position: absolute;
     top: 800px;
@@ -277,11 +271,9 @@ select.custom-select {
 //-----------------------------------------------
 #slider {
     width: 100%;
-    position: relative;
-    //height: 600px;
+    position: relative; //height: 600px;
     top: 66px;
-    margin-top: -66px;
-    //background: #3A3838;
+    margin-top: -66px; //background: #3A3838;
 }
 
 #slider section.slide {
@@ -295,8 +287,7 @@ select.custom-select {
     //height: 1600px;
     position: relative;
     text-align: center;
-    padding-bottom: 50px;
-    //background: orange;
+    padding-bottom: 50px; //background: orange;
 }
 
 #slider #menu-2 {
@@ -341,8 +332,7 @@ footer:after {
     font-family: FontAwesome;
     font-size: 2rem;
     position: absolute;
-    top: 0px;
-    //left: 50px;
+    top: 0px; //left: 50px;
     width: 80px;
     height: 80px;
     margin-left: -40px;
@@ -360,16 +350,13 @@ footer:hover:after {
 }
 
 footer .footer {
-    margin-top: 35px;
-    //width: 140px;
-    height: 40px;
-    //background: white;
+    margin-top: 35px; //width: 140px;
+    height: 40px; //background: white;
 }
 
 footer .footer a {
     width: 50px;
-    height: 50px;
-    //background: green;
+    height: 50px; //background: green;
     display: inline-block;
     font-size: 2rem;
     color: whitesmoke;
@@ -387,8 +374,7 @@ footer p {
 }
 
 .card-inicio {
-    backface-visibility: hidden;
-    //box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    backface-visibility: hidden; //box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     display: inline-block;
@@ -492,18 +478,15 @@ footer p {
 }
 
 .label-box {
-    position: absolute;
-    //top: 315px;
+    position: absolute; //top: 315px;
     bottom: 0px;
     color: #464a4c;
     z-index: 2;
     font-size: 1.5rem;
     text-align: center;
-    position: absolute;
-    //left: 100px;
+    position: absolute; //left: 100px;
     //right: 20px;
-    display: inline-block;
-    //background-color: rgba(255, 87, 34, 0.7);
+    display: inline-block; //background-color: rgba(255, 87, 34, 0.7);
     //transform: skew(-10deg) rotate(-10deg) translate(0, -25%);
     //padding: 10px 36px;
 }
@@ -521,12 +504,10 @@ footer p {
     display: inline-block;
     width: 225px;
     height: 225px;
-    border-radius: 30px;
-    //transform: rotate(45deg);
+    border-radius: 30px; //transform: rotate(45deg);
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    //padding: 0;
+    transition: all 0.3s ease-in-out; //padding: 0;
     //box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     margin: 15px auto;
     border: 0px;
@@ -538,8 +519,7 @@ footer p {
 }
 
 .item p {
-    position: absolute;
-    //top: 0px;
+    position: absolute; //top: 0px;
     left: 0px;
     right: 0px;
     bottom: -18px;
@@ -558,15 +538,13 @@ footer p {
 .item:hover {
     transform: none;
     transform: scale(1.1);
-    z-index: 2;
-    //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    z-index: 2; //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 img.box {
     //width: 100%;
     height: 250px;
-    transition: 0.3s linear;
-    //transform: rotate(-45deg) scale(1.4)
+    transition: 0.3s linear; //transform: rotate(-45deg) scale(1.4)
 }
 
 .item:hover>img {
@@ -641,8 +619,7 @@ img.box {
 }
 
 .column1 {
-    padding-left: 50px;
-    //padding-top: 120px;
+    padding-left: 50px; //padding-top: 120px;
     width: 220px;
     float: left;
     text-align: center;
@@ -665,8 +642,7 @@ img.box {
 .column2 {
     padding-left: 41px;
     padding-top: 30px;
-    margin-left: 20px;
-    // width: 480px;
+    margin-left: 20px; // width: 480px;
     float: left;
 }
 
@@ -689,8 +665,7 @@ img.box {
     z-index: 96;
     background: #c20c48;
     color: #fff;
-    left: 47%;
-    //bottom: -25px;
+    left: 47%; //bottom: -25px;
     width: 50px;
     height: 26px;
     overflow: hidden;
@@ -718,8 +693,7 @@ img.box {
 //=========== menulateral=========================
 .leftmenu {
     position: absolute;
-    top: calc(50% - 250px);
-    //left: 0;
+    top: calc(50% - 250px); //left: 0;
     z-index: 9;
     &__item {
         max-width: 56px;
@@ -774,8 +748,7 @@ h2.titulo-g {
     .gallerij {
         margin-top: 2vh;
         article {
-            margin-bottom: 2vh;
-            //display: none;
+            margin-bottom: 2vh; //display: none;
             &:nth-child(-n+5) {
                 display: block;
             }

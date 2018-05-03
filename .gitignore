@@ -16,3 +16,4 @@ yarn-error.log
 .env
 .vscode
 *.sql
+vsc-material-theme-1.2.0.vsix

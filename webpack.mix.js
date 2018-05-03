@@ -3,7 +3,7 @@ let mix = require('laravel-mix');
 let config = {
     host: '192.168.10.10',
     port: 3000,
-    base_url: 'apptotem.dev',
+    base_url: 'apptotem.test',
     watchFiles: [
         'app/**/*.php',
         'resources/views/**/*.php',
@@ -59,17 +59,17 @@ mix.browserSync({
 mix.js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css');
 
-mix.copy(['node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.css',
+mix.copy([
     'node_modules/animate.css/animate.css',
     'node_modules/owl.carousel/dist/assets/owl.carousel.css',
     'node_modules/fullpage.js/dist/jquery.fullpage.css',
     'node_modules/superfish/src/css/superfish.css',
     'node_modules/bootstrap/dist/css/bootstrap.css',
-    'node_modules/fancybox/dist/jquery.fancybox.css'
+    'node_modules/fancybox/dist//css/jquery.fancybox.css'
 ], 'public/css');
 
 
-mix.copy(['node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.js',
+mix.copy([
     'node_modules/owl.carousel/dist/owl.carousel.js',
     'node_modules/fullpage.js/dist/jquery.fullpage.extensions.min.js',
     'node_modules/fullpage.js/dist/jquery.fullpage.js',
@@ -81,7 +81,7 @@ mix.copy(['node_modules/bootstrap-material-design/dist/js/bootstrap-material-des
     'node_modules/vue/dist/vue.js',
     'node_modules/vue-resource/dist/vue-resource.js',
     'node_modules/vue-router/dist/vue-router.js',
-    'node_modules/fancybox/dist/jquery.fancybox.js'
+    'node_modules/fancybox/dist/js/jquery.fancybox.js'
 
 ], 'public/js');
 mix.copy(['resources/assets/img/*.*'], 'public/images');

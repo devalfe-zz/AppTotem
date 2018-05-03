@@ -16,6 +16,12 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::group(['prefix' => 'v1'], function () {
-    Route::resource('AtractivosApi', 'AtractivosApiController');
+Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
+    //header('Access-Control-Allow-Origin: *');
+    Route::get('atractivo','AtractivosApiController@index');
+    Route::get('atractivo/{id}','AtractivosApiController@show');
+    Route::get('categoria','AtractivosApiController@categorias');
+    Route::get('categoria/{id}','AtractivosApiController@categoria');
+    Route::get('galeria','AtractivosApiController@galerias');
+    Route::get('galeria/{id}','AtractivosApiController@galeria');
 });

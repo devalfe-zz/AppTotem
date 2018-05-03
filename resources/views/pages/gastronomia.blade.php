@@ -1,4 +1,7 @@
-@extends('template') @section ('title', 'telefonos') @section('class','telefonos') @section('content')
+@extends('template') 
+@section ('title', 'telefonos')
+@section('class','telefonos')
+@section('content')
 <div class="col-md-4">
 	<h3 class="text-center mb-5">Simple Card</h3>
 	<div class="card card-01">

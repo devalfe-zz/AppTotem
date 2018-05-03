@@ -1,9 +1,9 @@
 <?php
 
 namespace Apptotem\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Apptotem\Atractivo as Atractivo;
+use Apptotem\Categoria as Categoria;
 use Illuminate\Support\Facades\Response;
 
 class AtractivosApiController extends Controller
@@ -20,7 +20,7 @@ class AtractivosApiController extends Controller
         $response = Response::json($atractivos,200);
         //return ["results" =>[$response]];
         return $response; 
-        
+        //return Response::json(['results' => $atractivos],200);
     }
     /**
      * Show the form for creating a new resource.
@@ -55,6 +55,37 @@ class AtractivosApiController extends Controller
         $atractivos = Atractivo::findOrFail($id);
         $atractivos = $atractivos->load('fotos','categorias');
         $response = Response::json($atractivos,200);
+        return $response; 
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function categorias()
+    {
+        //$categorias = Categoria::get();
+        $categorias = Categoria::with('cat_atractivos')->get();
+        //$categorias = $categorias->load('cat_atractivos');
+         //$atractivos = Atractivo::all();
+        $response = Response::json($categorias,200);
+        //return ["results" =>[$response]];
+        return $response; 
+        //return Response::json(['results' => $atractivos],200);
+    }
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function categoria($id)
+    {
+        //$atractivos = Atractivo::with('fotos')->orderBy('id', 'asc')->get();
+        $categoria = Categoria::findOrFail($id);
+        $categoria = $categoria->load('cat_atractivos');
+       // dd($cat);
+        $response = Response::json($categoria,200);
         return $response; 
     }
 

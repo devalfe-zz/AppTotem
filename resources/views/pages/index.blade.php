@@ -1,4 +1,7 @@
-@extends('template') @section ('title', 'inicio') @section('class','inicio') @section('content')
+@extends('template') 
+@section ('title', 'inicio') 
+@section('class','inicio') 
+@section('content')
 <div class="col-xl-2 col-md-4 d-flex justify-content-center">
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner" role="listbox">
