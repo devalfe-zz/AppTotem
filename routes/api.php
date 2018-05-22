@@ -24,4 +24,7 @@ Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
     Route::get('categoria/{id}','AtractivosApiController@categoria');
     Route::get('galeria','AtractivosApiController@galerias');
     Route::get('galeria/{id}','AtractivosApiController@galeria');
+    
+    Route::get('lugares','AtractivosApiController@lugares');
+    Route::get('lugar/{id}','AtractivosApiController@lugar');
 });

@@ -123,6 +123,37 @@ class AtractivosApiController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function lugares()
+    {
+        $lugares = Atractivo::SearchCategoria(1)->get();
+        //$lugares = Atractivo::with('fotos')->get();
+        $response = Response::json($lugares,200);
+        //return ["results" =>[$response]];
+        return $response; 
+        //return Response::json(['results' => $atractivos],200);
+    }
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function lugar($id)
+    {
+        //$atractivos = Atractivo::with('fotos')->orderBy('id', 'asc')->get();
+        $lugar = Atractivo::findOrFail($id);
+        $lugar = $lugar->load('fotos');
+       // dd($cat);
+        $response = Response::json($lugar,200);
+        return $response; 
+    }
+
+    
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
