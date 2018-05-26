@@ -130,7 +130,7 @@ class AtractivosApiController extends Controller
     public function lugares()
     {
         $lugares = Atractivo::SearchCategoria(1)->get();
-        //$lugares = Atractivo::with('fotos')->get();
+        $lugares = $lugares->load('fotos');
         $response = Response::json($lugares,200);
         //return ["results" =>[$response]];
         return $response; 
@@ -145,7 +145,8 @@ class AtractivosApiController extends Controller
     public function lugar($id)
     {
         //$atractivos = Atractivo::with('fotos')->orderBy('id', 'asc')->get();
-        $lugar = Atractivo::findOrFail($id);
+        $lugar = Atractivo::SearchCategoria(1)->findOrFail($id);
+        //$lugar = Atractivo::findOrFail($id);
         $lugar = $lugar->load('fotos');
        // dd($cat);
         $response = Response::json($lugar,200);
