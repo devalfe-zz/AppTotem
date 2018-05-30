@@ -150,7 +150,8 @@ class AtractivosApiController extends Controller
         $lugar = $lugar->load('fotos');
        // dd($cat);
         $response = Response::json($lugar,200);
-        return $response; 
+        return Response::json(['results' => $lugar],200);
+        //return $response; 
     }
 
     
