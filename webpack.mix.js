@@ -6,7 +6,7 @@ let config = {
     base_url: 'apptotem.test',
     watchFiles: [
         'app/**/*.php',
-        'resources/views/**/*.php',
+        './resources/views/**/*.php',
         //'AppTotem/resources/views/**/*.php',
         'public/js/**/*.js',
         //'**/*.php',
@@ -65,7 +65,7 @@ mix.copy([
     'node_modules/fullpage.js/dist/jquery.fullpage.css',
     'node_modules/superfish/src/css/superfish.css',
     'node_modules/bootstrap/dist/css/bootstrap.css',
-    'node_modules/fancybox/dist//css/jquery.fancybox.css'
+    'node_modules/fancybox/dist/css/jquery.fancybox.css'
 ], 'public/css');
 
 
