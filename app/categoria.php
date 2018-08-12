@@ -6,17 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 use Apptotem\Categoria;
 class Categoria extends Model
 {
-    //$categorias = Apptotem\CAtegoria::all();
     protected $table = 'categorias';
     protected $primaryKey = 'id';    
-    protected $fillable = ['id','titulo','activo','categoria_id'];   
-    // public function cat_atractivos()
-    // {
-    //     return $this->hasMany('Apptotem\Atractivo');
-    // }
-    public function cat_atractivos()
+    protected $fillable = ['id','titulo','activo'];   
+    
+    public function atractivos()
 	{
-		return $this->hasMany(Atractivo::class);
+		return $this->hasMany('Apptotem\Atractivo');
+    }
+        
+    public function fotos()
+	{
+		return $this->hasManyThrough('Apptotem\Galeria','Apptotem\Atractivo','categoria_id','atractivo_id', 'id','id');
 	}
 
+    public function foto_cat(){
+        return $this->morphMany('Apptotem\Galeria','fotos_cat');
+    }
 }

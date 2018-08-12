@@ -15,4 +15,7 @@ class Galeria extends Model
     {
         return $this->belongsTo('Apptotem\Atractivo','atractivo_id','id');
     }
+    public function fotos_cat(){
+        return $this->morpTo();
+    }
 }

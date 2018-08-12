@@ -16,7 +16,7 @@ class AtractivosApiController extends Controller
      */
     public function index()
     {
-        $atractivos = Atractivo::with('fotos')->paginate(10);
+        $atractivos = Atractivo::with('fotos')->paginate(12);
         //$atractivos = Atractivo::all();
         $response = Response::json($atractivos,200);
         //return ["results" =>[$response]];
@@ -66,8 +66,8 @@ class AtractivosApiController extends Controller
     public function categorias()
     {
         //$categorias = Categoria::get();
-        $categorias = Categoria::with('cat_atractivos')->get();
-        //$categorias = $categorias->load('cat_atractivos');
+        $categorias = Categoria::with(['atractivos','fotos'])->get();
+        //$categorias = $categorias->load('cat_atractivos','cat_fotos');
          //$atractivos = Atractivo::all();
         $response = Response::json($categorias,200);
         //return ["results" =>[$response]];
@@ -82,12 +82,8 @@ class AtractivosApiController extends Controller
      */
     public function categoria($id)
     {
-        //$atractivos = Atractivo::with('fotos')->orderBy('id', 'asc')->get();
-        $categoria = Categoria::findOrFail($id);
-        $categoria = $categoria->load('cat_atractivos');
-       // dd($cat);
-        $response = Response::json($categoria,200);
-        return $response; 
+        $categoria = Atractivo::with('fotos','categorias')->SearchCategoria($id)->get();
+        return Response::json($categoria,200);
     }
     
     /**
@@ -101,9 +97,9 @@ class AtractivosApiController extends Controller
         $galerias = Galeria::with('lugares')->get();
         //$categorias = $categorias->load('cat_atractivos');
          //$atractivos = Atractivo::all();
-        $response = Response::json($galerias,200);
+        //$response = Response::json($galerias,200);
         //return ["results" =>[$response]];
-        return $response; 
+        return Response::json($galerias,200); 
         //return Response::json(['results' => $atractivos],200);
     }
     /**
@@ -115,11 +111,11 @@ class AtractivosApiController extends Controller
     public function galeria($id)
     {
         //$atractivos = Atractivo::with('fotos')->orderBy('id', 'asc')->get();
-        $galeria = Galeria::findOrFail($id);
-        $galeria = $galeria->load('lugares');
+        $galeria = Galeria::with('lugares')->findOrFail($id);
+        // $galeria = $galeria->load('lugares');
        // dd($cat);
-        $response = Response::json($galeria,200);
-        return $response; 
+       
+        return Response::json($galeria,200); 
     }
 
     /**
@@ -129,11 +125,11 @@ class AtractivosApiController extends Controller
      */
     public function lugares()
     {
-        $lugares = Atractivo::SearchCategoria(1)->get();
-        $lugares = $lugares->load('fotos');
-        $response = Response::json($lugares,200);
+        $lugares = Atractivo::with('fotos')->SearchCategoria(1)->get();
+        //$lugares = $lugares->load('fotos');
+        //$response = Response::json($lugares,200);
         //return ["results" =>[$response]];
-        return $response; 
+        return  Response::json($lugares,200);
         //return Response::json(['results' => $atractivos],200);
     }
     /**
@@ -145,11 +141,11 @@ class AtractivosApiController extends Controller
     public function lugar($id)
     {
         //$atractivos = Atractivo::with('fotos')->orderBy('id', 'asc')->get();
-        $lugar = Atractivo::SearchCategoria(1)->findOrFail($id);
+        $lugar = Atractivo::with('fotos')->SearchCategoria(1)->findOrFail($id);
         //$lugar = Atractivo::findOrFail($id);
-        $lugar = $lugar->load('fotos');
+        //$lugar = $lugar->load('fotos');
        // dd($cat);
-        $response = Response::json($lugar,200);
+        //$response = Response::json($lugar,200);
         return Response::json(['results' => $lugar],200);
         //return $response; 
     }

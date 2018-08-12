@@ -54,6 +54,21 @@ return [
             'engine' => null,
         ],
 
+        'mysql_default' => [
+            'driver' => 'mysql',
+            'host' => env('DDBB_HOST', '127.0.0.1'),
+            'port' => env('DDBB_PORT', '3306'),
+            'database' => env('DDBB_DATABASE', 'dbtoten'),
+            'username' => env('DDBB_USERNAME', 'homestead'),
+            'password' => env('DDBB_PASSWORD', 'secret'),
+            'unix_socket' => env('DDBB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),

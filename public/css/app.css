@@ -743,19 +743,19 @@ h2.titulo-g {
   padding: 3vh 0;
 }
 
-.fotos .gallerij {
+.fotos .gallerias {
   margin-top: 2vh;
 }
 
-.fotos .gallerij article {
+.fotos .gallerias article {
   margin-bottom: 2vh;
 }
 
-.fotos .gallerij article:nth-child(-n+5) {
+.fotos .gallerias article:nth-child(-n+5) {
   display: block;
 }
 
-.fotos .gallerij article .link {
+.fotos .gallerias article .link {
   display: block;
   background-color: rgba(0, 0, 0, 0.8);
   background-image: url(https://ariwarda.be/assets/images/camera.png);
@@ -773,7 +773,7 @@ h2.titulo-g {
   transition-property: background;
 }
 
-.fotos .gallerij article .link .foto-g {
+.fotos .gallerias article .link .foto-g {
   opacity: 0.5;
   -webkit-transform: perspective(1px) translateZ(0);
           transform: perspective(1px) translateZ(0);
@@ -786,33 +786,33 @@ h2.titulo-g {
   transition-property: opacity;
 }
 
-.fotos .gallerij article:hover .link {
+.fotos .gallerias article:hover .link {
   background: none;
 }
 
-.fotos .gallerij article:hover .link .foto-g {
+.fotos .gallerias article:hover .link .foto-g {
   opacity: 1;
 }
 
-.fotos .gallerij p {
+.fotos .gallerias p {
   text-align: center;
   margin-top: 5vh;
 }
 
-.fotos .gallerij p .link {
+.fotos .gallerias p .link {
   color: white;
   text-decoration: none;
 }
 
-.fotos .gallerij p .link.less {
+.fotos .gallerias p .link.less {
   display: none;
 }
 
-.fotos .gallerij p .link.green {
+.fotos .gallerias p .link.green {
   background-color: #2e7ba7;
 }
 
-.fotos .gallerij p .link.primary {
+.fotos .gallerias p .link.primary {
   background-color: #1b6189;
 }
 

@@ -42,11 +42,11 @@ class AtrativoController extends Controller
      */
     public function fuera()
     {
-        // $atractivos = Atractivo::where([
-        //     ['categoria_id', '=', '1'],
-        //     ['ubicacion', '<>', 'Mariscal Nieto'],
-        // ])->get();
-        //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
+        // *$atractivos = Atractivo::where([
+        //*     ['categoria_id', '=', '1'],
+        //*     ['ubicacion', '<>', 'Mariscal Nieto'],
+        //* ])->get();
+        //*$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
         $atractivos = Atractivo::SearchCategoria(6)->get();
         
         return view('pages.pages1', compact('atractivos'));
@@ -54,7 +54,7 @@ class AtrativoController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response 
      */
     public function servicios()
     {
@@ -93,18 +93,18 @@ class AtrativoController extends Controller
     public function alojamiento()
     {
         $atractivos = Atractivo::SearchCategoria(3)->get();
-        //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
+        //?$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
         return view('pages.pages3', compact('atractivos'));
     }
     /**
-     * Display a listing of the resource.
+     *! Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function restaurante()
     {
         $atractivos = Atractivo::SearchCategoria(4)->get();
-        //$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
+        //?$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
         return view('pages.pages3', compact('atractivos'));
     }
     /**

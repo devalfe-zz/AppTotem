@@ -1,5 +1,7 @@
 @extends('template') @section ('title', '') @section('class','quehacer') @section('lema') {{ $atractivos->titulo }} @endsection
-@section('content') {{-- {{ $atractivos->fotos as $foto }} --}} @foreach($atractivos->fotos as $foto) @endforeach
+@section('content') {{-- {{ $atractivos->fotos as $foto }} --}} 
+@foreach($atractivos->fotos as $foto) 
+@endforeach
 <div class="row movie-card">
 
 	{{--

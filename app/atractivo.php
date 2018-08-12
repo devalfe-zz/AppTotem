@@ -21,7 +21,7 @@ class Atractivo extends Model
 
     public function scopeSearchCategoria($query, $id)
 	{
-		return $query->where('categoria_id', '=', $id);
+		return $query->where('categoria_id',$id);
     }
     
     public function scopeSearchUbicacion($query, $ubicacion)

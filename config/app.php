@@ -181,7 +181,7 @@ return [
        //'GoogleMaps\ServiceProvider\GoogleMapsServiceProvider',
        //Appitventures\Phpgmaps\PhpgmapsServiceProvider::class,
        Cornford\Googlmapper\MapperServiceProvider::class,
-      
+       Intervention\Image\ImageServiceProvider::class
 
     ],
 
@@ -237,6 +237,7 @@ return [
         'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class
     ],
 
 ];

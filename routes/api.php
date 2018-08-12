@@ -28,3 +28,7 @@ Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
     Route::get('lugares','AtractivosApiController@lugares');
     Route::get('lugar/{id}','AtractivosApiController@lugar');
 });
+Route::group(['prefix' => 'v1/movil', 'middleware' => 'cors'],function(){
+    Route::resource('user', 'UserMovilController');
+    Route::post('checkuser', 'UserMovilController@checkuser')->name('user.checkuser');
+});

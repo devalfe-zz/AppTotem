@@ -55,9 +55,13 @@ mix.browserSync({
  | file for the application as well as bundling up all the JS files.
  |
  */
+mix.autoload({
+    jquery: ['$', 'window.jQuery', "jQuery", "window.$", "jquery", "window.jquery"],
+    'node_modules/popper.js/dist/popper.js': ['Popper']
+})
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css');
+    .sass('resources/assets/sass/app.scss', 'public/css').version();
 
 mix.copy([
     'node_modules/animate.css/animate.css',
@@ -65,11 +69,12 @@ mix.copy([
     'node_modules/fullpage.js/dist/jquery.fullpage.css',
     'node_modules/superfish/src/css/superfish.css',
     'node_modules/bootstrap/dist/css/bootstrap.css',
-    'node_modules/fancybox/dist/css/jquery.fancybox.css'
-], 'public/css');
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
+], 'public/css').version();
 
 
 mix.copy([
+    'node_modules/jquery/dist/jquery.js',
     'node_modules/owl.carousel/dist/owl.carousel.js',
     'node_modules/fullpage.js/dist/jquery.fullpage.extensions.min.js',
     'node_modules/fullpage.js/dist/jquery.fullpage.js',
@@ -81,7 +86,7 @@ mix.copy([
     'node_modules/vue/dist/vue.js',
     'node_modules/vue-resource/dist/vue-resource.js',
     'node_modules/vue-router/dist/vue-router.js',
-    'node_modules/fancybox/dist/js/jquery.fancybox.js'
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
 
-], 'public/js');
+], 'public/js').version();
 mix.copy(['resources/assets/img/*.*'], 'public/images');

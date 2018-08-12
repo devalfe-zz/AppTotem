@@ -7,15 +7,15 @@
 		<div class="carousel-inner" role="listbox">
 			<a href="">
 				<div class="carousel-item active menu-box">
-					<img class="card-img d-block w-100 h-100" src="{{asset('images/atractivos/casa_tradicional1.jpg')}}">
+					<img class="card-img d-block w-100 h-100" src="{{url('images/atractivos/casa_tradicional1.jpg')}}">
 					<div class="card-img-overlay menu">
-						<p class="card-text label-box carousel-caption d-none d-md-block">Información</p>
+						<p class="card-text label-box carousel-caption">Información</p>
 					</div>
 				</div>
 				<div class="carousel-item menu-box">
 					<img class="card-img d-block w-100 h-100" src="{{asset('images/atractivos/iglesia_belen.jpg')}}">
 					<div class="card-img-overlay menu">
-						<p class="card-text label-box carousel-caption d-none d-md-block">Información</p>
+						<p class="card-text label-box carousel-caption">Información</p>
 					</div>
 				</div>
 			</a>
@@ -29,13 +29,13 @@
 				<div class="carousel-item active menu-box">
 					<img class="card-img d-block w-100 h-100" src="{{asset('images/atractivos/carcel1.jpg')}}">
 					<div class="card-img-overlay menu">
-						<p class="card-text label-box  carousel-caption d-none d-md-block">Atractivos Turismo</p>
+						<p class="card-text label-box  carousel-caption">Atractivos Turismo</p>
 					</div>
 				</div>
 				<div class="carousel-item menu-box">
 					<img class="card-img d-block w-100 h-100" src="{{asset('images/atractivos/plaza2.jpg')}}">
 					<div class="card-img-overlay menu">
-						<p class="card-text label-box carousel-caption d-none d-md-block">Atractivos Turismo</p>
+						<p class="card-text label-box carousel-caption">Atractivos Turismo</p>
 					</div>
 				</div>
 			</a>
