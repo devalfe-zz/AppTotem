@@ -16,73 +16,12 @@ window.Vue = require('vue');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('login', require('./components/login.vue'));
 
-// const app = new Vue({
-//     el: '#app'
-// });
-var urlCat = 'categoria';
+
 new Vue({
-    el: '#crud',
-    created: function() {
-        this.getCategorias();
-    },
-    data: {
-        categorias: [],
-        addCategoria: {
-            titulo: '',
-            activo: ''
-        },
-        errors: {}
-    },
-    methods: {
-        getCategorias: function() {
-            axios.get(urlCat).then(response => {
-                this.categorias = response.data
-            });
-        },
-        deleteCategorias: function(categoria) {
-            let ok = confirm("are you sure?");
-            if (ok) {
-                var url = urlCat + '/' + categoria.id;
-                axios.delete(url).then(response => {
-                    //console.log(response);
-                    this.getCategorias();
-                    //toastr.success('Eliminado');
-                });
-            }
-        },
-        createCategorias: function() {
-            // axios.post('categoria', this.addCategoria)
-            //     .then(response => {
-            //         this.getCategorias();
-            //         this.addCategoria = "";
-            //         this.errors = "";
-            //         console.log(response);
-            //         //$('#create').modal('hide');
-            //         $('#create').modal().hide();
-            //     })
-            //     .catch(error => {
-            //         this.errors = error.response;
-            //         console.log(error.response)
-            //     })
-            axios.post('categoria', {
-                titulo: this.addCategoria,
-                activo: this.addCategoria
-            }).then(response => {
-                this.getCategorias();
-                this.addCategoria = "";
-                this.errors = [];
-                $('#create').modal('hide');
-                console.log(response);
-                // toastr.success('Nueva Categoria creada con éxito');
-            }).catch(error => {
-                this.errors = error.response.data
-                console.log(error.response)
-            });
+    el: '#app',
 
-        }
-
-    },
     mounted() {
         console.log('Component mounted.')
     }
