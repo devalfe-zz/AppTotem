@@ -5,7 +5,15 @@ Route::group(['prefix' => 'dashboard'], function () {
     Auth::routes();
     Route::get('/home', 'HomeController@index')->name('dashboard');
     Route::view('categorias', 'pages.dashboard');
-    Route::resource('categoria', 'CategoriaController', ['except' => 'show', 'create', 'edit']);    
+    Route::resource('categoria', 'CategoriaController', ['except' => 'show', 'create', 'edit']);
+
+    Route::get('{path}', function () {
+        return view('index');
+    })->where('path', '(.*)');
+
+    Route::get('password/reset/{token}', function () {
+        return view('index');
+    })->name('password.reset');
 });
 
 Route::group(['middleware' => ['web']], function () {
@@ -36,3 +44,7 @@ Route::group(['middleware' => ['web']], function () {
             return view('pages.cartelera',compact('carteleras'));
     })->name('cine');
 });
+
+Route::get('oauth/{driver}', 'Auth\OAuthController@redirectToProvider')->name('oauth');
+Route::get('oauth/{driver}/callback', 'Auth\OAuthController@handleProviderCallback')->name('oauth.callback');
+

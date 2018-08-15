@@ -17,16 +17,12 @@
 	<meta name="ICBM" content="@yield('ICBM','default')" />
 
 	<link rel="stylesheet" href="{{mix('css/jquery.fancybox.css')}}" />
-	<link rel="stylesheet" href="{{mix('css/animate.css')}}" />
 	<link rel="stylesheet" href="{{mix('css/owl.carousel.css')}}" />
 	<link rel="stylesheet" href="{{mix('css/jquery.fullpage.css')}}" />
 	<link rel="stylesheet" href="{{mix('css/superfish.css')}}" />
 	<link rel="stylesheet" href="{{mix('css/bootstrap.css')}}" />
 	<link rel="stylesheet" href="{{mix('css/app.css')}}" />
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-	<script src="{{mix('js/vue.js')}}"></script>
-	<script src="{{mix('js/vue-resource.js')}}"></script>
-	<script src="{{mix('js/vue-router.js')}}"></script>
 	<script src="{{mix('js/app.js')}}"></script>
 	@yield('map')
 

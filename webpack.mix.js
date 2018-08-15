@@ -1,5 +1,9 @@
 let mix = require('laravel-mix');
-// Configs
+const path = require('path')
+const webpack = require('webpack')
+    //! const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+
+//? Configs
 let config = {
     host: '192.168.10.10',
     port: 3000,
@@ -14,7 +18,7 @@ let config = {
     ]
 };
 
-//Browserfy
+//? Browserfy
 mix.browserSync({
     files: config.watchFiles,
     host: config.host,
@@ -61,17 +65,21 @@ mix.autoload({
 })
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css').version();
+    .js('resources/assets/js/main.js', 'public/js')
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .sass('resources/assets/sass/main.scss', 'public/css')
+
+.sourceMaps()
+    .disableNotifications()
 
 mix.copy([
-    'node_modules/animate.css/animate.css',
+
     'node_modules/owl.carousel/dist/assets/owl.carousel.css',
     'node_modules/fullpage.js/dist/jquery.fullpage.css',
     'node_modules/superfish/src/css/superfish.css',
     'node_modules/bootstrap/dist/css/bootstrap.css',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
-], 'public/css').version();
-
+], 'public/css')
 
 mix.copy([
     'node_modules/jquery/dist/jquery.js',
@@ -83,10 +91,47 @@ mix.copy([
     'node_modules/smooth-scroll/dist/js/smooth-scroll.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/popper.js/dist/popper.js',
-    'node_modules/vue/dist/vue.js',
-    'node_modules/vue-resource/dist/vue-resource.js',
-    'node_modules/vue-router/dist/vue-router.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
 
-], 'public/js').version();
-mix.copy(['resources/assets/img/*.*'], 'public/images');
+], 'public/js')
+mix.copy(['resources/assets/img/*.*'], 'public/images')
+
+if (mix.inProduction()) {
+    mix.version()
+
+    mix.extract([
+        'vue',
+        'vform',
+        'axios',
+        'vuex',
+        'jquery',
+        'popper.js',
+        'vue-i18n',
+        'vue-meta',
+        'js-cookie',
+        'bootstrap',
+        'vue-router',
+        'sweetalert2',
+        'vuex-router-sync',
+        '@fortawesome/fontawesome',
+        '@fortawesome/vue-fontawesome'
+    ])
+}
+mix.webpackConfig({
+    plugins: [
+        //! new BundleAnalyzerPlugin(),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            Popper: ['popper.js', 'default']
+        })
+    ],
+    resolve: {
+        extensions: ['.js', '.json', '.vue'],
+        alias: {
+            '~': path.join(__dirname, './resources/assets/js')
+        }
+    },
+
+})

@@ -79,6 +79,13 @@ return [
 
     'locale' => 'es',
 
+    'locales' => [
+        'en' => 'EN',
+        'zh-CN' => '中文',
+        'es' => 'ES',
+    ],
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -161,7 +168,7 @@ return [
         Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
-        Illuminate\View\ViewServiceProvider::class,  
+        Illuminate\View\ViewServiceProvider::class,
         //GeneaLabs\Phpgmaps\PhpgmapsServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         /*
@@ -181,7 +188,10 @@ return [
        //'GoogleMaps\ServiceProvider\GoogleMapsServiceProvider',
        //Appitventures\Phpgmaps\PhpgmapsServiceProvider::class,
        Cornford\Googlmapper\MapperServiceProvider::class,
-       Intervention\Image\ImageServiceProvider::class
+       Intervention\Image\ImageServiceProvider::class,
+       Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+       Laravel\Socialite\SocialiteServiceProvider::class,
+       Laravel\Dusk\DuskServiceProvider::class
 
     ],
 
@@ -237,6 +247,7 @@ return [
         'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Image' => Intervention\Image\Facades\Image::class
     ],
 

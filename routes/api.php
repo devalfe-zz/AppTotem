@@ -13,9 +13,26 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::group(['middleware' => 'auth:api'], function () {
+    Route::post('logout', 'Auth\LoginController@logout');
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+
+    Route::patch('settings/profile', 'Settings\ProfileController@update');
+    Route::patch('settings/password', 'Settings\PasswordController@update');
 });
+
+Route::group(['middleware' => 'guest:api'], function () {
+    Route::post('login', 'Auth\LoginController@login');
+    Route::post('register', 'Auth\RegisterController@register');
+    Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+    Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+});
+
+Route::get('translations/{locale}', 'TranslationController@show');
+
 Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
     //header('Access-Control-Allow-Origin: *');
     Route::get('atractivo','AtractivosApiController@index');
@@ -24,7 +41,7 @@ Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
     Route::get('categoria/{id}','AtractivosApiController@categoria');
     Route::get('galeria','AtractivosApiController@galerias');
     Route::get('galeria/{id}','AtractivosApiController@galeria');
-    
+
     Route::get('lugares','AtractivosApiController@lugares');
     Route::get('lugar/{id}','AtractivosApiController@lugar');
 });

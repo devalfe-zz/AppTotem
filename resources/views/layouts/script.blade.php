@@ -6,9 +6,6 @@
 
 <script src="{{mix('js/jquery.fullpage.extensions.min.js')}}"></script>
 <script src="{{mix('js/jquery.fullpage.js')}}"></script>
-<script src="{{mix('js/vue.js')}}"></script>
-<script src="{{mix('js/vue-resource.js')}}"></script>
-<script src="{{mix('js/vue-router.js')}}"></script>
 <script src="{{mix('js/owl.carousel.js')}}"></script>
 <script src="{{mix('js/app.js')}}"></script>
 <script src="{{mix('js/jquery.fancybox.js')}}"></script>
@@ -22,7 +19,7 @@
         autoplay:true,
         autoplayTimeout:4900,
         autoplayHoverPause:true
-    }) 
+    })
 });
 
 </script>

@@ -1,11 +1,11 @@
 <?php
 
 namespace Apptotem;
-
+use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
@@ -26,4 +26,49 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'photo_url',
+    ];
+
+    /**
+     * Get the profile photo URL attribute.
+     *
+     * @return string
+     */
+    public function getPhotoUrlAttribute()
+    {
+        return 'https://www.gravatar.com/avatar/'.md5(strtolower($this->email)).'.jpg?s=200&d=mm';
+    }
+
+    /**
+     * Get the oauth providers.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function oauthProviders()
+    {
+        return $this->hasMany(OAuthProvider::class);
+    }
+
+    /**
+     * @return int
+     */
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    /**
+     * @return array
+     */
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
+
 }
