@@ -18,6 +18,8 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \Apptotem\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        \Apptotem\Http\Middleware\SetLocale::class,
+
         //!\Apptotem\Http\Middleware\TrustProxies::class,
     ];
 
@@ -60,6 +62,7 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'cors' => \Apptotem\Http\Middleware\Cors::class,
+        'setlocale' => \Apptotem\Http\Middleware\SetLocale::class,
 
     ];
 }

@@ -2,14 +2,18 @@
 use GuzzleHttp\Client;
 
 Route::group(['prefix' => 'dashboard'], function () {
-    Auth::routes();
-    Route::get('/home', 'HomeController@index')->name('dashboard');
-    Route::view('categorias', 'pages.dashboard');
-    Route::resource('categoria', 'CategoriaController', ['except' => 'show', 'create', 'edit']);
+    //!Auth::routes();
+    //!Route::get('/home', 'HomeController@index')->name('dashboard');
+    //!Route::view('categorias', 'pages.dashboard');
+    //!Route::resource('categoria', 'CategoriaController', ['except' => 'show', 'create', 'edit']);
 
     Route::get('{path}', function () {
-        return view('index');
+         return view('index');
     })->where('path', '(.*)');
+
+    //! Route::get('/', function () {
+    //!     return view('index');
+    //! });
 
     Route::get('password/reset/{token}', function () {
         return view('index');
@@ -43,8 +47,10 @@ Route::group(['middleware' => ['web']], function () {
             //dd($carteleras);
             return view('pages.cartelera',compact('carteleras'));
     })->name('cine');
+
+    Route::get('oauth/{driver}', 'Auth\OAuthController@redirectToProvider')->name('oauth');
+    Route::get('oauth/{driver}/callback', 'Auth\OAuthController@handleProviderCallback')->name('oauth.callback');
+
 });
 
-Route::get('oauth/{driver}', 'Auth\OAuthController@redirectToProvider')->name('oauth');
-Route::get('oauth/{driver}/callback', 'Auth\OAuthController@handleProviderCallback')->name('oauth.callback');
 
