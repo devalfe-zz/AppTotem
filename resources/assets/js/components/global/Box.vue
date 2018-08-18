@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <div v-for="(item, i) in lists" :key="i" class="botonesInicio">
+    <div class="panel-inicio">
+        <div v-for="(item, i) in lists" :key="i" class="botonesInicio p-2">
             <a href="slide">
                 <div style="background:#e74c3c">
-                    <span class="fa fa-toggle-right"></span>
+                    <fa icon="coffee" size="5x" :style="{ color: 'white' }" />
                     <p class="box-title">{{ item.titulo }}</p>
                 </div>
             </a>
@@ -16,7 +16,11 @@ export default {
     props: ['lists']
 }
 </script>
-<style scoped>
+<style lang="scss">
+.panel-inicio {
+  display: flex;
+  flex-wrap: wrap;
+}
 .botonesInicio div {
   position: relative;
   display: block;

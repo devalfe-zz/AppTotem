@@ -1,5 +1,5 @@
 <template>
-    <div id="inicio" class="col-lg-10 col-md-10 col-sm-9 col-12">
+    <div id="inicio" class="col-12">
         {{ $t('you_are_logged_in') }}
         <v-Box :lists="categories"></v-Box>
     </div>

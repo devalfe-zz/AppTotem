@@ -111,6 +111,7 @@ if (mix.inProduction()) {
         'bootstrap',
         'vue-router',
         'sweetalert2',
+        'superfish',
         'vuex-router-sync',
         '@fortawesome/fontawesome',
         '@fortawesome/vue-fontawesome'
