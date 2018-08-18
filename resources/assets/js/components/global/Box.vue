@@ -1,20 +1,18 @@
 <template>
     <div>
-        <ul>
-            <li v-for="item in lists" class="botonesInicio">
-                <a href="slide">
-                    <div style="background:#e74c3c">
-                        <span class="fa fa-toggle-right"></span>
-                        <p class="box-title">{{ item.titulo }}</p>
-                    </div>
-                </a>
-            </li>
-        </ul>
+        <div v-for="(item, i) in lists" :key="i" class="botonesInicio">
+            <a href="slide">
+                <div style="background:#e74c3c">
+                    <span class="fa fa-toggle-right"></span>
+                    <p class="box-title">{{ item.titulo }}</p>
+                </div>
+            </a>
+        </div>
     </div>
 </template>
 <script>
 export default {
-    name: 'Box',
+    name: 'v-Box',
     props: ['lists']
 }
 </script>

@@ -13,5 +13,5 @@ export const SET_CAT = 'SET_CAT'
 export const LOAD_CATEGORIES = 'LOAD_CATEGORIES'
 
 export const FETCH_CAT = 'FETCH_CAT'
-export const FETCH_CAT_SUCCESS = 'FETCH_CAT_SUCCESS'
-export const FETCH_CAT_FAILURE = 'FETCH_CAT_FAILURE'
+export const CAT_SUCCESS = 'CAT_SUCCESS'
+export const CAT_FAILURE = 'CAT_FAILURE'
