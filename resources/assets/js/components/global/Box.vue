@@ -1,9 +1,9 @@
 <template>
-    <div class="panel-inicio">
-        <div v-for="(item, i) in lists" :key="i" class="botonesInicio p-2">
+    <div class="row">
+        <div v-for="(item, i) in lists" :key="i" class="col-lg-3 col-md-4 col-sm-6 col-12 botonesInicio p-5">
             <a href="slide">
-                <div style="background:#e74c3c">
-                    <fa icon="coffee" size="5x" :style="{ color: 'white' }" />
+                <div class="d-flex flex-column align-items-center box-circle">
+                    <fa class="box-icon" icon="coffee" size="5x" />
                     <p class="box-title">{{ item.titulo }}</p>
                 </div>
             </a>
@@ -13,14 +13,21 @@
 <script>
 export default {
     name: 'v-Box',
-    props: ['lists']
+    props: ['lists'],
+    computed: {
+        boxStyle() {
+            return {
+                background: 'blue'
+            }
+        }
+    }
 }
 </script>
 <style lang="scss">
-.panel-inicio {
-  display: flex;
-  flex-wrap: wrap;
+.box-circle {
+  background-color: crimson;
 }
+
 .botonesInicio div {
   position: relative;
   display: block;
@@ -36,13 +43,13 @@ export default {
   transform: rotateY(360deg);
   transform-style: preserve-3d;
 }
-.botonesInicio div span {
+.botonesInicio div .box-icon {
   font-size: 40px;
   margin-top: 30%;
   color: white;
 }
 .botonesInicio div p {
-  font-size: 20px;
+  font-size: 18px;
   color: white;
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
-    <div id="inicio" class="col-12">
-        {{ $t('you_are_logged_in') }}
+    <div id="inicio" class="d-flex align-content-center">
         <v-Box :lists="categories"></v-Box>
     </div>
 </template>
