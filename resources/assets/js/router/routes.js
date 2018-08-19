@@ -30,6 +30,16 @@ export default [{
                     component: require('~/pages/settings/password')
                 }
             ]
+        },
+        {
+            path: '/dashboard/categories',
+            name: 'categories.category',
+            component: require('~/pages/categories/category'),
+        },
+        {
+            path: '/dashboard/categories/detail',
+            name: 'categories.detail',
+            component: require('~/pages/categories/detail'),
         }
 
         //! ...middleware('admin', [
