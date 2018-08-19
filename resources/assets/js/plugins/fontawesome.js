@@ -13,10 +13,26 @@ import {
     faInfo,
     faSearch,
     faSignInAlt,
-    faSort,
-    faSpinner,
-    faCoffee,
-    faArchway
+    faArchway,
+    faAward,
+    faHotel,
+    faImages,
+    faMapMarkedAlt,
+    faStore,
+    faServer,
+    faPortrait,
+    faPassport,
+    faMoon,
+    faMap,
+    faMedal,
+    faBookmark,
+    faBuilding,
+    faBus,
+    faBook,
+    faCamera,
+    faHome,
+    faImage,
+    faTags
 }
 from '@fortawesome/free-solid-svg-icons'
 
@@ -26,7 +42,11 @@ import {
 from '@fortawesome/free-brands-svg-icons'
 
 library.add(
-    faUser, faLock, faSignOutAlt, faCog, faInfo, faSearch, faSignInAlt, faSort, faSpinner, faCoffee, faArchway, faLaravel
+    faUser, faLock, faSignOutAlt, faCog, faInfo, faSearch, faSignInAlt,
+    faArchway, faLaravel, faAward, faHotel, faImages, faMapMarkedAlt, faStore,
+    faServer, faPortrait, faPassport, faMoon, faMap, faMedal,
+    faBookmark, faBuilding, faBus, faBook, faCamera, faHome,
+    faImage, faTags
 )
 Vue.component('fa', FontAwesomeIcon)
 

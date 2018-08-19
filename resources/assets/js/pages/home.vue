@@ -1,6 +1,6 @@
 <template>
     <div id="inicio" class="d-flex align-content-center">
-        <v-Box :catx="categories"></v-Box>
+        <v-Box :lists="categories"></v-Box>
     </div>
 </template>
 
@@ -24,24 +24,11 @@ export default {
 
     },
     mounted() {
-        // axios
-        //     .get('/api/v1/categoria')
-        //     .then(response => {
-        //         this.categories = response.data
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //         this.errored = true
-        //     })
-        //     .finally(() => this.loading = false)
         this.$store.dispatch('category/loadCategories')
     },
     computed: mapGetters({
         categories: 'category/categories'
     }),
 
-    //computed: mapState({
-    //categories: 'prod/categories'
-    //}),
 }
 </script>

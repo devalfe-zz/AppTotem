@@ -48,7 +48,6 @@ export const actions = {
             const {
                 data
             } = await axios.get('/api/v1/categoria')
-
             commit(types.CAT_SUCCESS, {
                 categories: data
             })
