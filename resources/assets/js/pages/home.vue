@@ -1,6 +1,6 @@
 <template>
     <div id="inicio" class="d-flex align-content-center">
-        <v-Box :lists="categories"></v-Box>
+        <v-Box :catx="categories"></v-Box>
     </div>
 </template>
 

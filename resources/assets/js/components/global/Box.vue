@@ -1,12 +1,14 @@
 <template>
     <div class="row">
-        <div v-for="(item, i) in lists" :key="i" class="col-lg-3 col-md-4 col-sm-6 col-12 botonesInicio p-5">
-            <a href="slide">
-                <div class="d-flex flex-column align-items-center box-circle">
-                    <fa class="box-icon" icon="coffee" size="5x" />
-                    <p class="box-title">{{ item.titulo }}</p>
+        <div v-for="(item,i) in lists" :key="i" class="col-lg-3 col-md-4 col-sm-6 col-12 botonesInicio p-5">
+            <router-link :to="{ name: 'settings.profile' }">
+                <div class="d-flex flex-column align-items-center box-circle" :style="{background: item.color}">
+                    <fa class="box-icon" :icon="item.icon" size="5x" />
+                    <p class="box-title">
+                        {{ item.titulo }}
+                    </p>
                 </div>
-            </a>
+            </router-link>
         </div>
     </div>
 </template>
@@ -15,12 +17,67 @@ export default {
     name: 'v-Box',
     props: ['lists'],
     computed: {
-        boxStyle() {
-            return {
-                background: 'blue'
-            }
+        items() {
+            return [
+                {
+                    icon: 'user',
+                    color: '#e74c3c',
+                    route: 'settings.profile'
+                },
+                {
+                    icon: 'lock',
+                    color: '#2ecc71',
+                    route: 'settings.password'
+                },
+                {
+                    icon: 'user',
+                    color: '#e67e22',
+                    route: 'settings.profile'
+                },
+                {
+                    icon: 'lock',
+                    color: '#1abc9c',
+                    route: 'settings.password'
+                },
+                {
+                    icon: 'user',
+                    color: '#9b59b6',
+                    route: 'settings.profile'
+                },
+                {
+                    icon: 'lock',
+                    color: 'rgb(91, 192, 222)',
+                    route: 'settings.password'
+                },
+                {
+                    icon: 'user',
+                    color: 'rgb(63, 144, 63)',
+                    route: 'settings.profile'
+                },
+                {
+                    icon: 'lock',
+                    color: 'rgb(46, 109, 164)',
+                    route: 'settings.password'
+                }, {
+                    icon: 'user',
+                    color: 'rgb(245, 175, 75)',
+                    route: 'settings.profile'
+                },
+                {
+                    icon: 'lock',
+                    color: 'rgb(50, 100, 78)',
+                    route: 'settings.password'
+                },
+                {
+                    icon: 'user',
+                    color: 'rgb(240, 100, 78)',
+                    route: 'settings.profile'
+                }
+            ]
         }
-    }
+    },
+
+
 }
 </script>
 <style lang="scss">
