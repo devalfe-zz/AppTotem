@@ -32,7 +32,7 @@ export default [{
             ]
         },
         {
-            path: '/dashboard/categories',
+            path: '/dashboard/categories/:hashid',
             name: 'categories.category',
             component: require('~/pages/categories/category'),
         },

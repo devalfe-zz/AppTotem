@@ -8,6 +8,7 @@
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 
 export default {
+    middleware: 'auth',
 
     metaInfo() {
         return { title: this.$t('home') }
