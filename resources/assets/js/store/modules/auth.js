@@ -41,7 +41,6 @@ export const mutations = {
     [types.LOGOUT](state) {
         state.user = null
         state.token = null
-
         Cookies.remove('token')
     },
 
@@ -70,7 +69,6 @@ export const actions = {
             const {
                 data
             } = await axios.get('/api/v1/user')
-
             commit(types.FETCH_USER_SUCCESS, {
                 user: data
             })

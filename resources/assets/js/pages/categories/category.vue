@@ -1,35 +1,42 @@
 <template>
-    <card :title="$t('category')">
-        <v-List :columns="title"></v-List>
-    </card>
+    <div :title="$t('home')">
+        <v-Box :lists="category"></v-Box>
+    </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
 
 export default {
     middleware: 'auth',
-    created() {
-        this.categoryId = this.$route.params.hasid
+    metaInfo() {
+        return { title: this.$t('home') }
     },
     data() {
         return {
             categoryId: '',
-            category: []
         }
     },
-    metaInfo() {
-        return { title: this.$t('category') }
-    },
-    methods: {
 
+    created() {
+        this.categoryId = this.$route.params.hashid;
+        //?this.addCategory();
     },
 
     mounted() {
-        this.$store.dispatch('category/loadCategories')
+        //?this.$store.dispatch('category/addCategory')
+        this.$store.dispatch('category/loadCategory', this.categoryId)
     },
+
     computed: mapGetters({
-        title: 'category/categories'
+        category: 'category/category'
     }),
+
+    //? methods: {
+    //?     async addCategory() {
+    //?         this.$store.dispatch('category/addCategory', this.categoryId)
+    //?     }
+    //? },
+
 }
 </script>
 <style lang="sass">

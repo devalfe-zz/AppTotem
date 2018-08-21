@@ -11,7 +11,10 @@ export const SET_LOCALE = 'SET_LOCALE'
 
 export const SET_CAT = 'SET_CAT'
 export const LOAD_CATEGORIES = 'LOAD_CATEGORIES'
+export const CATEGORY_SUCCESS = 'CATEGORY_SUCCESS'
+export const CATEGORY_FAILURE = 'CATEGORY_FAILURE'
 
 export const FETCH_CAT = 'FETCH_CAT'
 export const CAT_SUCCESS = 'CAT_SUCCESS'
 export const CAT_FAILURE = 'CAT_FAILURE'
+export const LOAD_CATEGORY = 'LOAD_CATEGORY'

@@ -4,13 +4,13 @@ import * as types from '../mutation-types'
 
 // state
 export const state = {
-    categories: [],
+    category: [],
     token: Cookies.get('token')
 }
 
 // getters
 export const getters = {
-    categories: state => state.categories,
+    category: state => state.category,
     token: state => state.token,
     //check: state => state.user !== null
 }
@@ -26,34 +26,33 @@ export const mutations = {
             expires: remember ? 365 : null
         })
     },
-
-    [types.CAT_SUCCESS](state, {
-        categories
+    [types.CATEGORY_SUCCESS](state, {
+        category
     }) {
-        state.categories = categories
+        state.category = category
     },
-
-    [types.CAT_FAILURE](state) {
+    [types.CATEGORY_FAILURE](state) {
         state.token = null
         Cookies.remove('token')
     },
+
 }
 
 // actions
 export const actions = {
-    async loadCategories({
+
+    async loadCategory({
         commit
-    }) {
+    }, payload) {
         try {
             const {
                 data
-            } = await axios.get('/api/v1/categoria')
-            commit(types.CAT_SUCCESS, {
-                categories: data
+            } = await axios.get('/api/v1/categoria/' + payload)
+            commit(types.CATEGORY_SUCCESS, {
+                category: data
             })
         } catch (e) {
-            commit(types.CAT_FAILURE)
+            commit(types.CATEGORY_FAILURE)
         }
-    },
-
+    }
 }

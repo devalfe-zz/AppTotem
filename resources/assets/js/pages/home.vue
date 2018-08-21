@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
     middleware: 'auth',
@@ -13,22 +13,13 @@ export default {
     metaInfo() {
         return { title: this.$t('home') }
     },
-    data() {
-        return {
-            //categories: null,
-            //loading: true,
-            //errored: false
-        }
-    },
 
-    methods: {
-
-    },
     mounted() {
-        this.$store.dispatch('category/loadCategories')
+        this.$store.dispatch('categories/loadCategories')
     },
+
     computed: mapGetters({
-        categories: 'category/categories'
+        categories: 'categories/categories'
     }),
 
 }
