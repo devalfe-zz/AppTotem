@@ -20,7 +20,7 @@ class AtractivosApiController extends Controller
         //$atractivos = Atractivo::all();
         $response = Response::json($atractivos,200);
         //return ["results" =>[$response]];
-        return $response; 
+        return $response;
         //return Response::json(['results' => $atractivos],200);
     }
     /**
@@ -56,7 +56,7 @@ class AtractivosApiController extends Controller
         $atractivos = Atractivo::findOrFail($id);
         $atractivos = $atractivos->load('fotos','categorias');
         $response = Response::json($atractivos,200);
-        return $response; 
+        return $response;
     }
     /**
      * Display a listing of the resource.
@@ -71,7 +71,7 @@ class AtractivosApiController extends Controller
          //$atractivos = Atractivo::all();
         $response = Response::json($categorias,200);
         //return ["results" =>[$response]];
-        return $response; 
+        return $response;
         //return Response::json(['results' => $atractivos],200);
     }
     /**
@@ -85,7 +85,7 @@ class AtractivosApiController extends Controller
         $categoria = Atractivo::with('fotos','categorias')->SearchCategoria($id)->get();
         return Response::json($categoria,200);
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -99,7 +99,7 @@ class AtractivosApiController extends Controller
          //$atractivos = Atractivo::all();
         //$response = Response::json($galerias,200);
         //return ["results" =>[$response]];
-        return Response::json($galerias,200); 
+        return Response::json($galerias,200);
         //return Response::json(['results' => $atractivos],200);
     }
     /**
@@ -114,8 +114,8 @@ class AtractivosApiController extends Controller
         $galeria = Galeria::with('lugares')->findOrFail($id);
         // $galeria = $galeria->load('lugares');
        // dd($cat);
-       
-        return Response::json($galeria,200); 
+
+        return Response::json($galeria,200);
     }
 
     /**
@@ -147,10 +147,10 @@ class AtractivosApiController extends Controller
        // dd($cat);
         //$response = Response::json($lugar,200);
         return Response::json(['results' => $lugar],200);
-        //return $response; 
+        //return $response;
     }
 
-    
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -171,7 +171,21 @@ class AtractivosApiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $update = Atractivo::find($request->$id);
+
+        $this->validate($request, [
+            'titulo' => 'required',
+            'descripcion' => 'required',
+            'detalle' => 'required',
+            'direccion' => 'required',
+            'ubicacion' => 'required',
+            'longitud' => 'required',
+            'latitud' => 'required',
+            'horarios' => 'required',
+        ]);
+        return tap($update)->update($request->only('titulo',
+         'descripcion','detalle','direccion','ubicacion',
+        'longitud','latitud','horarios'));
     }
 
     /**

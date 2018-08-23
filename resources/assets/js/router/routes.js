@@ -37,7 +37,7 @@ export default [{
             component: require('~/pages/categories/category'),
         },
         {
-            path: '/dashboard/categories/detail',
+            path: '/dashboard/categories/detail/:hashid',
             name: 'categories.detail',
             component: require('~/pages/categories/detail'),
         }

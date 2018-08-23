@@ -16,8 +16,8 @@ export default {
         percent: 0,
         show: false,
         canSuccess: true,
-        duration: 3000,
-        height: '2px',
+        duration: 4000,
+        height: '4px',
         color: '#77b6ff',
         failedColor: 'red'
     }),

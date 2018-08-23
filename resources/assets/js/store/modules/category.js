@@ -35,6 +35,11 @@ export const mutations = {
         state.token = null
         Cookies.remove('token')
     },
+    [types.CATEGORY_UPDATE](state, {
+        category
+    }) {
+        state.category = category
+    },
 
 }
 
@@ -54,5 +59,11 @@ export const actions = {
         } catch (e) {
             commit(types.CATEGORY_FAILURE)
         }
-    }
+    },
+
+    updateCategory({
+        commit
+    }, payload) {
+        commit(types.CATEGORY_UPDATE, payload)
+    },
 }

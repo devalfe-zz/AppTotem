@@ -19,9 +19,11 @@ Route::group(['prefix' => 'v1', 'middleware' => 'auth:api'], function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
-
     Route::patch('settings/profile', 'Settings\ProfileController@update');
     Route::patch('settings/password', 'Settings\PasswordController@update');
+    Route::patch('atractivo/{category}', 'AtractivosApiController@update');
+
+
 });
 
 Route::group(['prefix' => 'v1', 'middleware' => 'guest:api'], function () {
@@ -36,6 +38,8 @@ Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
     //header('Access-Control-Allow-Origin: *');
     Route::get('atractivo','AtractivosApiController@index');
     Route::get('atractivo/{id}','AtractivosApiController@show');
+    Route::resource('atractivo', 'AtractivosApiController', ['except' => ['create', 'edit', 'update']]);
+
     Route::get('categoria','AtractivosApiController@categorias');
     Route::get('categoria/{id}','AtractivosApiController@categoria');
     Route::get('galeria','AtractivosApiController@galerias');

@@ -1,6 +1,6 @@
 <template>
-    <div :title="$t('home')">
-        <v-Box :lists="category"></v-Box>
+    <div>
+        <v-List :lists="category"></v-List>
     </div>
 </template>
 <script>
@@ -13,33 +13,37 @@ export default {
     },
     data() {
         return {
-            categoryId: '',
+            categoryId: ''
         }
     },
 
     created() {
         this.categoryId = this.$route.params.hashid;
-        //?this.addCategory();
+        this.addCategory();
     },
 
     mounted() {
-        //?this.$store.dispatch('category/addCategory')
-        this.$store.dispatch('category/loadCategory', this.categoryId)
+        //?this.$store.dispatch('category/loadCategory')
+        //?this.$store.dispatch('category/loadCategory', this.categoryId)
     },
 
-    computed: mapGetters({
-        category: 'category/category'
-    }),
+    computed: {
+        ...mapGetters({
+            category: 'category/category',
+        })
+    },
+    methods: {
+        async addCategory() {
+            this.$store.dispatch('category/loadCategory', this.categoryId)
+        },
+    },
+    events: {
 
-    //? methods: {
-    //?     async addCategory() {
-    //?         this.$store.dispatch('category/addCategory', this.categoryId)
-    //?     }
-    //? },
+    }
 
 }
 </script>
-<style lang="sass">
 
+<style>
 </style>
 
