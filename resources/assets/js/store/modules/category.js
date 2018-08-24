@@ -26,6 +26,12 @@ export const mutations = {
             expires: remember ? 365 : null
         })
     },
+
+    [types.UPDATE_CATEGORY](state, {
+        category
+    }) {
+        state.category = category
+    },
     [types.CATEGORY_SUCCESS](state, {
         category
     }) {
@@ -35,24 +41,19 @@ export const mutations = {
         state.token = null
         Cookies.remove('token')
     },
-    [types.CATEGORY_UPDATE](state, {
-        category
-    }) {
-        state.category = category
-    },
 
 }
 
 // actions
 export const actions = {
 
-    async loadCategory({
+    async loadCategoryId({
         commit
     }, payload) {
         try {
             const {
                 data
-            } = await axios.get('/api/v1/categoria/' + payload)
+            } = await axios.get('/api/v1/atractivo/' + payload)
             commit(types.CATEGORY_SUCCESS, {
                 category: data
             })
@@ -61,9 +62,9 @@ export const actions = {
         }
     },
 
-    updateCategory({
+    async updateCategory({
         commit
     }, payload) {
-        commit(types.CATEGORY_UPDATE, payload)
+        commit(types.UPDATE_CATEGORY, payload)
     },
 }

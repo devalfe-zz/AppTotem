@@ -6,6 +6,7 @@ use Apptotem\Atractivo as Atractivo;
 use Apptotem\Categoria as Categoria;
 use Apptotem\Galeria as Galeria;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\DB;
 
 class AtractivosApiController extends Controller
 {
@@ -168,24 +169,30 @@ class AtractivosApiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        $update = Atractivo::find($request->$id);
+     *
 
-        $this->validate($request, [
-            'titulo' => 'required',
-            'descripcion' => 'required',
-            'detalle' => 'required',
-            'direccion' => 'required',
-            'ubicacion' => 'required',
-            'longitud' => 'required',
-            'latitud' => 'required',
-            'horarios' => 'required',
-        ]);
-        return tap($update)->update($request->only('titulo',
-         'descripcion','detalle','direccion','ubicacion',
-        'longitud','latitud','horarios'));
+     */
+    public function update(Request $request, Atractivo $hashid)
+    {
+        // $update = Atractivo::find($request->$id);
+
+        // $this->validate($request, [
+        //     'titulo' => 'required',
+        //     'descripcion' => 'required',
+        //     'direccion' => 'required',
+        //     'ubicacion' => 'required',
+        //     'longitud' => 'required',
+        //     'detalle' => 'required',
+        //     'latitud' => 'required',
+        //     'horarios' => 'required',
+        // ]);e
+
+        $hashid->fill($request->all());
+        $hashid->save();
+        return tap($hashid)->update($request->only('titulo',
+        'descripcion','detalle','direccion','ubicacion',
+       'longitud','latitud','horarios'));
+
     }
 
     /**

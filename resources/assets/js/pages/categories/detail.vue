@@ -3,7 +3,6 @@
         <form @submit.prevent="update" @keydown="form.onKeydown($event)">
             <alert-success :form="form" :message="$t('info_updated')"></alert-success>
 
-            <!-- Name -->
             <div class="form-group row">
                 <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
                 <div class="col-md-7">
@@ -12,7 +11,6 @@
                 </div>
             </div>
 
-            <!-- Email -->
             <div class="form-group row">
                 <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
                 <div class="col-md-7">
@@ -74,6 +72,8 @@
 </template>
 <script>
 import Form from 'vform'
+import axios from 'axios'
+
 import { mapGetters } from 'vuex'
 
 export default {
@@ -93,28 +93,35 @@ export default {
             longitud: '',
             latitud: '',
             horarios: ''
-        })
+        }),
+        categoryId: ''
     }),
     created() {
+        this.categoryId = this.$route.params.hashid;
+
         //?Fill the form with data.
-        this.form.keys().forEach(key => {
-            this.form[key] = this.category[key]
-        })
-    },
-    methods: {
-        async update() {
-            const { data } = await this.form.patch('/api/v1/atractivo/' + this.$route.params.hashid)
-            this.$store.dispatch('category/updateCategory', { category: data })
-        }
+        // this.form.keys().forEach(key => {
+        //     this.form[key] = this.category[key]
+        // })
+        //this.updateCat();
     },
 
-    computed: mapGetters({
-        category: 'category/category'
-    }),
+    computed: {
+        ...mapGetters({
+            category: 'category/category',
+        })
+    },
+
+    methods: {
+        async update() {
+            const { data } = await this.form.patch('/api/v1/atractivo/' + this.categoryId)
+
+            this.$store.dispatch('category/updateCategory', { category: data })
+        }
+    }
+
+
 
 }
 </script>
-<style lang="sass">
-
-</style>
 

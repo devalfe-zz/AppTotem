@@ -22,7 +22,7 @@
 
 <script>
 export default {
-    loading: false,
+    loading: true,
 
     computed: {
         tabs() {

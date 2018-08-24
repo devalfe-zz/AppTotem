@@ -37,29 +37,29 @@ class UserMovilController extends Controller
     public function store(Request $request, Usermovil $user_movil)
     {
         if(Usermovil::find($request->input('Phone'))){
-            return ['error_msg' => 'User already existed with '.$request->input('Phone')]; 
+            return ['error_msg' => 'User already existed with '.$request->input('Phone')];
         }
         else{
             //Usermovil::create($request->all());
-            return Usermovil::create($request->all());             
-            //*return ['created' => true]; 
+            return Usermovil::create($request->all());
+            //*return ['created' => true];
         }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \Apptotem\User_movil  $user_movil
+     * @param  \Apptotem\Usermovil  $user_movil
      * @return \Illuminate\Http\Response
      */
     public function show($phone, Usermovil $user_movil)
     {
         //?return ['result' => $user_movil->find($phone)];
         //?return $user_movil->find($phone);
-        if ($user_movil->find($phone)){ 
+        if ($user_movil->find($phone)){
             return $user_movil->find($phone);
          }else{
-            return ['error_msg' => 'User not registerd with '.$phone]; 
+            return ['error_msg' => 'User not registerd with '.$phone];
          }
     }
 
@@ -97,7 +97,7 @@ class UserMovilController extends Controller
     public function destroy($phone, Usermovil $user_movil)
     {
         $user_movil->destroy($phone);
-        return Response::json(['exists' => TRUE],200);      
+        return Response::json(['exists' => TRUE],200);
     }
 
     /**
@@ -109,15 +109,15 @@ class UserMovilController extends Controller
     public function checkuser(Request $request)
     {
         if ($request->isMethod('post')) {
-            if (Usermovil::find($request->input('Phone'))){ 
-                return Response::json(['exists' => TRUE],200);      
+            if (Usermovil::find($request->input('Phone'))){
+                return Response::json(['exists' => TRUE],200);
             }else{
-                return Response::json(['exists' => FALSE],200);      
+                return Response::json(['exists' => FALSE],200);
             }
         }else{
-            return Response::json(['error_msg' => 'Required parameter (phone) is missing!'],200); 
+            return Response::json(['error_msg' => 'Required parameter (phone) is missing!'],200);
         }
 
-        
+
     }
 }

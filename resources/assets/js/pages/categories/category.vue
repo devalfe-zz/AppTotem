@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-List :lists="category"></v-List>
+        <v-List :lists="categories"></v-List>
     </div>
 </template>
 <script>
@@ -13,28 +13,28 @@ export default {
     },
     data() {
         return {
-            categoryId: ''
+            categoriesId: ''
         }
     },
 
     created() {
-        this.categoryId = this.$route.params.hashid;
+        this.categoriesId = this.$route.params.hashid;
         this.addCategory();
     },
 
     mounted() {
         //?this.$store.dispatch('category/loadCategory')
-        //?this.$store.dispatch('category/loadCategory', this.categoryId)
+        //?this.$store.dispatch('category/loadCategory', this.categoriesId)
     },
 
     computed: {
         ...mapGetters({
-            category: 'category/category',
+            categories: 'categories/categories',
         })
     },
     methods: {
         async addCategory() {
-            this.$store.dispatch('category/loadCategory', this.categoryId)
+            this.$store.dispatch('categories/loadCategoriesId', this.categoriesId)
         },
     },
     events: {

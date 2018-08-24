@@ -37,6 +37,15 @@ export const mutations = {
         state.token = null
         Cookies.remove('token')
     },
+    [types.CATEGORY_SUCCESS](state, {
+        category
+    }) {
+        state.category = category
+    },
+    [types.CATEGORY_FAILURE](state) {
+        state.token = null
+        Cookies.remove('token')
+    },
 
 }
 
@@ -54,6 +63,20 @@ export const actions = {
             })
         } catch (e) {
             commit(types.CAT_FAILURE)
+        }
+    },
+    async loadCategoriesId({
+        commit
+    }, payload) {
+        try {
+            const {
+                data
+            } = await axios.get('/api/v1/categoria/' + payload)
+            commit(types.CATEGORY_SUCCESS, {
+                categories: data
+            })
+        } catch (e) {
+            commit(types.CATEGORY_FAILURE)
         }
     },
 }

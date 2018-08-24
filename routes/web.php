@@ -2,7 +2,6 @@
 use GuzzleHttp\Client;
 
 Route::group(['prefix' => 'dashboard'], function () {
-    //!Auth::routes();
     //!Route::get('/home', 'HomeController@index')->name('dashboard');
     //!Route::view('categorias', 'pages.dashboard');
     //!Route::resource('categoria', 'CategoriaController', ['except' => 'show', 'create', 'edit']);
@@ -52,5 +51,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('oauth/{driver}/callback', 'Auth\OAuthController@handleProviderCallback')->name('oauth.callback');
 
 });
+
 
 
