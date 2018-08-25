@@ -21,10 +21,10 @@
                 <td class="col-md-1">{{ item.direccion }}</td>
                 <td class="col-md-3">
                     <div class="btn-group">
-                        <VButton v-if="item.activo == '1'" type="success">
-                            Ver
-                        </VButton>
-                        <router-link :to="{ name: 'categories.detail', params: {hashid: item.id }}">
+                        <router-link :to="{ name: 'categories.view' , params: {hashid: item.id }}">
+                            <VButton v-if="item.activo == '1'" type="success">Ver</VButton>
+                        </router-link>
+                        <router-link :to="{ name: 'categories.edit', params: {hashid: item.id }}">
                             <VButton type="info">Edit</VButton>
                         </router-link>
                         <VButton type="danger" @click="deletePost(item)">

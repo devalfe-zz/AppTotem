@@ -37,9 +37,14 @@ export default [{
             component: require('~/pages/categories/category'),
         },
         {
-            path: '/dashboard/categories/detail/:hashid',
-            name: 'categories.detail',
-            component: require('~/pages/categories/detail'),
+            path: '/dashboard/categories/edit/:hashid',
+            name: 'categories.edit',
+            component: require('~/pages/categories/edit'),
+        },
+        {
+            path: '/dashboard/categories/view/:hashid',
+            name: 'categories.view',
+            component: require('~/pages/categories/view'),
         }
 
         //! ...middleware('admin', [

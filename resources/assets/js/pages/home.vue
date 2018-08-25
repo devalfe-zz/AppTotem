@@ -1,6 +1,6 @@
 <template>
     <div id="inicio" class="d-flex align-content-center">
-        <v-Box :lists="categories"></v-Box>
+        <v-Box :lists="home"></v-Box>
     </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
     },
 
     computed: mapGetters({
-        categories: 'categories/categories'
+        home: 'categories/categories'
     }),
 
 }

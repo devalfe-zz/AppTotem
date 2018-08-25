@@ -63,8 +63,7 @@ export default {
     }),
 
     computed: mapGetters({
-        user: 'auth/user',
-        category: 'category/category',
+        user: 'auth/user'
     }),
 
     components: {

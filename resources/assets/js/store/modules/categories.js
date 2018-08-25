@@ -72,11 +72,11 @@ export const actions = {
             const {
                 data
             } = await axios.get('/api/v1/categoria/' + payload)
-            commit(types.CATEGORY_SUCCESS, {
+            commit(types.CAT_SUCCESS, {
                 categories: data
             })
         } catch (e) {
-            commit(types.CATEGORY_FAILURE)
+            commit(types.CAT_FAILURE)
         }
     },
 }
