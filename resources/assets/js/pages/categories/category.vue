@@ -8,9 +8,6 @@ import { mapGetters } from 'vuex'
 
 export default {
     middleware: 'auth',
-    ready() {
-        //this.fetchCategories()
-    },
 
     metaInfo() {
         return { title: this.$t('home') }
@@ -22,30 +19,16 @@ export default {
     },
 
     created() {
-        this.categoriesId = this.$route.params.hashid;
-        this.loadCategory();
+        this.categoriesId = this.$route.params.hashid
     },
 
     mounted() {
-        //?this.$store.dispatch('category/loadCategory')
-        //?this.$store.dispatch('category/loadCategoriesId', this.categoriesId)
-        this.$store.dispatch('category/loadCategoriesId', this.categoryId)
-
+        this.$store.dispatch('categories/loadCategoriesId', this.categoriesId)
     },
 
-    computed: {
-        ...mapGetters({
-            categories: 'categories/categories'
-        })
-    },
-    methods: {
-        async loadCategory() {
-            this.$store.dispatch('categories/loadCategoriesId', this.categoriesId)
-        },
-    },
-    events: {
-
-    }
+    computed: mapGetters({
+        categories: 'categories/categories'
+    }),
 
 }
 </script>
