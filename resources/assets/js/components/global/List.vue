@@ -22,14 +22,9 @@
                 <td class="col-md-3">
                     <div class="btn-group">
                         <router-link :to="{ name: 'categories.view' , params: {hashid: item.id }}">
-                            <VButton v-if="item.activo == '1'" type="success">Ver</VButton>
+                            <VButton v-if="item.activo == '1'" type="warning">Modificar</VButton>
                         </router-link>
-                        <router-link :to="{ name: 'categories.edit', params: {hashid: item.id }}">
-                            <VButton type="info">Edit</VButton>
-                        </router-link>
-                        <VButton type="danger" @click="deletePost(item)">
-                            Delete
-                        </VButton>
+                        <VButton type="danger" @click="deletePost(item)">Eliminar</VButton>
                     </div>
                 </td>
             </tr>

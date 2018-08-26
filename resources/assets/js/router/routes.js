@@ -37,15 +37,36 @@ export default [{
             component: require('~/pages/categories/category'),
         },
         {
-            path: '/dashboard/categories/edit/:hashid',
-            name: 'categories.edit',
-            component: require('~/pages/categories/edit'),
+            path: '/dashboard/categories',
+            component: require('~/pages/categories/index'),
+            children: [{
+                    path: '',
+                    redirect: {
+                        name: 'categories.view'
+                    }
+                },
+                {
+                    path: 'view/:hashid',
+                    name: 'categories.view',
+                    component: require('~/pages/categories/view')
+                },
+                {
+                    path: 'edit/:hashid',
+                    name: 'categories.edit',
+                    component: require('~/pages/categories/edit')
+                }
+            ]
         },
-        {
-            path: '/dashboard/categories/view/:hashid',
-            name: 'categories.view',
-            component: require('~/pages/categories/view'),
-        }
+        //? {
+        //?     path: '/dashboard/categories/edit/:hashid',
+        //?     name: 'categories.edit',
+        //?     component: require('~/pages/categories/edit'),
+        //? },
+        //? {
+        //?     path: '/dashboard/categories/view/:hashid',
+        //?     name: 'categories.view',
+        //?     component: require('~/pages/categories/view'),
+        //? }
 
         //! ...middleware('admin', [
         //!   { path: '/admin', name: 'admin', component: require('~/pages/admin') }

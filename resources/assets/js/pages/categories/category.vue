@@ -29,7 +29,7 @@ export default {
     mounted() {
         //?this.$store.dispatch('category/loadCategory')
         //?this.$store.dispatch('category/loadCategoriesId', this.categoriesId)
-        //?this.$store.dispatch('category/loadCategoryId', this.categoryId)
+        this.$store.dispatch('category/loadCategoriesId', this.categoryId)
 
     },
 
