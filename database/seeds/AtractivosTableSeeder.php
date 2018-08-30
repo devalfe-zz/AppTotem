@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Apptotem\atractivo;
+use Apptotem\Atractivo;
 class AtractivosTableSeeder extends Seeder
 {
     /**
@@ -12,7 +12,7 @@ class AtractivosTableSeeder extends Seeder
     public function run()
     {
         //
-       //1 
+       //1
        atractivo::create([
             'titulo' => 'PLAZA DE ARMAS',
             'descripcion' => 'Considerada como la más bella del sur peruano. ',
@@ -51,7 +51,7 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/muro_matriz2.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]);  
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'Museo Contisuyo',
             'descripcion' => 'Se emplaza al lado norte de la plaza de armas de la ciudad.',
@@ -77,7 +77,7 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/carcel1.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]);  
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'casa tradicional  de moquegua',
             'descripcion' => 'ESTADIO 25 DE NOVIEMBRE',
@@ -90,7 +90,7 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/estadio.JPG',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]);  
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'CASA CHOCANO',
             'descripcion' => 'Esta casa fue reconstruida en el siglo XIX por don Nicolás Jacinto Chocano.',
@@ -246,7 +246,7 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/cristo_blanco1.jpg',
             'video_url' => 'videos/mp4/CRISTOBLANCO.mp4',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'mercado central',
             'descripcion' => 'MIRADOR CRISTO BLANCO',
@@ -259,7 +259,7 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/cristo_blanco1.jpg',
             'video_url' => 'videos/mp4/CRISTOBLANCO.mp4',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'TERMINAL TERRESTRE',
             'descripcion' => 'TERMINAL TERRESTRE',
@@ -272,7 +272,7 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/terminal.JPG',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'PARQUE ECOLÓGICO',
             'descripcion' => 'PARQUE ECOLÓGICO',
@@ -285,7 +285,7 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/ecologico.JPG',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]);   
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'Centro Comercial',
             'descripcion' => 'TERMINAL TERRESTRE',
@@ -306,12 +306,12 @@ class AtractivosTableSeeder extends Seeder
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto',
             'longitud' => '-70.9297962',
-            'latitud' => '-17.1862302',            
+            'latitud' => '-17.1862302',
             'horarios' => '',
             'foto_url' => 'images/atractivos/estadio.JPG',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]);  
+            'categoria_id' => 1]);
 //==================================================================================================
          atractivo::create([
             'titulo' => 'BODEGAS LÓPEZ',
@@ -320,7 +320,7 @@ class AtractivosTableSeeder extends Seeder
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto - El valle',
             'longitud' => '-70.983176',
-            'latitud' => '-17.271867', 
+            'latitud' => '-17.271867',
             'horarios' => '',
             'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
@@ -333,7 +333,7 @@ class AtractivosTableSeeder extends Seeder
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto - El valle',
             'longitud' => '-70.9832829',
-            'latitud' => '-17.2393657', 
+            'latitud' => '-17.2393657',
             'horarios' => '',
             'foto_url' => 'images/bodegas/632.jpg',
             'video_url' => '',
@@ -346,7 +346,7 @@ class AtractivosTableSeeder extends Seeder
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto - El valle',
             'longitud' => '-70.9838462',
-            'latitud' => '-17.2373483', 
+            'latitud' => '-17.2373483',
             'horarios' => '',
             'foto_url' => 'images/bodegas/641.jpg',
             'video_url' => '',
@@ -359,7 +359,7 @@ class AtractivosTableSeeder extends Seeder
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto - El valle',
             'longitud' => '-70.9838462',
-            'latitud' => '-17.2373483', 
+            'latitud' => '-17.2373483',
             'horarios' => '',
             'foto_url' => 'images/bodegas/641.jpg',
             'video_url' => '',
@@ -377,7 +377,7 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]);   
+            'categoria_id' => 6]);
          atractivo::create([
             'titulo' => 'BODEGA san jose',
              'descripcion' => 'Moquegua ofrece una experiencia turística a través de los sentidos; resaltando la oferta gastronómica, visita a centenarias y tradicionales bodegas de pisco y vino, en medio de paisajes incomparables, disfrutando bajo un soleado y cálido clima.',
@@ -386,7 +386,7 @@ class AtractivosTableSeeder extends Seeder
             'ubicacion' => 'Mariscal Nieto - Chen Chen',
             'longitud' => '-70.924259',
             'latitud' => '-17.215572',
-            
+
             'horarios' => '',
             'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
@@ -404,7 +404,7 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'images/bodegas/parrasyreyes.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]);  
+            'categoria_id' => 6]);
         atractivo::create([
             'titulo' => 'BODEGA Norvill',
             'descripcion' => 'BODEGA PARRAS & REYES',
@@ -412,12 +412,12 @@ class AtractivosTableSeeder extends Seeder
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto',
             'longitud' => '-70.9412494',
-            'latitud' => '-17.184134',            
+            'latitud' => '-17.184134',
             'horarios' => '',
             'foto_url' => 'images/bodegas/parrasyreyes.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]);  
+            'categoria_id' => 6]);
         atractivo::create([
             'titulo' => 'BODEGA campano',
             'descripcion' => 'BODEGA PARRAS & REYES',
@@ -430,7 +430,7 @@ class AtractivosTableSeeder extends Seeder
             'foto_url' => 'images/bodegas/parrasyreyes.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]);  
+            'categoria_id' => 6]);
 atractivo::create([
             'titulo' => 'BODEGA Lindolfo',
             'descripcion' => 'BODEGA PARRAS & REYES',
@@ -443,7 +443,7 @@ atractivo::create([
             'foto_url' => 'images/bodegas/parrasyreyes.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]);  
+            'categoria_id' => 6]);
         atractivo::create([
             'titulo' => 'BODEGA don camilo',
             'descripcion' => 'BODEGA PARRAS & REYES',
@@ -456,7 +456,7 @@ atractivo::create([
             'foto_url' => 'images/bodegas/parrasyreyes.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]);  
+            'categoria_id' => 6]);
         atractivo::create([
             'titulo' => 'BODEGA EL MOCHO',
             'descripcion' => 'BODEGA EL MOCHO',
@@ -469,7 +469,7 @@ atractivo::create([
             'foto_url' => 'images/bodegas/mocho.JPG',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]); 
+            'categoria_id' => 6]);
         atractivo::create([
             'titulo' => 'BODEGA colana',
             'descripcion' => 'BODEGA EL MOCHO',
@@ -482,7 +482,7 @@ atractivo::create([
             'foto_url' => 'images/bodegas/mocho.JPG',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]); 
+            'categoria_id' => 6]);
         atractivo::create([
             'titulo' => 'BODEGA rayito de sol',
             'descripcion' => 'BODEGA EL MOCHO',
@@ -495,7 +495,7 @@ atractivo::create([
             'foto_url' => 'images/bodegas/mocho.JPG',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]); 
+            'categoria_id' => 6]);
         atractivo::create([
             'titulo' => 'BODEGA manchego ticona',
             'descripcion' => 'BODEGA EL MOCHO',
@@ -508,7 +508,7 @@ atractivo::create([
             'foto_url' => 'images/bodegas/mocho.JPG',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]); 
+            'categoria_id' => 6]);
         atractivo::create([
             'titulo' => 'BODEGA la gran cepa',
             'descripcion' => 'BODEGA EL MOCHO',
@@ -599,7 +599,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]);    
+            'categoria_id' => 1]);
 // =============================================================================
         atractivo::create([
             'titulo' => 'Moquegua',
@@ -613,7 +613,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]);  
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'Centro Poblado Los ángeles',
             'descripcion' => '',
@@ -626,7 +626,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'Mirador buena vista',
             'descripcion' => '',
@@ -639,7 +639,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'Sitio arqueológixo cerro baúl',
             'descripcion' => '',
@@ -652,7 +652,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'centro poblado yacango',
             'descripcion' => '',
@@ -665,7 +665,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'cataratas de mollesaja',
             'descripcion' => '',
@@ -691,7 +691,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'plaza de torata',
             'descripcion' => '',
@@ -704,7 +704,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'iglesia san agustin de torata',
             'descripcion' => '',
@@ -717,7 +717,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'panaderias artesanales',
             'descripcion' => '',
@@ -730,7 +730,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'mirador crsito blanco',
             'descripcion' => '',
@@ -743,7 +743,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'cruce chilligua',
             'descripcion' => '',
@@ -756,7 +756,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'laguna toro bravo',
             'descripcion' => '',
@@ -769,7 +769,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'laguna de camaña',
             'descripcion' => '',
@@ -782,7 +782,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/mirador.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]); 
+            'categoria_id' => 1]);
         atractivo::create([
             'titulo' => 'volcán ticsani',
             'descripcion' => '',
@@ -901,8 +901,8 @@ atractivo::create([
             'foto_url' => 'images/atractivos/hotel.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 3]);                              
-                    
+            'categoria_id' => 3]);
+
         atractivo::create([
             'titulo' => 'Ledelca Tours',
             'descripcion' => 'Ledelca Tours',
@@ -915,8 +915,8 @@ atractivo::create([
             'foto_url' => 'images/agencias/agencia.png',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 10]);                              
-        
+            'categoria_id' => 10]);
+
         atractivo::create([
             'titulo' => 'DM Hoteles Moquegua',
             'descripcion' => 'DM Hoteles Moquegua',
@@ -929,7 +929,7 @@ atractivo::create([
             'foto_url' => 'images/hoteles/dmoquegua.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 3]);         
+            'categoria_id' => 3]);
 
         atractivo::create([
             'titulo' => 'Taxigol Moquegua',
@@ -943,7 +943,7 @@ atractivo::create([
             'foto_url' => 'images/transporte/taxigol.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 5]);      
+            'categoria_id' => 5]);
 
 
 // ===============================
@@ -959,8 +959,8 @@ atractivo::create([
             'foto_url' => 'images/atractivos/regidor_perpetuo1.jpg',
             'video_url' => 'videos/mp4/CASADELREGIDORPERPETUO.mp4',
             'activo' => 1,
-            'categoria_id' => 1]); 
-       
+            'categoria_id' => 1]);
+
         atractivo::create([
             'titulo' => 'CASA DE LOS FERNÁNDEZ DE CÓRDOBA O LOS DE LA FLOR',
             'descripcion' => 'Este solar fue propiedad de los Fernández de Córdoba.',
@@ -973,7 +973,7 @@ atractivo::create([
             'foto_url' => 'images/atractivos/casa_tradicional1.jpg',
             'video_url' => 'videos/mp4/CASADELOSFERNANDEZDECORDOVAODELAFLOR.mp4',
             'activo' => 1,
-            'categoria_id' => 1]);        
+            'categoria_id' => 1]);
         //5
         atractivo::create([
             'titulo' => 'CASA DE LOS FERNÁNDEZ CORNEJO Y FERNÁNDEZ DE CÓRDOBA',
@@ -988,7 +988,7 @@ atractivo::create([
             'video_url' => 'videos/mp4/CASADELOSFERNANDEZCORNEJOYFERNANDEZDECORDOBA.mp4',
             'activo' => 1,
             'categoria_id' => 1]);
-        
+
         atractivo::create([
             'titulo' => 'COMPLEJO SAN FRANCISCO Y LAS CATACUMBAS',
             'descripcion' => 'Se ubica en la calle Lima, a una cuadra de la plaza de armas.',
@@ -1002,7 +1002,7 @@ atractivo::create([
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 1]);
-               
+
         atractivo::create([
             'titulo' => 'CASA DE LOS FERNÁNDEZ MALDONADO',
             'descripcion' => 'Fue reconstruida por Mariano Fernández Maldonado, cuyas iniciales aparecen grabadas en la parte superior de la portada.',
@@ -1015,22 +1015,22 @@ atractivo::create([
             'foto_url' => 'images/atractivos/casa_serpiente.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 1]);   
-            
+            'categoria_id' => 1]);
+
         atractivo::create([
             'titulo' => 'BODEGAS ANTIGUAS',
             'descripcion' => 'Moquegua ofrece una experiencia turística a través de los sentidos; resaltando la oferta gastronómica, visita a centenarias y tradicionales bodegas de pisco y vino, en medio de paisajes incomparables, disfrutando bajo un soleado y cálido clima.',
             'detalle' => 'La ruta del pisco te invita a disfrutar de la campiña moquegua, recorrer sus diversos rincones y pasajes, donde se elevan una cantidad generosa de bodegas coloniales y tradicionales, que entre parajes rurales hacen su aparición que para felicidad nuestra, acogidas bajo su sombra podemos disfrutar vinos, piscos y diversos licores que son la expresión enaltecida de tradicionales fórmulas y saberes de antiguos viñateros, que han atrevesado los tiempos graciasa su descendencia, a la que supieron contagiar el amor por la elaboración del pisco y demás bebidas, Así, pues, Moquegua es cuna de los más exquisitos Piscos del Perú',
             'direccion' => 'Mariscal Nieto - El valle',
             'ubicacion' => 'Mariscal Nieto',
-            'longitud' => '-70.995075', 
+            'longitud' => '-70.995075',
             'latitud' => '-17.317464',
             'horarios' => '',
             'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
             'activo' => 1,
             'categoria_id' => 6]);
-       
+
         atractivo::create([
             'titulo' => 'BODEGAS GHERSI',
             'descripcion' => 'Moquegua ofrece una experiencia turística a través de los sentidos; resaltando la oferta gastronómica, visita a centenarias y tradicionales bodegas de pisco y vino, en medio de paisajes incomparables, disfrutando bajo un soleado y cálido clima.',
@@ -1038,7 +1038,7 @@ atractivo::create([
             'direccion' => '',
             'ubicacion' => 'Mariscal Nieto - El valle',
             'longitud' => '-70.983176',
-            'latitud' => '-17.271867', 
+            'latitud' => '-17.271867',
             'horarios' => '',
             'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
@@ -1057,13 +1057,13 @@ atractivo::create([
             'foto_url' => 'images/atractivos/cristo_blanco1.jpg',
             'video_url' => 'videos/mp4/CRISTOBLANCO.mp4',
             'activo' => 1,
-            'categoria_id' => 1]); 
-      
-        
+            'categoria_id' => 1]);
 
-        
 
-        
+
+
+
+
         atractivo::create([
             'titulo' => 'BODEGA PAREDES',
             'descripcion' => 'BODEGA PAREDES',
@@ -1078,7 +1078,7 @@ atractivo::create([
             'activo' => 1,
             'categoria_id' => 6]);
 
-        
+
 
         atractivo::create([
             'titulo' => 'BODEGA CFAM',
@@ -1092,7 +1092,7 @@ atractivo::create([
             'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]);  
+            'categoria_id' => 6]);
 
         atractivo::create([
             'titulo' => 'BODEGA DON CAMILO',
@@ -1106,6 +1106,6 @@ atractivo::create([
             'foto_url' => 'images/bodegas/1.jpg',
             'video_url' => '',
             'activo' => 1,
-            'categoria_id' => 6]); 
+            'categoria_id' => 6]);
     }
 }

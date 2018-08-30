@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Apptotem\categoria as Categoria;
-use Apptotem\atractivo as Atractivo;
-use Apptotem\galeria as Galeria;
+use Apptotem\Categoria as Categoria;
+use Apptotem\Atractivo as Atractivo;
+use Apptotem\Galeria as Galeria;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Categoria::truncate();
         Atractivo::truncate();
-        Galeria::truncate();            
+        Galeria::truncate();
          $this->call(CategoriasTableSeeder::class);
          $this->call(AtractivosTableSeeder::class);
          $this->call(GaleriasTableSeeder::class);

@@ -4,7 +4,7 @@
     </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
     middleware: 'auth',
@@ -19,7 +19,7 @@ export default {
     },
 
     created() {
-        this.categoriesId = this.$route.params.hashid
+        this.categoriesId = this.$route.params.hashid;
     },
 
     mounted() {
@@ -29,7 +29,6 @@ export default {
     computed: mapGetters({
         categories: 'categories/categories'
     }),
-
 }
 </script>
 

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Apptotem\galeria;
+use Apptotem\Galeria;
 class GaleriasTableSeeder extends Seeder
 {
     /**
@@ -23,7 +23,7 @@ class GaleriasTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/regidor_perpetuo2.jpg',
             'atractivo_id' => 1,
             'activo' => 1
-        ]);        
+        ]);
         //2
         galeria::create([
             'Titulo' => 'PLAZA DE ARMAS',
@@ -51,38 +51,38 @@ class GaleriasTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/casa_chocano.jpg',
             'atractivo_id' => 3,
             'activo' => 1
-        ]);  
+        ]);
         galeria::create([
             'Titulo' => 'CASA CHOCANO',
             'foto_url' => 'images/atractivos/casa_chocano2.jpg',
             'atractivo_id' => 3,
             'activo' => 1
-        ]);   
+        ]);
         galeria::create([
             'Titulo' => 'CASA CHOCANO',
             'foto_url' => 'images/atractivos/casa_chocano3.jpg',
             'atractivo_id' => 3,
             'activo' => 1
-        ]);                     
+        ]);
         //4
         galeria::create([
             'Titulo' => 'CASA DE LOS FERNÁNDEZ DE CÓRDOBA O LOS DE LA FLOR',
             'foto_url' => 'images/atractivos/casa_tradicional1.jpg',
             'atractivo_id' => 4,
             'activo' => 1
-        ]);                   
+        ]);
         galeria::create([
             'Titulo' => 'CASA DE LOS FERNÁNDEZ DE CÓRDOBA O LOS DE LA FLOR',
             'foto_url' => 'images/atractivos/casa_tradicional2.jpg',
             'atractivo_id' => 4,
             'activo' => 1
-        ]);                   
+        ]);
         galeria::create([
             'Titulo' => 'CASA DE LOS FERNÁNDEZ DE CÓRDOBA O LOS DE LA FLOR',
             'foto_url' => 'images/atractivos/casa_tradicional3.jpg',
             'atractivo_id' => 4,
             'activo' => 1
-        ]);                   
+        ]);
         //5
         galeria::create([
             'Titulo' => 'CASA DE LOS FERNÁNDEZ CORNEJO Y FERNÁNDEZ DE CÓRDOBA',
@@ -117,20 +117,20 @@ class GaleriasTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/muro_matriz3.jpg',
             'atractivo_id' => 6,
             'activo' => 1
-        ]);        
+        ]);
         //7
         galeria::create([
             'Titulo' => 'LA ANTIGUA CÁRCEL Y EL CABILDO',
             'foto_url' => 'images/atractivos/carcel1.jpg',
             'atractivo_id' => 7,
             'activo' => 1
-        ]);   
+        ]);
         galeria::create([
             'Titulo' => 'LA ANTIGUA CÁRCEL Y EL CABILDO',
             'foto_url' => 'images/atractivos/carcel2.jpg',
             'atractivo_id' => 7,
             'activo' => 1
-        ]); 
+        ]);
 
         //8
         galeria::create([
@@ -238,21 +238,21 @@ class GaleriasTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/casa_diezcanseco3.jpg',
             'atractivo_id' => 13,
             'activo' => 1
-        ]);        
+        ]);
         //14
         galeria::create([
             'Titulo' => 'CASA DE LOS JIMÉNEZ DE LA FLOR ',
             'foto_url' => 'images/atractivos/casa_ancianos.jpg',
             'atractivo_id' => 14,
             'activo' => 1
-        ]);  
+        ]);
 
         galeria::create([
             'Titulo' => 'CASA DE LOS JIMÉNEZ DE LA FLOR ',
             'foto_url' => 'images/atractivos/casa_ancianos2.jpg',
             'atractivo_id' => 14,
             'activo' => 1
-        ]);  
+        ]);
         //15
         galeria::create([
             'Titulo' => 'COMPLEJO BETLEMÍTICO Y EL BARRIO ',
@@ -273,13 +273,13 @@ class GaleriasTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/iglesia_belen3.jpg',
             'atractivo_id' => 15,
             'activo' => 1
-        ]);        
+        ]);
 
         ///BODEGAS///////////////////////////////////////////////////////////
         //16
             //6-2
         //17
-            //6-3 
+            //6-3
         galeria::create([
             'Titulo' => 'BODEGAS BIONDI',
             'foto_url' => 'images/bodegas/631.jpg',
@@ -291,13 +291,13 @@ class GaleriasTableSeeder extends Seeder
             'foto_url' => 'images/bodegas/632.jpg',
             'atractivo_id' => 18,
             'activo' => 1
-        ]);  
+        ]);
         galeria::create([
             'Titulo' => 'BODEGAS BIONDI',
             'foto_url' => 'images/bodegas/633.jpg',
             'atractivo_id' => 18,
             'activo' => 1
-        ]);                          
+        ]);
         //19
             //6-4
         galeria::create([
@@ -305,26 +305,26 @@ class GaleriasTableSeeder extends Seeder
             'foto_url' => 'images/bodegas/641.jpg',
             'atractivo_id' => 19,
             'activo' => 1
-        ]); 
+        ]);
         galeria::create([
             'Titulo' => 'BODEGAS ZAPATA',
             'foto_url' => 'images/bodegas/642.jpg',
             'atractivo_id' => 19,
             'activo' => 1
-        ]); 
+        ]);
         galeria::create([
             'Titulo' => 'BODEGAS ZAPATA',
             'foto_url' => 'images/bodegas/643.jpg',
             'atractivo_id' => 19,
             'activo' => 1
-        ]);                 
+        ]);
         //20
         galeria::create([
             'Titulo' => 'GEOGLIFOS DE CHEN CHEN',
             'foto_url' => 'images/atractivos/geoglifos1.jpg',
             'atractivo_id' => 20,
             'activo' => 1
-        ]);  
+        ]);
 
         galeria::create([
             'Titulo' => 'GEOGLIFOS DE CHEN CHEN',
@@ -345,19 +345,19 @@ class GaleriasTableSeeder extends Seeder
             'foto_url' => 'images/atractivos/cristo_blanco1.jpg',
             'atractivo_id' => 22,
             'activo' => 1
-        ]);  
+        ]);
         galeria::create([
             'Titulo' => 'MIRADOR CRISTO BLANCO',
             'foto_url' => 'images/atractivos/cristo_blanco2.jpg',
             'atractivo_id' => 22,
             'activo' => 1
-        ]);                
+        ]);
         galeria::create([
             'Titulo' => 'MIRADOR CRISTO BLANCO',
             'foto_url' => 'images/atractivos/cristo_blanco3.jpg',
             'atractivo_id' => 22,
             'activo' => 1
-        ]);   
+        ]);
 
     }
 }

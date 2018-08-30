@@ -12,7 +12,6 @@ export const state = {
 export const getters = {
     categories: state => state.categories,
     token: state => state.token,
-    //check: state => state.user !== null
 }
 
 // mutations
