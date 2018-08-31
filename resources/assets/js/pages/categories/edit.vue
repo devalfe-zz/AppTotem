@@ -10,6 +10,41 @@
                     <has-error :form="form" field="titulo"></has-error>
                 </div>
             </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
+                <div class="col-md-7">
+                    <input v-model="form.titulo" type="text" name="titulo" class="form-control" :class="{ 'is-invalid': form.errors.has('titulo') }">
+                    <has-error :form="form" field="titulo"></has-error>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
+                <div class="col-md-7">
+                    <input v-model="form.titulo" type="text" name="titulo" class="form-control" :class="{ 'is-invalid': form.errors.has('titulo') }">
+                    <has-error :form="form" field="titulo"></has-error>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
+                <div class="col-md-7">
+                    <input v-model="form.titulo" type="text" name="titulo" class="form-control" :class="{ 'is-invalid': form.errors.has('titulo') }">
+                    <has-error :form="form" field="titulo"></has-error>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
+                <div class="col-md-7">
+                    <input v-model="form.titulo" type="text" name="titulo" class="form-control" :class="{ 'is-invalid': form.errors.has('titulo') }">
+                    <has-error :form="form" field="titulo"></has-error>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
+                <div class="col-md-7">
+                    <input v-model="form.titulo" type="text" name="titulo" class="form-control" :class="{ 'is-invalid': form.errors.has('titulo') }">
+                    <has-error :form="form" field="titulo"></has-error>
+                </div>
+            </div>
             <!-- Submit Button -->
             <div class="form-group row">
                 <div class="col-md-9 ml-md-auto">

@@ -4,7 +4,7 @@
     </div>
 </template>
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
     middleware: 'auth',
@@ -26,9 +26,15 @@ export default {
         this.$store.dispatch('categories/loadCategoriesId', this.categoriesId)
     },
 
-    computed: mapGetters({
-        categories: 'categories/categories'
-    }),
+    computed: {
+        ...mapState({
+            categories: state => state.categories.categories,
+        }),
+        // ...mapGetters({
+        //     categories: 'categories/categories',
+        // })
+    },
+
 }
 </script>
 

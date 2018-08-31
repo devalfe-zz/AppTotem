@@ -5,7 +5,8 @@ import * as types from '../mutation-types'
 // state
 export const state = {
     categories: [],
-    token: Cookies.get('token')
+    token: Cookies.get('token'),
+    fetching: false,
 }
 
 // getters
@@ -45,6 +46,9 @@ export const mutations = {
         state.token = null
         Cookies.remove('token')
     },
+    [types.MAIN_SET_FETCHING](state, obj) {
+        state.fetching = obj.fetching
+    },
 
 }
 
@@ -77,5 +81,10 @@ export const actions = {
         } catch (e) {
             commit(types.CAT_FAILURE)
         }
+    },
+    setFetching({
+        commit
+    }, obj) {
+        commit(types.MAIN_SET_FETCHING, obj)
     },
 }

@@ -8,6 +8,7 @@ export const UPDATE_USER = 'UPDATE_USER'
 
 // lang.js
 export const SET_LOCALE = 'SET_LOCALE'
+export const MAIN_SET_FETCHING = 'MAIN_SET_FETCHING'
 
 export const SET_CAT = 'SET_CAT'
 export const LOAD_CATEGORIES = 'LOAD_CATEGORIES'
