@@ -46,6 +46,9 @@
         "eslint": "^5.4.0",
         "eslint-plugin-vue-libs": "^3.0.0",
         "laravel-mix": "^2.1.14",
+        "simplemde": "^1.11.2",
+        "v-dialogs": "^1.10.0",
+        "v-uploader": "^1.7.0",
         "vue-template-compiler": "^2.5.17",
         "webpack-bundle-analyzer": "^2.13.1"
     }

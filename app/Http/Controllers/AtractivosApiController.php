@@ -176,22 +176,16 @@ class AtractivosApiController extends Controller
     {
         // $update = Atractivo::find($request->$id);
 
-        // $this->validate($request, [
-        //     'titulo' => 'required',
-        //     'descripcion' => 'required',
-        //     'direccion' => 'required',
-        //     'ubicacion' => 'required',
-        //     'longitud' => 'required',
-        //     'detalle' => 'required',
-        //     'latitud' => 'required',
-        //     'horarios' => 'required',
-        // ]);e
+        $this->validate($request, [
+            'titulo' => 'required|max:80',
+            'descripcion' => 'required|max:300'
+        ]);
 
         $hashid->fill($request->all());
         $hashid->save();
         return tap($hashid)->update($request->only('titulo',
         'descripcion','detalle','direccion','ubicacion',
-       'longitud','latitud','horarios'));
+       'longitud','latitud','horarios','foto_url','video_url'));
 
     }
 
