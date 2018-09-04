@@ -1,6 +1,8 @@
 <template>
     <card :title="$t('your_info')">
         <h3>{{ view.titulo }}</h3>
+        <h3>{{ view.detalle }}</h3>
+        <img class="img-fluid" :src="view.foto_url | baseurl" alt="item.titulo">
     </card>
 </template>
 
@@ -9,19 +11,26 @@ import { mapGetters } from 'vuex'
 import Form from 'vform'
 
 export default {
-    computed: mapGetters({
-        view: 'category/category'
-    }),
-    data() {
+    computed: {
+        ...mapState({
+            view: state => state.category.category
+        }),
+    },
+
+    // computed: mapGetters({
+    //     view: 'category/category'
+    // }),
+
+    data () {
         return {
             hashId: '',
         }
     },
 
-    created() {
+    created () {
         this.hashId = this.$route.params.hashid;
     },
-    mounted() {
+    mounted () {
         this.$store.dispatch('category/loadCategoryId', this.hashId)
     },
 }
