@@ -4,13 +4,13 @@ import * as types from '../mutation-types'
 
 // state
 export const state = {
-    category: [],
+    element: [],
     token: Cookies.get('token')
 }
 
 // getters
 export const getters = {
-    category: state => state.category,
+    element: state => state.element,
     token: state => state.token,
     //check: state => state.user !== null
 }
@@ -27,19 +27,20 @@ export const mutations = {
         })
     },
 
-    [types.UPDATE_CATEGORY](state, {
-        category
+    [types.CATEGORY_ID_SUCCESS](state, {
+        element
     }) {
-        state.category = category
+        state.element = element
     },
-    [types.CATEGORY_SUCCESS](state, {
-        category
-    }) {
-        state.category = category
-    },
-    [types.CATEGORY_FAILURE](state) {
+    [types.CATEGORY_ID_FAILURE](state) {
         state.token = null
         Cookies.remove('token')
+    },
+
+    [types.UPDATE_ID_CATEGORY](state, {
+        element
+    }) {
+        state.element = element
     },
 
 }
@@ -54,17 +55,17 @@ export const actions = {
             const {
                 data
             } = await axios.get('/api/v1/atractivo/' + payload)
-            commit(types.CATEGORY_SUCCESS, {
-                category: data
+            commit(types.CATEGORY_ID_SUCCESS, {
+                element: data
             })
         } catch (e) {
-            commit(types.CATEGORY_FAILURE)
+            commit(types.CATEGORY_ID_FAILURE)
         }
     },
 
-    async updateCategory({
+    updateCategory({
         commit
     }, payload) {
-        commit(types.UPDATE_CATEGORY, payload)
+        commit(types.UPDATE_ID_CATEGORY, payload)
     },
 }

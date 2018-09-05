@@ -21,7 +21,7 @@
                 <td class="col-md-1">{{ item.direccion }}</td>
                 <td class="col-md-3">
                     <div class="btn-group">
-                        <router-link :to="{ name: 'categories.view' , params: {hashid: item.id }}">
+                        <router-link :to="{ name: 'categories.view', params: {hashid: item.id }}">
                             <VButton v-if="item.activo == '1'" type="warning">Ver/Edit</VButton>
                         </router-link>
                         <VButton type="danger" @click="deletePost(item)">Eliminar</VButton>

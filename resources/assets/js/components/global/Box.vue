@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div v-for="(item,i) in lists" :key="i" class="col-lg-3 col-md-4 col-sm-6 col-12 botonesInicio p-5">
+        <div v-for="(item,i) in categories" :key="i" class="col-lg-3 col-md-4 col-sm-6 col-12 botonesInicio p-5">
             <router-link :to="{ name: 'categories.category', params: {hashid: item.id }}">
                 <div class="d-flex flex-column align-items-center box-circle" :style="{background: item.color}">
                     <fa class="box-icon" :icon="item.icon" size="5x" />
@@ -15,7 +15,7 @@
 <script>
 export default {
     name: 'v-Box',
-    props: ['lists'],
+    props: ['categories'],
 }
 </script>
 <style lang="scss">

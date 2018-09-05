@@ -133,5 +133,4 @@ mix.webpackConfig({
             '~': path.join(__dirname, './resources/assets/js')
         }
     },
-
 })

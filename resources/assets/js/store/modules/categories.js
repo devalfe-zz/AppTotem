@@ -4,7 +4,8 @@ import * as types from '../mutation-types'
 
 // state
 export const state = {
-    categories: [],
+    categories: null,
+    idcategories: null,
     token: Cookies.get('token'),
     fetching: false,
 }
@@ -12,6 +13,8 @@ export const state = {
 // getters
 export const getters = {
     categories: state => state.categories,
+    idcategories: state => state.idcategories,
+
     token: state => state.token,
 }
 
@@ -38,9 +41,9 @@ export const mutations = {
         Cookies.remove('token')
     },
     [types.CATEGORY_SUCCESS](state, {
-        category
+        idcategories
     }) {
-        state.category = category
+        state.idcategories = idcategories
     },
     [types.CATEGORY_FAILURE](state) {
         state.token = null
@@ -75,11 +78,11 @@ export const actions = {
             const {
                 data
             } = await axios.get('/api/v1/categoria/' + payload)
-            commit(types.CAT_SUCCESS, {
-                categories: data
+            commit(types.CATEGORY_SUCCESS, {
+                idcategories: data
             })
         } catch (e) {
-            commit(types.CAT_FAILURE)
+            commit(types.CATEGORY_FAILURE)
         }
     },
     setFetching({

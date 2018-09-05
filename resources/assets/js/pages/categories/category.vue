@@ -1,6 +1,7 @@
 <template>
     <div>
-        <v-List :lists="categories"></v-List>
+        <button type="button" class="btn btn-lg btn-primary btn-flat" style="margin-bottom: 15px;">Add new</button>
+        <v-List :lists="category"></v-List>
     </div>
 </template>
 <script>
@@ -9,26 +10,26 @@ import { mapState } from 'vuex'
 export default {
     middleware: 'auth',
 
-    metaInfo() {
+    metaInfo () {
         return { title: this.$t('home') }
     },
-    data() {
+    data () {
         return {
-            categoriesId: ''
+            hashId: ''
         }
     },
 
-    created() {
-        this.categoriesId = this.$route.params.hashid;
+    created () {
+        this.hashId = this.$route.params.hashid;
     },
 
-    mounted() {
-        this.$store.dispatch('categories/loadCategoriesId', this.categoriesId)
+    mounted () {
+        this.$store.dispatch('categories/loadCategoriesId', this.hashId)
     },
 
     computed: {
         ...mapState({
-            categories: state => state.categories.categories,
+            category: state => state.categories.idcategories,
         }),
         // ...mapGetters({
         //     categories: 'categories/categories',

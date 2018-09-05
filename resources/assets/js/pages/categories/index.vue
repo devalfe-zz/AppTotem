@@ -11,7 +11,6 @@
                 </ul>
             </card>
         </div>
-
         <div class="col-md-9">
             <transition name="fade" mode="out-in">
                 <router-view></router-view>
@@ -21,11 +20,13 @@
 </template>
 
 <script>
+import { mapGetters, mapState } from 'vuex'
+
 export default {
-    loading: true,
+    middleware: 'auth',
 
     computed: {
-        tabs() {
+        tabs () {
             return [
                 {
                     icon: 'user',
@@ -36,9 +37,9 @@ export default {
                     icon: 'lock',
                     name: this.$t('edit'),
                     route: 'categories.edit'
-                }
+                },
             ]
-        }
+        },
     }
 }
 </script>

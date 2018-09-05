@@ -1,6 +1,6 @@
 <template>
     <div id="inicio" class="d-flex align-content-center">
-        <v-Box :lists="home"></v-Box>
+        <v-Box :categories="home"></v-Box>
     </div>
 </template>
 
@@ -10,11 +10,11 @@ import { mapGetters, mapState } from 'vuex'
 export default {
     middleware: 'auth',
 
-    metaInfo() {
+    metaInfo () {
         return { title: this.$t('home') }
     },
 
-    mounted() {
+    mounted () {
         this.$store.dispatch('categories/loadCategories')
     },
 

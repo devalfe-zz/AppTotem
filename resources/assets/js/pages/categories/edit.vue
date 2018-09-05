@@ -2,7 +2,6 @@
     <card :title="$t('your_info')">
         <form @submit.prevent="update" @keydown="form.onKeydown($event)">
             <alert-success :form="form" :message="$t('info_updated')"></alert-success>
-            <p>{{form.titulo}}</p>
             <div class="form-group row">
                 <label class="col-md-2 col-form-label text-md-right">{{ $t('titulo') }}</label>
                 <div class="col-md-8">
@@ -80,12 +79,12 @@
 </template>
 <script>
 import Form from 'vform'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 
 export default {
     middleware: 'auth',
     scrollToTop: false,
-    metaInfo() {
+    metaInfo () {
         return { title: this.$t('settings') }
     },
     data: () => ({
@@ -102,25 +101,40 @@ export default {
             video_url: '',
 
         }),
+        hashId: '',
+
     }),
 
-    computed: mapGetters({
-        category: 'category/category'
-    }),
-    created() {
-        this.categoryId = this.$route.params.hashid;
+    computed: {
+        ...mapGetters({
+            //?...mapState({
+            //? edit: state => state.category.category,
+            edit: 'category/element'
+        }),
+    },
+    created () {
+        this.hashId = this.$route.params.hashid;
         this.form.keys().forEach(key => {
-            this.form[key] = this.category[key]
+            this.form[key] = this.edit[key]
         })
     },
 
     methods: {
-        async update() {
-            const { data } = await this.form.patch('/api/v1/atractivo/' + this.categoryId)
-            this.$store.dispatch('category/updateCategory', { category: data })
-        }
-    }
+        // async update () {
+        //     try {
+        //         const data = await this.form.patch('/api/v1/atractivo/' + this.hashId);
+        //         console.log(data);
+        //         this.$store.dispatch('category/updateCategory', { edit: data })
+        //     } catch (error) {
+        //         console.error(error);
+        //     }
+        // }
+        async update () {
+            const data = await this.form.patch('/api/v1/atractivo/' + this.hashId)
 
+            this.$store.dispatch('category/updateCategory', { edit: data })
+        }
+    },
 }
 </script>
 

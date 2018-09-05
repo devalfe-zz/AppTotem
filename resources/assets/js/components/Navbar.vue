@@ -23,9 +23,14 @@
                         <a class="nav-link dropdown-toggle text-dark py-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img :src="user.photo_url" class="rounded-circle profile-photo mr-1"> {{ user.name }}
                         </a>
+
                         <div class="dropdown-menu">
                             <router-link :to="{ name: 'settings.profile' }" class="dropdown-item pl-3">
                                 <fa icon="cog" fixed-width/> {{ $t('settings') }}
+                            </router-link>
+
+                            <router-link :to="{ name: 'register' }" class="dropdown-item pl-3">
+                                <fa icon="user" fixed-width/> {{ $t('register') }}
                             </router-link>
 
                             <div class="dropdown-divider"></div>
@@ -33,17 +38,14 @@
                                 <fa icon="sign-out-alt" fixed-width/> {{ $t('logout') }}
                             </a>
                         </div>
+
                     </li>
+
                     <!-- Guest -->
                     <template v-else>
                         <li class="nav-item">
                             <router-link :to="{ name: 'login' }" class="nav-link" active-class="active">
                                 {{ $t('login') }}
-                            </router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link :to="{ name: 'register' }" class="nav-link" active-class="active">
-                                {{ $t('register') }}
                             </router-link>
                         </li>
                     </template>
@@ -63,7 +65,7 @@ export default {
     }),
 
     computed: mapGetters({
-        user: 'auth/user'
+        user: 'auth/user',
     }),
 
     components: {
@@ -71,7 +73,7 @@ export default {
     },
 
     methods: {
-        async logout() {
+        async logout () {
             //? Log out the user.
             await this.$store.dispatch('auth/logout')
 

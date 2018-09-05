@@ -45,6 +45,7 @@ export default [{
                         name: 'categories.view'
                     }
                 },
+
                 {
                     path: 'view/:hashid',
                     name: 'categories.view',
@@ -54,7 +55,7 @@ export default [{
                     path: 'edit/:hashid',
                     name: 'categories.edit',
                     component: require('~/pages/categories/edit')
-                }
+                },
             ]
         },
         //? {
@@ -75,12 +76,7 @@ export default [{
     ]),
 
     //?Guest routes.
-    ...middleware('guest', [{
-            path: '/dashboard/login',
-            name: 'login',
-            component: require('~/pages/auth/login')
-        },
-        {
+    ...middleware('auth', [{
             path: '/dashboard/register',
             name: 'register',
             component: require('~/pages/auth/register')
@@ -96,6 +92,11 @@ export default [{
             component: require('~/pages/auth/password/reset')
         }
     ]),
+    ...middleware('guest', [{
+        path: '/dashboard/login',
+        name: 'login',
+        component: require('~/pages/auth/login')
+    }, ]),
 
     {
         path: '*',
