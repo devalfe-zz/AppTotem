@@ -7,6 +7,8 @@ use Apptotem\Categoria as Categoria;
 use Apptotem\Galeria as Galeria;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+
 
 class AtractivosApiController extends Controller
 {
@@ -17,21 +19,36 @@ class AtractivosApiController extends Controller
      */
     public function index()
     {
-        $atractivos = Atractivo::with('fotos')->paginate(12);
-        //$atractivos = Atractivo::all();
-        $response = Response::json($atractivos,200);
-        //return ["results" =>[$response]];
-        return $response;
-        //return Response::json(['results' => $atractivos],200);
+        //?$atractivos = Atractivo::with('fotos')->paginate(12);
+        //*$atractivos = Atractivo::all();
+        //?$response = Response::json($atractivos,200);
+        //*return ["results" =>[$response]];
+        return Atractivo::with('fotos')->paginate(12);;
+        //*return Response::json(['results' => $atractivos],200);
+    }
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'categoria_id' => 'required|string|unique',
+            'titulo' => 'required|string|max:80',
+            'descripcion' => 'required|string|max:300',
+        ]);
     }
     /**
      * Show the form for creating a new resource.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function register(Request $request)
     {
-        //
+        return Atractivo::create($request->all());
     }
 
     /**

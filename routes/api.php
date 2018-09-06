@@ -19,10 +19,8 @@ Route::group(['prefix' => 'v1', 'middleware' => 'auth:api'], function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
-    //?Route::patch('settings/profile', 'Settings\ProfileController@update');
-    //?Route::patch('settings/password', 'Settings\PasswordController@update');
-    //?Route::patch('atractivo/{category}', 'AtractivosApiController@update');
-    //?Route::get('atractivo','AtractivosApiController@index');
+    Route::patch('settings/profile', 'Settings\ProfileController@update');
+    Route::patch('settings/password', 'Settings\PasswordController@update');
 
 
 });
@@ -37,16 +35,17 @@ Route::group(['prefix' => 'v1', 'middleware' => 'guest:api'], function () {
 
 Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
 
-     Route::patch('settings/profile', 'Settings\ProfileController@update');
-    Route::patch('settings/password', 'Settings\PasswordController@update');
-    Route::patch('atractivo/{hashid}', 'AtractivosApiController@update');
     //header('Access-Control-Allow-Origin: *');
     Route::get('atractivo','AtractivosApiController@index');
+    Route::patch('atractivo/{hashid}', 'AtractivosApiController@update');
+    Route::post('atractivo', 'AtractivosApiController@register');
     Route::get('atractivo/{id}','AtractivosApiController@show');
-    Route::resource('atractivo', 'AtractivosApiController', ['except' => ['create', 'edit','update']]);
+
+    Route::resource('atractivo', 'AtractivosApiController', ['except' => ['index','show','create','update','store','edit']]);
 
     Route::get('categoria','AtractivosApiController@categorias');
     Route::get('categoria/{id}','AtractivosApiController@categoria');
+
     Route::get('galeria','AtractivosApiController@galerias');
     Route::get('galeria/{id}','AtractivosApiController@galeria');
 
@@ -54,9 +53,10 @@ Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
     Route::get('lugar/{id}','AtractivosApiController@lugar');
 
     Route::get('translations/{locale}', 'TranslationController@show');
+    Auth::routes();
+
 });
 Route::group(['prefix' => 'v1/movil', 'middleware' => 'cors'],function(){
     Route::resource('user', 'UserMovilController');
     Route::post('checkuser', 'UserMovilController@checkuser')->name('user.checkuser');
 });
-    Auth::routes();
