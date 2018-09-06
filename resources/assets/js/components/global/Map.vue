@@ -8,20 +8,9 @@ export default {
     name: 'v-Map',
     props: ['Lat', 'lng', 'title'],
     ready () {
-        GoogleMapsLoader.load((google) => {
-            this.initMap(google)
-        })
+        this.initMap(google)
     },
-    updated () {
-        GoogleMapsLoader.load((google) => {
-            this.initMap(google)
-        })
-    },
-    beforeUpdate () {
-        GoogleMapsLoader.load((google) => {
-            this.initMap(google)
-        })
-    },
+
     methods: {
         initMap (google) {
             var myLatlng = new google.maps.LatLng(this.Lat, this.lng)
@@ -106,6 +95,6 @@ export default {
   color: #fff;
   position: relative;
   z-index: 1;
-  top: 18px;
+  overflow: visible;
 }
 </style>

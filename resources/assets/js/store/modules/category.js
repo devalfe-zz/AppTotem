@@ -2,10 +2,12 @@ import axios from 'axios'
 import Cookies from 'js-cookie'
 import * as types from '../mutation-types'
 
+
 // state
 export const state = {
     element: [],
-    token: Cookies.get('token')
+    token: Cookies.get('token'),
+
 }
 
 // getters
@@ -68,4 +70,5 @@ export const actions = {
     }, payload) {
         commit(types.UPDATE_ID_CATEGORY, payload)
     },
+
 }

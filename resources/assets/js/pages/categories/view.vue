@@ -13,17 +13,17 @@
                             </div>
                             <div class="col-md-6 product_content">
                                 <h4>
-                                    <span>{{vies,descripcion}}</span>
+                                    <span>{{view.descripcion}}</span>
                                 </h4>
 
                                 <p>{{ view.detalle }}</p>
-                                <h3 class="cost">
+                                <h4 class="cost">
                                     <small class="pre-cost"> {{ view.latitud}}
                                     </small>
 
                                     <small class="pre-cost"> {{ view.longitud}}
                                     </small>
-                                </h3>
+                                </h4>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-6 col-xs-12">
                                         {{ view.direccion }}
@@ -40,12 +40,13 @@
                             </div>
                         </div>
                         <div class="row">
-                            <v-Map :Lat="view.latitud" :lng="view.longitud " :title="view.titulo "></v-Map>
                             <div class="col-6">
                                 <video width="100%" height="100%" controls>
                                     <source :src="view.video_url | baseurl">
                                 </video>
                             </div>
+                            <v-Map :Lat="view.latitud" :lng="view.longitud " :title="view.titulo"></v-Map>
+
                         </div>
                     </div>
                 </div>
@@ -56,6 +57,11 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex'
+import Vue from 'vue'
+
+Vue.filter('baseurl', function (value) {
+    return "http://moqueguaturismo.gob.pe/public/dist/" + value
+});
 
 export default {
     middleware: 'auth',
@@ -81,6 +87,12 @@ export default {
             //?view: 'category/element',
         }),
     },
+
+    methods: {
+        refresh () {
+            location.reload();
+        }
+    }
 
 
 
