@@ -37,6 +37,11 @@ export default [{
             component: require('~/pages/categories/category'),
         },
         {
+            path: '/dashboard/create/:hashid',
+            name: 'create',
+            component: require('~/pages/categories/create'),
+        },
+        {
             path: '/dashboard/categories',
             component: require('~/pages/categories/index'),
             children: [{

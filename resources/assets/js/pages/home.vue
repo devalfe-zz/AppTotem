@@ -1,6 +1,6 @@
 <template>
     <div id="inicio" class="d-flex align-content-center">
-        <v-Box :categories="home"></v-Box>
+        <v-Box :boxs="categories"></v-Box>
     </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
 
     computed: {
         ...mapState({
-            home: state => state.categories.categories,
+            categories: state => state.categories.categories,
         }),
     },
 

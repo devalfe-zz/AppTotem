@@ -4,6 +4,13 @@
             <card :title="$t('register')">
                 <form @submit.prevent="create" @keydown="form.onKeydown($event)">
                     <div class="form-group row">
+                        <label class="col-md-2 col-form-label text-md-right">{{ $t('categoria_id') }}</label>
+                        <div class="col-md-8">
+                            <input v-model="form.categoria_id" type="text" name="categoria_id" class="form-control" :class="{ 'is-invalid': form.errors.has('categoria_id') }">
+                            <has-error :form="form" field="categoria_id"></has-error>
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">{{ $t('titulo') }}</label>
                         <div class="col-md-8">
                             <input v-model="form.titulo" type="text" name="titulo" class="form-control" :class="{ 'is-invalid': form.errors.has('titulo') }">
@@ -71,8 +78,8 @@
                     </div>
                     <!-- Submit Button -->
                     <div class="form-group row">
-                        <div class="col-md-9 ml-md-auto">
-                            <v-button type="success" :loading="form.busy">{{ $t('update') }}</v-button>
+                        <div class="col-md-10 ml-md-auto">
+                            <v-button type="success" :loading="form.busy">{{ $t('register') }}</v-button>
                         </div>
                     </div>
                 </form>
@@ -90,6 +97,7 @@ export default {
 
     data: () => ({
         form: new Form({
+            categoria_id: '',
             titulo: '',
             descripcion: '',
             detalle: '',
@@ -107,9 +115,9 @@ export default {
     methods: {
         async create () {
             try {
-                const data = await this.form.post('/api/v1/atractivo/' + this.hashId);
+                const { data } = await this.form.post('/api/v1/atractivo');
                 console.log(data);
-                this.$store.dispatch('category/updateCategory', { element: data })
+                await this.$store.dispatch('category/updateCategory', { element: data })
                 this.$router.push({ name: 'home' })
 
             } catch (error) {

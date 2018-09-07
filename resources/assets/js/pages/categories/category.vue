@@ -1,7 +1,9 @@
 <template>
     <div>
-        <button type="button" class="btn btn-lg btn-primary btn-flat" style="margin-bottom: 15px;">Add new</button>
-        <v-List :lists="category"></v-List>
+        <router-link :to="{ name: 'create', params: {hashid: this.hashId }}">
+            <VButton type="primary" style="margin-bottom: 15px;">Add new</VButton>
+        </router-link>
+        <v-List :lists="idcategories"></v-List>
     </div>
 </template>
 <script>
@@ -29,7 +31,7 @@ export default {
 
     computed: {
         ...mapState({
-            category: state => state.categories.idcategories,
+            idcategories: state => state.categories.idcategories,
         }),
         // ...mapGetters({
         //     categories: 'categories/categories',

@@ -1,38 +1,38 @@
 <template>
     <card :title="$t('your_info')">
-        <div class="product_view" id="product_view">
+        <div class="product_element" id="product_element">
             <div>
                 <div>
                     <div>
-                        <h3 class="modal-title">{{ view.titulo}}</h3>
+                        <h3 class="modal-title">{{ element.titulo}}</h3>
                     </div>
                     <div>
                         <div class="row">
                             <div class="col-md-6 product_img">
-                                <img class="img-fluid" :src="view.foto_url | baseurl">
+                                <img class="img-fluid" :src="element.foto_url | baseurl">
                             </div>
                             <div class="col-md-6 product_content">
                                 <h4>
-                                    <span>{{view.descripcion}}</span>
+                                    <span>{{element.descripcion}}</span>
                                 </h4>
 
-                                <p>{{ view.detalle }}</p>
+                                <p>{{ element.detalle }}</p>
                                 <h4 class="cost">
-                                    <small class="pre-cost"> {{ view.latitud}}
+                                    <small class="pre-cost"> {{ element.latitud}}
                                     </small>
 
-                                    <small class="pre-cost"> {{ view.longitud}}
+                                    <small class="pre-cost"> {{ element.longitud}}
                                     </small>
                                 </h4>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-6 col-xs-12">
-                                        {{ view.direccion }}
+                                        {{ element.direccion }}
                                     </div>
                                     <!-- end col -->
-                                    <div class="col-md-4 col-sm-6 col-xs-12"> {{ view.ubicacion}}
+                                    <div class="col-md-4 col-sm-6 col-xs-12"> {{ element.ubicacion}}
                                     </div>
                                     <!-- end col -->
-                                    <div class="col-md-4 col-sm-12">{{ view.horarios }}
+                                    <div class="col-md-4 col-sm-12">{{ element.horarios }}
                                     </div>
                                     <!-- end col -->
                                 </div>
@@ -42,10 +42,10 @@
                         <div class="row">
                             <div class="col-6">
                                 <video width="100%" height="100%" controls>
-                                    <source :src="view.video_url | baseurl">
+                                    <source :src="element.video_url | baseurl">
                                 </video>
                             </div>
-                            <v-Map :Lat="view.latitud" :lng="view.longitud " :title="view.titulo"></v-Map>
+                            <v-Map :Lat="element.latitud" :lng="element.longitud " :title="element.titulo"></v-Map>
 
                         </div>
                     </div>
@@ -83,8 +83,8 @@ export default {
         //?...mapGetters({
 
         ...mapState({
-            view: state => state.category.element,
-            //?view: 'category/element',
+            element: state => state.category.element,
+            //?element: 'category/element',
         }),
     },
 

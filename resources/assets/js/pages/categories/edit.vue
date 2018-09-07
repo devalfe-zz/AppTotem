@@ -70,7 +70,7 @@
             </div>
             <!-- Submit Button -->
             <div class="form-group row">
-                <div class="col-md-9 ml-md-auto">
+                <div class="col-md-10 ml-md-auto">
                     <v-button type="success" :loading="form.busy">{{ $t('update') }}</v-button>
                 </div>
             </div>
@@ -108,14 +108,14 @@ export default {
     computed: {
         ...mapGetters({
             //?...mapState({
-            //? edit: state => state.category.category,
-            edit: 'category/element'
+            //? element: state => state.category.category,
+            element: 'category/element'
         }),
     },
     created () {
         this.hashId = this.$route.params.hashid;
         this.form.keys().forEach(key => {
-            this.form[key] = this.edit[key]
+            this.form[key] = this.element[key]
         })
     },
 
@@ -124,15 +124,15 @@ export default {
         //     try {
         //         const data = await this.form.patch('/api/v1/atractivo/' + this.hashId);
         //         console.log(data);
-        //         this.$store.dispatch('category/updateCategory', { edit: data })
+        //         this.$store.dispatch('category/updateCategory', { element: data })
         //     } catch (error) {
         //         console.error(error);
         //     }
         // }
         async update () {
-            const data = await this.form.patch('/api/v1/atractivo/' + this.hashId)
+            const { data } = await this.form.patch('/api/v1/atractivo/' + this.hashId)
 
-            this.$store.dispatch('category/updateCategory', { edit: data })
+            this.$store.dispatch('category/updateCategory', { element: data })
         }
     },
 }
