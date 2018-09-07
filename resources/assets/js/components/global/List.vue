@@ -24,7 +24,7 @@
                         <router-link :to="{ name: 'categories.view', params: {hashid: item.id }}">
                             <VButton v-if="item.activo == '1'" type="warning">Ver/Edit</VButton>
                         </router-link>
-                        <VButton type="danger" @click="deletePost(item)">Eliminar</VButton>
+                        <VButton type="danger" @click="deleteElement(item)">Eliminar</VButton>
                     </div>
                 </td>
             </tr>
@@ -41,6 +41,9 @@ Vue.filter('baseurl', function (value) {
 export default {
     name: 'v-List',
     props: ['lists'],
+    deleteElement (item) {
+        this.$store.dispatch('category/deleteCategory', item.id)
+    },
 }
 </script>
 <style lang="sass">

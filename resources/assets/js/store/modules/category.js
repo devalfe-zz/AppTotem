@@ -44,6 +44,12 @@ export const mutations = {
     }) {
         state.element = element
     },
+    [types.DELETE_CATEGORY](state, {
+        element
+    }) {
+        state.element.$remove(element)
+    }
+
 
 }
 
@@ -70,5 +76,13 @@ export const actions = {
     }, payload) {
         commit(types.UPDATE_ID_CATEGORY, payload)
     },
+
+    deleteCategory({
+        commit
+    }, payload) {
+        axios.delete('/api/v1/atractivo/' + payload)
+        commit(types.DELETE_CATEGORY, payload)
+    },
+
 
 }

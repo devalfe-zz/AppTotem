@@ -110,15 +110,20 @@ export default {
             video_url: '',
 
         }),
-    }),
+        hashId: ''
 
+    }),
+    created () {
+        this.hashId = this.$route.params.hashid
+        this.form.categoria_id = this.$route.params.hashid
+    },
     methods: {
         async create () {
             try {
                 const { data } = await this.form.post('/api/v1/atractivo');
                 console.log(data);
-                await this.$store.dispatch('category/updateCategory', { element: data })
-                this.$router.push({ name: 'home' })
+                //?await this.$store.dispatch('category/updateCategory', { element: data })
+                this.$router.push({ name: 'categories.category', params: { hashid: this.hashId } })
 
             } catch (error) {
                 console.error(error);

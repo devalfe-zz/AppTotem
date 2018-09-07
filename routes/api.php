@@ -36,12 +36,12 @@ Route::group(['prefix' => 'v1', 'middleware' => 'guest:api'], function () {
 Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
 
     //header('Access-Control-Allow-Origin: *');
-    Route::get('atractivo','AtractivosApiController@index');
-    Route::patch('atractivo/{hashid}', 'AtractivosApiController@update');
-    Route::post('atractivo', 'AtractivosApiController@register');
-    Route::get('atractivo/{id}','AtractivosApiController@show');
+    Route::get('atractivo','AtractivosApiController@index')->name('atractivo.index');;
+    Route::patch('atractivo/{hashid}', 'AtractivosApiController@update')->name('atractivo.update');;
+    Route::post('atractivo', 'AtractivosApiController@create')->name('atractivo.create');;
+    Route::get('atractivo/{id}','AtractivosApiController@show')->name('atractivo.show');;
 
-    Route::resource('atractivo', 'AtractivosApiController', ['except' => ['index','show','create','update','store','edit']]);
+    Route::resource('atractivo', 'AtractivosApiController', ['except' => ['create','index','update','show','store','edit']]);
 
     Route::get('categoria','AtractivosApiController@categorias');
     Route::get('categoria/{id}','AtractivosApiController@categoria');

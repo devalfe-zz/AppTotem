@@ -26,28 +26,20 @@ class AtractivosApiController extends Controller
         return Atractivo::with('fotos')->paginate(12);;
         //*return Response::json(['results' => $atractivos],200);
     }
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'categoria_id' => 'required|string|unique',
-            'titulo' => 'required|string|max:80',
-            'descripcion' => 'required|string|max:300',
-        ]);
-    }
+
     /**
      * Show the form for creating a new resource.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function register(Request $request)
+    public function create(Request $request)
     {
+        $this->validate($request, [
+            'categoria_id' => 'required|integer',
+            'titulo' => 'required|string|max:80',
+            'descripcion' => 'required|string|max:300',
+        ]);
         return Atractivo::create($request->all());
     }
 
@@ -209,11 +201,16 @@ class AtractivosApiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \Apptotem\Atractivo  $atractivo
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Atractivo $atractivo)
     {
-        //
+        $atractivo->delete();
+        return Response::json([
+            'success' => true,
+            'message' => 'Successfully deleted post.'
+        ]);
+
     }
 }
