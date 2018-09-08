@@ -59,10 +59,6 @@ mix.browserSync({
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.autoload({
-    jquery: ['$', 'window.jQuery', "jQuery", "window.$", "jquery", "window.jquery"],
-    'node_modules/popper.js/dist/popper.js': ['Popper']
-})
 
 mix.js('resources/assets/js/app.js', 'public/js')
     .js('resources/assets/js/main.js', 'public/js')
@@ -72,7 +68,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .disableNotifications()
 
 mix.copy([
-
     'node_modules/owl.carousel/dist/assets/owl.carousel.css',
     'node_modules/fullpage.js/dist/jquery.fullpage.css',
     'node_modules/superfish/src/css/superfish.css',
@@ -81,15 +76,12 @@ mix.copy([
 ], 'public/css')
 
 mix.copy([
-    'node_modules/jquery/dist/jquery.js',
     'node_modules/owl.carousel/dist/owl.carousel.js',
     'node_modules/fullpage.js/dist/jquery.fullpage.extensions.min.js',
     'node_modules/fullpage.js/dist/jquery.fullpage.js',
     'node_modules/wowjs/dist/wow.js',
     'node_modules/superfish/src/js/superfish.js',
     'node_modules/smooth-scroll/dist/js/smooth-scroll.js',
-    'node_modules/bootstrap/dist/js/bootstrap.js',
-    'node_modules/popper.js/dist/popper.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
 
 ], 'public/js')
@@ -112,6 +104,7 @@ if (mix.inProduction()) {
         'vue-router',
         'sweetalert2',
         'superfish',
+        'smooth-scroll',
         'vuex-router-sync',
         '@fortawesome/fontawesome',
         '@fortawesome/vue-fontawesome'

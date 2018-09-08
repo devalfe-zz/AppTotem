@@ -11,7 +11,7 @@ import {
 import '~/plugins'
 import '~/components'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 Vue.use(VueGoogleMaps, {
     load: {

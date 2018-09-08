@@ -108,7 +108,6 @@ export default {
             horarios: '',
             foto_url: '',
             video_url: '',
-
         }),
         hashId: ''
 
@@ -121,7 +120,7 @@ export default {
         async create () {
             try {
                 const { data } = await this.form.post('/api/v1/atractivo');
-                console.log(data);
+                //*console.log(data);
                 //?await this.$store.dispatch('category/updateCategory', { element: data })
                 this.$router.push({ name: 'categories.category', params: { hashid: this.hashId } })
 
