@@ -27,6 +27,6 @@ new Vue({
     i18n,
     store,
     router,
-    //?...App,
-    render: h => h(...App)
+    ...App,
+
 })

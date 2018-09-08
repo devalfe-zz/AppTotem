@@ -54,11 +54,20 @@
                     <has-error :form="form" field="horarios"></has-error>
                 </div>
             </div>
+
             <div class="form-group row">
-                <label class="col-md-2 col-form-label text-md-right">{{ $t('foto_url') }}</label>
-                <div class="col-md-8">
-                    <input v-model="form.foto_url" type="text" name="foto_url" class="form-control" :class="{ 'is-invalid': form.errors.has('foto_url') }">
-                    <has-error :form="form" field="foto_url"></has-error>
+                <label class="col-sm-2 col-form-label">{{ $t('foto_url') }}</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="foto_url" v-model="form.foto_url" placeholder="ex: /uploads/default_avatar.png">
+                </div>
+                <div class="col-sm-5">
+                    <img :src="form.foto_url" alt="" width="35" height="35">
+                    <div class="cover-upload pull-right">
+                        <a href="" class="btn btn-success file">
+                            <span>{{ $t('upload_file') }}</span>
+                            <input type="file">
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="form-group row">

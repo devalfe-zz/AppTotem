@@ -22,6 +22,9 @@ export default {
         ...mapState({
             categories: state => state.categories.categories,
         }),
+        ...mapGetters({
+            authenticated: 'auth/check'
+        })
     },
 
     // computed: mapGetters({

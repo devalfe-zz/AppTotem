@@ -44,10 +44,8 @@ export const mutations = {
     }) {
         state.element = element
     },
-    [types.DELETE_CATEGORY](state, {
-        element
-    }) {
-        state.element.$remove(element)
+    [types.DELETE_CATEGORY](state, element) {
+        state.element = element
     }
 
 
@@ -77,11 +75,22 @@ export const actions = {
         commit(types.UPDATE_ID_CATEGORY, payload)
     },
 
-    deleteCategory({
+    async deleteCategory({
         commit
     }, payload) {
-        axios.delete('/api/v1/atractivo/' + payload)
-        commit(types.DELETE_CATEGORY, payload)
+        //*axios.delete('/api/v1/atractivo/' + payload)
+        try {
+            axios.delete('/api/v1/atractivo/' + payload)
+            const {
+                data
+            } = await axios.get('/api/v1/atractivo/' + payload)
+            commit(types.CATEGORY_ID_SUCCESS, {
+                element: data
+            })
+        } catch (e) {
+            commit(types.CATEGORY_ID_FAILURE)
+        }
+        //?commit(types.DELETE_CATEGORY, payload)
     },
 
 

@@ -24,7 +24,7 @@
                         <router-link :to="{ name: 'categories.view', params: {hashid: item.id }}">
                             <VButton v-if="item.activo == '1'" type="warning">Ver/Edit</VButton>
                         </router-link>
-                        <VButton type="danger" @click="deleteElement(item)">Eliminar</VButton>
+                        <button type="button" class="btn btn-danger" v-on:click="deleteElement(item)">Delete</button>
                     </div>
                 </td>
             </tr>
@@ -32,8 +32,14 @@
     </table>
 </template>
 <script>
-import Vue from 'vue'
+import { mapState } from 'vuex'
 
+import Vue from 'vue'
+import vuex from 'vuex'
+
+import swal from 'sweetalert2'
+
+import axios from 'axios'
 Vue.filter('baseurl', function (value) {
     return "http://moqueguaturismo.gob.pe/public/dist/" + value
 });
@@ -41,10 +47,56 @@ Vue.filter('baseurl', function (value) {
 export default {
     name: 'v-List',
     props: ['lists'],
-    deleteElement (item) {
-        this.$store.dispatch('category/deleteCategory', item.id)
+    methods: {
+        deleteElement (item) {
+
+            //?let self = this
+            swal({
+                title: 'Are you sure?',
+                text: 'You will not be able to recover this post!',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, keep it',
+            }).then(function () {
+                const { response } = axios.delete('/api/v1/atractivo/' + item.id, item)
+                    .then(function (response) {
+                        swal(
+                            'Deleted!',
+                            'Your post has been deleted.',
+                            'success'
+                        );
+                        location.reload();
+                    }, function (response) {
+                        //? show_stack_error('Deletion of post went wrong.', response)
+                    })
+            }, function (dismiss) {
+                // dismiss can be 'cancel', 'overlay', 'close', 'timer'
+                if (dismiss === 'cancel') {
+                    swal(
+                        'Cancelled',
+                        'Your post is safe :)',
+                        'error'
+                    );
+                }
+            });
+        },
     },
+
+    computed: {
+        ...mapState({
+            idcategories: state => state.categories.idcategories,
+        }),
+        // ...mapGetters({
+        //     categories: 'categories/categories',
+        // })
+    },
+    refresh () {
+        location.reload();
+    }
+
 }
+
 </script>
 <style lang="sass">
 
