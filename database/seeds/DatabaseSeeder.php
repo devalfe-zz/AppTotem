@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Apptotem\Categoria as Categoria;
 use Apptotem\Atractivo as Atractivo;
 use Apptotem\Galeria as Galeria;
+use Apptotem\User as User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,8 +19,12 @@ class DatabaseSeeder extends Seeder
         Categoria::truncate();
         Atractivo::truncate();
         Galeria::truncate();
-         $this->call(CategoriasTableSeeder::class);
+        User::truncate();
+
+        $this->call(CategoriasTableSeeder::class);
          $this->call(AtractivosTableSeeder::class);
          $this->call(GaleriasTableSeeder::class);
+         $this->call(UsersTableSeeder::class);
+
     }
 }
