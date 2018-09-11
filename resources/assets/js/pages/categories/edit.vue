@@ -107,8 +107,7 @@ export default {
             latitud: '',
             horarios: '',
             foto_url: '',
-            video_url: '',
-
+            video_url: ''
         }),
         hashId: '',
 

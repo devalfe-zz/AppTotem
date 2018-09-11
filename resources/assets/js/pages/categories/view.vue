@@ -42,11 +42,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <video width="100%" height="100%" controls>
-                                    <source :src="element.video_url | baseurl">
+                                    <source :src="element.video_url | url">
                                 </video>
                             </div>
-                            <v-Map :Lat="element.latitud" :lng="element.longitud " :title="element.titulo"></v-Map>
-
+                            <!-- <v-Map :Lat="element.latitud" :lng="element.longitud " :title="element.titulo"></v-Map> -->
+                            <GmapMap :center="{lat:element.latitud,lng:element.longitud}" :zoom="17" style="width: 100%; height: 500px">
+                                <GmapMarker :key="index" v-for="(m, index) in markers" :position="{lat:element.latitud,lng:element.longitud,}" :clickable="true" :draggable="true" @click="center=m.position"></GmapMarker>
+                            </GmapMap>
                         </div>
                     </div>
                 </div>
@@ -59,7 +61,7 @@
 import { mapGetters, mapState } from 'vuex'
 import Vue from 'vue'
 
-Vue.filter('baseurl', function (value) {
+Vue.filter('url', function (value) {
     return "http://moqueguaturismo.gob.pe/public/dist/" + value
 });
 
@@ -68,12 +70,19 @@ export default {
 
     data () {
         return {
-            hashId: ''
+            hashId: '',
+            markers: [{
+                position: {
+                    lat: '',
+                    lng: ''
+                }
+            }]
         }
     },
 
     created () {
         this.hashId = this.$route.params.hashid
+
     },
 
     mounted () {

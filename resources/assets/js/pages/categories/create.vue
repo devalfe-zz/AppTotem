@@ -6,7 +6,7 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">{{ $t('categoria_id') }}</label>
                         <div class="col-md-8">
-                            <input v-model="form.categoria_id" type="text" name="categoria_id" class="form-control" :class="{ 'is-invalid': form.errors.has('categoria_id') }">
+                            <input v-model="form.categoria_id" type="text" name="categoria_id" class="form-control" :class="{ 'is-invalid': form.errors.has('categoria_id') }" disabled="disabled">
                             <has-error :form="form" field="categoria_id"></has-error>
                         </div>
                     </div>
@@ -65,15 +65,27 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">{{ $t('foto_url') }}</label>
                         <div class="col-md-8">
-                            <input v-model="form.foto_url" type="text" name="foto_url" class="form-control" :class="{ 'is-invalid': form.errors.has('foto_url') }">
+                            <input v-model="form.foto_url" type="text" name="foto_url" class="form-control" :class="{ 'is-invalid': form.errors.has('foto_url') }" disabled="disabled">
                             <has-error :form="form" field="foto_url"></has-error>
+                            <vue-dropzone id="drop1" :options="dropOptions" ref="dropzone" :useCustomSlot=true @vdropzone-complete="afterComplete">
+                                <div class="dropzone-custom-content">
+                                    <h3 class="dropzone-custom-title">Arrastrar y soltar para cargar contenido!</h3>
+                                    <div class="subtitle">...o haz clic para seleccionar un archivo de tu computadora</div>
+                                </div>
+                            </vue-dropzone>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">{{ $t('video_url') }}</label>
                         <div class="col-md-8">
-                            <input v-model="form.video_url" type="text" name="video_url" class="form-control" :class="{ 'is-invalid': form.errors.has('video_url') }">
+                            <input v-model="form.video_url" type="text" name="video_url" class="form-control" :class="{ 'is-invalid': form.errors.has('video_url') }" disabled="disabled">
                             <has-error :form="form" field="video_url"></has-error>
+                            <vue-dropzone id="drop2" :options="dropVideoOptions" ref="dropzone2" :useCustomSlot=true @vdropzone-complete="afterVideoComplete">
+                                <div class="dropzone-custom-content">
+                                    <h3 class="dropzone-custom-title">Arrastrar y soltar para cargar contenido!</h3>
+                                    <div class="subtitle">...o haz clic para seleccionar un archivo de tu computadora</div>
+                                </div>
+                            </vue-dropzone>
                         </div>
                     </div>
                     <!-- Submit Button -->
@@ -88,7 +100,10 @@
     </div>
 </template>
 <script>
+
 import Form from 'vform'
+import vueDropzone from "vue2-dropzone"
+import 'vue2-dropzone/dist/vue2Dropzone.min.css'
 export default {
 
     metaInfo () {
@@ -97,7 +112,6 @@ export default {
 
     data: () => ({
         form: new Form({
-            categoria_id: '',
             titulo: '',
             descripcion: '',
             detalle: '',
@@ -108,10 +122,39 @@ export default {
             horarios: '',
             foto_url: '',
             video_url: '',
+            activo: 1,
+            categoria_id: ''
         }),
-        hashId: ''
+        hashId: '',
+        dropOptions: {
+            url: "https://httpbin.org/post",
+            maxFilesize: 0.5, // MB
+            maxFiles: 1,
+            chunking: true,
+            chunkSize: 500, // Bytes
+            thumbnailWidth: 250, // px
+            thumbnailHeight: 250,
+            addRemoveLinks: true,
+            paramName: "file", // The name that will be used to transfer the file
+
+        },
+        dropVideoOptions: {
+            url: "https://httpbin.org/post",
+            maxFilesize: 5, // MB
+            maxFiles: 1,
+            chunking: true,
+            chunkSize: 500, // Bytes
+            thumbnailWidth: 250, // px
+            thumbnailHeight: 250,
+            addRemoveLinks: true,
+            paramName: "file", // The name that will be used to transfer the file
+
+        }
 
     }),
+    components: {
+        vueDropzone
+    },
     created () {
         this.hashId = this.$route.params.hashid
         this.form.categoria_id = this.$route.params.hashid
@@ -127,7 +170,50 @@ export default {
             } catch (error) {
                 console.error(error);
             }
+        },
+
+        afterComplete (file) {
+            this.form.foto_url = 'images/' + file.name
+        },
+        afterVideoComplete (file) {
+            this.form.video_url = 'video/' + file.name
         }
     }
 }
 </script>
+<style>
+#drop1 {
+  height: 250px;
+  padding: 15px;
+  color: white;
+}
+
+#drop1 .dz-preview {
+  width: 200px;
+}
+#drop2 {
+  height: 250px;
+  padding: 15px;
+  color: white;
+}
+
+#drop2 .dz-preview {
+  width: 200px;
+}
+.dropzone-custom-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.dropzone-custom-title {
+  margin-top: 0;
+  color: #00b782;
+}
+
+.subtitle {
+  color: #314b5f;
+}
+</style>

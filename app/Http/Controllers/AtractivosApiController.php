@@ -38,7 +38,7 @@ class AtractivosApiController extends Controller
         $this->validate($request, [
             'categoria_id' => 'required|integer',
             'titulo' => 'required|string|max:80',
-            'descripcion' => 'required|string|max:300',
+            'descripcion' => 'required|string|max:300'
         ]);
         return Atractivo::create($request->all());
     }
@@ -194,7 +194,7 @@ class AtractivosApiController extends Controller
         $hashid->save();
         return tap($hashid)->update($request->only('titulo',
         'descripcion','detalle','direccion','ubicacion',
-       'longitud','latitud','horarios','foto_url','video_url'));
+       'longitud','latitud','horarios','foto_url','video_url','activo'));
 
     }
 
