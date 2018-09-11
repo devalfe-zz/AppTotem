@@ -127,27 +127,25 @@ export default {
         }),
         hashId: '',
         dropOptions: {
-            url: "https://httpbin.org/post",
+            url: "http://apptotem.test/api/v1/file",
             maxFilesize: 0.5, // MB
             maxFiles: 1,
-            chunking: true,
-            chunkSize: 500, // Bytes
             thumbnailWidth: 250, // px
             thumbnailHeight: 250,
             addRemoveLinks: true,
             paramName: "file", // The name that will be used to transfer the file
+            acceptedFiles: "image/*,image/png,image/gif",
 
         },
         dropVideoOptions: {
-            url: "https://httpbin.org/post",
+            url: "http://apptotem.test/api/v1/file",
             maxFilesize: 5, // MB
             maxFiles: 1,
-            chunking: true,
-            chunkSize: 500, // Bytes
             thumbnailWidth: 250, // px
             thumbnailHeight: 250,
             addRemoveLinks: true,
             paramName: "file", // The name that will be used to transfer the file
+            acceptedFiles: "video/mp4,video/avi,video/mpeg",
 
         }
 
@@ -173,6 +171,7 @@ export default {
         },
 
         afterComplete (file) {
+            console.log(file);
             this.form.foto_url = 'images/' + file.name
         },
         afterVideoComplete (file) {

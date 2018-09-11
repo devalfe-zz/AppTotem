@@ -8,6 +8,7 @@ use Apptotem\Galeria as Galeria;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 
 class AtractivosApiController extends Controller
@@ -41,17 +42,6 @@ class AtractivosApiController extends Controller
             'descripcion' => 'required|string|max:300'
         ]);
         return Atractivo::create($request->all());
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
@@ -212,5 +202,28 @@ class AtractivosApiController extends Controller
             'message' => 'Successfully deleted post.'
         ]);
 
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $imageName = $request->file->getClientOriginalName();
+
+        //?$request->file->move(public_path('images'), $imageName);
+        //?return respose()->json(['sucess' =>'successfully upload file']);
+
+        //*$path = public_path().'/uploads/';
+        //*$files = $request->file('file');
+        //*$fileName = $file->getClientOriginalName();
+        //*$file->move($path, $fileName);
+
+    	//?$imageName = '.'.$request->file->getClientOriginalExtension();
+        $request->file->move(public_path('images'), $imageName);
+    	return response()->json(['success'=>'You have successfully upload file.']);
     }
 }

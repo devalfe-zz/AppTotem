@@ -59,15 +59,18 @@
                 <label class="col-sm-2 col-form-label">{{ $t('foto_url') }}</label>
                 <div class="col-sm-5">
                     <input type="text" class="form-control" name="foto_url" v-model="form.foto_url" placeholder="ex: /uploads/default_avatar.png">
+                    <vue-dropzone id="drop1" :options="dropOptions" ref="dropzone" :useCustomSlot=true @vdropzone-complete="afterComplete">
+                        <div class="dropzone-custom-content">
+                            <h3 class="dropzone-custom-title">Arrastrar y soltar para cargar contenido!</h3>
+                            <div class="subtitle">...o haz clic para seleccionar un archivo de tu computadora</div>
+                        </div>
+                    </vue-dropzone>
                 </div>
                 <div class="col-sm-5">
-                    <img :src="form.foto_url" alt="" width="35" height="35">
-                    <div class="cover-upload pull-right">
-                        <a href="" class="btn btn-success file">
-                            <span>{{ $t('upload_file') }}</span>
-                            <input type="file">
-                        </a>
+                    <div class="col-md-5">
+                        <img class="img-fluid" :src="element.foto_url | baseurl">
                     </div>
+
                 </div>
             </div>
             <div class="form-group row">
@@ -90,6 +93,9 @@
 import Form from 'vform'
 import { mapGetters, mapState } from 'vuex'
 
+import vueDropzone from "vue2-dropzone"
+import 'vue2-dropzone/dist/vue2Dropzone.min.css'
+
 export default {
     middleware: 'auth',
     scrollToTop: false,
@@ -110,8 +116,22 @@ export default {
             video_url: ''
         }),
         hashId: '',
+        dropOptions: {
+            url: "http://apptotem.test/api/v1/file",
+            maxFilesize: 0.5, // MB
+            maxFiles: 1,
+            thumbnailWidth: 250, // px
+            thumbnailHeight: 250,
+            addRemoveLinks: true,
+            paramName: "file", // The name that will be used to transfer the file
+            acceptedFiles: "image/*",
+
+        },
 
     }),
+    components: {
+        vueDropzone
+    },
 
     computed: {
         ...mapGetters({
@@ -141,8 +161,48 @@ export default {
             const { data } = await this.form.patch('/api/v1/atractivo/' + this.hashId)
 
             this.$store.dispatch('category/updateCategory', { element: data })
-        }
+        },
+        afterComplete (file) {
+            console.log(file);
+            this.form.foto_url = 'images/' + file.name
+        },
     },
 }
 </script>
 
+<style>
+#drop1 {
+  height: 250px;
+  padding: 15px;
+  color: white;
+}
+
+#drop1 .dz-preview {
+  width: 200px;
+}
+#drop2 {
+  height: 250px;
+  padding: 15px;
+  color: white;
+}
+
+#drop2 .dz-preview {
+  width: 200px;
+}
+.dropzone-custom-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.dropzone-custom-title {
+  margin-top: 0;
+  color: #00b782;
+}
+
+.subtitle {
+  color: #314b5f;
+}
+</style>

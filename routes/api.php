@@ -37,11 +37,18 @@ Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
 
     //header('Access-Control-Allow-Origin: *');
     Route::get('atractivo','AtractivosApiController@index')->name('atractivo.index');
+
     Route::patch('atractivo/{hashid}', 'AtractivosApiController@update')->name('atractivo.update');
+
     Route::post('atractivo', 'AtractivosApiController@create')->name('atractivo.create');
+
     Route::get('atractivo/{id}','AtractivosApiController@show')->name('atractivo.show');
 
+    Route::post('file','AtractivosApiController@store')->name('atractivo.store');
+
     Route::resource('atractivo', 'AtractivosApiController', ['except' => ['create','index','update','show','store','edit']]);
+
+    Route::post('imgsubmit', 'ImageController@imgsubmit')->name('image.imgsubmit');
 
     Route::get('categoria','AtractivosApiController@categorias');
     Route::get('categoria/{id}','AtractivosApiController@categoria');
