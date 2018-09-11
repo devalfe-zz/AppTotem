@@ -41,7 +41,7 @@ import swal from 'sweetalert2'
 
 import axios from 'axios'
 Vue.filter('baseurl', function (value) {
-    return "http://moqueguaturismo.gob.pe/public/dist/" + value
+    return "http://guiaturistica.moqueguaturismo.gob.pe/public/" + value
 });
 
 export default {
