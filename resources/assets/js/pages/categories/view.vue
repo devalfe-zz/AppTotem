@@ -62,7 +62,7 @@ import { mapGetters, mapState } from 'vuex'
 import Vue from 'vue'
 
 Vue.filter('url', function (value) {
-    return "http://guiaturistica.moqueguaturismo.gob.pe/public/" + value
+    return "https://guiaturistica.moqueguaturismo.gob.pe/public/" + value
 });
 
 export default {
