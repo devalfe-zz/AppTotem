@@ -38,9 +38,17 @@ export default {
                     name: this.$t('edit'),
                     route: 'categories.edit'
                 },
+                {
+                    icon: 'lock',
+                    name: this.$t('fotos'),
+                    route: 'categories.foto'
+                },
             ]
         },
-    }
+
+    },
+
+
 }
 </script>
 

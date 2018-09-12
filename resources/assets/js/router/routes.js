@@ -61,6 +61,11 @@ export default [{
                     name: 'categories.edit',
                     component: require('~/pages/categories/edit')
                 },
+                {
+                    path: 'foto/:hashid',
+                    name: 'categories.foto',
+                    component: require('~/pages/categories/foto')
+                },
             ]
         },
         //? {
