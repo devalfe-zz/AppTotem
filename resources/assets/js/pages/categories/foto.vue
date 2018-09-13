@@ -1,8 +1,6 @@
 <template>
     <card :title="$t('your_info')">
-
         <form @submit.prevent="create" @keydown="form.onKeydown($event)">
-
             <div class="form-group row">
                 <label class="col-md-2 col-form-label text-md-right">{{ $t('atractivo_id') }}</label>
                 <div class="col-md-8">
@@ -59,7 +57,7 @@
                     <td class="col-md-2">{{ foto.titulo }}</td>
                     <td class="col-md-2">
                         <div class="box-body">
-                            <img class="img-fluid" :src="'https://guiaturistica.moqueguaturismo.gob.pe/public/' + foto.foto_url" alt="{{foto.titulo}}">
+                            <img class="img-fluid" :src="'https://guiaturistica.moqueguaturismo.gob.pe/public/' + foto.foto_url" :alt="foto.titulo">
                         </div>
                     </td>
                     <td class="col-md-3">
@@ -113,7 +111,7 @@ export default {
     created () {
         this.hashId = this.$route.params.hashid
         this.form.atractivo_id = this.$route.params.hashid
-        this.form.titulo = this.element[0]
+        //!this.form.titulo = this.element[0]
 
     },
 
@@ -125,7 +123,7 @@ export default {
         async create () {
             try {
                 const { data } = await this.form.post('/api/v1/galeria')
-                this.$router.push({ name: 'categories.foto', params: { hashid: this.hashId } })
+                this.$router.push({ name: 'categories.view', params: { hashid: this.hashId } })
             } catch (error) {
                 console.error(error);
             }
@@ -136,7 +134,7 @@ export default {
         },
         deleteElement (foto) {
 
-            //?let self = this
+            let self = this
             swal({
                 title: 'Are you sure?',
                 text: 'You will not be able to recover this post!',
@@ -145,14 +143,16 @@ export default {
                 confirmButtonText: 'Yes, delete it!',
                 cancelButtonText: 'No, keep it',
             }).then(function () {
-                const { response } = axios.delete('/api/v1/galeria' + foto.id, foto)
+                const { response } = axios.delete('/api/v1/galeria/' + foto.id, foto)
                     .then(function (response) {
                         swal(
                             'Deleted!',
                             'Your post has been deleted.',
                             'success'
                         );
-                        location.reload();
+                        self.$store.dispatch('category/updateCategory', { element: response.data })
+
+                        self.$router.push({ name: 'categories.view', params: { hashid: self.hashId } })
                     }, function (response) {
                         //? show_stack_error('Deletion of post went wrong.', response)
                     })

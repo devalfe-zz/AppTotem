@@ -53,9 +53,13 @@ Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
     Route::get('categoria','AtractivosApiController@categorias');
     Route::get('categoria/{id}','AtractivosApiController@categoria');
 
-    Route::get('galeria','AtractivosApiController@galerias')->name('galeria.galerias');
-    Route::get('galeria/{id}','AtractivosApiController@galeria')->name('galeria.galeria');
-    Route::post('galeria', 'AtractivosApiController@creategalery')->name('galeria.create');
+    Route::get('galeria','GaleriaApiController@galerias')->name('galeria.galerias');
+
+    Route::get('galeria/{id}','GaleriaApiController@galeria')->name('galeria.galeria');
+
+    Route::post('galeria','GaleriaApiController@create')->name('galeria.create');
+
+    Route::delete('galeria/{id}','GaleriaApiController@destroy')->name('galeria.destroy');
 
     Route::get('lugares','AtractivosApiController@lugares');
     Route::get('lugar/{id}','AtractivosApiController@lugar');
