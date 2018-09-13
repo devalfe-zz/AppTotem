@@ -92,11 +92,12 @@ export default {
         hashId: '',
         dropOptions: {
             url: "/api/v1/file",
-            maxFilesize: 0.5, // MB
+            maxFilesize: 5, // MB
             maxFiles: 1,
             thumbnailWidth: 250, // px
-            thumbnailHeight: 250,
+            thumbnailHeight: 200,
             addRemoveLinks: true,
+            resizeWidth: 500,
             paramName: "file", // The name that will be used to transfer the file
             acceptedFiles: "image/*,image/png,image/gif",
         },

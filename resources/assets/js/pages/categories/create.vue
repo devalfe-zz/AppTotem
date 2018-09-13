@@ -131,7 +131,9 @@ export default {
             maxFilesize: 0.5, // MB
             maxFiles: 1,
             thumbnailWidth: 250, // px
-            thumbnailHeight: 250,
+            thumbnailHeight: 200,
+            resizeWidth: 500,
+
             addRemoveLinks: true,
             paramName: "file", // The name that will be used to transfer the file
             acceptedFiles: "image/*,image/png,image/gif",
@@ -142,7 +144,7 @@ export default {
             maxFilesize: 5, // MB
             maxFiles: 1,
             thumbnailWidth: 250, // px
-            thumbnailHeight: 250,
+            thumbnailHeight: 200,
             addRemoveLinks: true,
             paramName: "file", // The name that will be used to transfer the file
             acceptedFiles: "video/mp4,video/avi,video/mpeg",
