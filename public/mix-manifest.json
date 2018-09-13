@@ -2,5 +2,19 @@
     "/js/main.js": "/js/main.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/main.css": "/css/main.css"
+    "/css/main.css": "/css/main.css",
+    "/css/owl.carousel.css": "/css/owl.carousel.css",
+    "/css/jquery.fullpage.css": "/css/jquery.fullpage.css",
+    "/css/superfish.css": "/css/superfish.css",
+    "/css/bootstrap.css": "/css/bootstrap.css",
+    "/css/jquery.fancybox.css": "/css/jquery.fancybox.css",
+    "/js/owl.carousel.js": "/js/owl.carousel.js",
+    "/js/jquery.fullpage.extensions.min.js": "/js/jquery.fullpage.extensions.min.js",
+    "/js/jquery.fullpage.js": "/js/jquery.fullpage.js",
+    "/js/wow.js": "/js/wow.js",
+    "/js/superfish.js": "/js/superfish.js",
+    "/js/smooth-scroll.js": "/js/smooth-scroll.js",
+    "/js/jquery.fancybox.js": "/js/jquery.fancybox.js",
+    "/images/logo.svg": "/images/logo.svg",
+    "/images/mpmn.svg": "/images/mpmn.svg"
 }

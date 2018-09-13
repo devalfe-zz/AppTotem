@@ -40,6 +40,7 @@ import vuex from 'vuex'
 import swal from 'sweetalert2'
 
 import axios from 'axios'
+
 Vue.filter('baseurl', function (value) {
     return "https://guiaturistica.moqueguaturismo.gob.pe/public/" + value
 });

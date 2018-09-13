@@ -4,7 +4,7 @@
             <div>
                 <div>
                     <div>
-                        <h3 class="modal-title">{{ element.titulo}}</h3>
+                        <h3 class="modal-title">{{ element.titulo }}</h3>
                     </div>
                     <div>
                         <div class="row">
@@ -18,18 +18,18 @@
 
                                 <p>{{ element.detalle }}</p>
                                 <h4 class="cost">
-                                    <small class="pre-cost"> {{ element.latitud}}
+                                    <small class="pre-cost"> {{ element.latitud }}
                                     </small>
 
-                                    <small class="pre-cost"> {{ element.longitud}}
+                                    <small class="pre-cost"> {{ element.longitud }}
                                     </small>
                                 </h4>
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="col-md-4 col-sm-6 col-12">
                                         {{ element.direccion }}
                                     </div>
                                     <!-- end col -->
-                                    <div class="col-md-4 col-sm-6 col-xs-12"> {{ element.ubicacion}}
+                                    <div class="col-md-4 col-sm-6 col-12"> {{ element.ubicacion }}
                                     </div>
                                     <!-- end col -->
                                     <div class="col-md-4 col-sm-12">{{ element.horarios }}

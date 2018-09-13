@@ -48,13 +48,14 @@ Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function () {
 
     Route::resource('atractivo', 'AtractivosApiController', ['except' => ['create','index','update','show','store','edit']]);
 
-    Route::post('imgsubmit', 'ImageController@imgsubmit')->name('image.imgsubmit');
+    //!Route::post('imgsubmit', 'ImageController@imgsubmit')->name('image.imgsubmit');
 
     Route::get('categoria','AtractivosApiController@categorias');
     Route::get('categoria/{id}','AtractivosApiController@categoria');
 
-    Route::get('galeria','AtractivosApiController@galerias');
-    Route::get('galeria/{id}','AtractivosApiController@galeria');
+    Route::get('galeria','AtractivosApiController@galerias')->name('galeria.galerias');
+    Route::get('galeria/{id}','AtractivosApiController@galeria')->name('galeria.galeria');
+    Route::post('galeria', 'AtractivosApiController@creategalery')->name('galeria.create');
 
     Route::get('lugares','AtractivosApiController@lugares');
     Route::get('lugar/{id}','AtractivosApiController@lugar');

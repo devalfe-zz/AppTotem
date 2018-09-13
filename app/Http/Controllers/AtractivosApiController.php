@@ -119,6 +119,22 @@ class AtractivosApiController extends Controller
     }
 
     /**
+     * Show the form for creating a new resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function creategalery(Request $request)
+    {
+        $this->validate($request, [
+            'atractivo_id' => 'required|integer',
+            'titulo' => 'required|string|max:80',
+            'foto_url' => 'required|string',
+            'activo' => 'required'
+        ]);
+        return Galeria::create($request->all());
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
