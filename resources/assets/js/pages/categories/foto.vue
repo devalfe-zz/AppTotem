@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-sm-5">
                     <div class="col-md-5">
-                        <img class="img-fluid" :src="element.foto_url | baseurl">
+                        <img class="img-fluid" :src="url + element.foto_url">
                     </div>
 
                 </div>
@@ -57,7 +57,7 @@
                     <td class="col-md-2">{{ foto.titulo }}</td>
                     <td class="col-md-2">
                         <div class="box-body">
-                            <img class="img-fluid" :src="'https://guiaturistica.moqueguaturismo.gob.pe/public/' + foto.foto_url" :alt="foto.titulo">
+                            <img class="img-fluid" :src="url + foto.foto_url" :alt="foto.titulo">
                         </div>
                     </td>
                     <td class="col-md-3">
@@ -90,6 +90,8 @@ export default {
             atractivo_id: ''
         }),
         hashId: '',
+        url: null,
+
         dropOptions: {
             url: "/api/v1/file",
             maxFilesize: 5, // MB
@@ -115,8 +117,8 @@ export default {
         //!this.form.titulo = this.element[0]
 
     },
-
     mounted () {
+        this.url = process.env.MIX_APP_URL;
         //?this.$store.dispatch('category/loadCategoryId', this.hashId)
     },
 

@@ -15,7 +15,7 @@
                 <td class="col-md-3">{{ item.descripcion }}</td>
                 <td class="col-md-2">
                     <div class="box-body">
-                        <img class="img-fluid" :src="item.foto_url | baseurl" alt="item.titulo">
+                        <img class="img-fluid" :src="url + item.foto_url" alt="item.titulo">
                     </div>
                 </td>
                 <td class="col-md-1">{{ item.direccion }}</td>
@@ -41,13 +41,15 @@ import swal from 'sweetalert2'
 
 import axios from 'axios'
 
-Vue.filter('baseurl', function (value) {
-    return "https://guiaturistica.moqueguaturismo.gob.pe/public/" + value
-});
 
 export default {
     name: 'v-List',
     props: ['lists'],
+    data () {
+        return {
+            url: null,
+        }
+    },
     methods: {
         deleteElement (item) {
 
@@ -94,7 +96,10 @@ export default {
     },
     refresh () {
         location.reload();
-    }
+    },
+    mounted () {
+        this.url = process.env.MIX_APP_URL;
+    },
 
 }
 

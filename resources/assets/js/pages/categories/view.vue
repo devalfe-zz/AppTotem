@@ -9,7 +9,7 @@
                     <div>
                         <div class="row">
                             <div class="col-md-6 product_img">
-                                <img class="img-fluid" :src="element.foto_url | baseurl">
+                                <img class="img-fluid" :src="url + element.foto_url" :alt="element.titulo">
                             </div>
                             <div class="col-md-6 product_content">
                                 <h4>
@@ -42,12 +42,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <video width="100%" height="100%" controls>
-                                    <source :src="element.video_url | url">
+                                    <source :src="url + element.video_url">
                                 </video>
                             </div>
                             <!-- <v-Map :Lat="element.latitud" :lng="element.longitud " :title="element.titulo"></v-Map> -->
                             <GmapMap :center="{lat:element.latitud,lng:element.longitud}" :zoom="17" style="width: 100%; height: 500px">
-                                <GmapMarker :key="index" v-for="(m, index) in markers" :position="{lat:element.latitud,lng:element.longitud,}" :clickable="true" :draggable="true" @click="center=m.position"></GmapMarker>
+                                <GmapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="true" @click="center=m.position">
+                                </GmapMarker>
                             </GmapMap>
                         </div>
                     </div>
@@ -59,17 +60,13 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex'
-import Vue from 'vue'
-
-Vue.filter('url', function (value) {
-    return "https://guiaturistica.moqueguaturismo.gob.pe/public/" + value
-});
 
 export default {
     middleware: 'auth',
 
     data () {
         return {
+            url: null,
             hashId: '',
             markers: [{
                 position: {
@@ -86,14 +83,13 @@ export default {
     },
 
     mounted () {
-        this.$store.dispatch('category/loadCategoryId', this.hashId)
+        this.$store.dispatch('category/loadCategoryId', this.hashId);
+        this.url = process.env.MIX_APP_URL;
     },
-    computed: {
-        //?...mapGetters({
 
+    computed: {
         ...mapState({
             element: state => state.category.element,
-            //?element: 'category/element',
         }),
     },
 
@@ -102,9 +98,6 @@ export default {
             location.reload();
         }
     }
-
-
-
 }
 </script>
 

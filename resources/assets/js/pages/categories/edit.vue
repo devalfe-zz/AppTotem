@@ -68,7 +68,7 @@
                 </div>
                 <div class="col-sm-5">
                     <div class="col-md-5">
-                        <img class="img-fluid" :src="element.foto_url | baseurl">
+                        <img class="img-fluid" :src=" url + element.foto_url">
                     </div>
 
                 </div>
@@ -116,8 +116,9 @@ export default {
             video_url: ''
         }),
         hashId: '',
+        url: null,
         dropOptions: {
-            url: "https://guiaturistica.moqueguaturismo.gob.pe/api/v1/file",
+            url: "/api/v1/file",
             maxFilesize: 0.5, // MB
             maxFiles: 1,
             thumbnailWidth: 250, // px
@@ -166,6 +167,9 @@ export default {
             console.log(file);
             this.form.foto_url = 'images/' + file.name
         },
+    },
+    mounted () {
+        this.url = process.env.MIX_APP_URL;
     },
 }
 </script>

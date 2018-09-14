@@ -127,7 +127,7 @@ export default {
         }),
         hashId: '',
         dropOptions: {
-            url: "https://guiaturistica.moqueguaturismo.gob.pe/api/v1/file",
+            url: "/api/v1/file",
             maxFilesize: 0.5, // MB
             maxFiles: 1,
             thumbnailWidth: 250, // px
