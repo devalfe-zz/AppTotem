@@ -67,6 +67,7 @@ export default {
     data () {
         return {
             url: null,
+            element: '',
             hashId: '',
             markers: [{
                 position: {
