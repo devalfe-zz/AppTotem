@@ -46,7 +46,7 @@
                                 </video>
                             </div>
                             <!-- <v-Map :Lat="element.latitud" :lng="element.longitud " :title="element.titulo"></v-Map> -->
-                            <GmapMap :center="{lat:element.latitud,lng:element.longitud}" :zoom="17" style="width: 100%; height: 500px">
+                            <GmapMap :center="{lat:parseFloat(element.latitud),lng:parseFloat(element.longitud)}" :zoom="17" style="width: 100%; height: 500px">
                                 <GmapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="true" @click="center=m.position">
                                 </GmapMarker>
                             </GmapMap>
@@ -67,7 +67,6 @@ export default {
     data () {
         return {
             url: null,
-            element: '',
             hashId: '',
             markers: [{
                 position: {

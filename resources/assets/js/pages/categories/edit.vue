@@ -78,6 +78,12 @@
                 <div class="col-md-8">
                     <input v-model="form.video_url" type="text" name="video_url" class="form-control" :class="{ 'is-invalid': form.errors.has('video_url') }">
                     <has-error :form="form" field="video_url"></has-error>
+                    <vue-dropzone id="drop2" :options="dropVideoOptions" ref="dropzone2" :useCustomSlot=true @vdropzone-complete="afterVideoComplete">
+                        <div class="dropzone-custom-content">
+                            <h3 class="dropzone-custom-title">Arrastrar y soltar para cargar contenido!</h3>
+                            <div class="subtitle">...o haz clic para seleccionar un archivo de tu computadora</div>
+                        </div>
+                    </vue-dropzone>
                 </div>
             </div>
             <!-- Submit Button -->
@@ -119,7 +125,7 @@ export default {
         url: null,
         dropOptions: {
             url: "/api/v1/file",
-            maxFilesize: 0.5, // MB
+            maxFilesize: 5, // MB
             maxFiles: 1,
             thumbnailWidth: 250, // px
             thumbnailHeight: 250,
@@ -128,6 +134,18 @@ export default {
             acceptedFiles: "image/*",
 
         },
+        dropVideoOptions: {
+            url: "/api/v1/file",
+            maxFilesize: 10, // MB
+            maxFiles: 1,
+            thumbnailWidth: 250, // px
+            thumbnailHeight: 200,
+            addRemoveLinks: true,
+            paramName: "file", // The name that will be used to transfer the file
+            acceptedFiles: "video/mp4,video/avi,video/mpeg",
+
+        }
+
 
     }),
     components: {
@@ -167,6 +185,10 @@ export default {
             console.log(file);
             this.form.foto_url = 'images/' + file.name
         },
+        afterVideoComplete (file) {
+            console.log(file);
+            this.form.video_url = 'video/' + file.name
+        }
     },
     mounted () {
         this.url = process.env.MIX_APP_URL;

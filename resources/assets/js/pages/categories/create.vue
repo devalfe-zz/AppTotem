@@ -128,7 +128,7 @@ export default {
         hashId: '',
         dropOptions: {
             url: "/api/v1/file",
-            maxFilesize: 0.5, // MB
+            maxFilesize: 5, // MB
             maxFiles: 1,
             thumbnailWidth: 250, // px
             thumbnailHeight: 200,
@@ -136,12 +136,12 @@ export default {
 
             addRemoveLinks: true,
             paramName: "file", // The name that will be used to transfer the file
-            acceptedFiles: "image/*,image/png,image/gif",
+            acceptedFiles: "image/*",
 
         },
         dropVideoOptions: {
-            url: "https://guiaturistica.moqueguaturismo.gob.pe/api/v1/file",
-            maxFilesize: 5, // MB
+            url: "/api/v1/file",
+            maxFilesize: 10, // MB
             maxFiles: 1,
             thumbnailWidth: 250, // px
             thumbnailHeight: 200,
@@ -177,6 +177,7 @@ export default {
             this.form.foto_url = 'images/' + file.name
         },
         afterVideoComplete (file) {
+            console.log(file);
             this.form.video_url = 'video/' + file.name
         }
     }
