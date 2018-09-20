@@ -54,6 +54,17 @@
                             <input v-model="form.latitud" type="text" name="latitud" class="form-control" :class="{ 'is-invalid': form.errors.has('latitud') }">
                             <has-error :form="form" field="latitud"></has-error>
                         </div>
+                        <div class="col-md-5">
+                            <GmapAutocomplete class="form-control" @place_changed="setPlace">
+                            </GmapAutocomplete>
+                        </div>
+                        <GmapMap style="width: 600px; height: 300px;" :zoom="17" :center="{lat: form.latitud, lng: form.longitud}">
+                            <GmapMarker v-for="(marker, index) in markers" :key="index" :position="marker.position" />
+                            <GmapMarker v-if="this.place" label="★" :position="{
+                            lat: this.place.geometry.location.lat(),
+                            lng: this.place.geometry.location.lng(),
+                            }" />
+                        </GmapMap>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">{{ $t('horarios') }}</label>
@@ -149,7 +160,9 @@ export default {
             paramName: "file", // The name that will be used to transfer the file
             acceptedFiles: "video/mp4,video/avi,video/mpeg",
 
-        }
+        },
+        place: null,
+        markers: [],
 
     }),
     components: {
@@ -179,6 +192,22 @@ export default {
         afterVideoComplete (file) {
             console.log(file);
             this.form.video_url = 'video/' + file.name
+        },
+        setPlace (place) {
+            this.place = place
+            this.form.latitud = this.place.geometry.location.lat()
+            this.form.longitud = this.place.geometry.location.lng()
+        },
+        usePlace (place) {
+            if (this.place) {
+                this.markers.push({
+                    position: {
+                        lat: this.place.geometry.location.lat(),
+                        lng: this.place.geometry.location.lng(),
+                    }
+                })
+                this.place = null;
+            }
         }
     }
 }
@@ -217,5 +246,14 @@ export default {
 
 .subtitle {
   color: #314b5f;
+}
+
+.map {
+  height: 500px;
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  top: 18px;
 }
 </style>

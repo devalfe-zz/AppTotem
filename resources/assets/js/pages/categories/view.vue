@@ -45,11 +45,11 @@
                                     <source :src="url + element.video_url">
                                 </video>
                             </div>
-                            <!-- <v-Map :Lat="element.latitud" :lng="element.longitud " :title="element.titulo"></v-Map> -->
-                            <GmapMap :center="{lat:parseFloat(element.latitud),lng:parseFloat(element.longitud)}" :zoom="17" style="width: 100%; height: 500px">
+                            <v-Map :Lat="element.latitud" :lng="element.longitud " :title="element.titulo"></v-Map>
+                            <!-- <GmapMap :center="{lat:parseFloat(element.latitud),lng:parseFloat(element.longitud)}" :zoom="17" style="width: 100%; height: 500px">
                                 <GmapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="true" @click="center=m.position">
                                 </GmapMarker>
-                            </GmapMap>
+                            </GmapMap> -->
                         </div>
                     </div>
                 </div>
@@ -68,6 +68,7 @@ export default {
         return {
             url: null,
             hashId: '',
+            elementx: Object.assign({}, this.$store.state.category.element),
             markers: [{
                 position: {
                     lat: '',
@@ -79,18 +80,21 @@ export default {
 
     created () {
         this.hashId = this.$route.params.hashid
-
     },
 
     mounted () {
         this.$store.dispatch('category/loadCategoryId', this.hashId);
         this.url = process.env.MIX_APP_URL;
+        console.log(this.elementx.latitud);
+        console.log(this.elementx.longitud);
+
     },
 
     computed: {
         ...mapState({
             element: state => state.category.element,
         }),
+
     },
 
     methods: {
