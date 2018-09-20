@@ -204,7 +204,7 @@ export default {
             this.place = place
             this.form.latitud = this.place.geometry.location.lat()
             this.form.longitud = this.place.geometry.location.lng()
-
+            this.form.direccion = this.place.name
         },
         usePlace (place) {
             let self = this
