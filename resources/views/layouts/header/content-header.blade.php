@@ -4,10 +4,10 @@
             <!-- Header Logo -->
             <div class="logo my-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                 <a title="logo" href="{{ asset('/') }}">
-                    <img alt="logo" src="{{asset('storage/logo.svg')}}">
+                    <img alt="logo" src="{{asset('images/logo.svg')}}">
                 </a>
             </div>
-            <!-- End Header Logo --> 
+            <!-- End Header Logo -->
         </div>
         <div class="col-6 d-flex justify-content-center align-items-center">
              <div class="owl-carousel w-75">
@@ -40,13 +40,13 @@
                             <input type="text" name="search" id="" class="form-control" placeholder="Buscar">
                             <button type="button" name="" id="" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </div>
-                        </div>  
+                        </div>
                     </form>
-                </div>  
+                </div>
                 <div class="result well text-center text-uppercase text-white">
                     Look, I'm in a well!
                 </div>
-            <!-- End Search --> 
+            <!-- End Search -->
             </div>  --}}
         </div>
         <div class="col-3 d-flex justify-content-center align-items-center flex-column">
