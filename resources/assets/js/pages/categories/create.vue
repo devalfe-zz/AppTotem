@@ -143,8 +143,7 @@ export default {
             maxFiles: 1,
             thumbnailWidth: 250, // px
             thumbnailHeight: 200,
-            resizeWidth: 500,
-
+            resizeWidth: 800,
             addRemoveLinks: true,
             paramName: "file", // The name that will be used to transfer the file
             acceptedFiles: "image/*",

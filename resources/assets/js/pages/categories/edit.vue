@@ -82,27 +82,27 @@
                         <img class="img-fluid" :src=" url + element.foto_url">
                     </div>
 
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-md-2 col-form-label text-md-right">{{ $t('video_url') }}</label>
-                <div class="col-md-8">
-                    <input v-model="form.video_url" type="text" name="video_url" class="form-control" :class="{ 'is-invalid': form.errors.has('video_url') }">
-                    <has-error :form="form" field="video_url"></has-error>
-                    <vue-dropzone id="drop2" :options="dropVideoOptions" ref="dropzone2" :useCustomSlot=true @vdropzone-complete="afterVideoComplete">
-                        <div class="dropzone-custom-content">
-                            <h3 class="dropzone-custom-title">Arrastrar y soltar para cargar contenido!</h3>
-                            <div class="subtitle">...o haz clic para seleccionar un archivo de tu computadora</div>
-                        </div>
-                    </vue-dropzone>
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label text-md-right">{{ $t('video_url') }}</label>
+                    <div class="col-md-8">
+                        <input v-model="form.video_url" type="text" name="video_url" class="form-control" :class="{ 'is-invalid': form.errors.has('video_url') }">
+                        <has-error :form="form" field="video_url"></has-error>
+                        <vue-dropzone id="drop2" :options="dropVideoOptions" ref="dropzone2" :useCustomSlot=true @vdropzone-complete="afterVideoComplete">
+                            <div class="dropzone-custom-content">
+                                <h3 class="dropzone-custom-title">Arrastrar y soltar para cargar contenido!</h3>
+                                <div class="subtitle">...o haz clic para seleccionar un archivo de tu computadora</div>
+                            </div>
+                        </vue-dropzone>
+                    </div>
                 </div>
-            </div>
-            <!-- Submit Button -->
-            <div class="form-group row">
-                <div class="col-md-10 ml-md-auto">
-                    <v-button type="success" :loading="form.busy">{{ $t('update') }}</v-button>
+                <!-- Submit Button -->
+                <div class="form-group row">
+                    <div class="col-md-10 ml-md-auto">
+                        <v-button type="success" :loading="form.busy">{{ $t('update') }}</v-button>
+                    </div>
                 </div>
-            </div>
         </form>
     </card>
 </template>
@@ -139,7 +139,8 @@ export default {
             maxFilesize: 5, // MB
             maxFiles: 1,
             thumbnailWidth: 250, // px
-            thumbnailHeight: 250,
+            thumbnailHeight: 200,
+            resizeWidth: 800,
             addRemoveLinks: true,
             paramName: "file", // The name that will be used to transfer the file
             acceptedFiles: "image/*",
