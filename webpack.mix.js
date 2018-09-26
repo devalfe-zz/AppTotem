@@ -10,7 +10,7 @@ let config = {
     base_url: 'apptotem.test',
     watchFiles: [
         'app/**/*.php',
-        './resources/views/**/*.php',
+        '/resources/views/**/*.php',
         //'AppTotem/resources/views/**/*.php',
         'public/js/**/*.js',
         //'**/*.php',
@@ -76,15 +76,16 @@ mix.copy([
 ], 'public/css')
 
 mix.copy([
-    'node_modules/owl.carousel/dist/owl.carousel.js',
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/owl.carousel/dist/owl.carousel.min.js',
     'node_modules/fullpage.js/dist/jquery.fullpage.extensions.min.js',
     'node_modules/fullpage.js/dist/jquery.fullpage.js',
     'node_modules/wowjs/dist/wow.js',
     'node_modules/superfish/src/js/superfish.js',
     'node_modules/smooth-scroll/dist/js/smooth-scroll.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
-
 ], 'public/js')
+
 mix.copy(['resources/assets/img/*.*'], 'public/images')
 
 if (mix.inProduction()) {

@@ -6,12 +6,12 @@
 <div class="container-fluid">
 <h1 class="well text-center pt-2">
 @yield('lema')
-</h1> 
+</h1>
 <div class="row">
 @yield('content')
 </div>
 </div>
-@include('layouts.footer')
+{{-- @include('layouts.footer') --}}
 @include('layouts.script')
 </body>
 </html>

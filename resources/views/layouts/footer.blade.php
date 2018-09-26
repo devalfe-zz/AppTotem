@@ -6,7 +6,7 @@
         <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
         <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        
+
     </div>
-    <p class="my-2">©2017 All rights reserved | Privacity Policy</p>
+    <p class="my-2">©2018 All rights reserved | Privacity Policy</p>
 </footer>

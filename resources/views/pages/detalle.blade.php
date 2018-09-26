@@ -16,7 +16,7 @@
 		</a> --}} @if($atractivos->video_url !== "")
 		<div class="embed-responsive embed-responsive-16by9">
 			<video autoplay loop class="embed-responsive-item" controls="false">
-				<source src="{{ asset($atractivos->video_url) }}" allowfullscreen></source>
+				<source src="{{ env('APP_URL')}}{{$atractivos->video_url}}" allowfullscreen></source>
 			</video>
 			{{--
 			<iframe class="auto play embed-responsive-item" src="{{ $atractivos->video_url }}" allowfullscreen></iframe>

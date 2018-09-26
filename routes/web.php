@@ -30,6 +30,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/transporte','AtrativoController@transporte')->name('transporte');
     Route::get('/alojamiento','AtrativoController@alojamiento')->name('alojamiento');
     Route::get('/restaurante','AtrativoController@restaurante')->name('restaurante');
+    Route::get('/eventos','AtrativoController@eventos')->name('eventos');
     Route::view('/telefonos', 'pages.telefono')->name('telefono');
     Route::view('/historia', 'pages.historia')->name('historia');
     Route::view('/turismo', 'pages.turismo')->name('turismo');

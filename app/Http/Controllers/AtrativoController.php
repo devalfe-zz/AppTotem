@@ -16,7 +16,7 @@ class AtrativoController extends Controller
      */
     public function index()
     {
-        // 
+        //
         //$categorias = Categoria::find(1)->atractivos;
         //$atractivos = $categorias->atractivos;
         //$atractivos =  Atractivo::where('ubicacion','Mariscal Nieto')->get();
@@ -48,13 +48,12 @@ class AtrativoController extends Controller
         //* ])->get();
         //*$atractivos = Atractivo::SearchCategoria(1)->SearchUbicacion('Fuera')->get();
         $atractivos = Atractivo::SearchCategoria(6)->get();
-        
+
         return view('pages.pages1', compact('atractivos'));
     }
     /**
      * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response 
+     * @return \Illuminate\Http\Response
      */
     public function servicios()
     {
@@ -63,15 +62,23 @@ class AtrativoController extends Controller
     }
     /**
      * Display a listing of the resource.
-     *
+     * @return \Illuminate\Http\Response
+     */
+    public function eventos()
+    {
+        $eventos = Atractivo::SearchCategoria(8)->get();
+        return view('pages.eventos', compact('eventos'));
+    }
+    /**
+     * Display a listing of the resource.
      * @return \Illuminate\Http\Response
      */
     public function multimedia()
-    {   
+    {
         $galerias = Galeria::get();
         //$galerias = Galeria::with('lugares')->get();
         $galerias = $galerias->load('lugares');
-       
+
         return view('pages.multimedia', compact('galerias'));
     }
     /**
@@ -138,7 +145,7 @@ class AtrativoController extends Controller
         app('map')->initialize($config);
         // $marker = array();
         // $marker['position'] = $lat.','. $lng;
-        // $marker['title'] = $tit;       
+        // $marker['title'] = $tit;
         // $marker['infowindow_content'] = $des;
         // Gmaps::add_marker($marker);
         $map = app('map')->create_map();
@@ -149,7 +156,7 @@ class AtrativoController extends Controller
     public function map($id)
     {
         //$atractivos = Atractivo::with('fotos')->get();
-        
+
         $atractivos = Atractivo::findOrFail($id);
         $atractivos = $atractivos->load('fotos','categorias');
         $lng = $atractivos->longitud;
@@ -171,7 +178,7 @@ class AtrativoController extends Controller
     }
      /**
      * Display a listing of the resource.
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function maps()
@@ -186,9 +193,9 @@ class AtrativoController extends Controller
         app('map')->initialize($config);
         $marker = array();
         foreach ($lugares as $lugare) {
-            $marker['position'] = $lugare->latitud.','.$lugare->longitud;     
-            $marker['title'] = $lugare->titulo;       
-            $marker['infowindow_content'] = $lugare->titulo.''.$lugare->descripcion; 
+            $marker['position'] = $lugare->latitud.','.$lugare->longitud;
+            $marker['title'] = $lugare->titulo;
+            $marker['infowindow_content'] = $lugare->titulo.''.$lugare->descripcion;
             $marker['animation'] = 'DROP';
             app('map')->add_marker($marker);
         }

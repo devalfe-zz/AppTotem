@@ -88,17 +88,17 @@
 <div class="col-xl-2  col-md-4 d-flex justify-content-center">
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner" role="listbox">
-			<a href="{{ route('home') }}">
+			<a href="{{ route('eventos') }}">
 				<div class="carousel-item active menu-box">
 					<img class="card-img d-block w-100 h-100" src="{{asset('images/menu/casa_tradicional3.jpg')}}">
 					<div class="card-img-overlay menu">
-						<p class="card-text label-box carousel-caption">Diversión</p>
+						<p class="card-text label-box carousel-caption">Eventos</p>
 					</div>
 				</div>
 				<div class="carousel-item menu-box">
 					<img class="card-img d-block w-100 h-100" src="{{asset('images/menu/iglesia_belen3.jpg')}}">
 					<div class="card-img-overlay menu">
-						<p class="card-text label-box carousel-caption">Diversión</p>
+						<p class="card-text label-box carousel-caption">Eventos</p>
 					</div>
 				</div>
 			</a>
