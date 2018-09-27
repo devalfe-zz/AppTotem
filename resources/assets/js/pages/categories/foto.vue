@@ -35,14 +35,14 @@
                         <img class="img-fluid" :src="url + element.foto_url">
                     </div>
 
+                    </div>
                 </div>
-            </div>
-            <!-- Submit Button -->
-            <div class="form-group row">
-                <div class="col-md-10 ml-md-auto">
-                    <v-button type="success" :loading="form.busy">{{ $t('register') }}</v-button>
+                <!-- Submit Button -->
+                <div class="form-group row">
+                    <div class="col-md-10 ml-md-auto">
+                        <v-button type="success" :loading="form.busy">{{ $t('register') }}</v-button>
+                    </div>
                 </div>
-            </div>
         </form>
         <table class="table table-hover">
             <thead>
@@ -99,7 +99,7 @@ export default {
             thumbnailWidth: 250, // px
             thumbnailHeight: 200,
             addRemoveLinks: true,
-            resizeWidth: 500,
+            resizeWidth: 800,
             paramName: "file", // The name that will be used to transfer the file
             acceptedFiles: "image/*,image/png,image/gif",
         },

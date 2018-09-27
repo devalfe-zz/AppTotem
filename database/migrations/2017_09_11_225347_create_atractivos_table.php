@@ -18,7 +18,7 @@ class CreateAtractivosTable extends Migration
             $table->increments('id');
             $table->string('titulo',80);
             $table->string('descripcion',300);
-            $table->string('detalle',2000)->nullable();
+            $table->text('detalle')->nullable();
             $table->string('direccion',60)->nullable();
             $table->string('ubicacion')->nullable();
             $table->double('longitud')->default(0)->nullable();

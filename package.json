@@ -47,6 +47,7 @@
         "eslint-plugin-vue-libs": "^3.0.0",
         "google-maps": "^3.3.0",
         "laravel-mix": "^2.1.14",
+        "vue-simplemde": "^0.4.8",
         "vue-template-compiler": "^2.5.17",
         "vue2-dropzone": "^3.5.2",
         "vue2-google-maps": "^0.10.2",

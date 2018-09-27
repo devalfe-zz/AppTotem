@@ -2,6 +2,8 @@ import Vue from 'vue'
 import store from '~/store'
 import router from '~/router'
 import App from '~/components/App'
+import VueSimplemde from 'vue-simplemde'
+import 'simplemde/dist/simplemde.min.css'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
 import {
@@ -12,7 +14,7 @@ import '~/plugins'
 import '~/components'
 
 Vue.config.productionTip = true
-
+Vue.use(VueSimplemde)
 Vue.use(VueGoogleMaps, {
     load: {
         key: 'AIzaSyD5zckljcogOGoZ0dKc0Lkefncg4GFUzyE',

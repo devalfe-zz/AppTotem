@@ -27,7 +27,7 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">{{ $t('detalle') }}</label>
                         <div class="col-md-8">
-                            <input v-model="form.detalle" type="text" name="detalle" class="form-control" :class="{ 'is-invalid': form.errors.has('detalle') }">
+                            <markdown-editor v-model="form.detalle" ref="markdownEditor"></markdown-editor>
                             <has-error :form="form" field="detalle"></has-error>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
     </div>
 </template>
 <script>
-
+import markdownEditor from 'vue-simplemde/src/markdown-editor'
 import Form from 'vform'
 import vueDropzone from "vue2-dropzone"
 import 'vue2-dropzone/dist/vue2Dropzone.min.css'
@@ -165,7 +165,8 @@ export default {
 
     }),
     components: {
-        vueDropzone
+        vueDropzone,
+        markdownEditor
     },
     created () {
         this.hashId = this.$route.params.hashid
@@ -214,6 +215,8 @@ export default {
 }
 </script>
 <style>
+@import "~simplemde/dist/simplemde.min.css";
+
 #drop1 {
   height: 250px;
   padding: 15px;
