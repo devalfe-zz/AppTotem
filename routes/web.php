@@ -38,11 +38,23 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/atractivos/{id}','AtrativoController@map')->name('map');
     Route::get('/mapa','AtrativoController@maps')->name('mapa');
     Route::get('/cartelera', function () {
-        $client = new Client([
-                'base_uri' => 'https://tv-v2.api-fetch.website/movies/',
-                'timeout'  => 5.0,
+            $client = new Client([
+                'base_uri' => 'https://api.themoviedb.org/3/discover/',
+                //'?api_key=e6e8f5a2fdabdb4edd7823f487aac7dd&language=es-ES&sort_by=popularity.desc&include_adult=false&include_video=false&page=1',
+                //?'base_uri' => 'https://tv-v2.api-fetch.website/movies/',
+                //*'timeout'  => 2.0,
             ]);
-            $response = $client->request('GET', '1');
+            $response = $client->request('GET','movie',[
+                'query' => [
+                    'api_key' => 'e6e8f5a2fdabdb4edd7823f487aac7dd',
+                    'language' => 'es-ES',
+                    'sort_by' => 'popularity.desc',
+                    'include_adult' => 'false',
+                    'include_video' => '=true',
+                    'page' => '1'
+                ]
+
+            ]);
             $carteleras = json_decode ($response->getBody()->getContents());
             //dd($carteleras);
             return view('pages.cartelera',compact('carteleras'));
