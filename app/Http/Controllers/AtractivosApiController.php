@@ -82,7 +82,11 @@ class AtractivosApiController extends Controller
      */
     public function categoria($id)
     {
-        $categoria = Atractivo::with('fotos','categorias')->SearchCategoria($id)->get();
+        if($id == 11) {
+            $categoria = Atractivo::orderByRaw('updated_at - created_at ASC')->SearchCategoria($id)->get();
+        } else {
+            $categoria = Atractivo::with('fotos','categorias')->SearchCategoria($id)->get();
+        }
         return Response::json($categoria,200);
     }
 
