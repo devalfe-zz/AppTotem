@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Galeria extends Model
 {
-    //
     protected $table = 'galerias';
     protected $primaryKey = 'id';
     protected $fillable = ['id','titulo','foto_url','activo','atractivo_id'];

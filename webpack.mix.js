@@ -69,7 +69,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
 
 mix.copy([
     'node_modules/owl.carousel/dist/assets/owl.carousel.css',
-    'node_modules/fullpage.js/dist/jquery.fullpage.css',
     'node_modules/superfish/src/css/superfish.css',
     'node_modules/bootstrap/dist/css/bootstrap.css',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
@@ -78,11 +77,8 @@ mix.copy([
 mix.copy([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/owl.carousel/dist/owl.carousel.min.js',
-    'node_modules/fullpage.js/dist/jquery.fullpage.extensions.min.js',
-    'node_modules/fullpage.js/dist/jquery.fullpage.js',
     'node_modules/wowjs/dist/wow.js',
     'node_modules/superfish/src/js/superfish.js',
-    'node_modules/smooth-scroll/dist/js/smooth-scroll.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
 ], 'public/js')
 

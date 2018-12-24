@@ -99,7 +99,7 @@
 			<hr>
 			<h3>¿Qué significa esto?</h3>
 			<p>
-				No hemos podido encontrar la página solicitada en nuestros servidores. Realmente lo sentimos. Es nuestra culpa, no la tuya. Trabajaremos mucho para que esta página vuelva a estar en línea tan pronto como sea posible.
+				No hemos podido encontrar la página solicitada en nuestros servidores. Realmente lo sentimos. Trabajaremos mucho para que esta página vuelva a estar en línea tan pronto como sea posible.
 			</p>
 			<p>
 				Tal vez le gustaría ir a nuestro <a href="{{{ URL::to('/') }}}">home page</a>?

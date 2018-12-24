@@ -15,11 +15,11 @@
                          <th></th>
                     </tr>
                     </thead>
-                    <tbody>          
+                    <tbody>
                         <tr v-for = "categoria in categorias" >
                             <td scope="row"> @{{ categoria.id }} </td>
                             <td> @{{ categoria.titulo }} </td>
-                            <td> <p v-if="categoria.activo === 1">Publicado</p><p v-else>No Publicado</p></td>                        
+                            <td> <p v-if="categoria.activo === 1">Publicado</p><p v-else>No Publicado</p></td>
                             <td>
                                 <a name="" id="" class="btn btn-warning" href="#" role="button">Editar</a>
                             </td>
