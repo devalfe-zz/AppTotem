@@ -5,12 +5,12 @@ const webpack = require('webpack')
 
 //? Configs
 let config = {
-    host: '192.168.10.10',
-    port: 3000,
+    host: '192.168.1.10',
+
     base_url: 'apptotem.test',
     watchFiles: [
         'app/**/*.php',
-        '/resources/views/**/*.php',
+        'resources/views/**/*.php',
         //'AppTotem/resources/views/**/*.php',
         'public/js/**/*.js',
         //'**/*.php',
@@ -28,10 +28,10 @@ mix.browserSync({
     logConnections: false,
     reloadOnRestart: true,
     notify: true,
-    open: false, //false, local, external, ui, tunnel
+    open: "local", //false, local, external, ui, tunnel
     injectChanges: true,
     logSnippet: true,
-    browser: ["google chrome", "firefox"]
+    browser: ["chrome", "firefox"]
 });
 // BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 

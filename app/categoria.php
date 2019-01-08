@@ -42,14 +42,14 @@ class Categoria extends Model
     }
 
     public function atractivos()
-	{
-		return $this->hasMany('Apptotem\Atractivo');
+    {
+        return $this->hasMany('Apptotem\Atractivo');
     }
 
     public function fotos()
 	{
-		return $this->hasManyThrough('Apptotem\Galeria','Apptotem\Atractivo','categoria_id','atractivo_id', 'id','id');
-	}
+        return $this->hasManyThrough('Apptotem\Galeria','Apptotem\Atractivo','categoria_id','atractivo_id', 'id','id');
+    }
 
     public function foto_cat(){
         return $this->morphMany('Apptotem\Galeria','fotos_cat');

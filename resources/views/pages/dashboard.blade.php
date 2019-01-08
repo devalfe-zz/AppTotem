@@ -12,7 +12,7 @@
                         <th>ID</th>
                         <th>NAME</th>
                         <th>PUBLICAR</th>
-                         <th></th>
+
                     </tr>
                     </thead>
                     <tbody>

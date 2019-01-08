@@ -5,7 +5,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Atractivo extends Model
 {
-    //
     protected $table = 'atractivos';
     protected $fillable = ['id','titulo','descripcion','detalle','direccion','ubicacion','longitud','latitud','horarios','foto_url','video_url','activo','categoria_id'];
 
