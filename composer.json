@@ -25,7 +25,8 @@
         "phpunit/phpunit": "~6.0",
         "filp/whoops": "~2.0",
         "laravel/dusk": "^2.0",
-        "whoops/soap": "~1.0"
+        "whoops/soap": "~1.0",
+        "heroku/heroku-buildpack-php": "*"
     },
     "autoload": {
         "classmap": [
