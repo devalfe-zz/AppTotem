@@ -28,5 +28,9 @@ class AppServiceProvider extends ServiceProvider
             return base_path().'/public';
 
         });
+
+        //if ($this->app->environment('local', 'testing')) {
+        //    $this->app->register(DuskServiceProvider::class);
+        //}
     }
 }

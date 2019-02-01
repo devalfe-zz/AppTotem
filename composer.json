@@ -9,24 +9,24 @@
         "alexpechkarev/google-maps": "1.0.8",
         "barryvdh/laravel-dompdf": "^0.8.1",
         "cornford/googlmapper": "2.*",
+        "fideloper/proxy": "~3.3",
         "genealabs/laravel-maps": "^0.5.0",
         "guzzlehttp/guzzle": "^6.3",
         "intervention/image": "^2.4",
-        "laravel/framework": "5.5.*",
+        "laravel/framework": "5.5",
+        "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "~5.0",
-        "fideloper/proxy": "~3.3",
-        "laravel/socialite": "^3.0",
+        "symfony/process": "~3.2",
         "tymon/jwt-auth": "^1.0.0-rc.1"
     },
     "require-dev": {
+        "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
+        "heroku/heroku-buildpack-php": "*",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~6.0",
-        "filp/whoops": "~2.0",
-        "whoops/soap": "~1.0",
-        "heroku/heroku-buildpack-php": "*",
-        "laravel/dusk": "^2.0"
+        "whoops/soap": "~1.0"
     },
     "autoload": {
         "classmap": [
@@ -44,9 +44,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-
-            ]
+            "dont-discover": []
         }
     },
     "scripts": {

@@ -23,7 +23,6 @@ mix.browserSync({
     files: config.watchFiles,
     host: config.host,
     proxy: config.base_url,
-    port: config.port,
     online: true,
     logConnections: false,
     reloadOnRestart: true,
@@ -64,15 +63,9 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .js('resources/assets/js/main.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css')
     .sass('resources/assets/sass/main.scss', 'public/css')
-    .sourceMaps()
-    .disableNotifications()
 
-mix.copy([
-    'node_modules/owl.carousel/dist/assets/owl.carousel.css',
-    'node_modules/superfish/src/css/superfish.css',
-    'node_modules/bootstrap/dist/css/bootstrap.css',
-    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
-], 'public/css')
+
+
 
 mix.copy([
     'node_modules/jquery/dist/jquery.js',
@@ -103,7 +96,6 @@ if (mix.inProduction()) {
         'superfish',
         'smooth-scroll',
         'vuex-router-sync',
-        '@fortawesome/fontawesome',
         '@fortawesome/vue-fontawesome'
     ])
 }

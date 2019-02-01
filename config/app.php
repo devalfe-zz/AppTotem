@@ -190,7 +190,7 @@ return [
        Intervention\Image\ImageServiceProvider::class,
        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
        Laravel\Socialite\SocialiteServiceProvider::class,
-       Laravel\Dusk\DuskServiceProvider::class
+       //Laravel\Dusk\DuskServiceProvider::class
 
     ],
 
