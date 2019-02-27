@@ -19,7 +19,7 @@ class Kernel extends HttpKernel
         \Apptotem\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \Apptotem\Http\Middleware\SetLocale::class,
-
+        \Spatie\Cors\Cors::class
         //!\Apptotem\Http\Middleware\TrustProxies::class,
     ];
 
