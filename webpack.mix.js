@@ -64,7 +64,12 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css')
     .sass('resources/assets/sass/main.scss', 'public/css')
 
-
+mix.copy([
+    'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+    'node_modules/superfish/src/css/superfish.css',
+    'node_modules/bootstrap/dist/css/bootstrap.css',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
+], 'public/css')
 
 
 mix.copy([

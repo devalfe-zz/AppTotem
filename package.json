@@ -15,7 +15,7 @@
         "axios": "^0.18.0",
         "babel-preset-stage-2": "^6.24.1",
         "bootstrap": "^4.1.1",
-        "browser-sync": "^2.26.3",
+        "browser-sync": "^2.26.7",
         "browser-sync-webpack-plugin": "^2.0.1",
         "font-awesome": "^4.7.0",
         "jquery": "^3.3.1",
