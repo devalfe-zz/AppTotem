@@ -51,7 +51,7 @@
         "vue-template-compiler": "^2.5.17",
         "vue2-dropzone": "^3.5.2",
         "vue2-google-maps": "^0.10.2",
-        "webpack-bundle-analyzer": "^2.13.1"
+        "webpack-bundle-analyzer": "^3.3.2"
     },
     "browserslist": [
         "> 1%",
